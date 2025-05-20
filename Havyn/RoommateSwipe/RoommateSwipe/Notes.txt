@@ -1,0 +1,26 @@
+File Structure
+
+RoommateSwipe
+├── RoommateSwipe
+│    ├── ContentView.swift
+│    ├── RoommateSwipeApp.swift
+│    ├── Models
+│    │    ├── Profile.swift
+│    │    └── UserProfile.swift
+│    ├── ViewModels
+│    │    └── RoommateViewModel.swift
+│    ├── Views
+│    │    ├── LoadingView.swift
+│    │    ├── SwipeCardView.swift
+│    │    ├── SwipeView.swift
+│    │    ├── LikedView.swift
+│    │    ├── MatchesView.swift
+│    │    ├── RootTabView.swift
+│    │    └── ProfileView.swift
+│    └── Assets.xcassets
+├── RoommateSwipeTests
+│    └── RoommateSwipeTests.swift
+├── RoommateSwipeUITests
+│    ├── RoommateSwipeUITests.swift
+│    └── RoommateSwipeUITestsLaunchTests.swift
+

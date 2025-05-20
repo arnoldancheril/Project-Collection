@@ -1,0 +1,145 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container mt-5">
+    <!-- Welcome Message -->
+    <div class="row mb-4">
+        <div class="col text-center">
+            <h2>Welcome to Your Dashboard, {{ user.username }}</h2>
+            <p class="text-muted">Track your investments and portfolio performance</p>
+        </div>
+    </div>
+
+    <!-- Portfolio Summary -->
+    <div class="row mb-5">
+        <div class="col-md-4">
+            <div class="card text-center shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">Total Invested</h5>
+                    <p class="card-text display-6">${{ total_invested }}</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card text-center shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">Current Portfolio Value</h5>
+                    <p class="card-text display-6">${{ total_current_value }}</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card text-center shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">Total Profit/Loss</h5>
+                    <p class="card-text display-6 {% if total_profit_loss >= 0 %}text-success{% else %}text-danger{% endif %}">
+                        ${{ total_profit_loss }}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Portfolio Performance Chart -->
+    <div class="row mb-5">
+        <div class="col">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">Portfolio Performance</h5>
+                    <canvas id="portfolioPerformanceChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- User Investments -->
+    <div class="row">
+        <div class="col">
+            <h3>Your Investments</h3>
+            {% if user_investments %}
+            <div class="accordion" id="investmentsAccordion">
+                {% for investment in user_investments %}
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="heading{{ forloop.counter }}">
+                        <button class="accordion-button {% if not forloop.first %}collapsed{% endif %}" type="button" data-bs-toggle="collapse" data-bs-target="#collapse{{ forloop.counter }}" aria-expanded="{% if forloop.first %}true{% else %}false{% endif %}" aria-controls="collapse{{ forloop.counter }}">
+                            {{ investment.bot.name }} - ${{ investment.current_value }}
+                        </button>
+                    </h2>
+                    <div id="collapse{{ forloop.counter }}" class="accordion-collapse collapse {% if forloop.first %}show{% endif %}" aria-labelledby="heading{{ forloop.counter }}" data-bs-parent="#investmentsAccordion">
+                        <div class="accordion-body">
+                            <p><strong>Amount Invested:</strong> ${{ investment.amount_invested }}</p>
+                            <p><strong>Current Value:</strong> ${{ investment.current_value }}</p>
+                            <p><strong>Profit/Loss:</strong> ${{ investment.profit_loss }}</p>
+                            <!-- Individual Bot Performance Chart -->
+                            <canvas id="botChart{{ forloop.counter }}"></canvas>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            {% else %}
+            <p>You have not invested in any bots yet. <a href="{% url 'bots_list' %}">Explore our bots</a> to get started.</p>
+            {% endif %}
+        </div>
+    </div>
+</div>
+
+<!-- Charts Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    // Portfolio Performance Chart Data
+    const portfolioLabels = {{ performance_dates|safe }};
+    const portfolioValues = {{ performance_values|safe }};
+
+    // Render Portfolio Performance Chart
+    const portfolioCtx = document.getElementById('portfolioPerformanceChart').getContext('2d');
+    const portfolioChart = new Chart(portfolioCtx, {
+        type: 'line',
+        data: {
+            labels: portfolioLabels,
+            datasets: [{
+                label: 'Portfolio Value',
+                data: portfolioValues,
+                borderColor: 'rgba(75, 192, 192, 1)',
+                tension: 0.4,
+                fill: false,
+            }]
+        },
+        options: {
+            scales: {
+                y: { beginAtZero: false }
+            }
+        }
+    });
+
+    // Individual Bot Performance Charts
+    {% for investment in user_investments %}
+    (function() {
+        const botCtx = document.getElementById('botChart{{ forloop.counter }}').getContext('2d');
+        const botData = {{ investment.performance_data|safe }};
+        const botLabels = botData.map(item => item[0]);
+        const botValues = botData.map(item => item[1]);
+
+        new Chart(botCtx, {
+            type: 'line',
+            data: {
+                labels: botLabels,
+                datasets: [{
+                    label: '{{ investment.bot.name }} Performance',
+                    data: botValues,
+                    borderColor: 'rgba(54, 162, 235, 1)',
+                    tension: 0.4,
+                    fill: false,
+                }]
+            },
+            options: {
+                scales: {
+                    y: { beginAtZero: false }
+                }
+            }
+        });
+    })();
+    {% endfor %}
+</script>
+{% endblock %}

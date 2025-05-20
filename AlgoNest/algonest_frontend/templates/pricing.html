@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container py-5">
+    <div class="row text-center mb-5">
+        <h2 class="section-title">Choose Your Plan</h2>
+        <p class="section-subtitle">Select the plan that suits your investment goals.</p>
+    </div>
+    <div class="row">
+        <!-- Basic Plan -->
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">Basic</h5>
+                    <h6 class="card-price">$29<span class="period">/month</span></h6>
+                    <ul class="list-unstyled mt-3 mb-4">
+                        <li>Access to Steady Sigma</li>
+                        <li>Email Support</li>
+                        <li>Basic Analytics</li>
+                    </ul>
+                    <a href="#" class="btn btn-primary btn-block">Sign Up</a>
+                </div>
+            </div>
+        </div>
+        <!-- Standard Plan -->
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 shadow-sm border-primary">
+                <div class="card-body">
+                    <h5 class="card-title">Standard</h5>
+                    <h6 class="card-price">$49<span class="period">/month</span></h6>
+                    <ul class="list-unstyled mt-3 mb-4">
+                        <li>Access to Balanced Beta</li>
+                        <li>Priority Email Support</li>
+                        <li>Advanced Analytics</li>
+                    </ul>
+                    <a href="#" class="btn btn-primary btn-block">Sign Up</a>
+                </div>
+            </div>
+        </div>
+        <!-- Premium Plan -->
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">Premium</h5>
+                    <h6 class="card-price">$99<span class="period">/month</span></h6>
+                    <ul class="list-unstyled mt-3 mb-4">
+                        <li>Access to All Bots</li>
+                        <li>24/7 Support</li>
+                        <li>Premium Analytics</li>
+                    </ul>
+                    <a href="#" class="btn btn-primary btn-block">Sign Up</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

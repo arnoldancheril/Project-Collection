@@ -1,0 +1,264 @@
+/* Global Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: #ffffff;
+}
+
+.nav-link {
+    color: #555 !important;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: #007bff !important;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+    transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.btn-outline-primary {
+    border-color: #007bff;
+    color: #007bff;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-outline-primary:hover {
+    background-color: #007bff;
+    color: #ffffff;
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #343a40;
+    color: #ccc;
+    margin-top: auto;
+}
+
+.footer h5 {
+    font-weight: 600;
+}
+
+.footer a {
+    color: #ccc;
+    transition: color 0.3s;
+}
+
+.footer a:hover {
+    color: #fff;
+}
+
+.footer hr {
+    border-top: 1px solid #555;
+}
+
+/* Hero Section */
+.hero {
+    background-image: url('../images/hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.hero .container {
+    position: relative;
+    z-index: 1;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.hero p {
+    font-size: 1.25rem;
+}
+
+.hero .btn {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+}
+
+/* Features Section */
+.section-title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.section-subtitle {
+    color: #777;
+    margin-bottom: 2rem;
+}
+
+.feature-icon {
+    font-size: 3rem;
+    color: #007bff;
+    margin-bottom: 1rem;
+}
+
+.feature-box:hover {
+    transform: translateY(-10px);
+    transition: transform 0.3s;
+}
+
+/* Testimonials */
+.testimonial {
+    background-color: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    position: relative;
+    text-align: center;
+}
+
+.testimonial::before {
+    content: '“';
+    font-size: 3rem;
+    color: #007bff;
+    position: absolute;
+    top: -20px;
+    left: 10px;
+}
+
+.testimonial::after {
+    content: '”';
+    font-size: 3rem;
+    color: #007bff;
+    position: absolute;
+    bottom: -20px;
+    right: 10px;
+}
+
+.testimonial p {
+    font-size: 1rem;
+    font-style: italic;
+}
+
+.testimonial .author {
+    margin-top: 1rem;
+    font-weight: 600;
+}
+
+.testimonial .position {
+    color: #777;
+}
+
+/* Call to Action */
+.cta-section {
+    background-image: url('../images/cta-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 4rem 0;
+    position: relative;
+}
+
+.cta-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.cta-section .container {
+    position: relative;
+    z-index: 1;
+}
+
+.cta-section h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.cta-section p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+}
+
+.cta-section .btn {
+    padding: 0.75rem 2rem;
+    font-size: 1rem;
+}
+
+/* Cards */
+.card {
+    border: none;
+    border-radius: 0.75rem;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Bot List Vertical Layout */
+.card-img-left {
+    width: 200px;
+    height: auto;
+}
+
+@media (max-width: 767px) {
+    .card-img-left {
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* Responsive Styles */
+@media (max-width: 767px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .navbar-brand {
+        font-size: 1.25rem;
+    }
+}

@@ -1,0 +1,580 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXContainerItemProxy section */
+		23B6AF9E2D70F6D100F30F10 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 23B6AF812D70F6CF00F30F10 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 23B6AF882D70F6CF00F30F10;
+			remoteInfo = RoommateSwipe;
+		};
+		23B6AFA82D70F6D100F30F10 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 23B6AF812D70F6CF00F30F10 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 23B6AF882D70F6CF00F30F10;
+			remoteInfo = RoommateSwipe;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		23B6AF892D70F6CF00F30F10 /* RoommateSwipe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RoommateSwipe.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		23B6AF9D2D70F6D100F30F10 /* RoommateSwipeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RoommateSwipeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		23B6AFA72D70F6D100F30F10 /* RoommateSwipeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RoommateSwipeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		23B6AFAF2D70F6D100F30F10 /* Exceptions for "RoommateSwipe" folder in "RoommateSwipe" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 23B6AF882D70F6CF00F30F10 /* RoommateSwipe */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		23B6AF8B2D70F6CF00F30F10 /* RoommateSwipe */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				23B6AFAF2D70F6D100F30F10 /* Exceptions for "RoommateSwipe" folder in "RoommateSwipe" target */,
+			);
+			path = RoommateSwipe;
+			sourceTree = "<group>";
+		};
+		23B6AFA02D70F6D100F30F10 /* RoommateSwipeTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = RoommateSwipeTests;
+			sourceTree = "<group>";
+		};
+		23B6AFAA2D70F6D100F30F10 /* RoommateSwipeUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = RoommateSwipeUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		23B6AF862D70F6CF00F30F10 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		23B6AF9A2D70F6D100F30F10 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		23B6AFA42D70F6D100F30F10 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		23B6AF802D70F6CF00F30F10 = {
+			isa = PBXGroup;
+			children = (
+				23B6AF8B2D70F6CF00F30F10 /* RoommateSwipe */,
+				23B6AFA02D70F6D100F30F10 /* RoommateSwipeTests */,
+				23B6AFAA2D70F6D100F30F10 /* RoommateSwipeUITests */,
+				23B6AF8A2D70F6CF00F30F10 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		23B6AF8A2D70F6CF00F30F10 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				23B6AF892D70F6CF00F30F10 /* RoommateSwipe.app */,
+				23B6AF9D2D70F6D100F30F10 /* RoommateSwipeTests.xctest */,
+				23B6AFA72D70F6D100F30F10 /* RoommateSwipeUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		23B6AF882D70F6CF00F30F10 /* RoommateSwipe */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 23B6AFB02D70F6D100F30F10 /* Build configuration list for PBXNativeTarget "RoommateSwipe" */;
+			buildPhases = (
+				23B6AF852D70F6CF00F30F10 /* Sources */,
+				23B6AF862D70F6CF00F30F10 /* Frameworks */,
+				23B6AF872D70F6CF00F30F10 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				23B6AF8B2D70F6CF00F30F10 /* RoommateSwipe */,
+			);
+			name = RoommateSwipe;
+			packageProductDependencies = (
+			);
+			productName = RoommateSwipe;
+			productReference = 23B6AF892D70F6CF00F30F10 /* RoommateSwipe.app */;
+			productType = "com.apple.product-type.application";
+		};
+		23B6AF9C2D70F6D100F30F10 /* RoommateSwipeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 23B6AFB52D70F6D100F30F10 /* Build configuration list for PBXNativeTarget "RoommateSwipeTests" */;
+			buildPhases = (
+				23B6AF992D70F6D100F30F10 /* Sources */,
+				23B6AF9A2D70F6D100F30F10 /* Frameworks */,
+				23B6AF9B2D70F6D100F30F10 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				23B6AF9F2D70F6D100F30F10 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				23B6AFA02D70F6D100F30F10 /* RoommateSwipeTests */,
+			);
+			name = RoommateSwipeTests;
+			packageProductDependencies = (
+			);
+			productName = RoommateSwipeTests;
+			productReference = 23B6AF9D2D70F6D100F30F10 /* RoommateSwipeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		23B6AFA62D70F6D100F30F10 /* RoommateSwipeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 23B6AFB82D70F6D100F30F10 /* Build configuration list for PBXNativeTarget "RoommateSwipeUITests" */;
+			buildPhases = (
+				23B6AFA32D70F6D100F30F10 /* Sources */,
+				23B6AFA42D70F6D100F30F10 /* Frameworks */,
+				23B6AFA52D70F6D100F30F10 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				23B6AFA92D70F6D100F30F10 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				23B6AFAA2D70F6D100F30F10 /* RoommateSwipeUITests */,
+			);
+			name = RoommateSwipeUITests;
+			packageProductDependencies = (
+			);
+			productName = RoommateSwipeUITests;
+			productReference = 23B6AFA72D70F6D100F30F10 /* RoommateSwipeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		23B6AF812D70F6CF00F30F10 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1620;
+				LastUpgradeCheck = 1620;
+				TargetAttributes = {
+					23B6AF882D70F6CF00F30F10 = {
+						CreatedOnToolsVersion = 16.2;
+					};
+					23B6AF9C2D70F6D100F30F10 = {
+						CreatedOnToolsVersion = 16.2;
+						TestTargetID = 23B6AF882D70F6CF00F30F10;
+					};
+					23B6AFA62D70F6D100F30F10 = {
+						CreatedOnToolsVersion = 16.2;
+						TestTargetID = 23B6AF882D70F6CF00F30F10;
+					};
+				};
+			};
+			buildConfigurationList = 23B6AF842D70F6CF00F30F10 /* Build configuration list for PBXProject "RoommateSwipe" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 23B6AF802D70F6CF00F30F10;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 23B6AF8A2D70F6CF00F30F10 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				23B6AF882D70F6CF00F30F10 /* RoommateSwipe */,
+				23B6AF9C2D70F6D100F30F10 /* RoommateSwipeTests */,
+				23B6AFA62D70F6D100F30F10 /* RoommateSwipeUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		23B6AF872D70F6CF00F30F10 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		23B6AF9B2D70F6D100F30F10 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		23B6AFA52D70F6D100F30F10 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		23B6AF852D70F6CF00F30F10 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		23B6AF992D70F6D100F30F10 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		23B6AFA32D70F6D100F30F10 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		23B6AF9F2D70F6D100F30F10 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 23B6AF882D70F6CF00F30F10 /* RoommateSwipe */;
+			targetProxy = 23B6AF9E2D70F6D100F30F10 /* PBXContainerItemProxy */;
+		};
+		23B6AFA92D70F6D100F30F10 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 23B6AF882D70F6CF00F30F10 /* RoommateSwipe */;
+			targetProxy = 23B6AFA82D70F6D100F30F10 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		23B6AFB12D70F6D100F30F10 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = RoommateSwipe/RoommateSwipe.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"RoommateSwipe/Preview Content\"";
+				DEVELOPMENT_TEAM = CC8YQW2285;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = RoommateSwipe/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = test.example.RoommateSwipe;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		23B6AFB22D70F6D100F30F10 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = RoommateSwipe/RoommateSwipe.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"RoommateSwipe/Preview Content\"";
+				DEVELOPMENT_TEAM = CC8YQW2285;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = RoommateSwipe/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = test.example.RoommateSwipe;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		23B6AFB32D70F6D100F30F10 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		23B6AFB42D70F6D100F30F10 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		23B6AFB62D70F6D100F30F10 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = CC8YQW2285;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = test.example.RoommateSwipeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RoommateSwipe.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/RoommateSwipe";
+			};
+			name = Debug;
+		};
+		23B6AFB72D70F6D100F30F10 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = CC8YQW2285;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = test.example.RoommateSwipeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RoommateSwipe.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/RoommateSwipe";
+			};
+			name = Release;
+		};
+		23B6AFB92D70F6D100F30F10 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = CC8YQW2285;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = test.example.RoommateSwipeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = RoommateSwipe;
+			};
+			name = Debug;
+		};
+		23B6AFBA2D70F6D100F30F10 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = CC8YQW2285;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = test.example.RoommateSwipeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = RoommateSwipe;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		23B6AF842D70F6CF00F30F10 /* Build configuration list for PBXProject "RoommateSwipe" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				23B6AFB32D70F6D100F30F10 /* Debug */,
+				23B6AFB42D70F6D100F30F10 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		23B6AFB02D70F6D100F30F10 /* Build configuration list for PBXNativeTarget "RoommateSwipe" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				23B6AFB12D70F6D100F30F10 /* Debug */,
+				23B6AFB22D70F6D100F30F10 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		23B6AFB52D70F6D100F30F10 /* Build configuration list for PBXNativeTarget "RoommateSwipeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				23B6AFB62D70F6D100F30F10 /* Debug */,
+				23B6AFB72D70F6D100F30F10 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		23B6AFB82D70F6D100F30F10 /* Build configuration list for PBXNativeTarget "RoommateSwipeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				23B6AFB92D70F6D100F30F10 /* Debug */,
+				23B6AFBA2D70F6D100F30F10 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 23B6AF812D70F6CF00F30F10 /* Project object */;
+}

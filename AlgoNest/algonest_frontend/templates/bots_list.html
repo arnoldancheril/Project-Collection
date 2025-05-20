@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="container mt-5">
+    <div class="row mb-4">
+        <div class="col text-center">
+            <h2>Our Trading Bots</h2>
+            <p class="text-muted">Choose the bot that fits your investment style.</p>
+        </div>
+    </div>
+
+    <!-- Bots Grid -->
+    <div class="row" id="botsContainer">
+        {% for bot in bots %}
+        <div class="col-md-4 mb-4 bot-card" data-risk="{{ bot.risk_level }}">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">{{ bot.name }}</h5>
+                    <p class="card-text">{{ bot.description|truncatechars:100 }}</p>
+                    <ul class="list-unstyled">
+                        <li><strong>Risk Level:</strong> {{ bot.risk_level }}</li>
+                        <li><strong>Monthly Price:</strong> ${{ bot.monthly_price }}</li>
+                    </ul>
+                </div>
+                <div class="card-footer bg-transparent">
+                    <a href="{% url 'bot_detail' bot.id %}" class="btn btn-primary w-100">View Details</a>
+                </div>
+            </div>
+        </div>
+        {% empty %}
+        <p>No bots available at the moment.</p>
+        {% endfor %}
+    </div>
+</div>
+
+<!-- Filtering Script (if you have implemented filtering) -->
+<script>
+    const riskFilter = document.getElementById('riskFilter');
+    if (riskFilter) {
+        riskFilter.addEventListener('change', function() {
+            const selectedRisk = this.value;
+            const botCards = document.querySelectorAll('.bot-card');
+            botCards.forEach(card => {
+                if (selectedRisk === '' || card.getAttribute('data-risk') === selectedRisk) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+    }
+</script>
+{% endblock %}
