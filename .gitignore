@@ -26,4 +26,20 @@ Temporary Items
 .apdisk 
 
 # Project specific ignores
-Deep\ Learning\ Loinc\ Standardization/PyHealth/ 
+Deep\ Learning\ Loinc\ Standardization/PyHealth/
+
+# Python environments (should not be committed to Git)
+Deep\ Learning\ Loinc\ Standardization/598_env/
+**/598_env/**
+**/*env*/**
+**/venv/**
+**/.venv/**
+**/.env/**
+**/env/**
+**/__pycache__/**
+**/*.py[cod]
+**/*$py.class
+
+# Specific large files
+Deep\ Learning\ Loinc\ Standardization/598_env/lib/python3.12/site-packages/torch/lib/libtorch_cpu.dylib
+Deep\ Learning\ Loinc\ Standardization/598_env/lib/python3.12/site-packages/tensorflow/libtensorflow_cc.2.dylib 
