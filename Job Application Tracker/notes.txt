@@ -1,0 +1,21 @@
+I want to build a local app with a GUI to track jobs that I apply to. Possibly using SQLite as a local storage option. I just want the information such as company, role, date applied, and what the status is, etc to be tracked. I want to be able to use a GUI to quickly add whenever I apply for a job, I also want to use the GUI to filter through and show me all the applications I have sent to that company recently  with all the dates or if I want to see how many applications I have sent in the past week etc. I want a user engaging, colorful, and modern GUI. Can you help build this application for me. I want the information to be saved every time I exit or close the application, and I will only open the application when I am applying to jobs and when I open the application I want only my previous applications to be pre-populated.
+
+Can either use swift or python, which ever would be a more modern and clean look.
+
+I have attached a reference image. Right now I want to set up the directory. I want different parts of the application to be made in different files so it is easier to debug and improve the application as opposed to have a large app.py file. Everytime a new file is made I want it to be added to @filestructure.txt, with a description of the file. I also want a description of the file at the top of each file. I want to get everything setup before we start developing the first step which will be the dashboard.
+
+
+Now I want to start working on the dashboard. I have attached a reference image. Let's start piece by piece, can we start by making a dashboard:
+1 · Dashboard
+Gradient header with app title and global search.
+
+Status-summary cards (Applied, Interviewing, Offer, Rejected) use bright, accessible colors.
+
+Left filter rail lets you click quick time-frames (“Past 7 days”, “Past 30 days”, etc.).
+
+Central table shows the latest applications; pill badges echo the card colors so status is glanceable.
+ I want different parts of the application to be made in different files so it is easier to debug and improve the application as opposed to have a large app.py file. Can you make the dashboard based on the attached image and run and test the dashboard.
+
+
+@README.md @filestructure.txt 
+I have attached what the current analytics dashboard looks like, it is really cut off and just quickly created. I have also attached the dashboard we are trying to achieve. Can you create that dashboard.
