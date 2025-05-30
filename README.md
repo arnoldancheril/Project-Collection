@@ -20,6 +20,28 @@ A web application built with Flask that provides intelligent article summarizati
   - RESTful API design for easy integration with other services
   - Responsive frontend for mobile and desktop use
 
+### Job Application Tracker
+A local desktop GUI application designed to help job seekers efficiently track and manage their job applications with intelligent features and modern interface design.
+
+- **Features:**
+  - Smart auto-complete for company names and job roles based on application history
+  - Predefined software engineering roles for quick selection
+  - Modern card-based filter panel with real-time search capabilities
+  - Status tracking (Applied, Interviewing, Offer, Rejected) with visual indicators
+  - Analytics dashboard with application statistics and trends
+  - Date range filtering and custom search functionality
+  - Multiple launcher options including desktop app and terminal commands
+  - Local SQLite database with persistent application state
+- **Technologies:** Python, PyQt5, PyQtChart, SQLite, Matplotlib
+- **Use Case:** Job search management, career planning, application tracking, interview preparation
+- **Implementation Details:**
+  - MVC architecture with modular component separation
+  - Local database storage for privacy and offline functionality
+  - Event-driven GUI programming with PyQt5 framework
+  - Intelligent auto-complete algorithms for improved user experience
+  - Data visualization components for application analytics
+  - Cross-platform desktop application with native launcher integration
+
 ### AlgoNest
 A subscription-based platform for algorithmic trading bots with various risk profiles, featuring comprehensive performance visualization and monitoring tools.
 
