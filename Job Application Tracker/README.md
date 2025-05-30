@@ -28,8 +28,8 @@ A local GUI application to track job applications with a modern, colorful interf
 
 1. Clone this repository:
 ```
-git clone https://github.com/arnoldancheril/Project-Collection/application-tracker.git
-cd application-tracker
+git clone https://github.com/arnoldancheril/Project-Collection/tree/main/Job%20Application%20Tracker
+cd into the folder
 ```
 
 2. Install dependencies:
