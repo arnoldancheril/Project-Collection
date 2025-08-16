@@ -1,0 +1,212 @@
+[
+  {
+    "season": 2004,
+    "total_shots": 189803,
+    "three_pt_rate": 18.7,
+    "mid_range_rate": 35.65,
+    "fg_percentage": 43.86,
+    "efg_percentage": 47.11,
+    "three_pt_shots": 35493,
+    "mid_range_shots": 67657
+  },
+  {
+    "season": 2005,
+    "total_shots": 197626,
+    "three_pt_rate": 19.61,
+    "mid_range_rate": 35.44,
+    "fg_percentage": 44.75,
+    "efg_percentage": 48.23,
+    "three_pt_shots": 38748,
+    "mid_range_shots": 70034
+  },
+  {
+    "season": 2006,
+    "total_shots": 194314,
+    "three_pt_rate": 20.23,
+    "mid_range_rate": 34.44,
+    "fg_percentage": 45.37,
+    "efg_percentage": 49.0,
+    "three_pt_shots": 39313,
+    "mid_range_shots": 66926
+  },
+  {
+    "season": 2007,
+    "total_shots": 196072,
+    "three_pt_rate": 21.25,
+    "mid_range_rate": 33.03,
+    "fg_percentage": 45.83,
+    "efg_percentage": 49.64,
+    "three_pt_shots": 41671,
+    "mid_range_shots": 64759
+  },
+  {
+    "season": 2008,
+    "total_shots": 200501,
+    "three_pt_rate": 22.22,
+    "mid_range_rate": 32.91,
+    "fg_percentage": 45.72,
+    "efg_percentage": 49.74,
+    "three_pt_shots": 44544,
+    "mid_range_shots": 65986
+  },
+  {
+    "season": 2009,
+    "total_shots": 199030,
+    "three_pt_rate": 22.39,
+    "mid_range_rate": 32.15,
+    "fg_percentage": 45.87,
+    "efg_percentage": 49.98,
+    "three_pt_shots": 44559,
+    "mid_range_shots": 63990
+  },
+  {
+    "season": 2010,
+    "total_shots": 200966,
+    "three_pt_rate": 22.19,
+    "mid_range_rate": 31.43,
+    "fg_percentage": 46.14,
+    "efg_percentage": 50.07,
+    "three_pt_shots": 44599,
+    "mid_range_shots": 63169
+  },
+  {
+    "season": 2011,
+    "total_shots": 199761,
+    "three_pt_rate": 22.17,
+    "mid_range_rate": 31.01,
+    "fg_percentage": 45.86,
+    "efg_percentage": 49.83,
+    "three_pt_shots": 44284,
+    "mid_range_shots": 61950
+  },
+  {
+    "season": 2012,
+    "total_shots": 161205,
+    "three_pt_rate": 22.56,
+    "mid_range_rate": 30.26,
+    "fg_percentage": 44.79,
+    "efg_percentage": 48.73,
+    "three_pt_shots": 36375,
+    "mid_range_shots": 48783
+  },
+  {
+    "season": 2013,
+    "total_shots": 201579,
+    "three_pt_rate": 24.33,
+    "mid_range_rate": 28.32,
+    "fg_percentage": 45.28,
+    "efg_percentage": 49.64,
+    "three_pt_shots": 49037,
+    "mid_range_shots": 57083
+  },
+  {
+    "season": 2014,
+    "total_shots": 204126,
+    "three_pt_rate": 25.93,
+    "mid_range_rate": 26.81,
+    "fg_percentage": 45.45,
+    "efg_percentage": 50.11,
+    "three_pt_shots": 52928,
+    "mid_range_shots": 54720
+  },
+  {
+    "season": 2015,
+    "total_shots": 205550,
+    "three_pt_rate": 26.81,
+    "mid_range_rate": 26.16,
+    "fg_percentage": 44.89,
+    "efg_percentage": 49.59,
+    "three_pt_shots": 55117,
+    "mid_range_shots": 53776
+  },
+  {
+    "season": 2016,
+    "total_shots": 207893,
+    "three_pt_rate": 28.42,
+    "mid_range_rate": 24.6,
+    "fg_percentage": 45.22,
+    "efg_percentage": 50.25,
+    "three_pt_shots": 59085,
+    "mid_range_shots": 51133
+  },
+  {
+    "season": 2017,
+    "total_shots": 209929,
+    "three_pt_rate": 31.55,
+    "mid_range_rate": 22.19,
+    "fg_percentage": 45.72,
+    "efg_percentage": 51.36,
+    "three_pt_shots": 66237,
+    "mid_range_shots": 46575
+  },
+  {
+    "season": 2018,
+    "total_shots": 211707,
+    "three_pt_rate": 33.7,
+    "mid_range_rate": 19.05,
+    "fg_percentage": 46.02,
+    "efg_percentage": 52.12,
+    "three_pt_shots": 71339,
+    "mid_range_shots": 40336
+  },
+  {
+    "season": 2019,
+    "total_shots": 219458,
+    "three_pt_rate": 35.88,
+    "mid_range_rate": 15.16,
+    "fg_percentage": 46.05,
+    "efg_percentage": 52.42,
+    "three_pt_shots": 78742,
+    "mid_range_shots": 33276
+  },
+  {
+    "season": 2020,
+    "total_shots": 188116,
+    "three_pt_rate": 38.41,
+    "mid_range_rate": 13.32,
+    "fg_percentage": 46.01,
+    "efg_percentage": 52.88,
+    "three_pt_shots": 72252,
+    "mid_range_shots": 25066
+  },
+  {
+    "season": 2021,
+    "total_shots": 190983,
+    "three_pt_rate": 39.18,
+    "mid_range_rate": 12.86,
+    "fg_percentage": 46.61,
+    "efg_percentage": 53.79,
+    "three_pt_shots": 74822,
+    "mid_range_shots": 24558
+  },
+  {
+    "season": 2022,
+    "total_shots": 216722,
+    "three_pt_rate": 39.93,
+    "mid_range_rate": 12.79,
+    "fg_percentage": 46.11,
+    "efg_percentage": 53.17,
+    "three_pt_shots": 86535,
+    "mid_range_shots": 27712
+  },
+  {
+    "season": 2023,
+    "total_shots": 217220,
+    "three_pt_rate": 38.75,
+    "mid_range_rate": 11.86,
+    "fg_percentage": 47.54,
+    "efg_percentage": 54.53,
+    "three_pt_shots": 84164,
+    "mid_range_shots": 25763
+  },
+  {
+    "season": 2024,
+    "total_shots": 218701,
+    "three_pt_rate": 39.49,
+    "mid_range_rate": 11.24,
+    "fg_percentage": 47.43,
+    "efg_percentage": 54.65,
+    "three_pt_shots": 86355,
+    "mid_range_shots": 24589
+  }
+]

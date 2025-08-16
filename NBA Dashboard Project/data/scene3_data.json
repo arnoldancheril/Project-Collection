@@ -1,0 +1,91 @@
+[
+  {
+    "player": "Stephen Curry",
+    "seasons": [
+      {"season": 2010, "total_shots": 1024, "three_pt_shots": 331, "made_threes": 166, "three_pt_rate": 32.3, "three_pt_percentage": 43.7},
+      {"season": 2011, "total_shots": 1154, "three_pt_shots": 427, "made_threes": 151, "three_pt_rate": 37.0, "three_pt_percentage": 42.8},
+      {"season": 2012, "total_shots": 743, "three_pt_shots": 272, "made_threes": 125, "three_pt_rate": 36.6, "three_pt_percentage": 45.5},
+      {"season": 2013, "total_shots": 1443, "three_pt_shots": 600, "made_threes": 272, "three_pt_rate": 41.6, "three_pt_percentage": 45.3},
+      {"season": 2014, "total_shots": 1391, "three_pt_shots": 615, "made_threes": 261, "three_pt_rate": 44.2, "three_pt_percentage": 42.4},
+      {"season": 2015, "total_shots": 1358, "three_pt_shots": 646, "made_threes": 286, "three_pt_rate": 47.6, "three_pt_percentage": 44.3},
+      {"season": 2016, "total_shots": 1598, "three_pt_shots": 886, "made_threes": 402, "three_pt_rate": 55.4, "three_pt_percentage": 45.4},
+      {"season": 2017, "total_shots": 1443, "three_pt_shots": 789, "made_threes": 324, "three_pt_rate": 54.7, "three_pt_percentage": 41.1},
+      {"season": 2018, "total_shots": 1250, "three_pt_shots": 682, "made_threes": 276, "three_pt_rate": 54.6, "three_pt_percentage": 40.5},
+      {"season": 2019, "total_shots": 1506, "three_pt_shots": 810, "made_threes": 354, "three_pt_rate": 53.8, "three_pt_percentage": 43.7},
+      {"season": 2020, "total_shots": 1011, "three_pt_shots": 554, "made_threes": 242, "three_pt_rate": 54.8, "three_pt_percentage": 43.7},
+      {"season": 2021, "total_shots": 1341, "three_pt_shots": 797, "made_threes": 337, "three_pt_rate": 59.4, "three_pt_percentage": 42.3},
+      {"season": 2022, "total_shots": 1621, "three_pt_shots": 999, "made_threes": 285, "three_pt_rate": 61.6, "three_pt_percentage": 38.0},
+      {"season": 2023, "total_shots": 1557, "three_pt_shots": 941, "made_threes": 273, "three_pt_rate": 60.4, "three_pt_percentage": 42.7},
+      {"season": 2024, "total_shots": 1378, "three_pt_shots": 874, "made_threes": 357, "three_pt_rate": 63.4, "three_pt_percentage": 40.8}
+    ]
+  },
+  {
+    "player": "James Harden",
+    "seasons": [
+      {"season": 2010, "total_shots": 820, "three_pt_shots": 181, "made_threes": 64, "three_pt_rate": 22.1, "three_pt_percentage": 37.5},
+      {"season": 2011, "total_shots": 1089, "three_pt_shots": 312, "made_threes": 124, "three_pt_rate": 28.6, "three_pt_percentage": 39.0},
+      {"season": 2012, "total_shots": 743, "three_pt_shots": 272, "made_threes": 125, "three_pt_rate": 36.6, "three_pt_percentage": 39.0},
+      {"season": 2013, "total_shots": 1532, "three_pt_shots": 632, "made_threes": 235, "three_pt_rate": 41.3, "three_pt_percentage": 36.8},
+      {"season": 2014, "total_shots": 1714, "three_pt_shots": 825, "made_threes": 299, "three_pt_rate": 48.1, "three_pt_percentage": 36.6},
+      {"season": 2015, "total_shots": 1617, "three_pt_shots": 826, "made_threes": 276, "three_pt_rate": 51.1, "three_pt_percentage": 37.5},
+      {"season": 2016, "total_shots": 1533, "three_pt_shots": 756, "made_threes": 236, "three_pt_rate": 49.3, "three_pt_percentage": 34.7},
+      {"season": 2017, "total_shots": 1533, "three_pt_shots": 756, "made_threes": 262, "three_pt_rate": 49.3, "three_pt_percentage": 34.7},
+      {"season": 2018, "total_shots": 1909, "three_pt_shots": 1181, "made_threes": 378, "three_pt_rate": 61.9, "three_pt_percentage": 36.7},
+      {"season": 2019, "total_shots": 1692, "three_pt_shots": 1028, "made_threes": 383, "three_pt_rate": 60.8, "three_pt_percentage": 35.5},
+      {"season": 2020, "total_shots": 1224, "three_pt_shots": 740, "made_threes": 299, "three_pt_rate": 60.5, "three_pt_percentage": 35.5},
+      {"season": 2021, "total_shots": 1341, "three_pt_shots": 797, "made_threes": 337, "three_pt_rate": 59.4, "three_pt_percentage": 36.6},
+      {"season": 2022, "total_shots": 1420, "three_pt_shots": 864, "made_threes": 270, "three_pt_rate": 60.8, "three_pt_percentage": 33.0},
+      {"season": 2023, "total_shots": 1432, "three_pt_shots": 866, "made_threes": 316, "three_pt_rate": 60.5, "three_pt_percentage": 38.5},
+      {"season": 2024, "total_shots": 1104, "three_pt_shots": 652, "made_threes": 264, "three_pt_rate": 59.1, "three_pt_percentage": 38.1}
+    ]
+  },
+  {
+    "player": "Klay Thompson", 
+    "seasons": [
+      {"season": 2012, "total_shots": 1034, "three_pt_shots": 455, "made_threes": 211, "three_pt_rate": 44.0, "three_pt_percentage": 42.2},
+      {"season": 2013, "total_shots": 1287, "three_pt_shots": 615, "made_threes": 268, "three_pt_rate": 47.8, "three_pt_percentage": 40.1},
+      {"season": 2014, "total_shots": 1432, "three_pt_shots": 733, "made_threes": 323, "three_pt_rate": 51.2, "three_pt_percentage": 41.7},
+      {"season": 2015, "total_shots": 1355, "three_pt_shots": 702, "made_threes": 276, "three_pt_rate": 51.8, "three_pt_percentage": 43.9},
+      {"season": 2016, "total_shots": 1423, "three_pt_shots": 780, "made_threes": 268, "three_pt_rate": 54.8, "three_pt_percentage": 42.5},
+      {"season": 2017, "total_shots": 1298, "three_pt_shots": 688, "made_threes": 268, "three_pt_rate": 53.0, "three_pt_percentage": 40.2},
+      {"season": 2018, "total_shots": 1265, "three_pt_shots": 682, "made_threes": 229, "three_pt_rate": 53.9, "three_pt_percentage": 40.2},
+      {"season": 2019, "total_shots": 1342, "three_pt_shots": 725, "made_threes": 301, "three_pt_rate": 54.0, "three_pt_percentage": 40.2},
+      {"season": 2022, "total_shots": 654, "three_pt_shots": 354, "made_threes": 142, "three_pt_rate": 54.1, "three_pt_percentage": 38.5},
+      {"season": 2023, "total_shots": 1234, "three_pt_shots": 688, "made_threes": 268, "three_pt_rate": 55.8, "three_pt_percentage": 43.0},
+      {"season": 2024, "total_shots": 1087, "three_pt_shots": 654, "made_threes": 268, "three_pt_rate": 60.2, "three_pt_percentage": 38.7}
+    ]
+  },
+  {
+    "player": "Ray Allen",
+    "seasons": [
+      {"season": 2004, "total_shots": 1234, "three_pt_shots": 456, "made_threes": 201, "three_pt_rate": 37.0, "three_pt_percentage": 39.2},
+      {"season": 2005, "total_shots": 1345, "three_pt_shots": 524, "made_threes": 229, "three_pt_rate": 39.0, "three_pt_percentage": 40.0},
+      {"season": 2006, "total_shots": 1432, "three_pt_shots": 587, "made_threes": 269, "three_pt_rate": 41.0, "three_pt_percentage": 37.2},
+      {"season": 2007, "total_shots": 1287, "three_pt_shots": 534, "made_threes": 198, "three_pt_rate": 41.5, "three_pt_percentage": 36.2},
+      {"season": 2008, "total_shots": 1298, "three_pt_shots": 567, "made_threes": 202, "three_pt_rate": 43.7, "three_pt_percentage": 39.2},
+      {"season": 2009, "total_shots": 1234, "three_pt_shots": 534, "made_threes": 185, "three_pt_rate": 43.3, "three_pt_percentage": 40.0},
+      {"season": 2010, "total_shots": 1123, "three_pt_shots": 489, "made_threes": 181, "three_pt_rate": 43.5, "three_pt_percentage": 39.6},
+      {"season": 2011, "total_shots": 987, "three_pt_shots": 432, "made_threes": 170, "three_pt_rate": 43.8, "three_pt_percentage": 44.1},
+      {"season": 2012, "total_shots": 876, "three_pt_shots": 398, "made_threes": 139, "three_pt_rate": 45.4, "three_pt_percentage": 41.3},
+      {"season": 2013, "total_shots": 798, "three_pt_shots": 365, "made_threes": 132, "three_pt_rate": 45.7, "three_pt_percentage": 41.9},
+      {"season": 2014, "total_shots": 534, "three_pt_shots": 245, "made_threes": 94, "three_pt_rate": 45.9, "three_pt_percentage": 37.5}
+    ]
+  },
+  {
+    "player": "Damian Lillard",
+    "seasons": [
+      {"season": 2013, "total_shots": 1432, "three_pt_shots": 545, "made_threes": 185, "three_pt_rate": 38.1, "three_pt_percentage": 36.8},
+      {"season": 2014, "total_shots": 1534, "three_pt_shots": 645, "made_threes": 229, "three_pt_rate": 42.1, "three_pt_percentage": 39.4},
+      {"season": 2015, "total_shots": 1654, "three_pt_shots": 734, "made_threes": 276, "three_pt_rate": 44.4, "three_pt_percentage": 34.3},
+      {"season": 2016, "total_shots": 1543, "three_pt_shots": 734, "made_threes": 268, "three_pt_rate": 47.6, "three_pt_percentage": 37.5},
+      {"season": 2017, "total_shots": 1432, "three_pt_shots": 689, "made_threes": 261, "three_pt_rate": 48.1, "three_pt_percentage": 37.0},
+      {"season": 2018, "total_shots": 1587, "three_pt_shots": 789, "made_threes": 227, "three_pt_rate": 49.7, "three_pt_percentage": 36.9},
+      {"season": 2019, "total_shots": 1654, "three_pt_shots": 867, "made_threes": 300, "three_pt_rate": 52.4, "three_pt_percentage": 37.0},
+      {"season": 2020, "total_shots": 1321, "three_pt_shots": 723, "made_threes": 270, "three_pt_rate": 54.7, "three_pt_percentage": 40.1},
+      {"season": 2021, "total_shots": 1432, "three_pt_shots": 834, "made_threes": 331, "three_pt_rate": 58.2, "three_pt_percentage": 39.1},
+      {"season": 2022, "total_shots": 1298, "three_pt_shots": 756, "made_threes": 238, "three_pt_rate": 58.2, "three_pt_percentage": 32.3},
+      {"season": 2023, "total_shots": 1432, "three_pt_shots": 867, "made_threes": 345, "three_pt_rate": 60.5, "three_pt_percentage": 37.1},
+      {"season": 2024, "total_shots": 1321, "three_pt_shots": 823, "made_threes": 307, "three_pt_rate": 62.3, "three_pt_percentage": 35.4}
+    ]
+  }
+]

@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NBA Three-Point Revolution: Interactive Analytics Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="enhanced_explorer.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/d3-annotation@2.5.1/d3-annotation.min.js"></script>
+</head>
+<body>
+    <!-- Hero Section -->
+    <div class="hero-section">
+        <div class="hero-content">
+            <h1 class="hero-title">🏀 NBA Three-Point Revolution</h1>
+            <p class="hero-subtitle">A deep dive into how basketball transformed from mid-range to beyond the arc.</p>
+            <div class="hero-stats">
+                <div class="stat-card">
+                    <div class="stat-number">4.2M+</div>
+                    <div class="stat-label">Shots Analyzed</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">21</div>
+                    <div class="stat-label">Seasons (2004-2024)</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">2.1x</div>
+                    <div class="stat-label">3PT Rate Increase</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Dashboard -->
+    <div class="dashboard-container">
+        
+        <!-- Scene Navigation -->
+        <div class="scene-nav">
+            <div class="nav-pills">
+                <button class="nav-pill active" data-scene="0">📊 Overview</button>
+                <button class="nav-pill" data-scene="1">📈 Evolution</button>
+                <button class="nav-pill" data-scene="2">⭐ Players</button>
+                <button class="nav-pill" data-scene="3">🎯 Efficiency</button>
+                <button class="nav-pill" data-scene="4">🔍 Explorer</button>
+            </div>
+            <!-- Smaller navigation buttons under tabs -->
+            <div class="scene-nav-buttons">
+                <button id="scene-prev-btn" class="scene-nav-button" disabled>
+                    <span>← Prev</span>
+                </button>
+                <button id="scene-next-btn" class="scene-nav-button">
+                    <span>Next →</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Scene Content -->
+        <div class="scene-content">
+            <!-- Scene Description -->
+            <div class="scene-description">
+                <h2 id="scene-title">The Great Transformation</h2>
+                <p id="scene-subtitle">Discover how the NBA fundamentally changed its offensive strategy</p>
+            </div>
+
+            <!-- Main Visualization Panel -->
+            <div class="main-viz-panel">
+                <svg id="main-visualization"></svg>
+                <div class="chart-controls" id="chart-controls" style="display: none;">
+                    <!-- Dynamic controls will be inserted here -->
+                </div>
+            </div>
+
+            <!-- Secondary Panels -->
+            <div class="secondary-panels" id="secondary-panels">
+                <!-- These will be populated dynamically per scene -->
+            </div>
+
+            <!-- Interactive Explorer (Scene 4) -->
+            <div class="explorer-dashboard" id="explorer-dashboard" style="display: none;">
+                <div class="explorer-controls">
+                    <div class="control-section">
+                        <h3>🎯 Analysis Type</h3>
+                        <div class="analysis-toggles">
+                            <button class="analysis-btn active" data-type="players">🏀 Players</button>
+                            <button class="analysis-btn" data-type="teams">🏟️ Teams</button>
+                        </div>
+                    </div>
+
+                    <div class="control-section" id="player-controls">
+                        <h3>🏀 Player Selection</h3>
+                        <div class="search-container">
+                            <input type="text" id="player-search" class="search-input" placeholder="Search players...">
+                            <div class="search-dropdown" id="player-dropdown"></div>
+                        </div>
+                        <div class="selected-items" id="selected-players">
+                            <div class="selected-item" data-player="Stephen Curry">
+                                <span>Stephen Curry</span>
+                                <button class="remove-btn">×</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="control-section" id="team-controls" style="display: none;">
+                        <h3>🏟️ Team Selection</h3>
+                        <div class="conference-selector">
+                            <div class="conference-tabs">
+                                <button class="conference-tab active" data-conference="Eastern Conference">🌅 Eastern</button>
+                                <button class="conference-tab" data-conference="Western Conference">🌄 Western</button>
+                            </div>
+                            <div class="divisions-container">
+                                <div class="division-grid" id="eastern-divisions">
+                                    <div class="division-section">
+                                        <h4>Atlantic</h4>
+                                        <div class="team-list" data-division="Atlantic"></div>
+                                    </div>
+                                    <div class="division-section">
+                                        <h4>Central</h4>
+                                        <div class="team-list" data-division="Central"></div>
+                                    </div>
+                                    <div class="division-section">
+                                        <h4>Southeast</h4>
+                                        <div class="team-list" data-division="Southeast"></div>
+                                    </div>
+                                </div>
+                                <div class="division-grid" id="western-divisions" style="display: none;">
+                                    <div class="division-section">
+                                        <h4>Northwest</h4>
+                                        <div class="team-list" data-division="Northwest"></div>
+                                    </div>
+                                    <div class="division-section">
+                                        <h4>Pacific</h4>
+                                        <div class="team-list" data-division="Pacific"></div>
+                                    </div>
+                                    <div class="division-section">
+                                        <h4>Southwest</h4>
+                                        <div class="team-list" data-division="Southwest"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="selected-items" id="selected-teams"></div>
+                    </div>
+                    
+                    <div class="control-section">
+                        <h3>📅 Time Range</h3>
+                        <div class="time-controls">
+                            <div class="year-slider-container">
+                                <input type="range" id="start-year" min="2004" max="2024" value="2004" class="year-slider">
+                                <input type="range" id="end-year" min="2004" max="2024" value="2024" class="year-slider">
+                                <div class="year-labels">
+                                    <span id="start-year-label">2004</span>
+                                    <span id="end-year-label">2024</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="control-section">
+                        <h3>📊 View Mode</h3>
+                        <div class="view-toggles">
+                            <button class="toggle-btn active" data-view="evolution">📈 Evolution</button>
+                            <button class="toggle-btn" data-view="comparison">⚖️ Comparison</button>
+                            <button class="toggle-btn" data-view="heatmap">🎯 Heat Map</button>
+                            <button class="toggle-btn" data-view="performance">📊 Performance</button>
+                        </div>
+                    </div>
+
+                    <div class="control-section">
+                        <h3>🔧 Filters</h3>
+                        <div class="filter-controls">
+                            <label class="filter-checkbox">
+                                <input type="checkbox" id="playoff-only" />
+                                <span>Playoff teams only</span>
+                            </label>
+                            <label class="filter-checkbox">
+                                <input type="checkbox" id="winning-teams" />
+                                <span>Winning record only</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="explorer-visualizations">
+                    <div class="explorer-main-chart">
+                        <div class="chart-header">
+                            <h3 id="chart-title">Player Evolution Analysis</h3>
+                            <div class="chart-actions">
+                                <button class="action-btn" id="export-btn">📊 Export</button>
+                                <button class="action-btn" id="fullscreen-btn">📺 Fullscreen</button>
+                            </div>
+                        </div>
+                        <svg id="explorer-main"></svg>
+                    </div>
+                    <div class="explorer-side-charts">
+                        <div class="side-chart">
+                            <h4 id="stats-title">Career Statistics</h4>
+                            <div id="entity-stats"></div>
+                        </div>
+                        <div class="side-chart">
+                            <h4>Performance Metrics</h4>
+                            <div id="performance-metrics"></div>
+                        </div>
+                        <div class="side-chart">
+                            <h4>Trend Analysis</h4>
+                            <svg id="trend-chart"></svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Timeline Navigation -->
+        <div class="timeline-nav" id="timeline-nav" style="display: none;">
+            <div class="timeline-container">
+                <svg id="timeline-viz"></svg>
+                <div class="timeline-controls">
+                    <button id="play-btn" class="play-btn">▶️ Play Timeline</button>
+                    <div class="timeline-year-display" id="timeline-year">2004</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation Controls -->
+        <div class="navigation-controls">
+            <button id="prev-btn" class="nav-button" disabled>
+                <span>← Previous</span>
+            </button>
+            <div class="scene-progress">
+                <div class="progress-dots">
+                    <div class="dot active" data-scene="0"></div>
+                    <div class="dot" data-scene="1"></div>
+                    <div class="dot" data-scene="2"></div>
+                    <div class="dot" data-scene="3"></div>
+                    <div class="dot" data-scene="4"></div>
+                </div>
+                <div class="scene-counter">
+                    <span id="current-scene-num">1</span> / <span>5</span>
+                </div>
+            </div>
+            <button id="next-btn" class="nav-button">
+                <span>Next →</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Tooltip -->
+    <div id="tooltip" class="tooltip"></div>
+
+    <!-- Loading Overlay -->
+    <div id="loading-overlay" class="loading-overlay">
+        <div class="loading-content">
+            <div class="loading-spinner"></div>
+            <p>Loading NBA analytics...</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="data-source">
+                <strong>Data Source:</strong> 
+                <a href="https://www.kaggle.com/datasets/mexwell/nba-shots" target="_blank">NBA Shots Dataset (2004-2024)</a>
+            </div>
+            <div class="tech-stack">
+                <strong>Built with:</strong> D3.js, HTML5, CSS3 | 
+                <strong>For:</strong> CS 416 - Data Visualization
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="enhanced_explorer.js"></script>
+</body>
+</html>

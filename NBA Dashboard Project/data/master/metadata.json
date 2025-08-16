@@ -1,0 +1,53 @@
+{
+  "creation_date": "2025-08-02T17:55:56.959215",
+  "total_shots": 4231262,
+  "date_range": {
+    "start_year": 2004,
+    "end_year": 2024
+  },
+  "unique_players": 2164,
+  "unique_teams": 36,
+  "columns": [
+    "SEASON_1",
+    "SEASON_2",
+    "TEAM_ID",
+    "TEAM_NAME",
+    "PLAYER_ID",
+    "PLAYER_NAME",
+    "POSITION_GROUP",
+    "POSITION",
+    "GAME_DATE",
+    "GAME_ID",
+    "HOME_TEAM",
+    "AWAY_TEAM",
+    "EVENT_TYPE",
+    "SHOT_MADE",
+    "ACTION_TYPE",
+    "SHOT_TYPE",
+    "BASIC_ZONE",
+    "ZONE_NAME",
+    "ZONE_ABB",
+    "ZONE_RANGE",
+    "LOC_X",
+    "LOC_Y",
+    "SHOT_DISTANCE",
+    "QUARTER",
+    "MINS_LEFT",
+    "SECS_LEFT",
+    "FILE_YEAR",
+    "DATA_SOURCE",
+    "SEASON",
+    "TIME_REMAINING",
+    "GAME_PERIOD"
+  ],
+  "file_sizes": {
+    "master_csv_mb": 963.95,
+    "sample_csv_mb": 22.78
+  },
+  "analysis_datasets": [
+    "player_career",
+    "team_season",
+    "shot_analytics",
+    "situation_analytics"
+  ]
+}
