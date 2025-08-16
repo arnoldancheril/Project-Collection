@@ -202,3 +202,41 @@ A data analysis tool that uses graph algorithms to analyze airport connections a
   - Algorithm implementations optimized for large networks
   - Modular design with separation of data structures and algorithms
   - Thorough testing with over 6 test cases for different scenarios
+
+### NBA Dashboard Project
+A data visualization project analyzing the NBA’s shift toward three-point shooting from 2004–2024.
+
+- **Features:**
+  - Interactive, narrative visualization of league-wide shot profile changes
+  - Season selector and dynamic charts exploring mid-range vs three-point evolution
+  - Optimized client-side rendering for large datasets
+- **Technologies:** D3.js v7, HTML/CSS/JavaScript
+- **Use Case:** Sports analytics, data storytelling, interactive reports
+- **Implementation Details:**
+  - 4.2M+ shots across 21 seasons (CSV data excluded from repo via `.gitignore`)
+  - Data processing scripts: `process_data.py`, `process_enhanced_nba_data.py`, `process_comprehensive_nba_data.py`
+  - Live demo: `https://arnolda2.github.io/Narrative-Visualization/`
+
+### Job Application Tracker v2
+An enhanced iteration of the Job Application Tracker with improved launcher options and workflow polish.
+
+- **Features:**
+  - Same core tracker with auto-complete, filters, and analytics
+  - Multiple launch methods (desktop app, shell launcher, direct script)
+  - Project structure refinements and packaging scripts
+- **Technologies:** Python, PyQt5, PyQtChart, SQLite
+- **Use Case:** Job search management with streamlined launching
+- **Implementation Details:**
+  - Launcher scripts: `install_launcher.sh`, `launch_app_tracker.sh`
+  - Packaged app artifacts in `ApplicationTracker.app/`
+
+### Job Application Dashboard v3
+Further refined version focusing on stability, scripts, and packaging improvements.
+
+- **Features:**
+  - Same capabilities as prior versions with UX and packaging tweaks
+  - Consistent launcher experience
+- **Technologies:** Python, PyQt5, PyQtChart, SQLite
+- **Use Case:** Job tracking with an emphasis on easy deployment
+- **Implementation Details:**
+  - Updated scripts and app bundle in `ApplicationTracker.app/`

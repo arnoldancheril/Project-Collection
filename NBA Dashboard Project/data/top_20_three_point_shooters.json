@@ -1,0 +1,2020 @@
+[
+  {
+    "player": "Luke Kennard",
+    "career_three_pt_percentage": 43.9,
+    "career_three_pt_made": 790,
+    "career_three_pt_attempts": 1801,
+    "seasons_played": 7,
+    "years_active": "2018-2024",
+    "teams": [
+      "Detroit Pistons",
+      "Los Angeles Clippers",
+      "Memphis Grizzlies"
+    ],
+    "position_group": "G",
+    "seasons_data": [
+      {
+        "three_pt_attempts": 195,
+        "three_pt_made": 81,
+        "team": "Detroit Pistons",
+        "position_group": "G",
+        "three_pt_percentage": 41.5,
+        "year": 2018,
+        "player": "Luke Kennard"
+      },
+      {
+        "three_pt_attempts": 269,
+        "three_pt_made": 106,
+        "team": "Detroit Pistons",
+        "position_group": "G",
+        "three_pt_percentage": 39.4,
+        "year": 2019,
+        "player": "Luke Kennard"
+      },
+      {
+        "three_pt_attempts": 183,
+        "three_pt_made": 73,
+        "team": "Detroit Pistons",
+        "position_group": "G",
+        "three_pt_percentage": 39.9,
+        "year": 2020,
+        "player": "Luke Kennard"
+      },
+      {
+        "three_pt_attempts": 224,
+        "three_pt_made": 100,
+        "team": "Los Angeles Clippers",
+        "position_group": "G",
+        "three_pt_percentage": 44.6,
+        "year": 2021,
+        "player": "Luke Kennard"
+      },
+      {
+        "three_pt_attempts": 423,
+        "three_pt_made": 190,
+        "team": "Los Angeles Clippers",
+        "position_group": "G",
+        "three_pt_percentage": 44.9,
+        "year": 2022,
+        "player": "Luke Kennard"
+      },
+      {
+        "three_pt_attempts": 269,
+        "three_pt_made": 133,
+        "team": "Memphis Grizzlies",
+        "position_group": "G",
+        "three_pt_percentage": 49.4,
+        "year": 2023,
+        "player": "Luke Kennard"
+      },
+      {
+        "three_pt_attempts": 238,
+        "three_pt_made": 107,
+        "team": "Memphis Grizzlies",
+        "position_group": "G",
+        "three_pt_percentage": 45.0,
+        "year": 2024,
+        "player": "Luke Kennard"
+      }
+    ]
+  },
+  {
+    "player": "Jason Kapono",
+    "career_three_pt_percentage": 43.6,
+    "career_three_pt_made": 456,
+    "career_three_pt_attempts": 1046,
+    "seasons_played": 8,
+    "years_active": "2004-2012",
+    "teams": [
+      "Charlotte Bobcats",
+      "Toronto Raptors",
+      "Miami Heat",
+      "Philadelphia 76ers",
+      "Cleveland Cavaliers",
+      "Los Angeles Lakers"
+    ],
+    "position_group": "F",
+    "seasons_data": [
+      {
+        "three_pt_attempts": 44,
+        "three_pt_made": 21,
+        "team": "Cleveland Cavaliers",
+        "position_group": "F",
+        "three_pt_percentage": 47.7,
+        "year": 2004,
+        "player": "Jason Kapono"
+      },
+      {
+        "three_pt_attempts": 194,
+        "three_pt_made": 80,
+        "team": "Charlotte Bobcats",
+        "position_group": "F",
+        "three_pt_percentage": 41.2,
+        "year": 2005,
+        "player": "Jason Kapono"
+      },
+      {
+        "three_pt_attempts": 53,
+        "three_pt_made": 21,
+        "team": "Miami Heat",
+        "position_group": "F",
+        "three_pt_percentage": 39.6,
+        "year": 2006,
+        "player": "Jason Kapono"
+      },
+      {
+        "three_pt_attempts": 210,
+        "three_pt_made": 108,
+        "team": "Miami Heat",
+        "position_group": "F",
+        "three_pt_percentage": 51.4,
+        "year": 2007,
+        "player": "Jason Kapono"
+      },
+      {
+        "three_pt_attempts": 118,
+        "three_pt_made": 57,
+        "team": "Toronto Raptors",
+        "position_group": "F",
+        "three_pt_percentage": 48.3,
+        "year": 2008,
+        "player": "Jason Kapono"
+      },
+      {
+        "three_pt_attempts": 229,
+        "three_pt_made": 98,
+        "team": "Toronto Raptors",
+        "position_group": "G",
+        "three_pt_percentage": 42.8,
+        "year": 2009,
+        "player": "Jason Kapono"
+      },
+      {
+        "three_pt_attempts": 171,
+        "three_pt_made": 63,
+        "team": "Philadelphia 76ers",
+        "position_group": "F",
+        "three_pt_percentage": 36.8,
+        "year": 2010,
+        "player": "Jason Kapono"
+      },
+      {
+        "three_pt_attempts": 27,
+        "three_pt_made": 8,
+        "team": "Los Angeles Lakers",
+        "position_group": "G",
+        "three_pt_percentage": 29.6,
+        "year": 2012,
+        "player": "Jason Kapono"
+      }
+    ]
+  },
+  {
+    "player": "Joe Harris",
+    "career_three_pt_percentage": 43.6,
+    "career_three_pt_made": 1025,
+    "career_three_pt_attempts": 2351,
+    "seasons_played": 9,
+    "years_active": "2015-2024",
+    "teams": [
+      "Brooklyn Nets",
+      "Detroit Pistons",
+      "Cleveland Cavaliers"
+    ],
+    "position_group": "G",
+    "seasons_data": [
+      {
+        "three_pt_attempts": 84,
+        "three_pt_made": 31,
+        "team": "Cleveland Cavaliers",
+        "position_group": "G",
+        "three_pt_percentage": 36.9,
+        "year": 2015,
+        "player": "Joe Harris"
+      },
+      {
+        "three_pt_attempts": 221,
+        "three_pt_made": 85,
+        "team": "Brooklyn Nets",
+        "position_group": "G",
+        "three_pt_percentage": 38.5,
+        "year": 2017,
+        "player": "Joe Harris"
+      },
+      {
+        "three_pt_attempts": 359,
+        "three_pt_made": 150,
+        "team": "Brooklyn Nets",
+        "position_group": "G",
+        "three_pt_percentage": 41.8,
+        "year": 2018,
+        "player": "Joe Harris"
+      },
+      {
+        "three_pt_attempts": 386,
+        "three_pt_made": 183,
+        "team": "Brooklyn Nets",
+        "position_group": "G",
+        "three_pt_percentage": 47.4,
+        "year": 2019,
+        "player": "Joe Harris"
+      },
+      {
+        "three_pt_attempts": 406,
+        "three_pt_made": 172,
+        "team": "Brooklyn Nets",
+        "position_group": "F",
+        "three_pt_percentage": 42.4,
+        "year": 2020,
+        "player": "Joe Harris"
+      },
+      {
+        "three_pt_attempts": 444,
+        "three_pt_made": 211,
+        "team": "Brooklyn Nets",
+        "position_group": "F",
+        "three_pt_percentage": 47.5,
+        "year": 2021,
+        "player": "Joe Harris"
+      },
+      {
+        "three_pt_attempts": 88,
+        "three_pt_made": 41,
+        "team": "Brooklyn Nets",
+        "position_group": "F",
+        "three_pt_percentage": 46.6,
+        "year": 2022,
+        "player": "Joe Harris"
+      },
+      {
+        "three_pt_attempts": 333,
+        "three_pt_made": 142,
+        "team": "Brooklyn Nets",
+        "position_group": "G",
+        "three_pt_percentage": 42.6,
+        "year": 2023,
+        "player": "Joe Harris"
+      },
+      {
+        "three_pt_attempts": 30,
+        "three_pt_made": 10,
+        "team": "Detroit Pistons",
+        "position_group": "G",
+        "three_pt_percentage": 33.3,
+        "year": 2024,
+        "player": "Joe Harris"
+      }
+    ]
+  },
+  {
+    "player": "Steve Nash",
+    "career_three_pt_percentage": 43.3,
+    "career_three_pt_made": 1116,
+    "career_three_pt_attempts": 2578,
+    "seasons_played": 11,
+    "years_active": "2004-2014",
+    "teams": [
+      "Los Angeles Lakers",
+      "Phoenix Suns",
+      "Dallas Mavericks"
+    ],
+    "position_group": "G",
+    "seasons_data": [
+      {
+        "three_pt_attempts": 257,
+        "three_pt_made": 104,
+        "team": "Dallas Mavericks",
+        "position_group": "G",
+        "three_pt_percentage": 40.5,
+        "year": 2004,
+        "player": "Steve Nash"
+      },
+      {
+        "three_pt_attempts": 218,
+        "three_pt_made": 94,
+        "team": "Phoenix Suns",
+        "position_group": "G",
+        "three_pt_percentage": 43.1,
+        "year": 2005,
+        "player": "Steve Nash"
+      },
+      {
+        "three_pt_attempts": 342,
+        "three_pt_made": 150,
+        "team": "Phoenix Suns",
+        "position_group": "G",
+        "three_pt_percentage": 43.9,
+        "year": 2006,
+        "player": "Steve Nash"
+      },
+      {
+        "three_pt_attempts": 343,
+        "three_pt_made": 156,
+        "team": "Phoenix Suns",
+        "position_group": "G",
+        "three_pt_percentage": 45.5,
+        "year": 2007,
+        "player": "Steve Nash"
+      },
+      {
+        "three_pt_attempts": 381,
+        "three_pt_made": 179,
+        "team": "Phoenix Suns",
+        "position_group": "G",
+        "three_pt_percentage": 47.0,
+        "year": 2008,
+        "player": "Steve Nash"
+      },
+      {
+        "three_pt_attempts": 246,
+        "three_pt_made": 108,
+        "team": "Phoenix Suns",
+        "position_group": "G",
+        "three_pt_percentage": 43.9,
+        "year": 2009,
+        "player": "Steve Nash"
+      },
+      {
+        "three_pt_attempts": 291,
+        "three_pt_made": 124,
+        "team": "Phoenix Suns",
+        "position_group": "G",
+        "three_pt_percentage": 42.6,
+        "year": 2010,
+        "player": "Steve Nash"
+      },
+      {
+        "three_pt_attempts": 205,
+        "three_pt_made": 81,
+        "team": "Phoenix Suns",
+        "position_group": "G",
+        "three_pt_percentage": 39.5,
+        "year": 2011,
+        "player": "Steve Nash"
+      },
+      {
+        "three_pt_attempts": 141,
+        "three_pt_made": 55,
+        "team": "Phoenix Suns",
+        "position_group": "G",
+        "three_pt_percentage": 39.0,
+        "year": 2012,
+        "player": "Steve Nash"
+      },
+      {
+        "three_pt_attempts": 130,
+        "three_pt_made": 57,
+        "team": "Los Angeles Lakers",
+        "position_group": "G",
+        "three_pt_percentage": 43.8,
+        "year": 2013,
+        "player": "Steve Nash"
+      },
+      {
+        "three_pt_attempts": 24,
+        "three_pt_made": 8,
+        "team": "Los Angeles Lakers",
+        "position_group": "G",
+        "three_pt_percentage": 33.3,
+        "year": 2014,
+        "player": "Steve Nash"
+      }
+    ]
+  },
+  {
+    "player": "Steve Novak",
+    "career_three_pt_percentage": 43.2,
+    "career_three_pt_made": 575,
+    "career_three_pt_attempts": 1331,
+    "seasons_played": 10,
+    "years_active": "2007-2016",
+    "teams": [
+      "San Antonio Spurs",
+      "Toronto Raptors",
+      "New York Knicks",
+      "Los Angeles Clippers",
+      "Milwaukee Bucks",
+      "Oklahoma City Thunder",
+      "Houston Rockets"
+    ],
+    "position_group": "F",
+    "seasons_data": [
+      {
+        "three_pt_attempts": 39,
+        "three_pt_made": 13,
+        "team": "Houston Rockets",
+        "position_group": "F",
+        "three_pt_percentage": 33.3,
+        "year": 2007,
+        "player": "Steve Novak"
+      },
+      {
+        "three_pt_attempts": 71,
+        "three_pt_made": 34,
+        "team": "Houston Rockets",
+        "position_group": "F",
+        "three_pt_percentage": 47.9,
+        "year": 2008,
+        "player": "Steve Novak"
+      },
+      {
+        "three_pt_attempts": 285,
+        "three_pt_made": 119,
+        "team": "Los Angeles Clippers",
+        "position_group": "F",
+        "three_pt_percentage": 41.8,
+        "year": 2009,
+        "player": "Steve Novak"
+      },
+      {
+        "three_pt_attempts": 71,
+        "three_pt_made": 22,
+        "team": "Los Angeles Clippers",
+        "position_group": "F",
+        "three_pt_percentage": 31.0,
+        "year": 2010,
+        "player": "Steve Novak"
+      },
+      {
+        "three_pt_attempts": 46,
+        "three_pt_made": 26,
+        "team": "San Antonio Spurs",
+        "position_group": "F",
+        "three_pt_percentage": 56.5,
+        "year": 2011,
+        "player": "Steve Novak"
+      },
+      {
+        "three_pt_attempts": 282,
+        "three_pt_made": 133,
+        "team": "New York Knicks",
+        "position_group": "F",
+        "three_pt_percentage": 47.2,
+        "year": 2012,
+        "player": "Steve Novak"
+      },
+      {
+        "three_pt_attempts": 352,
+        "three_pt_made": 150,
+        "team": "New York Knicks",
+        "position_group": "F",
+        "three_pt_percentage": 42.6,
+        "year": 2013,
+        "player": "Steve Novak"
+      },
+      {
+        "three_pt_attempts": 122,
+        "three_pt_made": 52,
+        "team": "Toronto Raptors",
+        "position_group": "F",
+        "three_pt_percentage": 42.6,
+        "year": 2014,
+        "player": "Steve Novak"
+      },
+      {
+        "three_pt_attempts": 48,
+        "three_pt_made": 19,
+        "team": "Oklahoma City Thunder",
+        "position_group": "F",
+        "three_pt_percentage": 39.6,
+        "year": 2015,
+        "player": "Steve Novak"
+      },
+      {
+        "three_pt_attempts": 15,
+        "three_pt_made": 7,
+        "team": "Milwaukee Bucks",
+        "position_group": "F",
+        "three_pt_percentage": 46.7,
+        "year": 2016,
+        "player": "Steve Novak"
+      }
+    ]
+  },
+  {
+    "player": "Seth Curry",
+    "career_three_pt_percentage": 43.1,
+    "career_three_pt_made": 862,
+    "career_three_pt_attempts": 2000,
+    "seasons_played": 8,
+    "years_active": "2016-2024",
+    "teams": [
+      "Portland Trail Blazers",
+      "Brooklyn Nets",
+      "Philadelphia 76ers",
+      "Dallas Mavericks",
+      "Sacramento Kings"
+    ],
+    "position_group": "G",
+    "seasons_data": [
+      {
+        "three_pt_attempts": 111,
+        "three_pt_made": 50,
+        "team": "Sacramento Kings",
+        "position_group": "G",
+        "three_pt_percentage": 45.0,
+        "year": 2016,
+        "player": "Seth Curry"
+      },
+      {
+        "three_pt_attempts": 322,
+        "three_pt_made": 137,
+        "team": "Dallas Mavericks",
+        "position_group": "G",
+        "three_pt_percentage": 42.5,
+        "year": 2017,
+        "player": "Seth Curry"
+      },
+      {
+        "three_pt_attempts": 251,
+        "three_pt_made": 113,
+        "team": "Portland Trail Blazers",
+        "position_group": "G",
+        "three_pt_percentage": 45.0,
+        "year": 2019,
+        "player": "Seth Curry"
+      },
+      {
+        "three_pt_attempts": 321,
+        "three_pt_made": 145,
+        "team": "Dallas Mavericks",
+        "position_group": "G",
+        "three_pt_percentage": 45.2,
+        "year": 2020,
+        "player": "Seth Curry"
+      },
+      {
+        "three_pt_attempts": 281,
+        "three_pt_made": 127,
+        "team": "Philadelphia 76ers",
+        "position_group": "G",
+        "three_pt_percentage": 45.2,
+        "year": 2021,
+        "player": "Seth Curry"
+      },
+      {
+        "three_pt_attempts": 374,
+        "three_pt_made": 158,
+        "team": "Brooklyn Nets",
+        "position_group": "G",
+        "three_pt_percentage": 42.2,
+        "year": 2022,
+        "player": "Seth Curry"
+      },
+      {
+        "three_pt_attempts": 232,
+        "three_pt_made": 94,
+        "team": "Brooklyn Nets",
+        "position_group": "G",
+        "three_pt_percentage": 40.5,
+        "year": 2023,
+        "player": "Seth Curry"
+      },
+      {
+        "three_pt_attempts": 108,
+        "three_pt_made": 38,
+        "team": "Dallas Mavericks",
+        "position_group": "G",
+        "three_pt_percentage": 35.2,
+        "year": 2024,
+        "player": "Seth Curry"
+      }
+    ]
+  },
+  {
+    "player": "Kyle Korver",
+    "career_three_pt_percentage": 42.8,
+    "career_three_pt_made": 2450,
+    "career_three_pt_attempts": 5718,
+    "seasons_played": 17,
+    "years_active": "2004-2020",
+    "teams": [
+      "Utah Jazz",
+      "Chicago Bulls",
+      "Atlanta Hawks",
+      "Philadelphia 76ers",
+      "Cleveland Cavaliers",
+      "Milwaukee Bucks"
+    ],
+    "position_group": "F",
+    "seasons_data": [
+      {
+        "three_pt_attempts": 207,
+        "three_pt_made": 81,
+        "team": "Philadelphia 76ers",
+        "position_group": "F",
+        "three_pt_percentage": 39.1,
+        "year": 2004,
+        "player": "Kyle Korver"
+      },
+      {
+        "three_pt_attempts": 558,
+        "three_pt_made": 226,
+        "team": "Philadelphia 76ers",
+        "position_group": "F",
+        "three_pt_percentage": 40.5,
+        "year": 2005,
+        "player": "Kyle Korver"
+      },
+      {
+        "three_pt_attempts": 438,
+        "three_pt_made": 184,
+        "team": "Philadelphia 76ers",
+        "position_group": "F",
+        "three_pt_percentage": 42.0,
+        "year": 2006,
+        "player": "Kyle Korver"
+      },
+      {
+        "three_pt_attempts": 307,
+        "three_pt_made": 132,
+        "team": "Philadelphia 76ers",
+        "position_group": "F",
+        "three_pt_percentage": 43.0,
+        "year": 2007,
+        "player": "Kyle Korver"
+      },
+      {
+        "three_pt_attempts": 296,
+        "three_pt_made": 111,
+        "team": "Utah Jazz",
+        "position_group": "G",
+        "three_pt_percentage": 37.5,
+        "year": 2008,
+        "player": "Kyle Korver"
+      },
+      {
+        "three_pt_attempts": 267,
+        "three_pt_made": 103,
+        "team": "Utah Jazz",
+        "position_group": "F",
+        "three_pt_percentage": 38.6,
+        "year": 2009,
+        "player": "Kyle Korver"
+      },
+      {
+        "three_pt_attempts": 110,
+        "three_pt_made": 59,
+        "team": "Utah Jazz",
+        "position_group": "G",
+        "three_pt_percentage": 53.6,
+        "year": 2010,
+        "player": "Kyle Korver"
+      },
+      {
+        "three_pt_attempts": 289,
+        "three_pt_made": 120,
+        "team": "Chicago Bulls",
+        "position_group": "G",
+        "three_pt_percentage": 41.5,
+        "year": 2011,
+        "player": "Kyle Korver"
+      },
+      {
+        "three_pt_attempts": 270,
+        "three_pt_made": 118,
+        "team": "Chicago Bulls",
+        "position_group": "G",
+        "three_pt_percentage": 43.7,
+        "year": 2012,
+        "player": "Kyle Korver"
+      },
+      {
+        "three_pt_attempts": 414,
+        "three_pt_made": 189,
+        "team": "Atlanta Hawks",
+        "position_group": "F",
+        "three_pt_percentage": 45.7,
+        "year": 2013,
+        "player": "Kyle Korver"
+      },
+      {
+        "three_pt_attempts": 392,
+        "three_pt_made": 185,
+        "team": "Atlanta Hawks",
+        "position_group": "G",
+        "three_pt_percentage": 47.2,
+        "year": 2014,
+        "player": "Kyle Korver"
+      },
+      {
+        "three_pt_attempts": 449,
+        "three_pt_made": 221,
+        "team": "Atlanta Hawks",
+        "position_group": "G",
+        "three_pt_percentage": 49.2,
+        "year": 2015,
+        "player": "Kyle Korver"
+      },
+      {
+        "three_pt_attempts": 398,
+        "three_pt_made": 158,
+        "team": "Atlanta Hawks",
+        "position_group": "G",
+        "three_pt_percentage": 39.7,
+        "year": 2016,
+        "player": "Kyle Korver"
+      },
+      {
+        "three_pt_attempts": 359,
+        "three_pt_made": 162,
+        "team": "Cleveland Cavaliers",
+        "position_group": "G",
+        "three_pt_percentage": 45.1,
+        "year": 2017,
+        "player": "Kyle Korver"
+      },
+      {
+        "three_pt_attempts": 376,
+        "three_pt_made": 164,
+        "team": "Cleveland Cavaliers",
+        "position_group": "G",
+        "three_pt_percentage": 43.6,
+        "year": 2018,
+        "player": "Kyle Korver"
+      },
+      {
+        "three_pt_attempts": 351,
+        "three_pt_made": 138,
+        "team": "Utah Jazz",
+        "position_group": "G",
+        "three_pt_percentage": 39.3,
+        "year": 2019,
+        "player": "Kyle Korver"
+      },
+      {
+        "three_pt_attempts": 237,
+        "three_pt_made": 99,
+        "team": "Milwaukee Bucks",
+        "position_group": "F",
+        "three_pt_percentage": 41.8,
+        "year": 2020,
+        "player": "Kyle Korver"
+      }
+    ]
+  },
+  {
+    "player": "Stephen Curry",
+    "career_three_pt_percentage": 42.5,
+    "career_three_pt_made": 3745,
+    "career_three_pt_attempts": 8802,
+    "seasons_played": 15,
+    "years_active": "2010-2024",
+    "teams": [
+      "Golden State Warriors"
+    ],
+    "position_group": "G",
+    "seasons_data": [
+      {
+        "three_pt_attempts": 380,
+        "three_pt_made": 166,
+        "team": "Golden State Warriors",
+        "position_group": "G",
+        "three_pt_percentage": 43.7,
+        "year": 2010,
+        "player": "Stephen Curry"
+      },
+      {
+        "three_pt_attempts": 342,
+        "three_pt_made": 151,
+        "team": "Golden State Warriors",
+        "position_group": "G",
+        "three_pt_percentage": 44.2,
+        "year": 2011,
+        "player": "Stephen Curry"
+      },
+      {
+        "three_pt_attempts": 121,
+        "three_pt_made": 55,
+        "team": "Golden State Warriors",
+        "position_group": "G",
+        "three_pt_percentage": 45.5,
+        "year": 2012,
+        "player": "Stephen Curry"
+      },
+      {
+        "three_pt_attempts": 600,
+        "three_pt_made": 272,
+        "team": "Golden State Warriors",
+        "position_group": "G",
+        "three_pt_percentage": 45.3,
+        "year": 2013,
+        "player": "Stephen Curry"
+      },
+      {
+        "three_pt_attempts": 615,
+        "three_pt_made": 261,
+        "team": "Golden State Warriors",
+        "position_group": "G",
+        "three_pt_percentage": 42.4,
+        "year": 2014,
+        "player": "Stephen Curry"
+      },
+      {
+        "three_pt_attempts": 646,
+        "three_pt_made": 286,
+        "team": "Golden State Warriors",
+        "position_group": "G",
+        "three_pt_percentage": 44.3,
+        "year": 2015,
+        "player": "Stephen Curry"
+      },
+      {
+        "three_pt_attempts": 884,
+        "three_pt_made": 401,
+        "team": "Golden State Warriors",
+        "position_group": "G",
+        "three_pt_percentage": 45.4,
+        "year": 2016,
+        "player": "Stephen Curry"
+      },
+      {
+        "three_pt_attempts": 788,
+        "three_pt_made": 323,
+        "team": "Golden State Warriors",
+        "position_group": "G",
+        "three_pt_percentage": 41.0,
+        "year": 2017,
+        "player": "Stephen Curry"
+      },
+      {
+        "three_pt_attempts": 501,
+        "three_pt_made": 212,
+        "team": "Golden State Warriors",
+        "position_group": "G",
+        "three_pt_percentage": 42.3,
+        "year": 2018,
+        "player": "Stephen Curry"
+      },
+      {
+        "three_pt_attempts": 810,
+        "three_pt_made": 354,
+        "team": "Golden State Warriors",
+        "position_group": "G",
+        "three_pt_percentage": 43.7,
+        "year": 2019,
+        "player": "Stephen Curry"
+      },
+      {
+        "three_pt_attempts": 49,
+        "three_pt_made": 12,
+        "team": "Golden State Warriors",
+        "position_group": "G",
+        "three_pt_percentage": 24.5,
+        "year": 2020,
+        "player": "Stephen Curry"
+      },
+      {
+        "three_pt_attempts": 801,
+        "three_pt_made": 337,
+        "team": "Golden State Warriors",
+        "position_group": "G",
+        "three_pt_percentage": 42.1,
+        "year": 2021,
+        "player": "Stephen Curry"
+      },
+      {
+        "three_pt_attempts": 750,
+        "three_pt_made": 285,
+        "team": "Golden State Warriors",
+        "position_group": "G",
+        "three_pt_percentage": 38.0,
+        "year": 2022,
+        "player": "Stephen Curry"
+      },
+      {
+        "three_pt_attempts": 639,
+        "three_pt_made": 273,
+        "team": "Golden State Warriors",
+        "position_group": "G",
+        "three_pt_percentage": 42.7,
+        "year": 2023,
+        "player": "Stephen Curry"
+      },
+      {
+        "three_pt_attempts": 876,
+        "three_pt_made": 357,
+        "team": "Golden State Warriors",
+        "position_group": "G",
+        "three_pt_percentage": 40.8,
+        "year": 2024,
+        "player": "Stephen Curry"
+      }
+    ]
+  },
+  {
+    "player": "Sam Hauser",
+    "career_three_pt_percentage": 42.2,
+    "career_three_pt_made": 356,
+    "career_three_pt_attempts": 844,
+    "seasons_played": 3,
+    "years_active": "2022-2024",
+    "teams": [
+      "Boston Celtics"
+    ],
+    "position_group": "F",
+    "seasons_data": [
+      {
+        "three_pt_attempts": 44,
+        "three_pt_made": 19,
+        "team": "Boston Celtics",
+        "position_group": "F",
+        "three_pt_percentage": 43.2,
+        "year": 2022,
+        "player": "Sam Hauser"
+      },
+      {
+        "three_pt_attempts": 335,
+        "three_pt_made": 140,
+        "team": "Boston Celtics",
+        "position_group": "F",
+        "three_pt_percentage": 41.8,
+        "year": 2023,
+        "player": "Sam Hauser"
+      },
+      {
+        "three_pt_attempts": 465,
+        "three_pt_made": 197,
+        "team": "Boston Celtics",
+        "position_group": "F",
+        "three_pt_percentage": 42.4,
+        "year": 2024,
+        "player": "Sam Hauser"
+      }
+    ]
+  },
+  {
+    "player": "Anthony Morrow",
+    "career_three_pt_percentage": 41.6,
+    "career_three_pt_made": 807,
+    "career_three_pt_attempts": 1939,
+    "seasons_played": 9,
+    "years_active": "2009-2017",
+    "teams": [
+      "New Orleans Pelicans",
+      "Golden State Warriors",
+      "Chicago Bulls",
+      "New Jersey Nets",
+      "Dallas Mavericks",
+      "Oklahoma City Thunder"
+    ],
+    "position_group": "G",
+    "seasons_data": [
+      {
+        "three_pt_attempts": 184,
+        "three_pt_made": 86,
+        "team": "Golden State Warriors",
+        "position_group": "G",
+        "three_pt_percentage": 46.7,
+        "year": 2009,
+        "player": "Anthony Morrow"
+      },
+      {
+        "three_pt_attempts": 307,
+        "three_pt_made": 140,
+        "team": "Golden State Warriors",
+        "position_group": "G",
+        "three_pt_percentage": 45.6,
+        "year": 2010,
+        "player": "Anthony Morrow"
+      },
+      {
+        "three_pt_attempts": 260,
+        "three_pt_made": 110,
+        "team": "New Jersey Nets",
+        "position_group": "G",
+        "three_pt_percentage": 42.3,
+        "year": 2011,
+        "player": "Anthony Morrow"
+      },
+      {
+        "three_pt_attempts": 286,
+        "three_pt_made": 106,
+        "team": "New Jersey Nets",
+        "position_group": "G",
+        "three_pt_percentage": 37.1,
+        "year": 2012,
+        "player": "Anthony Morrow"
+      },
+      {
+        "three_pt_attempts": 43,
+        "three_pt_made": 16,
+        "team": "Dallas Mavericks",
+        "position_group": "G",
+        "three_pt_percentage": 37.2,
+        "year": 2013,
+        "player": "Anthony Morrow"
+      },
+      {
+        "three_pt_attempts": 195,
+        "three_pt_made": 88,
+        "team": "New Orleans Pelicans",
+        "position_group": "G",
+        "three_pt_percentage": 45.1,
+        "year": 2014,
+        "player": "Anthony Morrow"
+      },
+      {
+        "three_pt_attempts": 325,
+        "three_pt_made": 141,
+        "team": "Oklahoma City Thunder",
+        "position_group": "G",
+        "three_pt_percentage": 43.4,
+        "year": 2015,
+        "player": "Anthony Morrow"
+      },
+      {
+        "three_pt_attempts": 205,
+        "three_pt_made": 79,
+        "team": "Oklahoma City Thunder",
+        "position_group": "G",
+        "three_pt_percentage": 38.5,
+        "year": 2016,
+        "player": "Anthony Morrow"
+      },
+      {
+        "three_pt_attempts": 134,
+        "three_pt_made": 41,
+        "team": "Chicago Bulls",
+        "position_group": "G",
+        "three_pt_percentage": 30.6,
+        "year": 2017,
+        "player": "Anthony Morrow"
+      }
+    ]
+  },
+  {
+    "player": "Matt Bonner",
+    "career_three_pt_percentage": 41.5,
+    "career_three_pt_made": 798,
+    "career_three_pt_attempts": 1922,
+    "seasons_played": 12,
+    "years_active": "2005-2016",
+    "teams": [
+      "Toronto Raptors",
+      "San Antonio Spurs"
+    ],
+    "position_group": "C",
+    "seasons_data": [
+      {
+        "three_pt_attempts": 92,
+        "three_pt_made": 39,
+        "team": "Toronto Raptors",
+        "position_group": "C",
+        "three_pt_percentage": 42.4,
+        "year": 2005,
+        "player": "Matt Bonner"
+      },
+      {
+        "three_pt_attempts": 243,
+        "three_pt_made": 102,
+        "team": "Toronto Raptors",
+        "position_group": "F",
+        "three_pt_percentage": 42.0,
+        "year": 2006,
+        "player": "Matt Bonner"
+      },
+      {
+        "three_pt_attempts": 94,
+        "three_pt_made": 36,
+        "team": "San Antonio Spurs",
+        "position_group": "F",
+        "three_pt_percentage": 38.3,
+        "year": 2007,
+        "player": "Matt Bonner"
+      },
+      {
+        "three_pt_attempts": 137,
+        "three_pt_made": 46,
+        "team": "San Antonio Spurs",
+        "position_group": "F",
+        "three_pt_percentage": 33.6,
+        "year": 2008,
+        "player": "Matt Bonner"
+      },
+      {
+        "three_pt_attempts": 269,
+        "three_pt_made": 119,
+        "team": "San Antonio Spurs",
+        "position_group": "F",
+        "three_pt_percentage": 44.2,
+        "year": 2009,
+        "player": "Matt Bonner"
+      },
+      {
+        "three_pt_attempts": 231,
+        "three_pt_made": 90,
+        "team": "San Antonio Spurs",
+        "position_group": "F",
+        "three_pt_percentage": 39.0,
+        "year": 2010,
+        "player": "Matt Bonner"
+      },
+      {
+        "three_pt_attempts": 230,
+        "three_pt_made": 105,
+        "team": "San Antonio Spurs",
+        "position_group": "F",
+        "three_pt_percentage": 45.7,
+        "year": 2011,
+        "player": "Matt Bonner"
+      },
+      {
+        "three_pt_attempts": 250,
+        "three_pt_made": 105,
+        "team": "San Antonio Spurs",
+        "position_group": "F",
+        "three_pt_percentage": 42.0,
+        "year": 2012,
+        "player": "Matt Bonner"
+      },
+      {
+        "three_pt_attempts": 120,
+        "three_pt_made": 53,
+        "team": "San Antonio Spurs",
+        "position_group": "F",
+        "three_pt_percentage": 44.2,
+        "year": 2013,
+        "player": "Matt Bonner"
+      },
+      {
+        "three_pt_attempts": 97,
+        "three_pt_made": 42,
+        "team": "San Antonio Spurs",
+        "position_group": "F",
+        "three_pt_percentage": 43.3,
+        "year": 2014,
+        "player": "Matt Bonner"
+      },
+      {
+        "three_pt_attempts": 126,
+        "three_pt_made": 46,
+        "team": "San Antonio Spurs",
+        "position_group": "F",
+        "three_pt_percentage": 36.5,
+        "year": 2015,
+        "player": "Matt Bonner"
+      },
+      {
+        "three_pt_attempts": 33,
+        "three_pt_made": 15,
+        "team": "San Antonio Spurs",
+        "position_group": "C",
+        "three_pt_percentage": 45.5,
+        "year": 2016,
+        "player": "Matt Bonner"
+      }
+    ]
+  },
+  {
+    "player": "Desmond Bane",
+    "career_three_pt_percentage": 41.5,
+    "career_three_pt_made": 648,
+    "career_three_pt_attempts": 1562,
+    "seasons_played": 4,
+    "years_active": "2021-2024",
+    "teams": [
+      "Memphis Grizzlies"
+    ],
+    "position_group": "G",
+    "seasons_data": [
+      {
+        "three_pt_attempts": 271,
+        "three_pt_made": 117,
+        "team": "Memphis Grizzlies",
+        "position_group": "G",
+        "three_pt_percentage": 43.2,
+        "year": 2021,
+        "player": "Desmond Bane"
+      },
+      {
+        "three_pt_attempts": 523,
+        "three_pt_made": 228,
+        "team": "Memphis Grizzlies",
+        "position_group": "G",
+        "three_pt_percentage": 43.6,
+        "year": 2022,
+        "player": "Desmond Bane"
+      },
+      {
+        "three_pt_attempts": 407,
+        "three_pt_made": 166,
+        "team": "Memphis Grizzlies",
+        "position_group": "G",
+        "three_pt_percentage": 40.8,
+        "year": 2023,
+        "player": "Desmond Bane"
+      },
+      {
+        "three_pt_attempts": 361,
+        "three_pt_made": 137,
+        "team": "Memphis Grizzlies",
+        "position_group": "G",
+        "three_pt_percentage": 38.0,
+        "year": 2024,
+        "player": "Desmond Bane"
+      }
+    ]
+  },
+  {
+    "player": "JJ Redick",
+    "career_three_pt_percentage": 41.4,
+    "career_three_pt_made": 1940,
+    "career_three_pt_attempts": 4690,
+    "seasons_played": 15,
+    "years_active": "2007-2021",
+    "teams": [
+      "New Orleans Pelicans",
+      "Orlando Magic",
+      "Philadelphia 76ers",
+      "Los Angeles Clippers",
+      "Dallas Mavericks",
+      "Milwaukee Bucks",
+      "LA Clippers"
+    ],
+    "position_group": "G",
+    "seasons_data": [
+      {
+        "three_pt_attempts": 98,
+        "three_pt_made": 38,
+        "team": "Orlando Magic",
+        "position_group": "G",
+        "three_pt_percentage": 38.8,
+        "year": 2007,
+        "player": "JJ Redick"
+      },
+      {
+        "three_pt_attempts": 43,
+        "three_pt_made": 17,
+        "team": "Orlando Magic",
+        "position_group": "G",
+        "three_pt_percentage": 39.5,
+        "year": 2008,
+        "player": "JJ Redick"
+      },
+      {
+        "three_pt_attempts": 179,
+        "three_pt_made": 67,
+        "team": "Orlando Magic",
+        "position_group": "G",
+        "three_pt_percentage": 37.4,
+        "year": 2009,
+        "player": "JJ Redick"
+      },
+      {
+        "three_pt_attempts": 274,
+        "three_pt_made": 111,
+        "team": "Orlando Magic",
+        "position_group": "G",
+        "three_pt_percentage": 40.5,
+        "year": 2010,
+        "player": "JJ Redick"
+      },
+      {
+        "three_pt_attempts": 219,
+        "three_pt_made": 87,
+        "team": "Orlando Magic",
+        "position_group": "G",
+        "three_pt_percentage": 39.7,
+        "year": 2011,
+        "player": "JJ Redick"
+      },
+      {
+        "three_pt_attempts": 268,
+        "three_pt_made": 112,
+        "team": "Orlando Magic",
+        "position_group": "G",
+        "three_pt_percentage": 41.8,
+        "year": 2012,
+        "player": "JJ Redick"
+      },
+      {
+        "three_pt_attempts": 451,
+        "three_pt_made": 165,
+        "team": "Milwaukee Bucks",
+        "position_group": "G",
+        "three_pt_percentage": 36.6,
+        "year": 2013,
+        "player": "JJ Redick"
+      },
+      {
+        "three_pt_attempts": 185,
+        "three_pt_made": 73,
+        "team": "Los Angeles Clippers",
+        "position_group": "G",
+        "three_pt_percentage": 39.5,
+        "year": 2014,
+        "player": "JJ Redick"
+      },
+      {
+        "three_pt_attempts": 458,
+        "three_pt_made": 200,
+        "team": "Los Angeles Clippers",
+        "position_group": "G",
+        "three_pt_percentage": 43.7,
+        "year": 2015,
+        "player": "JJ Redick"
+      },
+      {
+        "three_pt_attempts": 413,
+        "three_pt_made": 197,
+        "team": "LA Clippers",
+        "position_group": "G",
+        "three_pt_percentage": 47.7,
+        "year": 2016,
+        "player": "JJ Redick"
+      },
+      {
+        "three_pt_attempts": 460,
+        "three_pt_made": 194,
+        "team": "LA Clippers",
+        "position_group": "G",
+        "three_pt_percentage": 42.2,
+        "year": 2017,
+        "player": "JJ Redick"
+      },
+      {
+        "three_pt_attempts": 460,
+        "three_pt_made": 193,
+        "team": "Philadelphia 76ers",
+        "position_group": "G",
+        "three_pt_percentage": 42.0,
+        "year": 2018,
+        "player": "JJ Redick"
+      },
+      {
+        "three_pt_attempts": 605,
+        "three_pt_made": 240,
+        "team": "Philadelphia 76ers",
+        "position_group": "G",
+        "three_pt_percentage": 39.7,
+        "year": 2019,
+        "player": "JJ Redick"
+      },
+      {
+        "three_pt_attempts": 398,
+        "three_pt_made": 180,
+        "team": "New Orleans Pelicans",
+        "position_group": "G",
+        "three_pt_percentage": 45.2,
+        "year": 2020,
+        "player": "JJ Redick"
+      },
+      {
+        "three_pt_attempts": 179,
+        "three_pt_made": 66,
+        "team": "Dallas Mavericks",
+        "position_group": "G",
+        "three_pt_percentage": 36.9,
+        "year": 2021,
+        "player": "JJ Redick"
+      }
+    ]
+  },
+  {
+    "player": "Mike Miller",
+    "career_three_pt_percentage": 41.3,
+    "career_three_pt_made": 1217,
+    "career_three_pt_attempts": 2944,
+    "seasons_played": 14,
+    "years_active": "2004-2017",
+    "teams": [
+      "Denver Nuggets",
+      "Minnesota Timberwolves",
+      "Memphis Grizzlies",
+      "Miami Heat",
+      "Washington Wizards",
+      "Cleveland Cavaliers"
+    ],
+    "position_group": "F",
+    "seasons_data": [
+      {
+        "three_pt_attempts": 215,
+        "three_pt_made": 80,
+        "team": "Memphis Grizzlies",
+        "position_group": "F",
+        "three_pt_percentage": 37.2,
+        "year": 2004,
+        "player": "Mike Miller"
+      },
+      {
+        "three_pt_attempts": 323,
+        "three_pt_made": 140,
+        "team": "Memphis Grizzlies",
+        "position_group": "F",
+        "three_pt_percentage": 43.3,
+        "year": 2005,
+        "player": "Mike Miller"
+      },
+      {
+        "three_pt_attempts": 339,
+        "three_pt_made": 138,
+        "team": "Memphis Grizzlies",
+        "position_group": "G",
+        "three_pt_percentage": 40.7,
+        "year": 2006,
+        "player": "Mike Miller"
+      },
+      {
+        "three_pt_attempts": 498,
+        "three_pt_made": 202,
+        "team": "Memphis Grizzlies",
+        "position_group": "G",
+        "three_pt_percentage": 40.6,
+        "year": 2007,
+        "player": "Mike Miller"
+      },
+      {
+        "three_pt_attempts": 359,
+        "three_pt_made": 155,
+        "team": "Memphis Grizzlies",
+        "position_group": "G",
+        "three_pt_percentage": 43.2,
+        "year": 2008,
+        "player": "Mike Miller"
+      },
+      {
+        "three_pt_attempts": 226,
+        "three_pt_made": 85,
+        "team": "Minnesota Timberwolves",
+        "position_group": "F",
+        "three_pt_percentage": 37.6,
+        "year": 2009,
+        "player": "Mike Miller"
+      },
+      {
+        "three_pt_attempts": 171,
+        "three_pt_made": 82,
+        "team": "Washington Wizards",
+        "position_group": "G",
+        "three_pt_percentage": 48.0,
+        "year": 2010,
+        "player": "Mike Miller"
+      },
+      {
+        "three_pt_attempts": 118,
+        "three_pt_made": 43,
+        "team": "Miami Heat",
+        "position_group": "G",
+        "three_pt_percentage": 36.4,
+        "year": 2011,
+        "player": "Mike Miller"
+      },
+      {
+        "three_pt_attempts": 117,
+        "three_pt_made": 53,
+        "team": "Miami Heat",
+        "position_group": "G",
+        "three_pt_percentage": 45.3,
+        "year": 2012,
+        "player": "Mike Miller"
+      },
+      {
+        "three_pt_attempts": 175,
+        "three_pt_made": 73,
+        "team": "Miami Heat",
+        "position_group": "F",
+        "three_pt_percentage": 41.7,
+        "year": 2013,
+        "player": "Mike Miller"
+      },
+      {
+        "three_pt_attempts": 233,
+        "three_pt_made": 107,
+        "team": "Memphis Grizzlies",
+        "position_group": "F",
+        "three_pt_percentage": 45.9,
+        "year": 2014,
+        "player": "Mike Miller"
+      },
+      {
+        "three_pt_attempts": 98,
+        "three_pt_made": 32,
+        "team": "Cleveland Cavaliers",
+        "position_group": "F",
+        "three_pt_percentage": 32.7,
+        "year": 2015,
+        "player": "Mike Miller"
+      },
+      {
+        "three_pt_attempts": 52,
+        "three_pt_made": 19,
+        "team": "Denver Nuggets",
+        "position_group": "F",
+        "three_pt_percentage": 36.5,
+        "year": 2016,
+        "player": "Mike Miller"
+      },
+      {
+        "three_pt_attempts": 20,
+        "three_pt_made": 8,
+        "team": "Denver Nuggets",
+        "position_group": "F",
+        "three_pt_percentage": 40.0,
+        "year": 2017,
+        "player": "Mike Miller"
+      }
+    ]
+  },
+  {
+    "player": "Klay Thompson",
+    "career_three_pt_percentage": 41.3,
+    "career_three_pt_made": 2482,
+    "career_three_pt_attempts": 6011,
+    "seasons_played": 11,
+    "years_active": "2012-2024",
+    "teams": [
+      "Golden State Warriors"
+    ],
+    "position_group": "G",
+    "seasons_data": [
+      {
+        "three_pt_attempts": 268,
+        "three_pt_made": 111,
+        "team": "Golden State Warriors",
+        "position_group": "G",
+        "three_pt_percentage": 41.4,
+        "year": 2012,
+        "player": "Klay Thompson"
+      },
+      {
+        "three_pt_attempts": 526,
+        "three_pt_made": 211,
+        "team": "Golden State Warriors",
+        "position_group": "G",
+        "three_pt_percentage": 40.1,
+        "year": 2013,
+        "player": "Klay Thompson"
+      },
+      {
+        "three_pt_attempts": 535,
+        "three_pt_made": 223,
+        "team": "Golden State Warriors",
+        "position_group": "G",
+        "three_pt_percentage": 41.7,
+        "year": 2014,
+        "player": "Klay Thompson"
+      },
+      {
+        "three_pt_attempts": 545,
+        "three_pt_made": 239,
+        "team": "Golden State Warriors",
+        "position_group": "G",
+        "three_pt_percentage": 43.9,
+        "year": 2015,
+        "player": "Klay Thompson"
+      },
+      {
+        "three_pt_attempts": 651,
+        "three_pt_made": 276,
+        "team": "Golden State Warriors",
+        "position_group": "G",
+        "three_pt_percentage": 42.4,
+        "year": 2016,
+        "player": "Klay Thompson"
+      },
+      {
+        "three_pt_attempts": 647,
+        "three_pt_made": 268,
+        "team": "Golden State Warriors",
+        "position_group": "G",
+        "three_pt_percentage": 41.4,
+        "year": 2017,
+        "player": "Klay Thompson"
+      },
+      {
+        "three_pt_attempts": 521,
+        "three_pt_made": 230,
+        "team": "Golden State Warriors",
+        "position_group": "G",
+        "three_pt_percentage": 44.1,
+        "year": 2018,
+        "player": "Klay Thompson"
+      },
+      {
+        "three_pt_attempts": 599,
+        "three_pt_made": 241,
+        "team": "Golden State Warriors",
+        "position_group": "G",
+        "three_pt_percentage": 40.2,
+        "year": 2019,
+        "player": "Klay Thompson"
+      },
+      {
+        "three_pt_attempts": 296,
+        "three_pt_made": 114,
+        "team": "Golden State Warriors",
+        "position_group": "G",
+        "three_pt_percentage": 38.5,
+        "year": 2022,
+        "player": "Klay Thompson"
+      },
+      {
+        "three_pt_attempts": 731,
+        "three_pt_made": 301,
+        "team": "Golden State Warriors",
+        "position_group": "G",
+        "three_pt_percentage": 41.2,
+        "year": 2023,
+        "player": "Klay Thompson"
+      },
+      {
+        "three_pt_attempts": 692,
+        "three_pt_made": 268,
+        "team": "Golden State Warriors",
+        "position_group": "F",
+        "three_pt_percentage": 38.7,
+        "year": 2024,
+        "player": "Klay Thompson"
+      }
+    ]
+  },
+  {
+    "player": "Grayson Allen",
+    "career_three_pt_percentage": 41.2,
+    "career_three_pt_made": 706,
+    "career_three_pt_attempts": 1714,
+    "seasons_played": 6,
+    "years_active": "2019-2024",
+    "teams": [
+      "Milwaukee Bucks",
+      "Phoenix Suns",
+      "Utah Jazz",
+      "Memphis Grizzlies"
+    ],
+    "position_group": "G",
+    "seasons_data": [
+      {
+        "three_pt_attempts": 99,
+        "three_pt_made": 32,
+        "team": "Utah Jazz",
+        "position_group": "G",
+        "three_pt_percentage": 32.3,
+        "year": 2019,
+        "player": "Grayson Allen"
+      },
+      {
+        "three_pt_attempts": 141,
+        "three_pt_made": 57,
+        "team": "Memphis Grizzlies",
+        "position_group": "G",
+        "three_pt_percentage": 40.4,
+        "year": 2020,
+        "player": "Grayson Allen"
+      },
+      {
+        "three_pt_attempts": 274,
+        "three_pt_made": 107,
+        "team": "Memphis Grizzlies",
+        "position_group": "G",
+        "three_pt_percentage": 39.1,
+        "year": 2021,
+        "player": "Grayson Allen"
+      },
+      {
+        "three_pt_attempts": 389,
+        "three_pt_made": 159,
+        "team": "Milwaukee Bucks",
+        "position_group": "G",
+        "three_pt_percentage": 40.9,
+        "year": 2022,
+        "player": "Grayson Allen"
+      },
+      {
+        "three_pt_attempts": 366,
+        "three_pt_made": 146,
+        "team": "Milwaukee Bucks",
+        "position_group": "G",
+        "three_pt_percentage": 39.9,
+        "year": 2023,
+        "player": "Grayson Allen"
+      },
+      {
+        "three_pt_attempts": 445,
+        "three_pt_made": 205,
+        "team": "Phoenix Suns",
+        "position_group": "G",
+        "three_pt_percentage": 46.1,
+        "year": 2024,
+        "player": "Grayson Allen"
+      }
+    ]
+  },
+  {
+    "player": "Brent Barry",
+    "career_three_pt_percentage": 41.1,
+    "career_three_pt_made": 519,
+    "career_three_pt_attempts": 1264,
+    "seasons_played": 6,
+    "years_active": "2004-2009",
+    "teams": [
+      "Seattle SuperSonics",
+      "Houston Rockets",
+      "San Antonio Spurs"
+    ],
+    "position_group": "G",
+    "seasons_data": [
+      {
+        "three_pt_attempts": 252,
+        "three_pt_made": 114,
+        "team": "Seattle SuperSonics",
+        "position_group": "G",
+        "three_pt_percentage": 45.2,
+        "year": 2004,
+        "player": "Brent Barry"
+      },
+      {
+        "three_pt_attempts": 280,
+        "three_pt_made": 100,
+        "team": "San Antonio Spurs",
+        "position_group": "G",
+        "three_pt_percentage": 35.7,
+        "year": 2005,
+        "player": "Brent Barry"
+      },
+      {
+        "three_pt_attempts": 202,
+        "three_pt_made": 80,
+        "team": "San Antonio Spurs",
+        "position_group": "G",
+        "three_pt_percentage": 39.6,
+        "year": 2006,
+        "player": "Brent Barry"
+      },
+      {
+        "three_pt_attempts": 287,
+        "three_pt_made": 128,
+        "team": "San Antonio Spurs",
+        "position_group": "G",
+        "three_pt_percentage": 44.6,
+        "year": 2007,
+        "player": "Brent Barry"
+      },
+      {
+        "three_pt_attempts": 112,
+        "three_pt_made": 48,
+        "team": "San Antonio Spurs",
+        "position_group": "F",
+        "three_pt_percentage": 42.9,
+        "year": 2008,
+        "player": "Brent Barry"
+      },
+      {
+        "three_pt_attempts": 131,
+        "three_pt_made": 49,
+        "team": "Houston Rockets",
+        "position_group": "G",
+        "three_pt_percentage": 37.4,
+        "year": 2009,
+        "player": "Brent Barry"
+      }
+    ]
+  },
+  {
+    "player": "Doug McDermott",
+    "career_three_pt_percentage": 41.0,
+    "career_three_pt_made": 941,
+    "career_three_pt_attempts": 2295,
+    "seasons_played": 10,
+    "years_active": "2015-2024",
+    "teams": [
+      "San Antonio Spurs",
+      "Chicago Bulls",
+      "Dallas Mavericks",
+      "Indiana Pacers",
+      "Oklahoma City Thunder"
+    ],
+    "position_group": "F",
+    "seasons_data": [
+      {
+        "three_pt_attempts": 41,
+        "three_pt_made": 13,
+        "team": "Chicago Bulls",
+        "position_group": "F",
+        "three_pt_percentage": 31.7,
+        "year": 2015,
+        "player": "Doug McDermott"
+      },
+      {
+        "three_pt_attempts": 260,
+        "three_pt_made": 110,
+        "team": "Chicago Bulls",
+        "position_group": "F",
+        "three_pt_percentage": 42.3,
+        "year": 2016,
+        "player": "Doug McDermott"
+      },
+      {
+        "three_pt_attempts": 208,
+        "three_pt_made": 77,
+        "team": "Oklahoma City Thunder",
+        "position_group": "F",
+        "three_pt_percentage": 37.0,
+        "year": 2017,
+        "player": "Doug McDermott"
+      },
+      {
+        "three_pt_attempts": 216,
+        "three_pt_made": 92,
+        "team": "Dallas Mavericks",
+        "position_group": "F",
+        "three_pt_percentage": 42.6,
+        "year": 2018,
+        "player": "Doug McDermott"
+      },
+      {
+        "three_pt_attempts": 206,
+        "three_pt_made": 84,
+        "team": "Indiana Pacers",
+        "position_group": "F",
+        "three_pt_percentage": 40.8,
+        "year": 2019,
+        "player": "Doug McDermott"
+      },
+      {
+        "three_pt_attempts": 295,
+        "three_pt_made": 129,
+        "team": "Indiana Pacers",
+        "position_group": "F",
+        "three_pt_percentage": 43.7,
+        "year": 2020,
+        "player": "Doug McDermott"
+      },
+      {
+        "three_pt_attempts": 286,
+        "three_pt_made": 111,
+        "team": "Indiana Pacers",
+        "position_group": "F",
+        "three_pt_percentage": 38.8,
+        "year": 2021,
+        "player": "Doug McDermott"
+      },
+      {
+        "three_pt_attempts": 256,
+        "three_pt_made": 108,
+        "team": "San Antonio Spurs",
+        "position_group": "F",
+        "three_pt_percentage": 42.2,
+        "year": 2022,
+        "player": "Doug McDermott"
+      },
+      {
+        "three_pt_attempts": 298,
+        "three_pt_made": 123,
+        "team": "San Antonio Spurs",
+        "position_group": "F",
+        "three_pt_percentage": 41.3,
+        "year": 2023,
+        "player": "Doug McDermott"
+      },
+      {
+        "three_pt_attempts": 229,
+        "three_pt_made": 94,
+        "team": "San Antonio Spurs",
+        "position_group": "F",
+        "three_pt_percentage": 41.0,
+        "year": 2024,
+        "player": "Doug McDermott"
+      }
+    ]
+  },
+  {
+    "player": "Bryn Forbes",
+    "career_three_pt_percentage": 41.0,
+    "career_three_pt_made": 720,
+    "career_three_pt_attempts": 1757,
+    "seasons_played": 7,
+    "years_active": "2017-2023",
+    "teams": [
+      "Minnesota Timberwolves",
+      "Denver Nuggets",
+      "San Antonio Spurs",
+      "Milwaukee Bucks"
+    ],
+    "position_group": "G",
+    "seasons_data": [
+      {
+        "three_pt_attempts": 53,
+        "three_pt_made": 17,
+        "team": "San Antonio Spurs",
+        "position_group": "G",
+        "three_pt_percentage": 32.1,
+        "year": 2017,
+        "player": "Bryn Forbes"
+      },
+      {
+        "three_pt_attempts": 228,
+        "three_pt_made": 89,
+        "team": "San Antonio Spurs",
+        "position_group": "G",
+        "three_pt_percentage": 39.0,
+        "year": 2018,
+        "player": "Bryn Forbes"
+      },
+      {
+        "three_pt_attempts": 413,
+        "three_pt_made": 176,
+        "team": "San Antonio Spurs",
+        "position_group": "G",
+        "three_pt_percentage": 42.6,
+        "year": 2019,
+        "player": "Bryn Forbes"
+      },
+      {
+        "three_pt_attempts": 381,
+        "three_pt_made": 148,
+        "team": "San Antonio Spurs",
+        "position_group": "G",
+        "three_pt_percentage": 38.8,
+        "year": 2020,
+        "player": "Bryn Forbes"
+      },
+      {
+        "three_pt_attempts": 341,
+        "three_pt_made": 154,
+        "team": "Milwaukee Bucks",
+        "position_group": "G",
+        "three_pt_percentage": 45.2,
+        "year": 2021,
+        "player": "Bryn Forbes"
+      },
+      {
+        "three_pt_attempts": 295,
+        "three_pt_made": 122,
+        "team": "Denver Nuggets",
+        "position_group": "G",
+        "three_pt_percentage": 41.4,
+        "year": 2022,
+        "player": "Bryn Forbes"
+      },
+      {
+        "three_pt_attempts": 46,
+        "three_pt_made": 14,
+        "team": "Minnesota Timberwolves",
+        "position_group": "G",
+        "three_pt_percentage": 30.4,
+        "year": 2023,
+        "player": "Bryn Forbes"
+      }
+    ]
+  },
+  {
+    "player": "Michael Porter Jr.",
+    "career_three_pt_percentage": 41.0,
+    "career_three_pt_made": 650,
+    "career_three_pt_attempts": 1585,
+    "seasons_played": 5,
+    "years_active": "2020-2024",
+    "teams": [
+      "Denver Nuggets"
+    ],
+    "position_group": "F",
+    "seasons_data": [
+      {
+        "three_pt_attempts": 147,
+        "three_pt_made": 62,
+        "team": "Denver Nuggets",
+        "position_group": "F",
+        "three_pt_percentage": 42.2,
+        "year": 2020,
+        "player": "Michael Porter Jr."
+      },
+      {
+        "three_pt_attempts": 382,
+        "three_pt_made": 170,
+        "team": "Denver Nuggets",
+        "position_group": "F",
+        "three_pt_percentage": 44.5,
+        "year": 2021,
+        "player": "Michael Porter Jr."
+      },
+      {
+        "three_pt_attempts": 48,
+        "three_pt_made": 10,
+        "team": "Denver Nuggets",
+        "position_group": "F",
+        "three_pt_percentage": 20.8,
+        "year": 2022,
+        "player": "Michael Porter Jr."
+      },
+      {
+        "three_pt_attempts": 454,
+        "three_pt_made": 188,
+        "team": "Denver Nuggets",
+        "position_group": "F",
+        "three_pt_percentage": 41.4,
+        "year": 2023,
+        "player": "Michael Porter Jr."
+      },
+      {
+        "three_pt_attempts": 554,
+        "three_pt_made": 220,
+        "team": "Denver Nuggets",
+        "position_group": "F",
+        "three_pt_percentage": 39.7,
+        "year": 2024,
+        "player": "Michael Porter Jr."
+      }
+    ]
+  }
+]

@@ -1,0 +1,5663 @@
+[
+  {
+    "TEAM_NAME": "Atlanta Hawks",
+    "FILE_YEAR": 2004,
+    "makes": 2829,
+    "attempts": 6529,
+    "three_point_attempts": 1249,
+    "unique_players": 23,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Atlanta Hawks",
+    "FILE_YEAR": 2005,
+    "makes": 2942,
+    "attempts": 6672,
+    "three_point_attempts": 973,
+    "unique_players": 20,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Atlanta Hawks",
+    "FILE_YEAR": 2006,
+    "makes": 2946,
+    "attempts": 6496,
+    "three_point_attempts": 1154,
+    "unique_players": 15,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Atlanta Hawks",
+    "FILE_YEAR": 2007,
+    "makes": 2831,
+    "attempts": 6372,
+    "three_point_attempts": 1038,
+    "unique_players": 19,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Atlanta Hawks",
+    "FILE_YEAR": 2008,
+    "makes": 2975,
+    "attempts": 6552,
+    "three_point_attempts": 1078,
+    "unique_players": 16,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Atlanta Hawks",
+    "FILE_YEAR": 2009,
+    "makes": 2954,
+    "attempts": 6447,
+    "three_point_attempts": 1629,
+    "unique_players": 15,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Atlanta Hawks",
+    "FILE_YEAR": 2010,
+    "makes": 3181,
+    "attempts": 6799,
+    "three_point_attempts": 1453,
+    "unique_players": 14,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Atlanta Hawks",
+    "FILE_YEAR": 2011,
+    "makes": 2971,
+    "attempts": 6428,
+    "three_point_attempts": 1426,
+    "unique_players": 17,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Atlanta Hawks",
+    "FILE_YEAR": 2012,
+    "makes": 2429,
+    "attempts": 5348,
+    "three_point_attempts": 1330,
+    "unique_players": 16,
+    "games_played": 66
+  },
+  {
+    "TEAM_NAME": "Atlanta Hawks",
+    "FILE_YEAR": 2013,
+    "makes": 3084,
+    "attempts": 6644,
+    "three_point_attempts": 1901,
+    "unique_players": 17,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Atlanta Hawks",
+    "FILE_YEAR": 2014,
+    "makes": 3061,
+    "attempts": 6687,
+    "three_point_attempts": 2115,
+    "unique_players": 18,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Atlanta Hawks",
+    "FILE_YEAR": 2015,
+    "makes": 3121,
+    "attempts": 6699,
+    "three_point_attempts": 2152,
+    "unique_players": 16,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Atlanta Hawks",
+    "FILE_YEAR": 2016,
+    "makes": 3166,
+    "attempts": 6920,
+    "three_point_attempts": 2323,
+    "unique_players": 17,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Atlanta Hawks",
+    "FILE_YEAR": 2017,
+    "makes": 3122,
+    "attempts": 6913,
+    "three_point_attempts": 2132,
+    "unique_players": 20,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Atlanta Hawks",
+    "FILE_YEAR": 2018,
+    "makes": 3130,
+    "attempts": 7015,
+    "three_point_attempts": 2544,
+    "unique_players": 22,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Atlanta Hawks",
+    "FILE_YEAR": 2019,
+    "makes": 3392,
+    "attempts": 7524,
+    "three_point_attempts": 3034,
+    "unique_players": 22,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Atlanta Hawks",
+    "FILE_YEAR": 2020,
+    "makes": 2723,
+    "attempts": 6067,
+    "three_point_attempts": 2416,
+    "unique_players": 21,
+    "games_played": 67
+  },
+  {
+    "TEAM_NAME": "Atlanta Hawks",
+    "FILE_YEAR": 2021,
+    "makes": 2937,
+    "attempts": 6281,
+    "three_point_attempts": 2402,
+    "unique_players": 18,
+    "games_played": 72
+  },
+  {
+    "TEAM_NAME": "Atlanta Hawks",
+    "FILE_YEAR": 2022,
+    "makes": 3401,
+    "attempts": 7241,
+    "three_point_attempts": 2821,
+    "unique_players": 24,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Atlanta Hawks",
+    "FILE_YEAR": 2023,
+    "makes": 3658,
+    "attempts": 7574,
+    "three_point_attempts": 2505,
+    "unique_players": 20,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Atlanta Hawks",
+    "FILE_YEAR": 2024,
+    "makes": 3529,
+    "attempts": 7584,
+    "three_point_attempts": 3092,
+    "unique_players": 19,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Boston Celtics",
+    "FILE_YEAR": 2004,
+    "makes": 2843,
+    "attempts": 6415,
+    "three_point_attempts": 1599,
+    "unique_players": 19,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Boston Celtics",
+    "FILE_YEAR": 2005,
+    "makes": 3046,
+    "attempts": 6511,
+    "three_point_attempts": 1252,
+    "unique_players": 15,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Boston Celtics",
+    "FILE_YEAR": 2006,
+    "makes": 2951,
+    "attempts": 6322,
+    "three_point_attempts": 1290,
+    "unique_players": 18,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Boston Celtics",
+    "FILE_YEAR": 2007,
+    "makes": 2858,
+    "attempts": 6454,
+    "three_point_attempts": 1283,
+    "unique_players": 16,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Boston Celtics",
+    "FILE_YEAR": 2008,
+    "makes": 2986,
+    "attempts": 6286,
+    "three_point_attempts": 1564,
+    "unique_players": 15,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Boston Celtics",
+    "FILE_YEAR": 2009,
+    "makes": 3075,
+    "attempts": 6333,
+    "three_point_attempts": 1355,
+    "unique_players": 16,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Boston Celtics",
+    "FILE_YEAR": 2010,
+    "makes": 3039,
+    "attempts": 6293,
+    "three_point_attempts": 1432,
+    "unique_players": 19,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Boston Celtics",
+    "FILE_YEAR": 2011,
+    "makes": 3023,
+    "attempts": 6219,
+    "three_point_attempts": 1119,
+    "unique_players": 21,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Boston Celtics",
+    "FILE_YEAR": 2012,
+    "makes": 2341,
+    "attempts": 5086,
+    "three_point_attempts": 988,
+    "unique_players": 17,
+    "games_played": 66
+  },
+  {
+    "TEAM_NAME": "Boston Celtics",
+    "FILE_YEAR": 2013,
+    "makes": 3001,
+    "attempts": 6458,
+    "three_point_attempts": 1389,
+    "unique_players": 20,
+    "games_played": 81
+  },
+  {
+    "TEAM_NAME": "Boston Celtics",
+    "FILE_YEAR": 2014,
+    "makes": 2996,
+    "attempts": 6881,
+    "three_point_attempts": 1727,
+    "unique_players": 19,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Boston Celtics",
+    "FILE_YEAR": 2015,
+    "makes": 3193,
+    "attempts": 7209,
+    "three_point_attempts": 2019,
+    "unique_players": 22,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Boston Celtics",
+    "FILE_YEAR": 2016,
+    "makes": 3216,
+    "attempts": 7316,
+    "three_point_attempts": 2140,
+    "unique_players": 16,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Boston Celtics",
+    "FILE_YEAR": 2017,
+    "makes": 3166,
+    "attempts": 6974,
+    "three_point_attempts": 2738,
+    "unique_players": 15,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Boston Celtics",
+    "FILE_YEAR": 2018,
+    "makes": 3141,
+    "attempts": 6975,
+    "three_point_attempts": 2492,
+    "unique_players": 20,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Boston Celtics",
+    "FILE_YEAR": 2019,
+    "makes": 3451,
+    "attempts": 7423,
+    "three_point_attempts": 2829,
+    "unique_players": 17,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Boston Celtics",
+    "FILE_YEAR": 2020,
+    "makes": 2971,
+    "attempts": 6448,
+    "three_point_attempts": 2487,
+    "unique_players": 17,
+    "games_played": 72
+  },
+  {
+    "TEAM_NAME": "Boston Celtics",
+    "FILE_YEAR": 2021,
+    "makes": 2985,
+    "attempts": 6401,
+    "three_point_attempts": 2618,
+    "unique_players": 21,
+    "games_played": 72
+  },
+  {
+    "TEAM_NAME": "Boston Celtics",
+    "FILE_YEAR": 2022,
+    "makes": 3341,
+    "attempts": 7167,
+    "three_point_attempts": 3044,
+    "unique_players": 26,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Boston Celtics",
+    "FILE_YEAR": 2023,
+    "makes": 3460,
+    "attempts": 7278,
+    "three_point_attempts": 3492,
+    "unique_players": 18,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Boston Celtics",
+    "FILE_YEAR": 2024,
+    "makes": 3601,
+    "attempts": 7396,
+    "three_point_attempts": 3482,
+    "unique_players": 19,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Brooklyn Nets",
+    "FILE_YEAR": 2013,
+    "makes": 2942,
+    "attempts": 6541,
+    "three_point_attempts": 1757,
+    "unique_players": 16,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Brooklyn Nets",
+    "FILE_YEAR": 2014,
+    "makes": 2930,
+    "attempts": 6390,
+    "three_point_attempts": 1921,
+    "unique_players": 19,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Brooklyn Nets",
+    "FILE_YEAR": 2015,
+    "makes": 3069,
+    "attempts": 6804,
+    "three_point_attempts": 1633,
+    "unique_players": 19,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Brooklyn Nets",
+    "FILE_YEAR": 2016,
+    "makes": 3135,
+    "attempts": 6918,
+    "three_point_attempts": 1506,
+    "unique_players": 17,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Brooklyn Nets",
+    "FILE_YEAR": 2017,
+    "makes": 3101,
+    "attempts": 6985,
+    "three_point_attempts": 2590,
+    "unique_players": 21,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Brooklyn Nets",
+    "FILE_YEAR": 2018,
+    "makes": 3136,
+    "attempts": 7114,
+    "three_point_attempts": 2924,
+    "unique_players": 21,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Brooklyn Nets",
+    "FILE_YEAR": 2019,
+    "makes": 3301,
+    "attempts": 7358,
+    "three_point_attempts": 2965,
+    "unique_players": 19,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Brooklyn Nets",
+    "FILE_YEAR": 2020,
+    "makes": 2908,
+    "attempts": 6498,
+    "three_point_attempts": 2746,
+    "unique_players": 24,
+    "games_played": 72
+  },
+  {
+    "TEAM_NAME": "Brooklyn Nets",
+    "FILE_YEAR": 2021,
+    "makes": 3106,
+    "attempts": 6289,
+    "three_point_attempts": 2600,
+    "unique_players": 27,
+    "games_played": 72
+  },
+  {
+    "TEAM_NAME": "Brooklyn Nets",
+    "FILE_YEAR": 2022,
+    "makes": 3442,
+    "attempts": 7251,
+    "three_point_attempts": 2602,
+    "unique_players": 23,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Brooklyn Nets",
+    "FILE_YEAR": 2023,
+    "makes": 3399,
+    "attempts": 6978,
+    "three_point_attempts": 2771,
+    "unique_players": 23,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Brooklyn Nets",
+    "FILE_YEAR": 2024,
+    "makes": 3334,
+    "attempts": 7307,
+    "three_point_attempts": 3010,
+    "unique_players": 21,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Charlotte Bobcats",
+    "FILE_YEAR": 2005,
+    "makes": 2961,
+    "attempts": 6859,
+    "three_point_attempts": 881,
+    "unique_players": 19,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Charlotte Bobcats",
+    "FILE_YEAR": 2006,
+    "makes": 2961,
+    "attempts": 6843,
+    "three_point_attempts": 1261,
+    "unique_players": 16,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Charlotte Bobcats",
+    "FILE_YEAR": 2007,
+    "makes": 2960,
+    "attempts": 6643,
+    "three_point_attempts": 1280,
+    "unique_players": 18,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Charlotte Bobcats",
+    "FILE_YEAR": 2008,
+    "makes": 2960,
+    "attempts": 6554,
+    "three_point_attempts": 1443,
+    "unique_players": 15,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Charlotte Bobcats",
+    "FILE_YEAR": 2009,
+    "makes": 2866,
+    "attempts": 6299,
+    "three_point_attempts": 1339,
+    "unique_players": 23,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Charlotte Bobcats",
+    "FILE_YEAR": 2010,
+    "makes": 2858,
+    "attempts": 6305,
+    "three_point_attempts": 1330,
+    "unique_players": 19,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Charlotte Bobcats",
+    "FILE_YEAR": 2011,
+    "makes": 2873,
+    "attempts": 6364,
+    "three_point_attempts": 1202,
+    "unique_players": 19,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Charlotte Bobcats",
+    "FILE_YEAR": 2012,
+    "makes": 2193,
+    "attempts": 5293,
+    "three_point_attempts": 892,
+    "unique_players": 16,
+    "games_played": 66
+  },
+  {
+    "TEAM_NAME": "Charlotte Bobcats",
+    "FILE_YEAR": 2013,
+    "makes": 2823,
+    "attempts": 6649,
+    "three_point_attempts": 1399,
+    "unique_players": 17,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Charlotte Bobcats",
+    "FILE_YEAR": 2014,
+    "makes": 2976,
+    "attempts": 6727,
+    "three_point_attempts": 1468,
+    "unique_players": 18,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Charlotte Hornets",
+    "FILE_YEAR": 2015,
+    "makes": 2913,
+    "attempts": 6932,
+    "three_point_attempts": 1566,
+    "unique_players": 17,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Charlotte Hornets",
+    "FILE_YEAR": 2016,
+    "makes": 3036,
+    "attempts": 6921,
+    "three_point_attempts": 2409,
+    "unique_players": 17,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Charlotte Hornets",
+    "FILE_YEAR": 2017,
+    "makes": 3093,
+    "attempts": 6998,
+    "three_point_attempts": 2345,
+    "unique_players": 19,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Charlotte Hornets",
+    "FILE_YEAR": 2018,
+    "makes": 3197,
+    "attempts": 7106,
+    "three_point_attempts": 2233,
+    "unique_players": 17,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Charlotte Hornets",
+    "FILE_YEAR": 2019,
+    "makes": 3297,
+    "attempts": 7362,
+    "three_point_attempts": 2783,
+    "unique_players": 17,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Charlotte Hornets",
+    "FILE_YEAR": 2020,
+    "makes": 2425,
+    "attempts": 5586,
+    "three_point_attempts": 2231,
+    "unique_players": 16,
+    "games_played": 65
+  },
+  {
+    "TEAM_NAME": "Charlotte Hornets",
+    "FILE_YEAR": 2021,
+    "makes": 2875,
+    "attempts": 6324,
+    "three_point_attempts": 2666,
+    "unique_players": 17,
+    "games_played": 72
+  },
+  {
+    "TEAM_NAME": "Charlotte Hornets",
+    "FILE_YEAR": 2022,
+    "makes": 3508,
+    "attempts": 7497,
+    "three_point_attempts": 3130,
+    "unique_players": 18,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Charlotte Hornets",
+    "FILE_YEAR": 2023,
+    "makes": 3385,
+    "attempts": 7413,
+    "three_point_attempts": 2669,
+    "unique_players": 19,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Charlotte Hornets",
+    "FILE_YEAR": 2024,
+    "makes": 3281,
+    "attempts": 7133,
+    "three_point_attempts": 2788,
+    "unique_players": 26,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Chicago Bulls",
+    "FILE_YEAR": 2004,
+    "makes": 2798,
+    "attempts": 6753,
+    "three_point_attempts": 1256,
+    "unique_players": 21,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Chicago Bulls",
+    "FILE_YEAR": 2005,
+    "makes": 2849,
+    "attempts": 6592,
+    "three_point_attempts": 1433,
+    "unique_players": 15,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Chicago Bulls",
+    "FILE_YEAR": 2006,
+    "makes": 3004,
+    "attempts": 6737,
+    "three_point_attempts": 1477,
+    "unique_players": 19,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Chicago Bulls",
+    "FILE_YEAR": 2007,
+    "makes": 3046,
+    "attempts": 6663,
+    "three_point_attempts": 1237,
+    "unique_players": 14,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Chicago Bulls",
+    "FILE_YEAR": 2008,
+    "makes": 2987,
+    "attempts": 6861,
+    "three_point_attempts": 1305,
+    "unique_players": 19,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Chicago Bulls",
+    "FILE_YEAR": 2009,
+    "makes": 3126,
+    "attempts": 6844,
+    "three_point_attempts": 1291,
+    "unique_players": 19,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Chicago Bulls",
+    "FILE_YEAR": 2010,
+    "makes": 3081,
+    "attempts": 6824,
+    "three_point_attempts": 1065,
+    "unique_players": 18,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Chicago Bulls",
+    "FILE_YEAR": 2011,
+    "makes": 3042,
+    "attempts": 6587,
+    "three_point_attempts": 1415,
+    "unique_players": 15,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Chicago Bulls",
+    "FILE_YEAR": 2012,
+    "makes": 2467,
+    "attempts": 5461,
+    "three_point_attempts": 1116,
+    "unique_players": 14,
+    "games_played": 66
+  },
+  {
+    "TEAM_NAME": "Chicago Bulls",
+    "FILE_YEAR": 2013,
+    "makes": 2926,
+    "attempts": 6698,
+    "three_point_attempts": 1265,
+    "unique_players": 15,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Chicago Bulls",
+    "FILE_YEAR": 2014,
+    "makes": 2843,
+    "attempts": 6577,
+    "three_point_attempts": 1459,
+    "unique_players": 17,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Chicago Bulls",
+    "FILE_YEAR": 2015,
+    "makes": 3001,
+    "attempts": 6797,
+    "three_point_attempts": 1825,
+    "unique_players": 14,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Chicago Bulls",
+    "FILE_YEAR": 2016,
+    "makes": 3165,
+    "attempts": 7170,
+    "three_point_attempts": 1753,
+    "unique_players": 16,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Chicago Bulls",
+    "FILE_YEAR": 2017,
+    "makes": 3169,
+    "attempts": 7138,
+    "three_point_attempts": 1828,
+    "unique_players": 18,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Chicago Bulls",
+    "FILE_YEAR": 2018,
+    "makes": 3170,
+    "attempts": 7285,
+    "three_point_attempts": 2549,
+    "unique_players": 21,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Chicago Bulls",
+    "FILE_YEAR": 2019,
+    "makes": 3266,
+    "attempts": 7205,
+    "three_point_attempts": 2123,
+    "unique_players": 21,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Chicago Bulls",
+    "FILE_YEAR": 2020,
+    "makes": 2573,
+    "attempts": 5762,
+    "three_point_attempts": 2282,
+    "unique_players": 17,
+    "games_played": 65
+  },
+  {
+    "TEAM_NAME": "Chicago Bulls",
+    "FILE_YEAR": 2021,
+    "makes": 3035,
+    "attempts": 6380,
+    "three_point_attempts": 2446,
+    "unique_players": 22,
+    "games_played": 72
+  },
+  {
+    "TEAM_NAME": "Chicago Bulls",
+    "FILE_YEAR": 2022,
+    "makes": 3422,
+    "attempts": 7127,
+    "three_point_attempts": 2364,
+    "unique_players": 21,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Chicago Bulls",
+    "FILE_YEAR": 2023,
+    "makes": 3488,
+    "attempts": 7116,
+    "three_point_attempts": 2367,
+    "unique_players": 18,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Chicago Bulls",
+    "FILE_YEAR": 2024,
+    "makes": 3448,
+    "attempts": 7339,
+    "three_point_attempts": 2630,
+    "unique_players": 18,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Cleveland Cavaliers",
+    "FILE_YEAR": 2004,
+    "makes": 2922,
+    "attempts": 6753,
+    "three_point_attempts": 786,
+    "unique_players": 20,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Cleveland Cavaliers",
+    "FILE_YEAR": 2005,
+    "makes": 2990,
+    "attempts": 6687,
+    "three_point_attempts": 904,
+    "unique_players": 16,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Cleveland Cavaliers",
+    "FILE_YEAR": 2006,
+    "makes": 2908,
+    "attempts": 6412,
+    "three_point_attempts": 1465,
+    "unique_players": 17,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Cleveland Cavaliers",
+    "FILE_YEAR": 2007,
+    "makes": 2978,
+    "attempts": 6658,
+    "three_point_attempts": 1404,
+    "unique_players": 15,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Cleveland Cavaliers",
+    "FILE_YEAR": 2008,
+    "makes": 2937,
+    "attempts": 6697,
+    "three_point_attempts": 1544,
+    "unique_players": 23,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Cleveland Cavaliers",
+    "FILE_YEAR": 2009,
+    "makes": 3022,
+    "attempts": 6454,
+    "three_point_attempts": 1670,
+    "unique_players": 16,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Cleveland Cavaliers",
+    "FILE_YEAR": 2010,
+    "makes": 3100,
+    "attempts": 6390,
+    "three_point_attempts": 1581,
+    "unique_players": 17,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Cleveland Cavaliers",
+    "FILE_YEAR": 2011,
+    "makes": 2886,
+    "attempts": 6647,
+    "three_point_attempts": 1489,
+    "unique_players": 19,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Cleveland Cavaliers",
+    "FILE_YEAR": 2012,
+    "makes": 2261,
+    "attempts": 5360,
+    "three_point_attempts": 1273,
+    "unique_players": 21,
+    "games_played": 66
+  },
+  {
+    "TEAM_NAME": "Cleveland Cavaliers",
+    "FILE_YEAR": 2013,
+    "makes": 2993,
+    "attempts": 6901,
+    "three_point_attempts": 1581,
+    "unique_players": 19,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Cleveland Cavaliers",
+    "FILE_YEAR": 2014,
+    "makes": 3036,
+    "attempts": 6954,
+    "three_point_attempts": 1639,
+    "unique_players": 21,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Cleveland Cavaliers",
+    "FILE_YEAR": 2015,
+    "makes": 3088,
+    "attempts": 6738,
+    "three_point_attempts": 2252,
+    "unique_players": 20,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Cleveland Cavaliers",
+    "FILE_YEAR": 2016,
+    "makes": 3169,
+    "attempts": 6883,
+    "three_point_attempts": 2423,
+    "unique_players": 18,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Cleveland Cavaliers",
+    "FILE_YEAR": 2017,
+    "makes": 3273,
+    "attempts": 6956,
+    "three_point_attempts": 2772,
+    "unique_players": 20,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Cleveland Cavaliers",
+    "FILE_YEAR": 2018,
+    "makes": 3311,
+    "attempts": 6950,
+    "three_point_attempts": 2636,
+    "unique_players": 22,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Cleveland Cavaliers",
+    "FILE_YEAR": 2019,
+    "makes": 3189,
+    "attempts": 7184,
+    "three_point_attempts": 2388,
+    "unique_players": 25,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Cleveland Cavaliers",
+    "FILE_YEAR": 2020,
+    "makes": 2619,
+    "attempts": 5715,
+    "three_point_attempts": 2070,
+    "unique_players": 19,
+    "games_played": 65
+  },
+  {
+    "TEAM_NAME": "Cleveland Cavaliers",
+    "FILE_YEAR": 2021,
+    "makes": 2778,
+    "attempts": 6175,
+    "three_point_attempts": 2141,
+    "unique_players": 25,
+    "games_played": 72
+  },
+  {
+    "TEAM_NAME": "Cleveland Cavaliers",
+    "FILE_YEAR": 2022,
+    "makes": 3255,
+    "attempts": 6940,
+    "three_point_attempts": 2686,
+    "unique_players": 26,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Cleveland Cavaliers",
+    "FILE_YEAR": 2023,
+    "makes": 3408,
+    "attempts": 6984,
+    "three_point_attempts": 2589,
+    "unique_players": 18,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Cleveland Cavaliers",
+    "FILE_YEAR": 2024,
+    "makes": 3425,
+    "attempts": 7148,
+    "three_point_attempts": 3016,
+    "unique_players": 18,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Dallas Mavericks",
+    "FILE_YEAR": 2004,
+    "makes": 3322,
+    "attempts": 7230,
+    "three_point_attempts": 1456,
+    "unique_players": 14,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Dallas Mavericks",
+    "FILE_YEAR": 2005,
+    "makes": 3058,
+    "attempts": 6691,
+    "three_point_attempts": 1273,
+    "unique_players": 15,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Dallas Mavericks",
+    "FILE_YEAR": 2006,
+    "makes": 2948,
+    "attempts": 6375,
+    "three_point_attempts": 1113,
+    "unique_players": 16,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Dallas Mavericks",
+    "FILE_YEAR": 2007,
+    "makes": 3010,
+    "attempts": 6442,
+    "three_point_attempts": 1404,
+    "unique_players": 16,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Dallas Mavericks",
+    "FILE_YEAR": 2008,
+    "makes": 3025,
+    "attempts": 6515,
+    "three_point_attempts": 1403,
+    "unique_players": 20,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Dallas Mavericks",
+    "FILE_YEAR": 2009,
+    "makes": 3128,
+    "attempts": 6770,
+    "three_point_attempts": 1632,
+    "unique_players": 16,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Dallas Mavericks",
+    "FILE_YEAR": 2010,
+    "makes": 3140,
+    "attempts": 6759,
+    "three_point_attempts": 1497,
+    "unique_players": 18,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Dallas Mavericks",
+    "FILE_YEAR": 2011,
+    "makes": 3069,
+    "attempts": 6463,
+    "three_point_attempts": 1768,
+    "unique_players": 18,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Dallas Mavericks",
+    "FILE_YEAR": 2012,
+    "makes": 2398,
+    "attempts": 5412,
+    "three_point_attempts": 1464,
+    "unique_players": 16,
+    "games_played": 66
+  },
+  {
+    "TEAM_NAME": "Dallas Mavericks",
+    "FILE_YEAR": 2013,
+    "makes": 3182,
+    "attempts": 6892,
+    "three_point_attempts": 1628,
+    "unique_players": 23,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Dallas Mavericks",
+    "FILE_YEAR": 2014,
+    "makes": 3248,
+    "attempts": 6857,
+    "three_point_attempts": 1876,
+    "unique_players": 15,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Dallas Mavericks",
+    "FILE_YEAR": 2015,
+    "makes": 3255,
+    "attempts": 7036,
+    "three_point_attempts": 2082,
+    "unique_players": 19,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Dallas Mavericks",
+    "FILE_YEAR": 2016,
+    "makes": 3062,
+    "attempts": 6898,
+    "three_point_attempts": 2340,
+    "unique_players": 16,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Dallas Mavericks",
+    "FILE_YEAR": 2017,
+    "makes": 2967,
+    "attempts": 6749,
+    "three_point_attempts": 2472,
+    "unique_players": 24,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Dallas Mavericks",
+    "FILE_YEAR": 2018,
+    "makes": 3128,
+    "attempts": 7042,
+    "three_point_attempts": 2688,
+    "unique_players": 23,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Dallas Mavericks",
+    "FILE_YEAR": 2019,
+    "makes": 3182,
+    "attempts": 7122,
+    "three_point_attempts": 3002,
+    "unique_players": 20,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Dallas Mavericks",
+    "FILE_YEAR": 2020,
+    "makes": 3124,
+    "attempts": 6772,
+    "three_point_attempts": 3095,
+    "unique_players": 19,
+    "games_played": 75
+  },
+  {
+    "TEAM_NAME": "Dallas Mavericks",
+    "FILE_YEAR": 2021,
+    "makes": 2958,
+    "attempts": 6287,
+    "three_point_attempts": 2744,
+    "unique_players": 19,
+    "games_played": 72
+  },
+  {
+    "TEAM_NAME": "Dallas Mavericks",
+    "FILE_YEAR": 2022,
+    "makes": 3222,
+    "attempts": 6982,
+    "three_point_attempts": 3063,
+    "unique_players": 27,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Dallas Mavericks",
+    "FILE_YEAR": 2023,
+    "makes": 3283,
+    "attempts": 6909,
+    "three_point_attempts": 3362,
+    "unique_players": 23,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Dallas Mavericks",
+    "FILE_YEAR": 2024,
+    "makes": 3535,
+    "attempts": 7352,
+    "three_point_attempts": 3242,
+    "unique_players": 22,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Denver Nuggets",
+    "FILE_YEAR": 2004,
+    "makes": 2993,
+    "attempts": 6763,
+    "three_point_attempts": 985,
+    "unique_players": 15,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Denver Nuggets",
+    "FILE_YEAR": 2005,
+    "makes": 3038,
+    "attempts": 6615,
+    "three_point_attempts": 940,
+    "unique_players": 17,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Denver Nuggets",
+    "FILE_YEAR": 2006,
+    "makes": 3078,
+    "attempts": 6672,
+    "three_point_attempts": 1076,
+    "unique_players": 18,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Denver Nuggets",
+    "FILE_YEAR": 2007,
+    "makes": 3164,
+    "attempts": 6805,
+    "three_point_attempts": 1440,
+    "unique_players": 18,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Denver Nuggets",
+    "FILE_YEAR": 2008,
+    "makes": 3307,
+    "attempts": 7038,
+    "three_point_attempts": 1605,
+    "unique_players": 17,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Denver Nuggets",
+    "FILE_YEAR": 2009,
+    "makes": 3058,
+    "attempts": 6510,
+    "three_point_attempts": 1477,
+    "unique_players": 17,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Denver Nuggets",
+    "FILE_YEAR": 2010,
+    "makes": 3124,
+    "attempts": 6678,
+    "three_point_attempts": 1517,
+    "unique_players": 13,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Denver Nuggets",
+    "FILE_YEAR": 2011,
+    "makes": 3144,
+    "attempts": 6609,
+    "three_point_attempts": 1700,
+    "unique_players": 19,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Denver Nuggets",
+    "FILE_YEAR": 2012,
+    "makes": 2572,
+    "attempts": 5403,
+    "three_point_attempts": 1310,
+    "unique_players": 17,
+    "games_played": 66
+  },
+  {
+    "TEAM_NAME": "Denver Nuggets",
+    "FILE_YEAR": 2013,
+    "makes": 3339,
+    "attempts": 6981,
+    "three_point_attempts": 1516,
+    "unique_players": 15,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Denver Nuggets",
+    "FILE_YEAR": 2014,
+    "makes": 3147,
+    "attempts": 7042,
+    "three_point_attempts": 1959,
+    "unique_players": 16,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Denver Nuggets",
+    "FILE_YEAR": 2015,
+    "makes": 3099,
+    "attempts": 7158,
+    "three_point_attempts": 2032,
+    "unique_players": 20,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Denver Nuggets",
+    "FILE_YEAR": 2016,
+    "makes": 3092,
+    "attempts": 7002,
+    "three_point_attempts": 1942,
+    "unique_players": 19,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Denver Nuggets",
+    "FILE_YEAR": 2017,
+    "makes": 3377,
+    "attempts": 7190,
+    "three_point_attempts": 2361,
+    "unique_players": 19,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Denver Nuggets",
+    "FILE_YEAR": 2018,
+    "makes": 3338,
+    "attempts": 7102,
+    "three_point_attempts": 2536,
+    "unique_players": 17,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Denver Nuggets",
+    "FILE_YEAR": 2019,
+    "makes": 3439,
+    "attempts": 7384,
+    "three_point_attempts": 2571,
+    "unique_players": 18,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Denver Nuggets",
+    "FILE_YEAR": 2020,
+    "makes": 3069,
+    "attempts": 6488,
+    "three_point_attempts": 2234,
+    "unique_players": 21,
+    "games_played": 73
+  },
+  {
+    "TEAM_NAME": "Denver Nuggets",
+    "FILE_YEAR": 2021,
+    "makes": 3114,
+    "attempts": 6422,
+    "three_point_attempts": 2462,
+    "unique_players": 21,
+    "games_played": 72
+  },
+  {
+    "TEAM_NAME": "Denver Nuggets",
+    "FILE_YEAR": 2022,
+    "makes": 3416,
+    "attempts": 7079,
+    "three_point_attempts": 2944,
+    "unique_players": 22,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Denver Nuggets",
+    "FILE_YEAR": 2023,
+    "makes": 3574,
+    "attempts": 7088,
+    "three_point_attempts": 2559,
+    "unique_players": 18,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Denver Nuggets",
+    "FILE_YEAR": 2024,
+    "makes": 3610,
+    "attempts": 7279,
+    "three_point_attempts": 2560,
+    "unique_players": 17,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Detroit Pistons",
+    "FILE_YEAR": 2004,
+    "makes": 2747,
+    "attempts": 6314,
+    "three_point_attempts": 968,
+    "unique_players": 17,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Detroit Pistons",
+    "FILE_YEAR": 2005,
+    "makes": 2851,
+    "attempts": 6421,
+    "three_point_attempts": 1053,
+    "unique_players": 17,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Detroit Pistons",
+    "FILE_YEAR": 2006,
+    "makes": 2983,
+    "attempts": 6558,
+    "three_point_attempts": 1451,
+    "unique_players": 17,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Detroit Pistons",
+    "FILE_YEAR": 2007,
+    "makes": 2942,
+    "attempts": 6484,
+    "three_point_attempts": 1305,
+    "unique_players": 15,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Detroit Pistons",
+    "FILE_YEAR": 2008,
+    "makes": 2999,
+    "attempts": 6551,
+    "three_point_attempts": 1330,
+    "unique_players": 18,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Detroit Pistons",
+    "FILE_YEAR": 2009,
+    "makes": 2981,
+    "attempts": 6559,
+    "three_point_attempts": 1079,
+    "unique_players": 15,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Detroit Pistons",
+    "FILE_YEAR": 2010,
+    "makes": 2938,
+    "attempts": 6600,
+    "three_point_attempts": 1188,
+    "unique_players": 14,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Detroit Pistons",
+    "FILE_YEAR": 2011,
+    "makes": 3055,
+    "attempts": 6646,
+    "three_point_attempts": 1255,
+    "unique_players": 13,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Detroit Pistons",
+    "FILE_YEAR": 2012,
+    "makes": 2291,
+    "attempts": 5232,
+    "three_point_attempts": 916,
+    "unique_players": 14,
+    "games_played": 66
+  },
+  {
+    "TEAM_NAME": "Detroit Pistons",
+    "FILE_YEAR": 2013,
+    "makes": 2979,
+    "attempts": 6638,
+    "three_point_attempts": 1440,
+    "unique_players": 16,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Detroit Pistons",
+    "FILE_YEAR": 2014,
+    "makes": 3181,
+    "attempts": 7123,
+    "three_point_attempts": 1579,
+    "unique_players": 15,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Detroit Pistons",
+    "FILE_YEAR": 2015,
+    "makes": 3041,
+    "attempts": 7038,
+    "three_point_attempts": 2043,
+    "unique_players": 20,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Detroit Pistons",
+    "FILE_YEAR": 2016,
+    "makes": 3111,
+    "attempts": 7083,
+    "three_point_attempts": 2144,
+    "unique_players": 17,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Detroit Pistons",
+    "FILE_YEAR": 2017,
+    "makes": 3268,
+    "attempts": 7278,
+    "three_point_attempts": 1911,
+    "unique_players": 15,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Detroit Pistons",
+    "FILE_YEAR": 2018,
+    "makes": 3208,
+    "attempts": 7129,
+    "three_point_attempts": 2373,
+    "unique_players": 22,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Detroit Pistons",
+    "FILE_YEAR": 2019,
+    "makes": 3185,
+    "attempts": 7238,
+    "three_point_attempts": 2854,
+    "unique_players": 20,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Detroit Pistons",
+    "FILE_YEAR": 2020,
+    "makes": 2595,
+    "attempts": 5658,
+    "three_point_attempts": 2157,
+    "unique_players": 22,
+    "games_played": 66
+  },
+  {
+    "TEAM_NAME": "Detroit Pistons",
+    "FILE_YEAR": 2021,
+    "makes": 2783,
+    "attempts": 6162,
+    "three_point_attempts": 2370,
+    "unique_players": 21,
+    "games_played": 72
+  },
+  {
+    "TEAM_NAME": "Detroit Pistons",
+    "FILE_YEAR": 2022,
+    "makes": 3129,
+    "attempts": 7267,
+    "three_point_attempts": 2838,
+    "unique_players": 27,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Detroit Pistons",
+    "FILE_YEAR": 2023,
+    "makes": 3244,
+    "attempts": 7140,
+    "three_point_attempts": 2659,
+    "unique_players": 22,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Detroit Pistons",
+    "FILE_YEAR": 2024,
+    "makes": 3353,
+    "attempts": 7236,
+    "three_point_attempts": 2602,
+    "unique_players": 30,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Golden State Warriors",
+    "FILE_YEAR": 2004,
+    "makes": 2875,
+    "attempts": 6511,
+    "three_point_attempts": 1283,
+    "unique_players": 18,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Golden State Warriors",
+    "FILE_YEAR": 2005,
+    "makes": 3029,
+    "attempts": 7039,
+    "three_point_attempts": 1774,
+    "unique_players": 18,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Golden State Warriors",
+    "FILE_YEAR": 2006,
+    "makes": 2939,
+    "attempts": 6785,
+    "three_point_attempts": 1832,
+    "unique_players": 15,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Golden State Warriors",
+    "FILE_YEAR": 2007,
+    "makes": 3261,
+    "attempts": 7048,
+    "three_point_attempts": 1966,
+    "unique_players": 20,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Golden State Warriors",
+    "FILE_YEAR": 2008,
+    "makes": 3403,
+    "attempts": 7406,
+    "three_point_attempts": 2185,
+    "unique_players": 17,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Golden State Warriors",
+    "FILE_YEAR": 2009,
+    "makes": 3231,
+    "attempts": 7054,
+    "three_point_attempts": 1474,
+    "unique_players": 17,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Golden State Warriors",
+    "FILE_YEAR": 2010,
+    "makes": 3329,
+    "attempts": 7094,
+    "three_point_attempts": 1687,
+    "unique_players": 20,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Golden State Warriors",
+    "FILE_YEAR": 2011,
+    "makes": 3251,
+    "attempts": 7047,
+    "three_point_attempts": 1749,
+    "unique_players": 17,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Golden State Warriors",
+    "FILE_YEAR": 2012,
+    "makes": 2489,
+    "attempts": 5443,
+    "three_point_attempts": 1351,
+    "unique_players": 20,
+    "games_played": 66
+  },
+  {
+    "TEAM_NAME": "Golden State Warriors",
+    "FILE_YEAR": 2013,
+    "makes": 3130,
+    "attempts": 6840,
+    "three_point_attempts": 1632,
+    "unique_players": 16,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Golden State Warriors",
+    "FILE_YEAR": 2014,
+    "makes": 3236,
+    "attempts": 7005,
+    "three_point_attempts": 2037,
+    "unique_players": 18,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Golden State Warriors",
+    "FILE_YEAR": 2015,
+    "makes": 3410,
+    "attempts": 7137,
+    "three_point_attempts": 2217,
+    "unique_players": 15,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Golden State Warriors",
+    "FILE_YEAR": 2016,
+    "makes": 3486,
+    "attempts": 7155,
+    "three_point_attempts": 2588,
+    "unique_players": 16,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Golden State Warriors",
+    "FILE_YEAR": 2017,
+    "makes": 3531,
+    "attempts": 7139,
+    "three_point_attempts": 2561,
+    "unique_players": 17,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Golden State Warriors",
+    "FILE_YEAR": 2018,
+    "makes": 3509,
+    "attempts": 6979,
+    "three_point_attempts": 2369,
+    "unique_players": 17,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Golden State Warriors",
+    "FILE_YEAR": 2019,
+    "makes": 3612,
+    "attempts": 7361,
+    "three_point_attempts": 2824,
+    "unique_players": 17,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Golden State Warriors",
+    "FILE_YEAR": 2020,
+    "makes": 2510,
+    "attempts": 5730,
+    "three_point_attempts": 2032,
+    "unique_players": 22,
+    "games_played": 65
+  },
+  {
+    "TEAM_NAME": "Golden State Warriors",
+    "FILE_YEAR": 2021,
+    "makes": 2973,
+    "attempts": 6347,
+    "three_point_attempts": 2789,
+    "unique_players": 18,
+    "games_played": 72
+  },
+  {
+    "TEAM_NAME": "Golden State Warriors",
+    "FILE_YEAR": 2022,
+    "makes": 3323,
+    "attempts": 7087,
+    "three_point_attempts": 3231,
+    "unique_players": 17,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Golden State Warriors",
+    "FILE_YEAR": 2023,
+    "makes": 3538,
+    "attempts": 7393,
+    "three_point_attempts": 3540,
+    "unique_players": 18,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Golden State Warriors",
+    "FILE_YEAR": 2024,
+    "makes": 3582,
+    "attempts": 7515,
+    "three_point_attempts": 3191,
+    "unique_players": 18,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Houston Rockets",
+    "FILE_YEAR": 2004,
+    "makes": 2738,
+    "attempts": 6195,
+    "three_point_attempts": 1406,
+    "unique_players": 17,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Houston Rockets",
+    "FILE_YEAR": 2005,
+    "makes": 2846,
+    "attempts": 6419,
+    "three_point_attempts": 1521,
+    "unique_players": 23,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Houston Rockets",
+    "FILE_YEAR": 2006,
+    "makes": 2708,
+    "attempts": 6252,
+    "three_point_attempts": 1414,
+    "unique_players": 20,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Houston Rockets",
+    "FILE_YEAR": 2007,
+    "makes": 2906,
+    "attempts": 6528,
+    "three_point_attempts": 1893,
+    "unique_players": 15,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Houston Rockets",
+    "FILE_YEAR": 2008,
+    "makes": 3003,
+    "attempts": 6698,
+    "three_point_attempts": 1707,
+    "unique_players": 21,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Houston Rockets",
+    "FILE_YEAR": 2009,
+    "makes": 2959,
+    "attempts": 6525,
+    "three_point_attempts": 1655,
+    "unique_players": 17,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Houston Rockets",
+    "FILE_YEAR": 2010,
+    "makes": 3093,
+    "attempts": 6921,
+    "three_point_attempts": 1836,
+    "unique_players": 21,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Houston Rockets",
+    "FILE_YEAR": 2011,
+    "makes": 3169,
+    "attempts": 6973,
+    "three_point_attempts": 1841,
+    "unique_players": 20,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Houston Rockets",
+    "FILE_YEAR": 2012,
+    "makes": 2489,
+    "attempts": 5542,
+    "three_point_attempts": 1329,
+    "unique_players": 19,
+    "games_played": 66
+  },
+  {
+    "TEAM_NAME": "Houston Rockets",
+    "FILE_YEAR": 2013,
+    "makes": 3124,
+    "attempts": 6781,
+    "three_point_attempts": 2368,
+    "unique_players": 20,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Houston Rockets",
+    "FILE_YEAR": 2014,
+    "makes": 3114,
+    "attempts": 6599,
+    "three_point_attempts": 2175,
+    "unique_players": 18,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Houston Rockets",
+    "FILE_YEAR": 2015,
+    "makes": 3032,
+    "attempts": 6831,
+    "three_point_attempts": 2679,
+    "unique_players": 20,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Houston Rockets",
+    "FILE_YEAR": 2016,
+    "makes": 3093,
+    "attempts": 6841,
+    "three_point_attempts": 2527,
+    "unique_players": 17,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Houston Rockets",
+    "FILE_YEAR": 2017,
+    "makes": 3302,
+    "attempts": 7145,
+    "three_point_attempts": 3299,
+    "unique_players": 18,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Houston Rockets",
+    "FILE_YEAR": 2018,
+    "makes": 3174,
+    "attempts": 6906,
+    "three_point_attempts": 3470,
+    "unique_players": 24,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Houston Rockets",
+    "FILE_YEAR": 2019,
+    "makes": 3218,
+    "attempts": 7163,
+    "three_point_attempts": 3721,
+    "unique_players": 23,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Houston Rockets",
+    "FILE_YEAR": 2020,
+    "makes": 2936,
+    "attempts": 6512,
+    "three_point_attempts": 3261,
+    "unique_players": 21,
+    "games_played": 72
+  },
+  {
+    "TEAM_NAME": "Houston Rockets",
+    "FILE_YEAR": 2021,
+    "makes": 2826,
+    "attempts": 6372,
+    "three_point_attempts": 2923,
+    "unique_players": 30,
+    "games_played": 72
+  },
+  {
+    "TEAM_NAME": "Houston Rockets",
+    "FILE_YEAR": 2022,
+    "makes": 3229,
+    "attempts": 7083,
+    "three_point_attempts": 3170,
+    "unique_players": 19,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Houston Rockets",
+    "FILE_YEAR": 2023,
+    "makes": 3329,
+    "attempts": 7287,
+    "three_point_attempts": 2619,
+    "unique_players": 18,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Houston Rockets",
+    "FILE_YEAR": 2024,
+    "makes": 3425,
+    "attempts": 7459,
+    "three_point_attempts": 2964,
+    "unique_players": 17,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Indiana Pacers",
+    "FILE_YEAR": 2004,
+    "makes": 2753,
+    "attempts": 6322,
+    "three_point_attempts": 1281,
+    "unique_players": 15,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Indiana Pacers",
+    "FILE_YEAR": 2005,
+    "makes": 2668,
+    "attempts": 6169,
+    "three_point_attempts": 1575,
+    "unique_players": 20,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Indiana Pacers",
+    "FILE_YEAR": 2006,
+    "makes": 2786,
+    "attempts": 6274,
+    "three_point_attempts": 1536,
+    "unique_players": 16,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Indiana Pacers",
+    "FILE_YEAR": 2007,
+    "makes": 2872,
+    "attempts": 6561,
+    "three_point_attempts": 1389,
+    "unique_players": 19,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Indiana Pacers",
+    "FILE_YEAR": 2008,
+    "makes": 3102,
+    "attempts": 6993,
+    "three_point_attempts": 2021,
+    "unique_players": 16,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Indiana Pacers",
+    "FILE_YEAR": 2009,
+    "makes": 3220,
+    "attempts": 7080,
+    "three_point_attempts": 1725,
+    "unique_players": 14,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Indiana Pacers",
+    "FILE_YEAR": 2010,
+    "makes": 3019,
+    "attempts": 6821,
+    "three_point_attempts": 1894,
+    "unique_players": 15,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Indiana Pacers",
+    "FILE_YEAR": 2011,
+    "makes": 3003,
+    "attempts": 6786,
+    "three_point_attempts": 1652,
+    "unique_players": 15,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Indiana Pacers",
+    "FILE_YEAR": 2012,
+    "makes": 2354,
+    "attempts": 5374,
+    "three_point_attempts": 1063,
+    "unique_players": 15,
+    "games_played": 66
+  },
+  {
+    "TEAM_NAME": "Indiana Pacers",
+    "FILE_YEAR": 2013,
+    "makes": 2845,
+    "attempts": 6524,
+    "three_point_attempts": 1598,
+    "unique_players": 16,
+    "games_played": 81
+  },
+  {
+    "TEAM_NAME": "Indiana Pacers",
+    "FILE_YEAR": 2014,
+    "makes": 2949,
+    "attempts": 6572,
+    "three_point_attempts": 1541,
+    "unique_players": 17,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Indiana Pacers",
+    "FILE_YEAR": 2015,
+    "makes": 2998,
+    "attempts": 6824,
+    "three_point_attempts": 1740,
+    "unique_players": 16,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Indiana Pacers",
+    "FILE_YEAR": 2016,
+    "makes": 3135,
+    "attempts": 6970,
+    "three_point_attempts": 1874,
+    "unique_players": 16,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Indiana Pacers",
+    "FILE_YEAR": 2017,
+    "makes": 3211,
+    "attempts": 6918,
+    "three_point_attempts": 1872,
+    "unique_players": 16,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Indiana Pacers",
+    "FILE_YEAR": 2018,
+    "makes": 3345,
+    "attempts": 7083,
+    "three_point_attempts": 2010,
+    "unique_players": 17,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Indiana Pacers",
+    "FILE_YEAR": 2019,
+    "makes": 3390,
+    "attempts": 7135,
+    "three_point_attempts": 2081,
+    "unique_players": 17,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Indiana Pacers",
+    "FILE_YEAR": 2020,
+    "makes": 3075,
+    "attempts": 6457,
+    "three_point_attempts": 2046,
+    "unique_players": 17,
+    "games_played": 73
+  },
+  {
+    "TEAM_NAME": "Indiana Pacers",
+    "FILE_YEAR": 2021,
+    "makes": 3115,
+    "attempts": 6567,
+    "three_point_attempts": 2445,
+    "unique_players": 20,
+    "games_played": 72
+  },
+  {
+    "TEAM_NAME": "Indiana Pacers",
+    "FILE_YEAR": 2022,
+    "makes": 3398,
+    "attempts": 7338,
+    "three_point_attempts": 2899,
+    "unique_players": 27,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Indiana Pacers",
+    "FILE_YEAR": 2023,
+    "makes": 3444,
+    "attempts": 7345,
+    "three_point_attempts": 3030,
+    "unique_players": 20,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Indiana Pacers",
+    "FILE_YEAR": 2024,
+    "makes": 3855,
+    "attempts": 7599,
+    "three_point_attempts": 2891,
+    "unique_players": 22,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "LA Clippers",
+    "FILE_YEAR": 2016,
+    "makes": 3128,
+    "attempts": 6726,
+    "three_point_attempts": 2157,
+    "unique_players": 18,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "LA Clippers",
+    "FILE_YEAR": 2017,
+    "makes": 3233,
+    "attempts": 6789,
+    "three_point_attempts": 2214,
+    "unique_players": 15,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "LA Clippers",
+    "FILE_YEAR": 2018,
+    "makes": 3302,
+    "attempts": 7004,
+    "three_point_attempts": 2196,
+    "unique_players": 21,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "LA Clippers",
+    "FILE_YEAR": 2019,
+    "makes": 3384,
+    "attempts": 7178,
+    "three_point_attempts": 2118,
+    "unique_players": 22,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "LA Clippers",
+    "FILE_YEAR": 2023,
+    "makes": 3370,
+    "attempts": 7060,
+    "three_point_attempts": 2734,
+    "unique_players": 21,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "LA Clippers",
+    "FILE_YEAR": 2024,
+    "makes": 3473,
+    "attempts": 7108,
+    "three_point_attempts": 2719,
+    "unique_players": 21,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Los Angeles Clippers",
+    "FILE_YEAR": 2004,
+    "makes": 2817,
+    "attempts": 6579,
+    "three_point_attempts": 1024,
+    "unique_players": 16,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Los Angeles Clippers",
+    "FILE_YEAR": 2005,
+    "makes": 2924,
+    "attempts": 6368,
+    "three_point_attempts": 669,
+    "unique_players": 17,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Los Angeles Clippers",
+    "FILE_YEAR": 2006,
+    "makes": 2993,
+    "attempts": 6443,
+    "three_point_attempts": 843,
+    "unique_players": 18,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Los Angeles Clippers",
+    "FILE_YEAR": 2007,
+    "makes": 2880,
+    "attempts": 6318,
+    "three_point_attempts": 903,
+    "unique_players": 19,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Los Angeles Clippers",
+    "FILE_YEAR": 2008,
+    "makes": 2820,
+    "attempts": 6445,
+    "three_point_attempts": 1079,
+    "unique_players": 20,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Los Angeles Clippers",
+    "FILE_YEAR": 2009,
+    "makes": 2955,
+    "attempts": 6695,
+    "three_point_attempts": 1512,
+    "unique_players": 19,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Los Angeles Clippers",
+    "FILE_YEAR": 2010,
+    "makes": 3001,
+    "attempts": 6600,
+    "three_point_attempts": 1456,
+    "unique_players": 18,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Los Angeles Clippers",
+    "FILE_YEAR": 2011,
+    "makes": 3012,
+    "attempts": 6590,
+    "three_point_attempts": 1515,
+    "unique_players": 17,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Los Angeles Clippers",
+    "FILE_YEAR": 2012,
+    "makes": 2437,
+    "attempts": 5362,
+    "three_point_attempts": 1437,
+    "unique_players": 18,
+    "games_played": 66
+  },
+  {
+    "TEAM_NAME": "Los Angeles Clippers",
+    "FILE_YEAR": 2013,
+    "makes": 3160,
+    "attempts": 6606,
+    "three_point_attempts": 1750,
+    "unique_players": 15,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Los Angeles Clippers",
+    "FILE_YEAR": 2014,
+    "makes": 3206,
+    "attempts": 6754,
+    "three_point_attempts": 1959,
+    "unique_players": 20,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Los Angeles Clippers",
+    "FILE_YEAR": 2015,
+    "makes": 3227,
+    "attempts": 6827,
+    "three_point_attempts": 2199,
+    "unique_players": 20,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Los Angeles Clippers",
+    "FILE_YEAR": 2020,
+    "makes": 2992,
+    "attempts": 6425,
+    "three_point_attempts": 2410,
+    "unique_players": 20,
+    "games_played": 72
+  },
+  {
+    "TEAM_NAME": "Los Angeles Clippers",
+    "FILE_YEAR": 2021,
+    "makes": 3009,
+    "attempts": 6242,
+    "three_point_attempts": 2498,
+    "unique_players": 20,
+    "games_played": 72
+  },
+  {
+    "TEAM_NAME": "Los Angeles Clippers",
+    "FILE_YEAR": 2022,
+    "makes": 3285,
+    "attempts": 7170,
+    "three_point_attempts": 2802,
+    "unique_players": 22,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Los Angeles Lakers",
+    "FILE_YEAR": 2004,
+    "makes": 3028,
+    "attempts": 6676,
+    "three_point_attempts": 1115,
+    "unique_players": 17,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Los Angeles Lakers",
+    "FILE_YEAR": 2005,
+    "makes": 2895,
+    "attempts": 6629,
+    "three_point_attempts": 1813,
+    "unique_players": 16,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Los Angeles Lakers",
+    "FILE_YEAR": 2006,
+    "makes": 2992,
+    "attempts": 6607,
+    "three_point_attempts": 1583,
+    "unique_players": 17,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Los Angeles Lakers",
+    "FILE_YEAR": 2007,
+    "makes": 3103,
+    "attempts": 6664,
+    "three_point_attempts": 1724,
+    "unique_players": 14,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Los Angeles Lakers",
+    "FILE_YEAR": 2008,
+    "makes": 3248,
+    "attempts": 6818,
+    "three_point_attempts": 1751,
+    "unique_players": 19,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Los Angeles Lakers",
+    "FILE_YEAR": 2009,
+    "makes": 3305,
+    "attempts": 6978,
+    "three_point_attempts": 1513,
+    "unique_players": 16,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Los Angeles Lakers",
+    "FILE_YEAR": 2010,
+    "makes": 3144,
+    "attempts": 6875,
+    "three_point_attempts": 1562,
+    "unique_players": 13,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Los Angeles Lakers",
+    "FILE_YEAR": 2011,
+    "makes": 3126,
+    "attempts": 6755,
+    "three_point_attempts": 1485,
+    "unique_players": 16,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Los Angeles Lakers",
+    "FILE_YEAR": 2012,
+    "makes": 2428,
+    "attempts": 5318,
+    "three_point_attempts": 1111,
+    "unique_players": 17,
+    "games_played": 66
+  },
+  {
+    "TEAM_NAME": "Los Angeles Lakers",
+    "FILE_YEAR": 2013,
+    "makes": 3037,
+    "attempts": 6632,
+    "three_point_attempts": 2007,
+    "unique_players": 16,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Los Angeles Lakers",
+    "FILE_YEAR": 2014,
+    "makes": 3138,
+    "attempts": 6974,
+    "three_point_attempts": 2026,
+    "unique_players": 19,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Los Angeles Lakers",
+    "FILE_YEAR": 2015,
+    "makes": 3054,
+    "attempts": 7020,
+    "three_point_attempts": 1546,
+    "unique_players": 18,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Los Angeles Lakers",
+    "FILE_YEAR": 2016,
+    "makes": 2876,
+    "attempts": 6947,
+    "three_point_attempts": 2007,
+    "unique_players": 15,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Los Angeles Lakers",
+    "FILE_YEAR": 2017,
+    "makes": 3216,
+    "attempts": 7140,
+    "three_point_attempts": 2086,
+    "unique_players": 18,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Los Angeles Lakers",
+    "FILE_YEAR": 2018,
+    "makes": 3338,
+    "attempts": 7248,
+    "three_point_attempts": 2384,
+    "unique_players": 24,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Los Angeles Lakers",
+    "FILE_YEAR": 2019,
+    "makes": 3491,
+    "attempts": 7425,
+    "three_point_attempts": 2541,
+    "unique_players": 22,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Los Angeles Lakers",
+    "FILE_YEAR": 2020,
+    "makes": 3006,
+    "attempts": 6269,
+    "three_point_attempts": 2242,
+    "unique_players": 20,
+    "games_played": 71
+  },
+  {
+    "TEAM_NAME": "Los Angeles Lakers",
+    "FILE_YEAR": 2021,
+    "makes": 2925,
+    "attempts": 6197,
+    "three_point_attempts": 2248,
+    "unique_players": 19,
+    "games_played": 72
+  },
+  {
+    "TEAM_NAME": "Los Angeles Lakers",
+    "FILE_YEAR": 2022,
+    "makes": 3415,
+    "attempts": 7279,
+    "three_point_attempts": 2826,
+    "unique_players": 25,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Los Angeles Lakers",
+    "FILE_YEAR": 2023,
+    "makes": 3516,
+    "attempts": 7298,
+    "three_point_attempts": 2558,
+    "unique_players": 24,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Los Angeles Lakers",
+    "FILE_YEAR": 2024,
+    "makes": 3580,
+    "attempts": 7177,
+    "three_point_attempts": 2572,
+    "unique_players": 21,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Memphis Grizzlies",
+    "FILE_YEAR": 2004,
+    "makes": 2963,
+    "attempts": 6657,
+    "three_point_attempts": 1314,
+    "unique_players": 16,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Memphis Grizzlies",
+    "FILE_YEAR": 2005,
+    "makes": 2802,
+    "attempts": 6271,
+    "three_point_attempts": 1486,
+    "unique_players": 15,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Memphis Grizzlies",
+    "FILE_YEAR": 2006,
+    "makes": 2746,
+    "attempts": 6125,
+    "three_point_attempts": 1578,
+    "unique_players": 16,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Memphis Grizzlies",
+    "FILE_YEAR": 2007,
+    "makes": 2998,
+    "attempts": 6448,
+    "three_point_attempts": 1362,
+    "unique_players": 17,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Memphis Grizzlies",
+    "FILE_YEAR": 2008,
+    "makes": 3060,
+    "attempts": 6737,
+    "three_point_attempts": 1779,
+    "unique_players": 19,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Memphis Grizzlies",
+    "FILE_YEAR": 2009,
+    "makes": 2865,
+    "attempts": 6310,
+    "three_point_attempts": 1105,
+    "unique_players": 14,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Memphis Grizzlies",
+    "FILE_YEAR": 2010,
+    "makes": 3223,
+    "attempts": 6875,
+    "three_point_attempts": 1020,
+    "unique_players": 17,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Memphis Grizzlies",
+    "FILE_YEAR": 2011,
+    "makes": 3200,
+    "attempts": 6801,
+    "three_point_attempts": 926,
+    "unique_players": 19,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Memphis Grizzlies",
+    "FILE_YEAR": 2012,
+    "makes": 2425,
+    "attempts": 5422,
+    "three_point_attempts": 849,
+    "unique_players": 17,
+    "games_played": 66
+  },
+  {
+    "TEAM_NAME": "Memphis Grizzlies",
+    "FILE_YEAR": 2013,
+    "makes": 2964,
+    "attempts": 6679,
+    "three_point_attempts": 1107,
+    "unique_players": 20,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Memphis Grizzlies",
+    "FILE_YEAR": 2014,
+    "makes": 3122,
+    "attempts": 6723,
+    "three_point_attempts": 1147,
+    "unique_players": 17,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Memphis Grizzlies",
+    "FILE_YEAR": 2015,
+    "makes": 3097,
+    "attempts": 6763,
+    "three_point_attempts": 1246,
+    "unique_players": 19,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Memphis Grizzlies",
+    "FILE_YEAR": 2016,
+    "makes": 3018,
+    "attempts": 6858,
+    "three_point_attempts": 1520,
+    "unique_players": 27,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Memphis Grizzlies",
+    "FILE_YEAR": 2017,
+    "makes": 2982,
+    "attempts": 6850,
+    "three_point_attempts": 2165,
+    "unique_players": 17,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Memphis Grizzlies",
+    "FILE_YEAR": 2018,
+    "makes": 3013,
+    "attempts": 6788,
+    "three_point_attempts": 2152,
+    "unique_players": 24,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Memphis Grizzlies",
+    "FILE_YEAR": 2019,
+    "makes": 3113,
+    "attempts": 6924,
+    "three_point_attempts": 2368,
+    "unique_players": 28,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Memphis Grizzlies",
+    "FILE_YEAR": 2020,
+    "makes": 3106,
+    "attempts": 6634,
+    "three_point_attempts": 2297,
+    "unique_players": 21,
+    "games_played": 73
+  },
+  {
+    "TEAM_NAME": "Memphis Grizzlies",
+    "FILE_YEAR": 2021,
+    "makes": 3085,
+    "attempts": 6608,
+    "three_point_attempts": 2258,
+    "unique_players": 18,
+    "games_played": 72
+  },
+  {
+    "TEAM_NAME": "Memphis Grizzlies",
+    "FILE_YEAR": 2022,
+    "makes": 3571,
+    "attempts": 7739,
+    "three_point_attempts": 2679,
+    "unique_players": 23,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Memphis Grizzlies",
+    "FILE_YEAR": 2023,
+    "makes": 3585,
+    "attempts": 7551,
+    "three_point_attempts": 2807,
+    "unique_players": 19,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Memphis Grizzlies",
+    "FILE_YEAR": 2024,
+    "makes": 3145,
+    "attempts": 7229,
+    "three_point_attempts": 3097,
+    "unique_players": 33,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Miami Heat",
+    "FILE_YEAR": 2004,
+    "makes": 2729,
+    "attempts": 6417,
+    "three_point_attempts": 1357,
+    "unique_players": 17,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Miami Heat",
+    "FILE_YEAR": 2005,
+    "makes": 3097,
+    "attempts": 6368,
+    "three_point_attempts": 1260,
+    "unique_players": 17,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Miami Heat",
+    "FILE_YEAR": 2006,
+    "makes": 3039,
+    "attempts": 6355,
+    "three_point_attempts": 1441,
+    "unique_players": 17,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Miami Heat",
+    "FILE_YEAR": 2007,
+    "makes": 2919,
+    "attempts": 6288,
+    "three_point_attempts": 1539,
+    "unique_players": 16,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Miami Heat",
+    "FILE_YEAR": 2008,
+    "makes": 2808,
+    "attempts": 6336,
+    "three_point_attempts": 1373,
+    "unique_players": 22,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Miami Heat",
+    "FILE_YEAR": 2009,
+    "makes": 3034,
+    "attempts": 6645,
+    "three_point_attempts": 1630,
+    "unique_players": 18,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Miami Heat",
+    "FILE_YEAR": 2010,
+    "makes": 2984,
+    "attempts": 6518,
+    "three_point_attempts": 1426,
+    "unique_players": 15,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Miami Heat",
+    "FILE_YEAR": 2011,
+    "makes": 3030,
+    "attempts": 6299,
+    "three_point_attempts": 1477,
+    "unique_players": 17,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Miami Heat",
+    "FILE_YEAR": 2012,
+    "makes": 2446,
+    "attempts": 5212,
+    "three_point_attempts": 1030,
+    "unique_players": 16,
+    "games_played": 66
+  },
+  {
+    "TEAM_NAME": "Miami Heat",
+    "FILE_YEAR": 2013,
+    "makes": 3148,
+    "attempts": 6346,
+    "three_point_attempts": 1807,
+    "unique_players": 18,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Miami Heat",
+    "FILE_YEAR": 2014,
+    "makes": 3142,
+    "attempts": 6272,
+    "three_point_attempts": 1829,
+    "unique_players": 18,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Miami Heat",
+    "FILE_YEAR": 2015,
+    "makes": 2885,
+    "attempts": 6330,
+    "three_point_attempts": 1659,
+    "unique_players": 21,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Miami Heat",
+    "FILE_YEAR": 2016,
+    "makes": 3148,
+    "attempts": 6693,
+    "three_point_attempts": 1476,
+    "unique_players": 18,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Miami Heat",
+    "FILE_YEAR": 2017,
+    "makes": 3200,
+    "attempts": 7030,
+    "three_point_attempts": 2206,
+    "unique_players": 15,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Miami Heat",
+    "FILE_YEAR": 2018,
+    "makes": 3184,
+    "attempts": 6997,
+    "three_point_attempts": 2506,
+    "unique_players": 19,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Miami Heat",
+    "FILE_YEAR": 2019,
+    "makes": 3251,
+    "attempts": 7218,
+    "three_point_attempts": 2658,
+    "unique_players": 18,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Miami Heat",
+    "FILE_YEAR": 2020,
+    "makes": 2880,
+    "attempts": 6160,
+    "three_point_attempts": 2584,
+    "unique_players": 21,
+    "games_played": 73
+  },
+  {
+    "TEAM_NAME": "Miami Heat",
+    "FILE_YEAR": 2021,
+    "makes": 2824,
+    "attempts": 6029,
+    "three_point_attempts": 2606,
+    "unique_players": 21,
+    "games_played": 72
+  },
+  {
+    "TEAM_NAME": "Miami Heat",
+    "FILE_YEAR": 2022,
+    "makes": 3246,
+    "attempts": 6954,
+    "three_point_attempts": 2936,
+    "unique_players": 22,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Miami Heat",
+    "FILE_YEAR": 2023,
+    "makes": 3215,
+    "attempts": 6991,
+    "three_point_attempts": 2852,
+    "unique_players": 20,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Miami Heat",
+    "FILE_YEAR": 2024,
+    "makes": 3266,
+    "attempts": 7022,
+    "three_point_attempts": 2765,
+    "unique_players": 21,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Milwaukee Bucks",
+    "FILE_YEAR": 2004,
+    "makes": 2970,
+    "attempts": 6650,
+    "three_point_attempts": 1145,
+    "unique_players": 15,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Milwaukee Bucks",
+    "FILE_YEAR": 2005,
+    "makes": 2964,
+    "attempts": 6580,
+    "three_point_attempts": 925,
+    "unique_players": 18,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Milwaukee Bucks",
+    "FILE_YEAR": 2006,
+    "makes": 2976,
+    "attempts": 6566,
+    "three_point_attempts": 1335,
+    "unique_players": 15,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Milwaukee Bucks",
+    "FILE_YEAR": 2007,
+    "makes": 3121,
+    "attempts": 6714,
+    "three_point_attempts": 1472,
+    "unique_players": 17,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Milwaukee Bucks",
+    "FILE_YEAR": 2008,
+    "makes": 3026,
+    "attempts": 6745,
+    "three_point_attempts": 1313,
+    "unique_players": 14,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Milwaukee Bucks",
+    "FILE_YEAR": 2009,
+    "makes": 3009,
+    "attempts": 6754,
+    "three_point_attempts": 1407,
+    "unique_players": 17,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Milwaukee Bucks",
+    "FILE_YEAR": 2010,
+    "makes": 3048,
+    "attempts": 6992,
+    "three_point_attempts": 1807,
+    "unique_players": 19,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Milwaukee Bucks",
+    "FILE_YEAR": 2011,
+    "makes": 2814,
+    "attempts": 6543,
+    "three_point_attempts": 1413,
+    "unique_players": 16,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Milwaukee Bucks",
+    "FILE_YEAR": 2012,
+    "makes": 2496,
+    "attempts": 5645,
+    "three_point_attempts": 1258,
+    "unique_players": 17,
+    "games_played": 66
+  },
+  {
+    "TEAM_NAME": "Milwaukee Bucks",
+    "FILE_YEAR": 2013,
+    "makes": 3128,
+    "attempts": 7196,
+    "three_point_attempts": 1669,
+    "unique_players": 18,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Milwaukee Bucks",
+    "FILE_YEAR": 2014,
+    "makes": 2952,
+    "attempts": 6735,
+    "three_point_attempts": 1551,
+    "unique_players": 19,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Milwaukee Bucks",
+    "FILE_YEAR": 2015,
+    "makes": 3083,
+    "attempts": 6722,
+    "three_point_attempts": 1500,
+    "unique_players": 20,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Milwaukee Bucks",
+    "FILE_YEAR": 2016,
+    "makes": 3142,
+    "attempts": 6726,
+    "three_point_attempts": 1263,
+    "unique_players": 17,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Milwaukee Bucks",
+    "FILE_YEAR": 2017,
+    "makes": 3175,
+    "attempts": 6701,
+    "three_point_attempts": 1932,
+    "unique_players": 19,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Milwaukee Bucks",
+    "FILE_YEAR": 2018,
+    "makes": 3257,
+    "attempts": 6807,
+    "three_point_attempts": 2024,
+    "unique_players": 24,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Milwaukee Bucks",
+    "FILE_YEAR": 2019,
+    "makes": 3555,
+    "attempts": 7471,
+    "three_point_attempts": 3134,
+    "unique_players": 24,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Milwaukee Bucks",
+    "FILE_YEAR": 2020,
+    "makes": 3160,
+    "attempts": 6638,
+    "three_point_attempts": 2840,
+    "unique_players": 17,
+    "games_played": 73
+  },
+  {
+    "TEAM_NAME": "Milwaukee Bucks",
+    "FILE_YEAR": 2021,
+    "makes": 3221,
+    "attempts": 6610,
+    "three_point_attempts": 2669,
+    "unique_players": 22,
+    "games_played": 72
+  },
+  {
+    "TEAM_NAME": "Milwaukee Bucks",
+    "FILE_YEAR": 2022,
+    "makes": 3429,
+    "attempts": 7331,
+    "three_point_attempts": 3151,
+    "unique_players": 28,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Milwaukee Bucks",
+    "FILE_YEAR": 2023,
+    "makes": 3504,
+    "attempts": 7411,
+    "three_point_attempts": 3306,
+    "unique_players": 21,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Milwaukee Bucks",
+    "FILE_YEAR": 2024,
+    "makes": 3538,
+    "attempts": 7258,
+    "three_point_attempts": 3122,
+    "unique_players": 20,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Minnesota Timberwolves",
+    "FILE_YEAR": 2004,
+    "makes": 3033,
+    "attempts": 6571,
+    "three_point_attempts": 897,
+    "unique_players": 17,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Minnesota Timberwolves",
+    "FILE_YEAR": 2005,
+    "makes": 3045,
+    "attempts": 6629,
+    "three_point_attempts": 1145,
+    "unique_players": 14,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Minnesota Timberwolves",
+    "FILE_YEAR": 2006,
+    "makes": 2888,
+    "attempts": 6340,
+    "three_point_attempts": 942,
+    "unique_players": 18,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Minnesota Timberwolves",
+    "FILE_YEAR": 2007,
+    "makes": 2997,
+    "attempts": 6502,
+    "three_point_attempts": 1089,
+    "unique_players": 14,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Minnesota Timberwolves",
+    "FILE_YEAR": 2008,
+    "makes": 3076,
+    "attempts": 6817,
+    "three_point_attempts": 1259,
+    "unique_players": 16,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Minnesota Timberwolves",
+    "FILE_YEAR": 2009,
+    "makes": 2986,
+    "attempts": 6766,
+    "three_point_attempts": 1539,
+    "unique_players": 16,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Minnesota Timberwolves",
+    "FILE_YEAR": 2010,
+    "makes": 3106,
+    "attempts": 6923,
+    "three_point_attempts": 1181,
+    "unique_players": 16,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Minnesota Timberwolves",
+    "FILE_YEAR": 2011,
+    "makes": 3090,
+    "attempts": 7014,
+    "three_point_attempts": 1565,
+    "unique_players": 17,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Minnesota Timberwolves",
+    "FILE_YEAR": 2012,
+    "makes": 2355,
+    "attempts": 5433,
+    "three_point_attempts": 1422,
+    "unique_players": 15,
+    "games_played": 66
+  },
+  {
+    "TEAM_NAME": "Minnesota Timberwolves",
+    "FILE_YEAR": 2013,
+    "makes": 2943,
+    "attempts": 6702,
+    "three_point_attempts": 1475,
+    "unique_players": 19,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Minnesota Timberwolves",
+    "FILE_YEAR": 2014,
+    "makes": 3188,
+    "attempts": 7173,
+    "three_point_attempts": 1755,
+    "unique_players": 17,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Minnesota Timberwolves",
+    "FILE_YEAR": 2015,
+    "makes": 2985,
+    "attempts": 6819,
+    "three_point_attempts": 1222,
+    "unique_players": 24,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Minnesota Timberwolves",
+    "FILE_YEAR": 2016,
+    "makes": 3094,
+    "attempts": 6666,
+    "three_point_attempts": 1345,
+    "unique_players": 16,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Minnesota Timberwolves",
+    "FILE_YEAR": 2017,
+    "makes": 3235,
+    "attempts": 6921,
+    "three_point_attempts": 1722,
+    "unique_players": 16,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Minnesota Timberwolves",
+    "FILE_YEAR": 2018,
+    "makes": 3365,
+    "attempts": 7063,
+    "three_point_attempts": 1845,
+    "unique_players": 16,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Minnesota Timberwolves",
+    "FILE_YEAR": 2019,
+    "makes": 3413,
+    "attempts": 7483,
+    "three_point_attempts": 2357,
+    "unique_players": 21,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Minnesota Timberwolves",
+    "FILE_YEAR": 2020,
+    "makes": 2586,
+    "attempts": 5865,
+    "three_point_attempts": 2540,
+    "unique_players": 24,
+    "games_played": 64
+  },
+  {
+    "TEAM_NAME": "Minnesota Timberwolves",
+    "FILE_YEAR": 2021,
+    "makes": 2932,
+    "attempts": 6546,
+    "three_point_attempts": 2706,
+    "unique_players": 15,
+    "games_played": 72
+  },
+  {
+    "TEAM_NAME": "Minnesota Timberwolves",
+    "FILE_YEAR": 2022,
+    "makes": 3411,
+    "attempts": 7458,
+    "three_point_attempts": 3386,
+    "unique_players": 17,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Minnesota Timberwolves",
+    "FILE_YEAR": 2023,
+    "makes": 3515,
+    "attempts": 7167,
+    "three_point_attempts": 2731,
+    "unique_players": 20,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Minnesota Timberwolves",
+    "FILE_YEAR": 2024,
+    "makes": 3383,
+    "attempts": 6974,
+    "three_point_attempts": 2681,
+    "unique_players": 18,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "New Jersey Nets",
+    "FILE_YEAR": 2004,
+    "makes": 2813,
+    "attempts": 6372,
+    "three_point_attempts": 1123,
+    "unique_players": 19,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "New Jersey Nets",
+    "FILE_YEAR": 2005,
+    "makes": 2753,
+    "attempts": 6419,
+    "three_point_attempts": 1203,
+    "unique_players": 22,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "New Jersey Nets",
+    "FILE_YEAR": 2006,
+    "makes": 2778,
+    "attempts": 6317,
+    "three_point_attempts": 1447,
+    "unique_players": 17,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "New Jersey Nets",
+    "FILE_YEAR": 2007,
+    "makes": 2913,
+    "attempts": 6379,
+    "three_point_attempts": 1676,
+    "unique_players": 15,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "New Jersey Nets",
+    "FILE_YEAR": 2008,
+    "makes": 2856,
+    "attempts": 6450,
+    "three_point_attempts": 1430,
+    "unique_players": 20,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "New Jersey Nets",
+    "FILE_YEAR": 2009,
+    "makes": 2924,
+    "attempts": 6535,
+    "three_point_attempts": 1734,
+    "unique_players": 15,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "New Jersey Nets",
+    "FILE_YEAR": 2010,
+    "makes": 2813,
+    "attempts": 6554,
+    "three_point_attempts": 1185,
+    "unique_players": 17,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "New Jersey Nets",
+    "FILE_YEAR": 2011,
+    "makes": 2918,
+    "attempts": 6638,
+    "three_point_attempts": 1337,
+    "unique_players": 22,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "New Jersey Nets",
+    "FILE_YEAR": 2012,
+    "makes": 2262,
+    "attempts": 5320,
+    "three_point_attempts": 1481,
+    "unique_players": 22,
+    "games_played": 66
+  },
+  {
+    "TEAM_NAME": "New Orleans Hornets",
+    "FILE_YEAR": 2004,
+    "makes": 2772,
+    "attempts": 6605,
+    "three_point_attempts": 1666,
+    "unique_players": 16,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "New Orleans Hornets",
+    "FILE_YEAR": 2005,
+    "makes": 2718,
+    "attempts": 6556,
+    "three_point_attempts": 1316,
+    "unique_players": 22,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "New Orleans Hornets",
+    "FILE_YEAR": 2008,
+    "makes": 3164,
+    "attempts": 6796,
+    "three_point_attempts": 1621,
+    "unique_players": 16,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "New Orleans Hornets",
+    "FILE_YEAR": 2009,
+    "makes": 2910,
+    "attempts": 6364,
+    "three_point_attempts": 1524,
+    "unique_players": 15,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "New Orleans Hornets",
+    "FILE_YEAR": 2010,
+    "makes": 3178,
+    "attempts": 6842,
+    "three_point_attempts": 1572,
+    "unique_players": 16,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "New Orleans Hornets",
+    "FILE_YEAR": 2011,
+    "makes": 2944,
+    "attempts": 6416,
+    "three_point_attempts": 1232,
+    "unique_players": 19,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "New Orleans Hornets",
+    "FILE_YEAR": 2012,
+    "makes": 2300,
+    "attempts": 5103,
+    "three_point_attempts": 777,
+    "unique_players": 22,
+    "games_played": 66
+  },
+  {
+    "TEAM_NAME": "New Orleans Hornets",
+    "FILE_YEAR": 2013,
+    "makes": 2955,
+    "attempts": 6589,
+    "three_point_attempts": 1474,
+    "unique_players": 18,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "New Orleans Pelicans",
+    "FILE_YEAR": 2014,
+    "makes": 3101,
+    "attempts": 6761,
+    "three_point_attempts": 1303,
+    "unique_players": 20,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "New Orleans Pelicans",
+    "FILE_YEAR": 2015,
+    "makes": 3107,
+    "attempts": 6793,
+    "three_point_attempts": 1581,
+    "unique_players": 21,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "New Orleans Pelicans",
+    "FILE_YEAR": 2016,
+    "makes": 3152,
+    "attempts": 7035,
+    "three_point_attempts": 1946,
+    "unique_players": 21,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "New Orleans Pelicans",
+    "FILE_YEAR": 2017,
+    "makes": 3208,
+    "attempts": 7125,
+    "three_point_attempts": 2191,
+    "unique_players": 26,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "New Orleans Pelicans",
+    "FILE_YEAR": 2018,
+    "makes": 3500,
+    "attempts": 7241,
+    "three_point_attempts": 2312,
+    "unique_players": 23,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "New Orleans Pelicans",
+    "FILE_YEAR": 2019,
+    "makes": 3581,
+    "attempts": 7563,
+    "three_point_attempts": 2449,
+    "unique_players": 20,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "New Orleans Pelicans",
+    "FILE_YEAR": 2020,
+    "makes": 3065,
+    "attempts": 6598,
+    "three_point_attempts": 2656,
+    "unique_players": 17,
+    "games_played": 72
+  },
+  {
+    "TEAM_NAME": "New Orleans Pelicans",
+    "FILE_YEAR": 2021,
+    "makes": 3060,
+    "attempts": 6412,
+    "three_point_attempts": 2190,
+    "unique_players": 21,
+    "games_played": 72
+  },
+  {
+    "TEAM_NAME": "New Orleans Pelicans",
+    "FILE_YEAR": 2022,
+    "makes": 3294,
+    "attempts": 7212,
+    "three_point_attempts": 2629,
+    "unique_players": 22,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "New Orleans Pelicans",
+    "FILE_YEAR": 2023,
+    "makes": 3447,
+    "attempts": 7180,
+    "three_point_attempts": 2468,
+    "unique_players": 17,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "New Orleans Pelicans",
+    "FILE_YEAR": 2024,
+    "makes": 3484,
+    "attempts": 7165,
+    "three_point_attempts": 2673,
+    "unique_players": 20,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "New Orleans/Oklahoma City Hornets",
+    "FILE_YEAR": 2006,
+    "makes": 2831,
+    "attempts": 6428,
+    "three_point_attempts": 885,
+    "unique_players": 19,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "New Orleans/Oklahoma City Hornets",
+    "FILE_YEAR": 2007,
+    "makes": 2971,
+    "attempts": 6674,
+    "three_point_attempts": 1256,
+    "unique_players": 15,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "New York Knicks",
+    "FILE_YEAR": 2004,
+    "makes": 2881,
+    "attempts": 6513,
+    "three_point_attempts": 1115,
+    "unique_players": 22,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "New York Knicks",
+    "FILE_YEAR": 2005,
+    "makes": 2978,
+    "attempts": 6599,
+    "three_point_attempts": 1240,
+    "unique_players": 19,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "New York Knicks",
+    "FILE_YEAR": 2006,
+    "makes": 2822,
+    "attempts": 6205,
+    "three_point_attempts": 884,
+    "unique_players": 19,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "New York Knicks",
+    "FILE_YEAR": 2007,
+    "makes": 2903,
+    "attempts": 6356,
+    "three_point_attempts": 1370,
+    "unique_players": 15,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "New York Knicks",
+    "FILE_YEAR": 2008,
+    "makes": 2967,
+    "attempts": 6757,
+    "three_point_attempts": 1454,
+    "unique_players": 15,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "New York Knicks",
+    "FILE_YEAR": 2009,
+    "makes": 3157,
+    "attempts": 7091,
+    "three_point_attempts": 2284,
+    "unique_players": 23,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "New York Knicks",
+    "FILE_YEAR": 2010,
+    "makes": 3127,
+    "attempts": 6876,
+    "three_point_attempts": 2145,
+    "unique_players": 20,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "New York Knicks",
+    "FILE_YEAR": 2011,
+    "makes": 3140,
+    "attempts": 6865,
+    "three_point_attempts": 2079,
+    "unique_players": 20,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "New York Knicks",
+    "FILE_YEAR": 2012,
+    "makes": 2365,
+    "attempts": 5335,
+    "three_point_attempts": 1538,
+    "unique_players": 17,
+    "games_played": 66
+  },
+  {
+    "TEAM_NAME": "New York Knicks",
+    "FILE_YEAR": 2013,
+    "makes": 2996,
+    "attempts": 6689,
+    "three_point_attempts": 2371,
+    "unique_players": 19,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "New York Knicks",
+    "FILE_YEAR": 2014,
+    "makes": 3027,
+    "attempts": 6739,
+    "three_point_attempts": 2038,
+    "unique_players": 17,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "New York Knicks",
+    "FILE_YEAR": 2015,
+    "makes": 2882,
+    "attempts": 6726,
+    "three_point_attempts": 1614,
+    "unique_players": 20,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "New York Knicks",
+    "FILE_YEAR": 2016,
+    "makes": 3021,
+    "attempts": 6882,
+    "three_point_attempts": 1758,
+    "unique_players": 16,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "New York Knicks",
+    "FILE_YEAR": 2017,
+    "makes": 3243,
+    "attempts": 7254,
+    "three_point_attempts": 2020,
+    "unique_players": 16,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "New York Knicks",
+    "FILE_YEAR": 2018,
+    "makes": 3334,
+    "attempts": 7193,
+    "three_point_attempts": 1914,
+    "unique_players": 21,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "New York Knicks",
+    "FILE_YEAR": 2019,
+    "makes": 3134,
+    "attempts": 7241,
+    "three_point_attempts": 2421,
+    "unique_players": 23,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "New York Knicks",
+    "FILE_YEAR": 2020,
+    "makes": 2638,
+    "attempts": 5896,
+    "three_point_attempts": 1872,
+    "unique_players": 17,
+    "games_played": 66
+  },
+  {
+    "TEAM_NAME": "New York Knicks",
+    "FILE_YEAR": 2021,
+    "makes": 2839,
+    "attempts": 6225,
+    "three_point_attempts": 2163,
+    "unique_players": 19,
+    "games_played": 72
+  },
+  {
+    "TEAM_NAME": "New York Knicks",
+    "FILE_YEAR": 2022,
+    "makes": 3088,
+    "attempts": 7069,
+    "three_point_attempts": 3029,
+    "unique_players": 22,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "New York Knicks",
+    "FILE_YEAR": 2023,
+    "makes": 3444,
+    "attempts": 7328,
+    "three_point_attempts": 2930,
+    "unique_players": 17,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "New York Knicks",
+    "FILE_YEAR": 2024,
+    "makes": 3385,
+    "attempts": 7272,
+    "three_point_attempts": 2936,
+    "unique_players": 26,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Oklahoma City Thunder",
+    "FILE_YEAR": 2009,
+    "makes": 2999,
+    "attempts": 6715,
+    "three_point_attempts": 948,
+    "unique_players": 20,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Oklahoma City Thunder",
+    "FILE_YEAR": 2010,
+    "makes": 3063,
+    "attempts": 6629,
+    "three_point_attempts": 1229,
+    "unique_players": 18,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Oklahoma City Thunder",
+    "FILE_YEAR": 2011,
+    "makes": 3066,
+    "attempts": 6609,
+    "three_point_attempts": 1403,
+    "unique_players": 18,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Oklahoma City Thunder",
+    "FILE_YEAR": 2012,
+    "makes": 2462,
+    "attempts": 5229,
+    "three_point_attempts": 1317,
+    "unique_players": 16,
+    "games_played": 66
+  },
+  {
+    "TEAM_NAME": "Oklahoma City Thunder",
+    "FILE_YEAR": 2013,
+    "makes": 3125,
+    "attempts": 6503,
+    "three_point_attempts": 1587,
+    "unique_players": 16,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Oklahoma City Thunder",
+    "FILE_YEAR": 2014,
+    "makes": 3194,
+    "attempts": 6781,
+    "three_point_attempts": 1838,
+    "unique_players": 18,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Oklahoma City Thunder",
+    "FILE_YEAR": 2015,
+    "makes": 3183,
+    "attempts": 7116,
+    "three_point_attempts": 1861,
+    "unique_players": 21,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Oklahoma City Thunder",
+    "FILE_YEAR": 2016,
+    "makes": 3372,
+    "attempts": 7080,
+    "three_point_attempts": 1943,
+    "unique_players": 17,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Oklahoma City Thunder",
+    "FILE_YEAR": 2017,
+    "makes": 3236,
+    "attempts": 7168,
+    "three_point_attempts": 2115,
+    "unique_players": 19,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Oklahoma City Thunder",
+    "FILE_YEAR": 2018,
+    "makes": 3271,
+    "attempts": 7221,
+    "three_point_attempts": 2491,
+    "unique_players": 17,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Oklahoma City Thunder",
+    "FILE_YEAR": 2019,
+    "makes": 3497,
+    "attempts": 7706,
+    "three_point_attempts": 2677,
+    "unique_players": 18,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Oklahoma City Thunder",
+    "FILE_YEAR": 2020,
+    "makes": 2879,
+    "attempts": 6156,
+    "three_point_attempts": 2171,
+    "unique_players": 18,
+    "games_played": 72
+  },
+  {
+    "TEAM_NAME": "Oklahoma City Thunder",
+    "FILE_YEAR": 2021,
+    "makes": 2795,
+    "attempts": 6338,
+    "three_point_attempts": 2529,
+    "unique_players": 22,
+    "games_played": 72
+  },
+  {
+    "TEAM_NAME": "Oklahoma City Thunder",
+    "FILE_YEAR": 2022,
+    "makes": 3141,
+    "attempts": 7310,
+    "three_point_attempts": 3066,
+    "unique_players": 26,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Oklahoma City Thunder",
+    "FILE_YEAR": 2023,
+    "makes": 3533,
+    "attempts": 7590,
+    "three_point_attempts": 2797,
+    "unique_players": 19,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Oklahoma City Thunder",
+    "FILE_YEAR": 2024,
+    "makes": 3653,
+    "attempts": 7324,
+    "three_point_attempts": 2805,
+    "unique_players": 22,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Orlando Magic",
+    "FILE_YEAR": 2004,
+    "makes": 2904,
+    "attempts": 6768,
+    "three_point_attempts": 1248,
+    "unique_players": 21,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Orlando Magic",
+    "FILE_YEAR": 2005,
+    "makes": 3034,
+    "attempts": 6679,
+    "three_point_attempts": 916,
+    "unique_players": 18,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Orlando Magic",
+    "FILE_YEAR": 2006,
+    "makes": 2911,
+    "attempts": 6167,
+    "three_point_attempts": 796,
+    "unique_players": 18,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Orlando Magic",
+    "FILE_YEAR": 2007,
+    "makes": 2875,
+    "attempts": 6090,
+    "three_point_attempts": 962,
+    "unique_players": 15,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Orlando Magic",
+    "FILE_YEAR": 2008,
+    "makes": 3058,
+    "attempts": 6446,
+    "three_point_attempts": 2074,
+    "unique_players": 16,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Orlando Magic",
+    "FILE_YEAR": 2009,
+    "makes": 2929,
+    "attempts": 6416,
+    "three_point_attempts": 2147,
+    "unique_players": 16,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Orlando Magic",
+    "FILE_YEAR": 2010,
+    "makes": 3005,
+    "attempts": 6394,
+    "three_point_attempts": 2241,
+    "unique_players": 12,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Orlando Magic",
+    "FILE_YEAR": 2011,
+    "makes": 2956,
+    "attempts": 6409,
+    "three_point_attempts": 2101,
+    "unique_players": 17,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Orlando Magic",
+    "FILE_YEAR": 2012,
+    "makes": 2275,
+    "attempts": 5162,
+    "three_point_attempts": 1785,
+    "unique_players": 16,
+    "games_played": 66
+  },
+  {
+    "TEAM_NAME": "Orlando Magic",
+    "FILE_YEAR": 2013,
+    "makes": 3093,
+    "attempts": 6904,
+    "three_point_attempts": 1537,
+    "unique_players": 18,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Orlando Magic",
+    "FILE_YEAR": 2014,
+    "makes": 3021,
+    "attempts": 6782,
+    "three_point_attempts": 1594,
+    "unique_players": 16,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Orlando Magic",
+    "FILE_YEAR": 2015,
+    "makes": 3076,
+    "attempts": 6792,
+    "three_point_attempts": 1598,
+    "unique_players": 15,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Orlando Magic",
+    "FILE_YEAR": 2016,
+    "makes": 3242,
+    "attempts": 7117,
+    "three_point_attempts": 1815,
+    "unique_players": 17,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Orlando Magic",
+    "FILE_YEAR": 2017,
+    "makes": 3138,
+    "attempts": 7130,
+    "three_point_attempts": 2136,
+    "unique_players": 19,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Orlando Magic",
+    "FILE_YEAR": 2018,
+    "makes": 3182,
+    "attempts": 7042,
+    "three_point_attempts": 2405,
+    "unique_players": 19,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Orlando Magic",
+    "FILE_YEAR": 2019,
+    "makes": 3316,
+    "attempts": 7307,
+    "three_point_attempts": 2633,
+    "unique_players": 17,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Orlando Magic",
+    "FILE_YEAR": 2020,
+    "makes": 2871,
+    "attempts": 6468,
+    "three_point_attempts": 2354,
+    "unique_players": 19,
+    "games_played": 73
+  },
+  {
+    "TEAM_NAME": "Orlando Magic",
+    "FILE_YEAR": 2021,
+    "makes": 2754,
+    "attempts": 6423,
+    "three_point_attempts": 2288,
+    "unique_players": 28,
+    "games_played": 72
+  },
+  {
+    "TEAM_NAME": "Orlando Magic",
+    "FILE_YEAR": 2022,
+    "makes": 3139,
+    "attempts": 7240,
+    "three_point_attempts": 3022,
+    "unique_players": 22,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Orlando Magic",
+    "FILE_YEAR": 2023,
+    "makes": 3323,
+    "attempts": 7074,
+    "three_point_attempts": 2551,
+    "unique_players": 20,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Orlando Magic",
+    "FILE_YEAR": 2024,
+    "makes": 3318,
+    "attempts": 6964,
+    "three_point_attempts": 2568,
+    "unique_players": 18,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Philadelphia 76ers",
+    "FILE_YEAR": 2004,
+    "makes": 2682,
+    "attempts": 6260,
+    "three_point_attempts": 992,
+    "unique_players": 14,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Philadelphia 76ers",
+    "FILE_YEAR": 2005,
+    "makes": 2946,
+    "attempts": 6736,
+    "three_point_attempts": 1453,
+    "unique_players": 17,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Philadelphia 76ers",
+    "FILE_YEAR": 2006,
+    "makes": 3001,
+    "attempts": 6546,
+    "three_point_attempts": 1031,
+    "unique_players": 16,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Philadelphia 76ers",
+    "FILE_YEAR": 2007,
+    "makes": 2932,
+    "attempts": 6408,
+    "three_point_attempts": 823,
+    "unique_players": 18,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Philadelphia 76ers",
+    "FILE_YEAR": 2008,
+    "makes": 3056,
+    "attempts": 6648,
+    "three_point_attempts": 952,
+    "unique_players": 15,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Philadelphia 76ers",
+    "FILE_YEAR": 2009,
+    "makes": 2997,
+    "attempts": 6531,
+    "three_point_attempts": 1071,
+    "unique_players": 13,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Philadelphia 76ers",
+    "FILE_YEAR": 2010,
+    "makes": 3087,
+    "attempts": 6706,
+    "three_point_attempts": 1381,
+    "unique_players": 16,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Philadelphia 76ers",
+    "FILE_YEAR": 2011,
+    "makes": 3125,
+    "attempts": 6775,
+    "three_point_attempts": 1247,
+    "unique_players": 15,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Philadelphia 76ers",
+    "FILE_YEAR": 2012,
+    "makes": 2471,
+    "attempts": 5516,
+    "three_point_attempts": 963,
+    "unique_players": 16,
+    "games_played": 66
+  },
+  {
+    "TEAM_NAME": "Philadelphia 76ers",
+    "FILE_YEAR": 2013,
+    "makes": 3059,
+    "attempts": 6894,
+    "three_point_attempts": 1437,
+    "unique_players": 17,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Philadelphia 76ers",
+    "FILE_YEAR": 2014,
+    "makes": 3108,
+    "attempts": 7148,
+    "three_point_attempts": 1845,
+    "unique_players": 23,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Philadelphia 76ers",
+    "FILE_YEAR": 2015,
+    "makes": 2765,
+    "attempts": 6776,
+    "three_point_attempts": 2159,
+    "unique_players": 25,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Philadelphia 76ers",
+    "FILE_YEAR": 2016,
+    "makes": 2970,
+    "attempts": 6885,
+    "three_point_attempts": 2253,
+    "unique_players": 18,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Philadelphia 76ers",
+    "FILE_YEAR": 2017,
+    "makes": 3082,
+    "attempts": 6977,
+    "three_point_attempts": 2428,
+    "unique_players": 21,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Philadelphia 76ers",
+    "FILE_YEAR": 2018,
+    "makes": 3349,
+    "attempts": 7098,
+    "three_point_attempts": 2445,
+    "unique_players": 23,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Philadelphia 76ers",
+    "FILE_YEAR": 2019,
+    "makes": 3407,
+    "attempts": 7233,
+    "three_point_attempts": 2474,
+    "unique_players": 26,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Philadelphia 76ers",
+    "FILE_YEAR": 2020,
+    "makes": 3000,
+    "attempts": 6417,
+    "three_point_attempts": 2307,
+    "unique_players": 19,
+    "games_played": 73
+  },
+  {
+    "TEAM_NAME": "Philadelphia 76ers",
+    "FILE_YEAR": 2021,
+    "makes": 2981,
+    "attempts": 6257,
+    "three_point_attempts": 2169,
+    "unique_players": 23,
+    "games_played": 72
+  },
+  {
+    "TEAM_NAME": "Philadelphia 76ers",
+    "FILE_YEAR": 2022,
+    "makes": 3230,
+    "attempts": 6932,
+    "three_point_attempts": 2608,
+    "unique_players": 22,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Philadelphia 76ers",
+    "FILE_YEAR": 2023,
+    "makes": 3347,
+    "attempts": 6870,
+    "three_point_attempts": 2675,
+    "unique_players": 20,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Philadelphia 76ers",
+    "FILE_YEAR": 2024,
+    "makes": 3404,
+    "attempts": 7331,
+    "three_point_attempts": 2733,
+    "unique_players": 26,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Phoenix Suns",
+    "FILE_YEAR": 2004,
+    "makes": 2958,
+    "attempts": 6671,
+    "three_point_attempts": 1202,
+    "unique_players": 19,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Phoenix Suns",
+    "FILE_YEAR": 2005,
+    "makes": 3351,
+    "attempts": 7018,
+    "three_point_attempts": 2026,
+    "unique_players": 18,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Phoenix Suns",
+    "FILE_YEAR": 2006,
+    "makes": 3430,
+    "attempts": 7167,
+    "three_point_attempts": 2097,
+    "unique_players": 18,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Phoenix Suns",
+    "FILE_YEAR": 2007,
+    "makes": 3388,
+    "attempts": 6855,
+    "three_point_attempts": 1965,
+    "unique_players": 14,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Phoenix Suns",
+    "FILE_YEAR": 2008,
+    "makes": 3392,
+    "attempts": 6782,
+    "three_point_attempts": 1764,
+    "unique_players": 16,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Phoenix Suns",
+    "FILE_YEAR": 2009,
+    "makes": 3372,
+    "attempts": 6694,
+    "three_point_attempts": 1444,
+    "unique_players": 17,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Phoenix Suns",
+    "FILE_YEAR": 2010,
+    "makes": 3339,
+    "attempts": 6788,
+    "three_point_attempts": 1770,
+    "unique_players": 14,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Phoenix Suns",
+    "FILE_YEAR": 2011,
+    "makes": 3219,
+    "attempts": 6844,
+    "three_point_attempts": 1857,
+    "unique_players": 18,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Phoenix Suns",
+    "FILE_YEAR": 2012,
+    "makes": 2495,
+    "attempts": 5445,
+    "three_point_attempts": 1295,
+    "unique_players": 13,
+    "games_played": 66
+  },
+  {
+    "TEAM_NAME": "Phoenix Suns",
+    "FILE_YEAR": 2013,
+    "makes": 3061,
+    "attempts": 6917,
+    "three_point_attempts": 1455,
+    "unique_players": 16,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Phoenix Suns",
+    "FILE_YEAR": 2014,
+    "makes": 3171,
+    "attempts": 6843,
+    "three_point_attempts": 2053,
+    "unique_players": 15,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Phoenix Suns",
+    "FILE_YEAR": 2015,
+    "makes": 3178,
+    "attempts": 7038,
+    "three_point_attempts": 2048,
+    "unique_players": 23,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Phoenix Suns",
+    "FILE_YEAR": 2016,
+    "makes": 3050,
+    "attempts": 7013,
+    "three_point_attempts": 2113,
+    "unique_players": 23,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Phoenix Suns",
+    "FILE_YEAR": 2017,
+    "makes": 3270,
+    "attempts": 7258,
+    "three_point_attempts": 1852,
+    "unique_players": 18,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Phoenix Suns",
+    "FILE_YEAR": 2018,
+    "makes": 3153,
+    "attempts": 7141,
+    "three_point_attempts": 2286,
+    "unique_players": 22,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Phoenix Suns",
+    "FILE_YEAR": 2019,
+    "makes": 3289,
+    "attempts": 7164,
+    "three_point_attempts": 2400,
+    "unique_players": 22,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Phoenix Suns",
+    "FILE_YEAR": 2020,
+    "makes": 3006,
+    "attempts": 6429,
+    "three_point_attempts": 2320,
+    "unique_players": 19,
+    "games_played": 73
+  },
+  {
+    "TEAM_NAME": "Phoenix Suns",
+    "FILE_YEAR": 2021,
+    "makes": 3118,
+    "attempts": 6357,
+    "three_point_attempts": 2490,
+    "unique_players": 17,
+    "games_played": 72
+  },
+  {
+    "TEAM_NAME": "Phoenix Suns",
+    "FILE_YEAR": 2022,
+    "makes": 3581,
+    "attempts": 7389,
+    "three_point_attempts": 2616,
+    "unique_players": 23,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Phoenix Suns",
+    "FILE_YEAR": 2023,
+    "makes": 3453,
+    "attempts": 7388,
+    "three_point_attempts": 2674,
+    "unique_players": 20,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Phoenix Suns",
+    "FILE_YEAR": 2024,
+    "makes": 3482,
+    "attempts": 7063,
+    "three_point_attempts": 2671,
+    "unique_players": 22,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Portland Trail Blazers",
+    "FILE_YEAR": 2004,
+    "makes": 2898,
+    "attempts": 6467,
+    "three_point_attempts": 1102,
+    "unique_players": 24,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Portland Trail Blazers",
+    "FILE_YEAR": 2005,
+    "makes": 2896,
+    "attempts": 6422,
+    "three_point_attempts": 1161,
+    "unique_players": 17,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Portland Trail Blazers",
+    "FILE_YEAR": 2006,
+    "makes": 2791,
+    "attempts": 6267,
+    "three_point_attempts": 1042,
+    "unique_players": 17,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Portland Trail Blazers",
+    "FILE_YEAR": 2007,
+    "makes": 2874,
+    "attempts": 6392,
+    "three_point_attempts": 1232,
+    "unique_players": 16,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Portland Trail Blazers",
+    "FILE_YEAR": 2008,
+    "makes": 2935,
+    "attempts": 6546,
+    "three_point_attempts": 1426,
+    "unique_players": 14,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Portland Trail Blazers",
+    "FILE_YEAR": 2009,
+    "makes": 3018,
+    "attempts": 6494,
+    "three_point_attempts": 1555,
+    "unique_players": 15,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Portland Trail Blazers",
+    "FILE_YEAR": 2010,
+    "makes": 2974,
+    "attempts": 6453,
+    "three_point_attempts": 1388,
+    "unique_players": 19,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Portland Trail Blazers",
+    "FILE_YEAR": 2011,
+    "makes": 2950,
+    "attempts": 6598,
+    "three_point_attempts": 1502,
+    "unique_players": 18,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Portland Trail Blazers",
+    "FILE_YEAR": 2012,
+    "makes": 2402,
+    "attempts": 5417,
+    "three_point_attempts": 1382,
+    "unique_players": 18,
+    "games_played": 66
+  },
+  {
+    "TEAM_NAME": "Portland Trail Blazers",
+    "FILE_YEAR": 2013,
+    "makes": 3008,
+    "attempts": 6713,
+    "three_point_attempts": 1902,
+    "unique_players": 15,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Portland Trail Blazers",
+    "FILE_YEAR": 2014,
+    "makes": 3207,
+    "attempts": 7134,
+    "three_point_attempts": 2071,
+    "unique_players": 15,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Portland Trail Blazers",
+    "FILE_YEAR": 2015,
+    "makes": 3172,
+    "attempts": 7046,
+    "three_point_attempts": 2228,
+    "unique_players": 18,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Portland Trail Blazers",
+    "FILE_YEAR": 2016,
+    "makes": 3167,
+    "attempts": 7036,
+    "three_point_attempts": 2332,
+    "unique_players": 16,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Portland Trail Blazers",
+    "FILE_YEAR": 2017,
+    "makes": 3241,
+    "attempts": 7057,
+    "three_point_attempts": 2270,
+    "unique_players": 15,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Portland Trail Blazers",
+    "FILE_YEAR": 2018,
+    "makes": 3222,
+    "attempts": 7132,
+    "three_point_attempts": 2308,
+    "unique_players": 16,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Portland Trail Blazers",
+    "FILE_YEAR": 2019,
+    "makes": 3470,
+    "attempts": 7427,
+    "three_point_attempts": 2520,
+    "unique_players": 18,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Portland Trail Blazers",
+    "FILE_YEAR": 2020,
+    "makes": 3122,
+    "attempts": 6749,
+    "three_point_attempts": 2525,
+    "unique_players": 19,
+    "games_played": 74
+  },
+  {
+    "TEAM_NAME": "Portland Trail Blazers",
+    "FILE_YEAR": 2021,
+    "makes": 2973,
+    "attempts": 6558,
+    "three_point_attempts": 2939,
+    "unique_players": 17,
+    "games_played": 72
+  },
+  {
+    "TEAM_NAME": "Portland Trail Blazers",
+    "FILE_YEAR": 2022,
+    "makes": 3161,
+    "attempts": 7144,
+    "three_point_attempts": 3017,
+    "unique_players": 27,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Portland Trail Blazers",
+    "FILE_YEAR": 2023,
+    "makes": 3317,
+    "attempts": 7001,
+    "three_point_attempts": 2893,
+    "unique_players": 24,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Portland Trail Blazers",
+    "FILE_YEAR": 2024,
+    "makes": 3227,
+    "attempts": 7356,
+    "three_point_attempts": 2723,
+    "unique_players": 22,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Sacramento Kings",
+    "FILE_YEAR": 2004,
+    "makes": 3103,
+    "attempts": 6711,
+    "three_point_attempts": 1498,
+    "unique_players": 13,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Sacramento Kings",
+    "FILE_YEAR": 2005,
+    "makes": 3203,
+    "attempts": 6978,
+    "three_point_attempts": 1396,
+    "unique_players": 18,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Sacramento Kings",
+    "FILE_YEAR": 2006,
+    "makes": 2954,
+    "attempts": 6500,
+    "three_point_attempts": 1408,
+    "unique_players": 16,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Sacramento Kings",
+    "FILE_YEAR": 2007,
+    "makes": 2941,
+    "attempts": 6532,
+    "three_point_attempts": 1513,
+    "unique_players": 15,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Sacramento Kings",
+    "FILE_YEAR": 2008,
+    "makes": 3043,
+    "attempts": 6558,
+    "three_point_attempts": 1367,
+    "unique_players": 19,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Sacramento Kings",
+    "FILE_YEAR": 2009,
+    "makes": 2990,
+    "attempts": 6684,
+    "three_point_attempts": 1593,
+    "unique_players": 21,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Sacramento Kings",
+    "FILE_YEAR": 2010,
+    "makes": 3143,
+    "attempts": 6894,
+    "three_point_attempts": 1382,
+    "unique_players": 20,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Sacramento Kings",
+    "FILE_YEAR": 2011,
+    "makes": 3133,
+    "attempts": 6977,
+    "three_point_attempts": 1275,
+    "unique_players": 15,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Sacramento Kings",
+    "FILE_YEAR": 2012,
+    "makes": 2490,
+    "attempts": 5712,
+    "three_point_attempts": 1301,
+    "unique_players": 15,
+    "games_played": 66
+  },
+  {
+    "TEAM_NAME": "Sacramento Kings",
+    "FILE_YEAR": 2013,
+    "makes": 3086,
+    "attempts": 6904,
+    "three_point_attempts": 1681,
+    "unique_players": 17,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Sacramento Kings",
+    "FILE_YEAR": 2014,
+    "makes": 3026,
+    "attempts": 6766,
+    "three_point_attempts": 1475,
+    "unique_players": 23,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Sacramento Kings",
+    "FILE_YEAR": 2015,
+    "makes": 3010,
+    "attempts": 6617,
+    "three_point_attempts": 1350,
+    "unique_players": 19,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Sacramento Kings",
+    "FILE_YEAR": 2016,
+    "makes": 3283,
+    "attempts": 7082,
+    "three_point_attempts": 1838,
+    "unique_players": 15,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Sacramento Kings",
+    "FILE_YEAR": 2017,
+    "makes": 3100,
+    "attempts": 6727,
+    "three_point_attempts": 1953,
+    "unique_players": 19,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Sacramento Kings",
+    "FILE_YEAR": 2018,
+    "makes": 3179,
+    "attempts": 7063,
+    "three_point_attempts": 1967,
+    "unique_players": 18,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Sacramento Kings",
+    "FILE_YEAR": 2019,
+    "makes": 3541,
+    "attempts": 7637,
+    "three_point_attempts": 2455,
+    "unique_players": 20,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Sacramento Kings",
+    "FILE_YEAR": 2020,
+    "makes": 2943,
+    "attempts": 6364,
+    "three_point_attempts": 2511,
+    "unique_players": 23,
+    "games_played": 72
+  },
+  {
+    "TEAM_NAME": "Sacramento Kings",
+    "FILE_YEAR": 2021,
+    "makes": 3067,
+    "attempts": 6382,
+    "three_point_attempts": 2400,
+    "unique_players": 24,
+    "games_played": 72
+  },
+  {
+    "TEAM_NAME": "Sacramento Kings",
+    "FILE_YEAR": 2022,
+    "makes": 3321,
+    "attempts": 7223,
+    "three_point_attempts": 2722,
+    "unique_players": 25,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Sacramento Kings",
+    "FILE_YEAR": 2023,
+    "makes": 3573,
+    "attempts": 7232,
+    "three_point_attempts": 3060,
+    "unique_players": 20,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Sacramento Kings",
+    "FILE_YEAR": 2024,
+    "makes": 3553,
+    "attempts": 7455,
+    "three_point_attempts": 3219,
+    "unique_players": 20,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "San Antonio Spurs",
+    "FILE_YEAR": 2004,
+    "makes": 2842,
+    "attempts": 6434,
+    "three_point_attempts": 1140,
+    "unique_players": 17,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "San Antonio Spurs",
+    "FILE_YEAR": 2005,
+    "makes": 2923,
+    "attempts": 6450,
+    "three_point_attempts": 1395,
+    "unique_players": 17,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "San Antonio Spurs",
+    "FILE_YEAR": 2006,
+    "makes": 2993,
+    "attempts": 6342,
+    "three_point_attempts": 1362,
+    "unique_players": 14,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "San Antonio Spurs",
+    "FILE_YEAR": 2007,
+    "makes": 2999,
+    "attempts": 6328,
+    "three_point_attempts": 1561,
+    "unique_players": 16,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "San Antonio Spurs",
+    "FILE_YEAR": 2008,
+    "makes": 2938,
+    "attempts": 6424,
+    "three_point_attempts": 1610,
+    "unique_players": 21,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "San Antonio Spurs",
+    "FILE_YEAR": 2009,
+    "makes": 3041,
+    "attempts": 6532,
+    "three_point_attempts": 1618,
+    "unique_players": 20,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "San Antonio Spurs",
+    "FILE_YEAR": 2010,
+    "makes": 3149,
+    "attempts": 6657,
+    "three_point_attempts": 1545,
+    "unique_players": 17,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "San Antonio Spurs",
+    "FILE_YEAR": 2011,
+    "makes": 3148,
+    "attempts": 6626,
+    "three_point_attempts": 1725,
+    "unique_players": 20,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "San Antonio Spurs",
+    "FILE_YEAR": 2012,
+    "makes": 2611,
+    "attempts": 5463,
+    "three_point_attempts": 1405,
+    "unique_players": 21,
+    "games_played": 66
+  },
+  {
+    "TEAM_NAME": "San Antonio Spurs",
+    "FILE_YEAR": 2013,
+    "makes": 3210,
+    "attempts": 6674,
+    "three_point_attempts": 1763,
+    "unique_players": 16,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "San Antonio Spurs",
+    "FILE_YEAR": 2014,
+    "makes": 3326,
+    "attempts": 6843,
+    "three_point_attempts": 1756,
+    "unique_players": 19,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "San Antonio Spurs",
+    "FILE_YEAR": 2015,
+    "makes": 3208,
+    "attempts": 6852,
+    "three_point_attempts": 1845,
+    "unique_players": 17,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "San Antonio Spurs",
+    "FILE_YEAR": 2016,
+    "makes": 3288,
+    "attempts": 6792,
+    "three_point_attempts": 1513,
+    "unique_players": 17,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "San Antonio Spurs",
+    "FILE_YEAR": 2017,
+    "makes": 3222,
+    "attempts": 6862,
+    "three_point_attempts": 1925,
+    "unique_players": 16,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "San Antonio Spurs",
+    "FILE_YEAR": 2018,
+    "makes": 3202,
+    "attempts": 6999,
+    "three_point_attempts": 1977,
+    "unique_players": 17,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "San Antonio Spurs",
+    "FILE_YEAR": 2019,
+    "makes": 3468,
+    "attempts": 7248,
+    "three_point_attempts": 2071,
+    "unique_players": 16,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "San Antonio Spurs",
+    "FILE_YEAR": 2020,
+    "makes": 2995,
+    "attempts": 6350,
+    "three_point_attempts": 2021,
+    "unique_players": 18,
+    "games_played": 71
+  },
+  {
+    "TEAM_NAME": "San Antonio Spurs",
+    "FILE_YEAR": 2021,
+    "makes": 3014,
+    "attempts": 6518,
+    "three_point_attempts": 2046,
+    "unique_players": 18,
+    "games_played": 72
+  },
+  {
+    "TEAM_NAME": "San Antonio Spurs",
+    "FILE_YEAR": 2022,
+    "makes": 3546,
+    "attempts": 7601,
+    "three_point_attempts": 2626,
+    "unique_players": 23,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "San Antonio Spurs",
+    "FILE_YEAR": 2023,
+    "makes": 3533,
+    "attempts": 7593,
+    "three_point_attempts": 2640,
+    "unique_players": 23,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "San Antonio Spurs",
+    "FILE_YEAR": 2024,
+    "makes": 3438,
+    "attempts": 7436,
+    "three_point_attempts": 2983,
+    "unique_players": 20,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Seattle SuperSonics",
+    "FILE_YEAR": 2004,
+    "makes": 2939,
+    "attempts": 6590,
+    "three_point_attempts": 1936,
+    "unique_players": 14,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Seattle SuperSonics",
+    "FILE_YEAR": 2005,
+    "makes": 2882,
+    "attempts": 6498,
+    "three_point_attempts": 1824,
+    "unique_players": 15,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Seattle SuperSonics",
+    "FILE_YEAR": 2006,
+    "makes": 3077,
+    "attempts": 6711,
+    "three_point_attempts": 1631,
+    "unique_players": 19,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Seattle SuperSonics",
+    "FILE_YEAR": 2007,
+    "makes": 3047,
+    "attempts": 6628,
+    "three_point_attempts": 1451,
+    "unique_players": 16,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Seattle SuperSonics",
+    "FILE_YEAR": 2008,
+    "makes": 3125,
+    "attempts": 7032,
+    "three_point_attempts": 939,
+    "unique_players": 21,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Toronto Raptors",
+    "FILE_YEAR": 2004,
+    "makes": 2654,
+    "attempts": 6348,
+    "three_point_attempts": 1294,
+    "unique_players": 23,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Toronto Raptors",
+    "FILE_YEAR": 2005,
+    "makes": 2952,
+    "attempts": 6656,
+    "three_point_attempts": 1681,
+    "unique_players": 16,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Toronto Raptors",
+    "FILE_YEAR": 2006,
+    "makes": 3013,
+    "attempts": 6639,
+    "three_point_attempts": 1620,
+    "unique_players": 17,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Toronto Raptors",
+    "FILE_YEAR": 2007,
+    "makes": 3032,
+    "attempts": 6547,
+    "three_point_attempts": 1464,
+    "unique_players": 17,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Toronto Raptors",
+    "FILE_YEAR": 2008,
+    "makes": 3148,
+    "attempts": 6726,
+    "three_point_attempts": 1459,
+    "unique_players": 17,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Toronto Raptors",
+    "FILE_YEAR": 2009,
+    "makes": 3054,
+    "attempts": 6673,
+    "three_point_attempts": 1289,
+    "unique_players": 19,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Toronto Raptors",
+    "FILE_YEAR": 2010,
+    "makes": 3199,
+    "attempts": 6631,
+    "three_point_attempts": 1397,
+    "unique_players": 15,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Toronto Raptors",
+    "FILE_YEAR": 2011,
+    "makes": 3144,
+    "attempts": 6755,
+    "three_point_attempts": 1091,
+    "unique_players": 22,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Toronto Raptors",
+    "FILE_YEAR": 2012,
+    "makes": 2268,
+    "attempts": 5154,
+    "three_point_attempts": 1075,
+    "unique_players": 18,
+    "games_played": 66
+  },
+  {
+    "TEAM_NAME": "Toronto Raptors",
+    "FILE_YEAR": 2013,
+    "makes": 2978,
+    "attempts": 6682,
+    "three_point_attempts": 1662,
+    "unique_players": 18,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Toronto Raptors",
+    "FILE_YEAR": 2014,
+    "makes": 2992,
+    "attempts": 6716,
+    "three_point_attempts": 1915,
+    "unique_players": 20,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Toronto Raptors",
+    "FILE_YEAR": 2015,
+    "makes": 3108,
+    "attempts": 6828,
+    "three_point_attempts": 2059,
+    "unique_players": 15,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Toronto Raptors",
+    "FILE_YEAR": 2016,
+    "makes": 3006,
+    "attempts": 6658,
+    "three_point_attempts": 1904,
+    "unique_players": 16,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Toronto Raptors",
+    "FILE_YEAR": 2017,
+    "makes": 3211,
+    "attempts": 6914,
+    "three_point_attempts": 1992,
+    "unique_players": 17,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Toronto Raptors",
+    "FILE_YEAR": 2018,
+    "makes": 3383,
+    "attempts": 7169,
+    "three_point_attempts": 2705,
+    "unique_players": 18,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Toronto Raptors",
+    "FILE_YEAR": 2019,
+    "makes": 3460,
+    "attempts": 7305,
+    "three_point_attempts": 2771,
+    "unique_players": 22,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Toronto Raptors",
+    "FILE_YEAR": 2020,
+    "makes": 2897,
+    "attempts": 6331,
+    "three_point_attempts": 2663,
+    "unique_players": 18,
+    "games_played": 72
+  },
+  {
+    "TEAM_NAME": "Toronto Raptors",
+    "FILE_YEAR": 2021,
+    "makes": 2859,
+    "attempts": 6383,
+    "three_point_attempts": 2831,
+    "unique_players": 22,
+    "games_played": 72
+  },
+  {
+    "TEAM_NAME": "Toronto Raptors",
+    "FILE_YEAR": 2022,
+    "makes": 3332,
+    "attempts": 7489,
+    "three_point_attempts": 2808,
+    "unique_players": 22,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Toronto Raptors",
+    "FILE_YEAR": 2023,
+    "makes": 3434,
+    "attempts": 7489,
+    "three_point_attempts": 2626,
+    "unique_players": 20,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Toronto Raptors",
+    "FILE_YEAR": 2024,
+    "makes": 3466,
+    "attempts": 7356,
+    "three_point_attempts": 2712,
+    "unique_players": 28,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Utah Jazz",
+    "FILE_YEAR": 2004,
+    "makes": 2690,
+    "attempts": 6172,
+    "three_point_attempts": 786,
+    "unique_players": 18,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Utah Jazz",
+    "FILE_YEAR": 2005,
+    "makes": 2828,
+    "attempts": 6301,
+    "three_point_attempts": 762,
+    "unique_players": 17,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Utah Jazz",
+    "FILE_YEAR": 2006,
+    "makes": 2744,
+    "attempts": 6207,
+    "three_point_attempts": 925,
+    "unique_players": 15,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Utah Jazz",
+    "FILE_YEAR": 2007,
+    "makes": 3069,
+    "attempts": 6471,
+    "three_point_attempts": 1056,
+    "unique_players": 14,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Utah Jazz",
+    "FILE_YEAR": 2008,
+    "makes": 3279,
+    "attempts": 6592,
+    "three_point_attempts": 1095,
+    "unique_players": 15,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Utah Jazz",
+    "FILE_YEAR": 2009,
+    "makes": 3143,
+    "attempts": 6623,
+    "three_point_attempts": 1122,
+    "unique_players": 15,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Utah Jazz",
+    "FILE_YEAR": 2010,
+    "makes": 3227,
+    "attempts": 6575,
+    "three_point_attempts": 1207,
+    "unique_players": 15,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Utah Jazz",
+    "FILE_YEAR": 2011,
+    "makes": 3064,
+    "attempts": 6590,
+    "three_point_attempts": 1256,
+    "unique_players": 17,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Utah Jazz",
+    "FILE_YEAR": 2012,
+    "makes": 2523,
+    "attempts": 5531,
+    "three_point_attempts": 845,
+    "unique_players": 15,
+    "games_played": 66
+  },
+  {
+    "TEAM_NAME": "Utah Jazz",
+    "FILE_YEAR": 2013,
+    "makes": 3046,
+    "attempts": 6710,
+    "three_point_attempts": 1385,
+    "unique_players": 14,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Utah Jazz",
+    "FILE_YEAR": 2014,
+    "makes": 2951,
+    "attempts": 6650,
+    "three_point_attempts": 1575,
+    "unique_players": 17,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Utah Jazz",
+    "FILE_YEAR": 2015,
+    "makes": 2900,
+    "attempts": 6492,
+    "three_point_attempts": 1781,
+    "unique_players": 21,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Utah Jazz",
+    "FILE_YEAR": 2016,
+    "makes": 2957,
+    "attempts": 6593,
+    "three_point_attempts": 1956,
+    "unique_players": 17,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Utah Jazz",
+    "FILE_YEAR": 2017,
+    "makes": 3033,
+    "attempts": 6514,
+    "three_point_attempts": 2127,
+    "unique_players": 15,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Utah Jazz",
+    "FILE_YEAR": 2018,
+    "makes": 3139,
+    "attempts": 6797,
+    "three_point_attempts": 2425,
+    "unique_players": 21,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Utah Jazz",
+    "FILE_YEAR": 2019,
+    "makes": 3314,
+    "attempts": 7082,
+    "three_point_attempts": 2789,
+    "unique_players": 18,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Utah Jazz",
+    "FILE_YEAR": 2020,
+    "makes": 2886,
+    "attempts": 6130,
+    "three_point_attempts": 2537,
+    "unique_players": 20,
+    "games_played": 72
+  },
+  {
+    "TEAM_NAME": "Utah Jazz",
+    "FILE_YEAR": 2021,
+    "makes": 2971,
+    "attempts": 6344,
+    "three_point_attempts": 3098,
+    "unique_players": 18,
+    "games_played": 72
+  },
+  {
+    "TEAM_NAME": "Utah Jazz",
+    "FILE_YEAR": 2022,
+    "makes": 3327,
+    "attempts": 7067,
+    "three_point_attempts": 3308,
+    "unique_players": 24,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Utah Jazz",
+    "FILE_YEAR": 2023,
+    "makes": 3485,
+    "attempts": 7365,
+    "three_point_attempts": 3099,
+    "unique_players": 23,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Utah Jazz",
+    "FILE_YEAR": 2024,
+    "makes": 3443,
+    "attempts": 7371,
+    "three_point_attempts": 2993,
+    "unique_players": 21,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Washington Wizards",
+    "FILE_YEAR": 2004,
+    "makes": 2759,
+    "attempts": 6557,
+    "three_point_attempts": 1270,
+    "unique_players": 17,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Washington Wizards",
+    "FILE_YEAR": 2005,
+    "makes": 2966,
+    "attempts": 6794,
+    "three_point_attempts": 1498,
+    "unique_players": 16,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Washington Wizards",
+    "FILE_YEAR": 2006,
+    "makes": 2975,
+    "attempts": 6656,
+    "three_point_attempts": 1394,
+    "unique_players": 15,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Washington Wizards",
+    "FILE_YEAR": 2007,
+    "makes": 3070,
+    "attempts": 6820,
+    "three_point_attempts": 1614,
+    "unique_players": 16,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Washington Wizards",
+    "FILE_YEAR": 2008,
+    "makes": 2986,
+    "attempts": 6695,
+    "three_point_attempts": 1614,
+    "unique_players": 13,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Washington Wizards",
+    "FILE_YEAR": 2009,
+    "makes": 2994,
+    "attempts": 6655,
+    "three_point_attempts": 1198,
+    "unique_players": 17,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Washington Wizards",
+    "FILE_YEAR": 2010,
+    "makes": 3008,
+    "attempts": 6700,
+    "three_point_attempts": 1225,
+    "unique_players": 24,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Washington Wizards",
+    "FILE_YEAR": 2011,
+    "makes": 3048,
+    "attempts": 6888,
+    "three_point_attempts": 1182,
+    "unique_players": 23,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Washington Wizards",
+    "FILE_YEAR": 2012,
+    "makes": 2412,
+    "attempts": 5472,
+    "three_point_attempts": 1072,
+    "unique_players": 21,
+    "games_played": 66
+  },
+  {
+    "TEAM_NAME": "Washington Wizards",
+    "FILE_YEAR": 2013,
+    "makes": 2910,
+    "attempts": 6692,
+    "three_point_attempts": 1494,
+    "unique_players": 19,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Washington Wizards",
+    "FILE_YEAR": 2014,
+    "makes": 3177,
+    "attempts": 6918,
+    "three_point_attempts": 1702,
+    "unique_players": 17,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Washington Wizards",
+    "FILE_YEAR": 2015,
+    "makes": 3139,
+    "attempts": 6790,
+    "three_point_attempts": 1381,
+    "unique_players": 18,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Washington Wizards",
+    "FILE_YEAR": 2016,
+    "makes": 3237,
+    "attempts": 7027,
+    "three_point_attempts": 1977,
+    "unique_players": 19,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Washington Wizards",
+    "FILE_YEAR": 2017,
+    "makes": 3385,
+    "attempts": 7129,
+    "three_point_attempts": 2022,
+    "unique_players": 17,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Washington Wizards",
+    "FILE_YEAR": 2018,
+    "makes": 3275,
+    "attempts": 7018,
+    "three_point_attempts": 2173,
+    "unique_players": 15,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Washington Wizards",
+    "FILE_YEAR": 2019,
+    "makes": 3456,
+    "attempts": 7387,
+    "three_point_attempts": 2731,
+    "unique_players": 25,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Washington Wizards",
+    "FILE_YEAR": 2020,
+    "makes": 2990,
+    "attempts": 6544,
+    "three_point_attempts": 2345,
+    "unique_players": 23,
+    "games_played": 72
+  },
+  {
+    "TEAM_NAME": "Washington Wizards",
+    "FILE_YEAR": 2021,
+    "makes": 3108,
+    "attempts": 6547,
+    "three_point_attempts": 2088,
+    "unique_players": 21,
+    "games_played": 72
+  },
+  {
+    "TEAM_NAME": "Washington Wizards",
+    "FILE_YEAR": 2022,
+    "makes": 3327,
+    "attempts": 7056,
+    "three_point_attempts": 2512,
+    "unique_players": 28,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Washington Wizards",
+    "FILE_YEAR": 2023,
+    "makes": 3456,
+    "attempts": 7127,
+    "three_point_attempts": 2601,
+    "unique_players": 23,
+    "games_played": 82
+  },
+  {
+    "TEAM_NAME": "Washington Wizards",
+    "FILE_YEAR": 2024,
+    "makes": 3523,
+    "attempts": 7493,
+    "three_point_attempts": 2915,
+    "unique_players": 23,
+    "games_played": 82
+  }
+]

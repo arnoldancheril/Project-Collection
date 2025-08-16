@@ -1,0 +1,1892 @@
+[
+  {
+    "GAME_PERIOD": "OT",
+    "SHOT_TYPE": "2PT Field Goal",
+    "FILE_YEAR": 2004,
+    "makes": 421,
+    "attempts": 955,
+    "fg_percentage": 0.441,
+    "avg_time_remaining": 138.106
+  },
+  {
+    "GAME_PERIOD": "OT",
+    "SHOT_TYPE": "2PT Field Goal",
+    "FILE_YEAR": 2005,
+    "makes": 484,
+    "attempts": 1074,
+    "fg_percentage": 0.451,
+    "avg_time_remaining": 139.735
+  },
+  {
+    "GAME_PERIOD": "OT",
+    "SHOT_TYPE": "2PT Field Goal",
+    "FILE_YEAR": 2006,
+    "makes": 578,
+    "attempts": 1256,
+    "fg_percentage": 0.46,
+    "avg_time_remaining": 138.462
+  },
+  {
+    "GAME_PERIOD": "OT",
+    "SHOT_TYPE": "2PT Field Goal",
+    "FILE_YEAR": 2007,
+    "makes": 600,
+    "attempts": 1265,
+    "fg_percentage": 0.474,
+    "avg_time_remaining": 142.153
+  },
+  {
+    "GAME_PERIOD": "OT",
+    "SHOT_TYPE": "2PT Field Goal",
+    "FILE_YEAR": 2008,
+    "makes": 391,
+    "attempts": 868,
+    "fg_percentage": 0.45,
+    "avg_time_remaining": 141.897
+  },
+  {
+    "GAME_PERIOD": "OT",
+    "SHOT_TYPE": "2PT Field Goal",
+    "FILE_YEAR": 2009,
+    "makes": 470,
+    "attempts": 1058,
+    "fg_percentage": 0.444,
+    "avg_time_remaining": 140.767
+  },
+  {
+    "GAME_PERIOD": "OT",
+    "SHOT_TYPE": "2PT Field Goal",
+    "FILE_YEAR": 2010,
+    "makes": 440,
+    "attempts": 957,
+    "fg_percentage": 0.46,
+    "avg_time_remaining": 145.463
+  },
+  {
+    "GAME_PERIOD": "OT",
+    "SHOT_TYPE": "2PT Field Goal",
+    "FILE_YEAR": 2011,
+    "makes": 511,
+    "attempts": 1101,
+    "fg_percentage": 0.464,
+    "avg_time_remaining": 141.523
+  },
+  {
+    "GAME_PERIOD": "OT",
+    "SHOT_TYPE": "2PT Field Goal",
+    "FILE_YEAR": 2012,
+    "makes": 398,
+    "attempts": 915,
+    "fg_percentage": 0.435,
+    "avg_time_remaining": 139.499
+  },
+  {
+    "GAME_PERIOD": "OT",
+    "SHOT_TYPE": "2PT Field Goal",
+    "FILE_YEAR": 2013,
+    "makes": 479,
+    "attempts": 1085,
+    "fg_percentage": 0.441,
+    "avg_time_remaining": 138.964
+  },
+  {
+    "GAME_PERIOD": "OT",
+    "SHOT_TYPE": "2PT Field Goal",
+    "FILE_YEAR": 2014,
+    "makes": 502,
+    "attempts": 1104,
+    "fg_percentage": 0.455,
+    "avg_time_remaining": 138.11
+  },
+  {
+    "GAME_PERIOD": "OT",
+    "SHOT_TYPE": "2PT Field Goal",
+    "FILE_YEAR": 2015,
+    "makes": 486,
+    "attempts": 1148,
+    "fg_percentage": 0.423,
+    "avg_time_remaining": 139.529
+  },
+  {
+    "GAME_PERIOD": "OT",
+    "SHOT_TYPE": "2PT Field Goal",
+    "FILE_YEAR": 2016,
+    "makes": 476,
+    "attempts": 1038,
+    "fg_percentage": 0.459,
+    "avg_time_remaining": 140.824
+  },
+  {
+    "GAME_PERIOD": "OT",
+    "SHOT_TYPE": "2PT Field Goal",
+    "FILE_YEAR": 2017,
+    "makes": 413,
+    "attempts": 909,
+    "fg_percentage": 0.454,
+    "avg_time_remaining": 141.76
+  },
+  {
+    "GAME_PERIOD": "OT",
+    "SHOT_TYPE": "2PT Field Goal",
+    "FILE_YEAR": 2018,
+    "makes": 353,
+    "attempts": 713,
+    "fg_percentage": 0.495,
+    "avg_time_remaining": 140.126
+  },
+  {
+    "GAME_PERIOD": "OT",
+    "SHOT_TYPE": "2PT Field Goal",
+    "FILE_YEAR": 2019,
+    "makes": 426,
+    "attempts": 874,
+    "fg_percentage": 0.487,
+    "avg_time_remaining": 137.638
+  },
+  {
+    "GAME_PERIOD": "OT",
+    "SHOT_TYPE": "2PT Field Goal",
+    "FILE_YEAR": 2020,
+    "makes": 377,
+    "attempts": 766,
+    "fg_percentage": 0.492,
+    "avg_time_remaining": 142.462
+  },
+  {
+    "GAME_PERIOD": "OT",
+    "SHOT_TYPE": "2PT Field Goal",
+    "FILE_YEAR": 2021,
+    "makes": 345,
+    "attempts": 662,
+    "fg_percentage": 0.521,
+    "avg_time_remaining": 147.654
+  },
+  {
+    "GAME_PERIOD": "OT",
+    "SHOT_TYPE": "2PT Field Goal",
+    "FILE_YEAR": 2022,
+    "makes": 341,
+    "attempts": 680,
+    "fg_percentage": 0.501,
+    "avg_time_remaining": 146.096
+  },
+  {
+    "GAME_PERIOD": "OT",
+    "SHOT_TYPE": "2PT Field Goal",
+    "FILE_YEAR": 2023,
+    "makes": 466,
+    "attempts": 893,
+    "fg_percentage": 0.522,
+    "avg_time_remaining": 142.244
+  },
+  {
+    "GAME_PERIOD": "OT",
+    "SHOT_TYPE": "2PT Field Goal",
+    "FILE_YEAR": 2024,
+    "makes": 348,
+    "attempts": 719,
+    "fg_percentage": 0.484,
+    "avg_time_remaining": 139.063
+  },
+  {
+    "GAME_PERIOD": "OT",
+    "SHOT_TYPE": "3PT Field Goal",
+    "FILE_YEAR": 2004,
+    "makes": 100,
+    "attempts": 342,
+    "fg_percentage": 0.292,
+    "avg_time_remaining": 105.646
+  },
+  {
+    "GAME_PERIOD": "OT",
+    "SHOT_TYPE": "3PT Field Goal",
+    "FILE_YEAR": 2005,
+    "makes": 139,
+    "attempts": 406,
+    "fg_percentage": 0.342,
+    "avg_time_remaining": 115.19
+  },
+  {
+    "GAME_PERIOD": "OT",
+    "SHOT_TYPE": "3PT Field Goal",
+    "FILE_YEAR": 2006,
+    "makes": 128,
+    "attempts": 416,
+    "fg_percentage": 0.308,
+    "avg_time_remaining": 112.82
+  },
+  {
+    "GAME_PERIOD": "OT",
+    "SHOT_TYPE": "3PT Field Goal",
+    "FILE_YEAR": 2007,
+    "makes": 160,
+    "attempts": 486,
+    "fg_percentage": 0.329,
+    "avg_time_remaining": 104.342
+  },
+  {
+    "GAME_PERIOD": "OT",
+    "SHOT_TYPE": "3PT Field Goal",
+    "FILE_YEAR": 2008,
+    "makes": 117,
+    "attempts": 352,
+    "fg_percentage": 0.332,
+    "avg_time_remaining": 108.366
+  },
+  {
+    "GAME_PERIOD": "OT",
+    "SHOT_TYPE": "3PT Field Goal",
+    "FILE_YEAR": 2009,
+    "makes": 121,
+    "attempts": 364,
+    "fg_percentage": 0.332,
+    "avg_time_remaining": 101.986
+  },
+  {
+    "GAME_PERIOD": "OT",
+    "SHOT_TYPE": "3PT Field Goal",
+    "FILE_YEAR": 2010,
+    "makes": 110,
+    "attempts": 405,
+    "fg_percentage": 0.272,
+    "avg_time_remaining": 104.827
+  },
+  {
+    "GAME_PERIOD": "OT",
+    "SHOT_TYPE": "3PT Field Goal",
+    "FILE_YEAR": 2011,
+    "makes": 122,
+    "attempts": 412,
+    "fg_percentage": 0.296,
+    "avg_time_remaining": 105.515
+  },
+  {
+    "GAME_PERIOD": "OT",
+    "SHOT_TYPE": "3PT Field Goal",
+    "FILE_YEAR": 2012,
+    "makes": 96,
+    "attempts": 340,
+    "fg_percentage": 0.282,
+    "avg_time_remaining": 107.662
+  },
+  {
+    "GAME_PERIOD": "OT",
+    "SHOT_TYPE": "3PT Field Goal",
+    "FILE_YEAR": 2013,
+    "makes": 123,
+    "attempts": 441,
+    "fg_percentage": 0.279,
+    "avg_time_remaining": 112.567
+  },
+  {
+    "GAME_PERIOD": "OT",
+    "SHOT_TYPE": "3PT Field Goal",
+    "FILE_YEAR": 2014,
+    "makes": 168,
+    "attempts": 515,
+    "fg_percentage": 0.326,
+    "avg_time_remaining": 116.493
+  },
+  {
+    "GAME_PERIOD": "OT",
+    "SHOT_TYPE": "3PT Field Goal",
+    "FILE_YEAR": 2015,
+    "makes": 150,
+    "attempts": 491,
+    "fg_percentage": 0.305,
+    "avg_time_remaining": 114.64
+  },
+  {
+    "GAME_PERIOD": "OT",
+    "SHOT_TYPE": "3PT Field Goal",
+    "FILE_YEAR": 2016,
+    "makes": 145,
+    "attempts": 493,
+    "fg_percentage": 0.294,
+    "avg_time_remaining": 113.69
+  },
+  {
+    "GAME_PERIOD": "OT",
+    "SHOT_TYPE": "3PT Field Goal",
+    "FILE_YEAR": 2017,
+    "makes": 147,
+    "attempts": 497,
+    "fg_percentage": 0.296,
+    "avg_time_remaining": 119.298
+  },
+  {
+    "GAME_PERIOD": "OT",
+    "SHOT_TYPE": "3PT Field Goal",
+    "FILE_YEAR": 2018,
+    "makes": 129,
+    "attempts": 434,
+    "fg_percentage": 0.297,
+    "avg_time_remaining": 121.214
+  },
+  {
+    "GAME_PERIOD": "OT",
+    "SHOT_TYPE": "3PT Field Goal",
+    "FILE_YEAR": 2019,
+    "makes": 178,
+    "attempts": 575,
+    "fg_percentage": 0.31,
+    "avg_time_remaining": 124.777
+  },
+  {
+    "GAME_PERIOD": "OT",
+    "SHOT_TYPE": "3PT Field Goal",
+    "FILE_YEAR": 2020,
+    "makes": 165,
+    "attempts": 537,
+    "fg_percentage": 0.307,
+    "avg_time_remaining": 123.883
+  },
+  {
+    "GAME_PERIOD": "OT",
+    "SHOT_TYPE": "3PT Field Goal",
+    "FILE_YEAR": 2021,
+    "makes": 144,
+    "attempts": 408,
+    "fg_percentage": 0.353,
+    "avg_time_remaining": 125.662
+  },
+  {
+    "GAME_PERIOD": "OT",
+    "SHOT_TYPE": "3PT Field Goal",
+    "FILE_YEAR": 2022,
+    "makes": 132,
+    "attempts": 458,
+    "fg_percentage": 0.288,
+    "avg_time_remaining": 123.939
+  },
+  {
+    "GAME_PERIOD": "OT",
+    "SHOT_TYPE": "3PT Field Goal",
+    "FILE_YEAR": 2023,
+    "makes": 160,
+    "attempts": 577,
+    "fg_percentage": 0.277,
+    "avg_time_remaining": 127.811
+  },
+  {
+    "GAME_PERIOD": "OT",
+    "SHOT_TYPE": "3PT Field Goal",
+    "FILE_YEAR": 2024,
+    "makes": 151,
+    "attempts": 465,
+    "fg_percentage": 0.325,
+    "avg_time_remaining": 126.252
+  },
+  {
+    "GAME_PERIOD": "Q1",
+    "SHOT_TYPE": "2PT Field Goal",
+    "FILE_YEAR": 2004,
+    "makes": 19673,
+    "attempts": 42190,
+    "fg_percentage": 0.466,
+    "avg_time_remaining": 360.615
+  },
+  {
+    "GAME_PERIOD": "Q1",
+    "SHOT_TYPE": "2PT Field Goal",
+    "FILE_YEAR": 2005,
+    "makes": 20781,
+    "attempts": 43494,
+    "fg_percentage": 0.478,
+    "avg_time_remaining": 362.417
+  },
+  {
+    "GAME_PERIOD": "Q1",
+    "SHOT_TYPE": "2PT Field Goal",
+    "FILE_YEAR": 2006,
+    "makes": 20744,
+    "attempts": 42770,
+    "fg_percentage": 0.485,
+    "avg_time_remaining": 361.284
+  },
+  {
+    "GAME_PERIOD": "Q1",
+    "SHOT_TYPE": "2PT Field Goal",
+    "FILE_YEAR": 2007,
+    "makes": 20802,
+    "attempts": 42101,
+    "fg_percentage": 0.494,
+    "avg_time_remaining": 363.355
+  },
+  {
+    "GAME_PERIOD": "Q1",
+    "SHOT_TYPE": "2PT Field Goal",
+    "FILE_YEAR": 2008,
+    "makes": 21212,
+    "attempts": 42981,
+    "fg_percentage": 0.494,
+    "avg_time_remaining": 363.296
+  },
+  {
+    "GAME_PERIOD": "Q1",
+    "SHOT_TYPE": "2PT Field Goal",
+    "FILE_YEAR": 2009,
+    "makes": 20673,
+    "attempts": 42053,
+    "fg_percentage": 0.492,
+    "avg_time_remaining": 359.961
+  },
+  {
+    "GAME_PERIOD": "Q1",
+    "SHOT_TYPE": "2PT Field Goal",
+    "FILE_YEAR": 2010,
+    "makes": 21416,
+    "attempts": 42807,
+    "fg_percentage": 0.5,
+    "avg_time_remaining": 361.189
+  },
+  {
+    "GAME_PERIOD": "Q1",
+    "SHOT_TYPE": "2PT Field Goal",
+    "FILE_YEAR": 2011,
+    "makes": 21238,
+    "attempts": 42694,
+    "fg_percentage": 0.497,
+    "avg_time_remaining": 361.042
+  },
+  {
+    "GAME_PERIOD": "Q1",
+    "SHOT_TYPE": "2PT Field Goal",
+    "FILE_YEAR": 2012,
+    "makes": 16497,
+    "attempts": 34027,
+    "fg_percentage": 0.485,
+    "avg_time_remaining": 361.12
+  },
+  {
+    "GAME_PERIOD": "Q1",
+    "SHOT_TYPE": "2PT Field Goal",
+    "FILE_YEAR": 2013,
+    "makes": 20248,
+    "attempts": 41371,
+    "fg_percentage": 0.489,
+    "avg_time_remaining": 358.833
+  },
+  {
+    "GAME_PERIOD": "Q1",
+    "SHOT_TYPE": "2PT Field Goal",
+    "FILE_YEAR": 2014,
+    "makes": 20197,
+    "attempts": 40848,
+    "fg_percentage": 0.494,
+    "avg_time_remaining": 358.319
+  },
+  {
+    "GAME_PERIOD": "Q1",
+    "SHOT_TYPE": "2PT Field Goal",
+    "FILE_YEAR": 2015,
+    "makes": 19750,
+    "attempts": 40424,
+    "fg_percentage": 0.489,
+    "avg_time_remaining": 358.711
+  },
+  {
+    "GAME_PERIOD": "Q1",
+    "SHOT_TYPE": "2PT Field Goal",
+    "FILE_YEAR": 2016,
+    "makes": 19533,
+    "attempts": 39856,
+    "fg_percentage": 0.49,
+    "avg_time_remaining": 356.372
+  },
+  {
+    "GAME_PERIOD": "Q1",
+    "SHOT_TYPE": "2PT Field Goal",
+    "FILE_YEAR": 2017,
+    "makes": 19450,
+    "attempts": 38620,
+    "fg_percentage": 0.504,
+    "avg_time_remaining": 356.8
+  },
+  {
+    "GAME_PERIOD": "Q1",
+    "SHOT_TYPE": "2PT Field Goal",
+    "FILE_YEAR": 2018,
+    "makes": 19208,
+    "attempts": 37557,
+    "fg_percentage": 0.511,
+    "avg_time_remaining": 357.218
+  },
+  {
+    "GAME_PERIOD": "Q1",
+    "SHOT_TYPE": "2PT Field Goal",
+    "FILE_YEAR": 2019,
+    "makes": 19473,
+    "attempts": 37511,
+    "fg_percentage": 0.519,
+    "avg_time_remaining": 357.691
+  },
+  {
+    "GAME_PERIOD": "Q1",
+    "SHOT_TYPE": "2PT Field Goal",
+    "FILE_YEAR": 2020,
+    "makes": 16033,
+    "attempts": 30564,
+    "fg_percentage": 0.525,
+    "avg_time_remaining": 355.699
+  },
+  {
+    "GAME_PERIOD": "Q1",
+    "SHOT_TYPE": "2PT Field Goal",
+    "FILE_YEAR": 2021,
+    "makes": 16180,
+    "attempts": 30542,
+    "fg_percentage": 0.53,
+    "avg_time_remaining": 357.819
+  },
+  {
+    "GAME_PERIOD": "Q1",
+    "SHOT_TYPE": "2PT Field Goal",
+    "FILE_YEAR": 2022,
+    "makes": 18128,
+    "attempts": 34047,
+    "fg_percentage": 0.532,
+    "avg_time_remaining": 358.674
+  },
+  {
+    "GAME_PERIOD": "Q1",
+    "SHOT_TYPE": "2PT Field Goal",
+    "FILE_YEAR": 2023,
+    "makes": 19085,
+    "attempts": 34749,
+    "fg_percentage": 0.549,
+    "avg_time_remaining": 358.249
+  },
+  {
+    "GAME_PERIOD": "Q1",
+    "SHOT_TYPE": "2PT Field Goal",
+    "FILE_YEAR": 2024,
+    "makes": 18595,
+    "attempts": 34336,
+    "fg_percentage": 0.542,
+    "avg_time_remaining": 357.944
+  },
+  {
+    "GAME_PERIOD": "Q1",
+    "SHOT_TYPE": "3PT Field Goal",
+    "FILE_YEAR": 2004,
+    "makes": 2881,
+    "attempts": 7922,
+    "fg_percentage": 0.364,
+    "avg_time_remaining": 322.44
+  },
+  {
+    "GAME_PERIOD": "Q1",
+    "SHOT_TYPE": "3PT Field Goal",
+    "FILE_YEAR": 2005,
+    "makes": 3099,
+    "attempts": 8383,
+    "fg_percentage": 0.37,
+    "avg_time_remaining": 312.605
+  },
+  {
+    "GAME_PERIOD": "Q1",
+    "SHOT_TYPE": "3PT Field Goal",
+    "FILE_YEAR": 2006,
+    "makes": 3074,
+    "attempts": 8437,
+    "fg_percentage": 0.364,
+    "avg_time_remaining": 315.195
+  },
+  {
+    "GAME_PERIOD": "Q1",
+    "SHOT_TYPE": "3PT Field Goal",
+    "FILE_YEAR": 2007,
+    "makes": 3330,
+    "attempts": 9099,
+    "fg_percentage": 0.366,
+    "avg_time_remaining": 314.623
+  },
+  {
+    "GAME_PERIOD": "Q1",
+    "SHOT_TYPE": "3PT Field Goal",
+    "FILE_YEAR": 2008,
+    "makes": 3626,
+    "attempts": 9686,
+    "fg_percentage": 0.374,
+    "avg_time_remaining": 313.585
+  },
+  {
+    "GAME_PERIOD": "Q1",
+    "SHOT_TYPE": "3PT Field Goal",
+    "FILE_YEAR": 2009,
+    "makes": 3730,
+    "attempts": 9944,
+    "fg_percentage": 0.375,
+    "avg_time_remaining": 324.831
+  },
+  {
+    "GAME_PERIOD": "Q1",
+    "SHOT_TYPE": "3PT Field Goal",
+    "FILE_YEAR": 2010,
+    "makes": 3738,
+    "attempts": 9965,
+    "fg_percentage": 0.375,
+    "avg_time_remaining": 317.927
+  },
+  {
+    "GAME_PERIOD": "Q1",
+    "SHOT_TYPE": "3PT Field Goal",
+    "FILE_YEAR": 2011,
+    "makes": 3538,
+    "attempts": 9777,
+    "fg_percentage": 0.362,
+    "avg_time_remaining": 317.578
+  },
+  {
+    "GAME_PERIOD": "Q1",
+    "SHOT_TYPE": "3PT Field Goal",
+    "FILE_YEAR": 2012,
+    "makes": 2988,
+    "attempts": 8252,
+    "fg_percentage": 0.362,
+    "avg_time_remaining": 318.762
+  },
+  {
+    "GAME_PERIOD": "Q1",
+    "SHOT_TYPE": "3PT Field Goal",
+    "FILE_YEAR": 2013,
+    "makes": 4068,
+    "attempts": 11008,
+    "fg_percentage": 0.37,
+    "avg_time_remaining": 326.343
+  },
+  {
+    "GAME_PERIOD": "Q1",
+    "SHOT_TYPE": "3PT Field Goal",
+    "FILE_YEAR": 2014,
+    "makes": 4582,
+    "attempts": 12313,
+    "fg_percentage": 0.372,
+    "avg_time_remaining": 336.03
+  },
+  {
+    "GAME_PERIOD": "Q1",
+    "SHOT_TYPE": "3PT Field Goal",
+    "FILE_YEAR": 2015,
+    "makes": 4699,
+    "attempts": 12861,
+    "fg_percentage": 0.365,
+    "avg_time_remaining": 328.988
+  },
+  {
+    "GAME_PERIOD": "Q1",
+    "SHOT_TYPE": "3PT Field Goal",
+    "FILE_YEAR": 2016,
+    "makes": 5185,
+    "attempts": 14126,
+    "fg_percentage": 0.367,
+    "avg_time_remaining": 339.278
+  },
+  {
+    "GAME_PERIOD": "Q1",
+    "SHOT_TYPE": "3PT Field Goal",
+    "FILE_YEAR": 2017,
+    "makes": 6003,
+    "attempts": 16034,
+    "fg_percentage": 0.374,
+    "avg_time_remaining": 339.548
+  },
+  {
+    "GAME_PERIOD": "Q1",
+    "SHOT_TYPE": "3PT Field Goal",
+    "FILE_YEAR": 2018,
+    "makes": 6578,
+    "attempts": 17511,
+    "fg_percentage": 0.376,
+    "avg_time_remaining": 341.398
+  },
+  {
+    "GAME_PERIOD": "Q1",
+    "SHOT_TYPE": "3PT Field Goal",
+    "FILE_YEAR": 2019,
+    "makes": 7068,
+    "attempts": 19358,
+    "fg_percentage": 0.365,
+    "avg_time_remaining": 343.909
+  },
+  {
+    "GAME_PERIOD": "Q1",
+    "SHOT_TYPE": "3PT Field Goal",
+    "FILE_YEAR": 2020,
+    "makes": 6566,
+    "attempts": 17995,
+    "fg_percentage": 0.365,
+    "avg_time_remaining": 343.671
+  },
+  {
+    "GAME_PERIOD": "Q1",
+    "SHOT_TYPE": "3PT Field Goal",
+    "FILE_YEAR": 2021,
+    "makes": 7299,
+    "attempts": 19002,
+    "fg_percentage": 0.384,
+    "avg_time_remaining": 344.692
+  },
+  {
+    "GAME_PERIOD": "Q1",
+    "SHOT_TYPE": "3PT Field Goal",
+    "FILE_YEAR": 2022,
+    "makes": 8051,
+    "attempts": 22085,
+    "fg_percentage": 0.365,
+    "avg_time_remaining": 345.66
+  },
+  {
+    "GAME_PERIOD": "Q1",
+    "SHOT_TYPE": "3PT Field Goal",
+    "FILE_YEAR": 2023,
+    "makes": 7996,
+    "attempts": 21522,
+    "fg_percentage": 0.372,
+    "avg_time_remaining": 345.453
+  },
+  {
+    "GAME_PERIOD": "Q1",
+    "SHOT_TYPE": "3PT Field Goal",
+    "FILE_YEAR": 2024,
+    "makes": 8245,
+    "attempts": 22148,
+    "fg_percentage": 0.372,
+    "avg_time_remaining": 346.841
+  },
+  {
+    "GAME_PERIOD": "Q2",
+    "SHOT_TYPE": "2PT Field Goal",
+    "FILE_YEAR": 2004,
+    "makes": 18023,
+    "attempts": 38661,
+    "fg_percentage": 0.466,
+    "avg_time_remaining": 353.793
+  },
+  {
+    "GAME_PERIOD": "Q2",
+    "SHOT_TYPE": "2PT Field Goal",
+    "FILE_YEAR": 2005,
+    "makes": 18705,
+    "attempts": 39632,
+    "fg_percentage": 0.472,
+    "avg_time_remaining": 353.106
+  },
+  {
+    "GAME_PERIOD": "Q2",
+    "SHOT_TYPE": "2PT Field Goal",
+    "FILE_YEAR": 2006,
+    "makes": 18667,
+    "attempts": 38844,
+    "fg_percentage": 0.481,
+    "avg_time_remaining": 355.673
+  },
+  {
+    "GAME_PERIOD": "Q2",
+    "SHOT_TYPE": "2PT Field Goal",
+    "FILE_YEAR": 2007,
+    "makes": 18723,
+    "attempts": 38622,
+    "fg_percentage": 0.485,
+    "avg_time_remaining": 354.398
+  },
+  {
+    "GAME_PERIOD": "Q2",
+    "SHOT_TYPE": "2PT Field Goal",
+    "FILE_YEAR": 2008,
+    "makes": 18814,
+    "attempts": 39029,
+    "fg_percentage": 0.482,
+    "avg_time_remaining": 353.659
+  },
+  {
+    "GAME_PERIOD": "Q2",
+    "SHOT_TYPE": "2PT Field Goal",
+    "FILE_YEAR": 2009,
+    "makes": 18880,
+    "attempts": 38819,
+    "fg_percentage": 0.486,
+    "avg_time_remaining": 353.285
+  },
+  {
+    "GAME_PERIOD": "Q2",
+    "SHOT_TYPE": "2PT Field Goal",
+    "FILE_YEAR": 2010,
+    "makes": 19628,
+    "attempts": 39482,
+    "fg_percentage": 0.497,
+    "avg_time_remaining": 354.164
+  },
+  {
+    "GAME_PERIOD": "Q2",
+    "SHOT_TYPE": "2PT Field Goal",
+    "FILE_YEAR": 2011,
+    "makes": 19257,
+    "attempts": 39168,
+    "fg_percentage": 0.492,
+    "avg_time_remaining": 353.746
+  },
+  {
+    "GAME_PERIOD": "Q2",
+    "SHOT_TYPE": "2PT Field Goal",
+    "FILE_YEAR": 2012,
+    "makes": 15100,
+    "attempts": 31205,
+    "fg_percentage": 0.484,
+    "avg_time_remaining": 349.987
+  },
+  {
+    "GAME_PERIOD": "Q2",
+    "SHOT_TYPE": "2PT Field Goal",
+    "FILE_YEAR": 2013,
+    "makes": 18727,
+    "attempts": 38236,
+    "fg_percentage": 0.49,
+    "avg_time_remaining": 350.039
+  },
+  {
+    "GAME_PERIOD": "Q2",
+    "SHOT_TYPE": "2PT Field Goal",
+    "FILE_YEAR": 2014,
+    "makes": 18635,
+    "attempts": 38107,
+    "fg_percentage": 0.489,
+    "avg_time_remaining": 353.006
+  },
+  {
+    "GAME_PERIOD": "Q2",
+    "SHOT_TYPE": "2PT Field Goal",
+    "FILE_YEAR": 2015,
+    "makes": 18436,
+    "attempts": 37867,
+    "fg_percentage": 0.487,
+    "avg_time_remaining": 349.576
+  },
+  {
+    "GAME_PERIOD": "Q2",
+    "SHOT_TYPE": "2PT Field Goal",
+    "FILE_YEAR": 2016,
+    "makes": 18550,
+    "attempts": 37655,
+    "fg_percentage": 0.493,
+    "avg_time_remaining": 354.725
+  },
+  {
+    "GAME_PERIOD": "Q2",
+    "SHOT_TYPE": "2PT Field Goal",
+    "FILE_YEAR": 2017,
+    "makes": 18592,
+    "attempts": 36564,
+    "fg_percentage": 0.508,
+    "avg_time_remaining": 353.135
+  },
+  {
+    "GAME_PERIOD": "Q2",
+    "SHOT_TYPE": "2PT Field Goal",
+    "FILE_YEAR": 2018,
+    "makes": 18405,
+    "attempts": 35700,
+    "fg_percentage": 0.516,
+    "avg_time_remaining": 352.781
+  },
+  {
+    "GAME_PERIOD": "Q2",
+    "SHOT_TYPE": "2PT Field Goal",
+    "FILE_YEAR": 2019,
+    "makes": 18732,
+    "attempts": 35783,
+    "fg_percentage": 0.523,
+    "avg_time_remaining": 354.453
+  },
+  {
+    "GAME_PERIOD": "Q2",
+    "SHOT_TYPE": "2PT Field Goal",
+    "FILE_YEAR": 2020,
+    "makes": 15434,
+    "attempts": 29331,
+    "fg_percentage": 0.526,
+    "avg_time_remaining": 354.455
+  },
+  {
+    "GAME_PERIOD": "Q2",
+    "SHOT_TYPE": "2PT Field Goal",
+    "FILE_YEAR": 2021,
+    "makes": 15723,
+    "attempts": 29583,
+    "fg_percentage": 0.531,
+    "avg_time_remaining": 353.666
+  },
+  {
+    "GAME_PERIOD": "Q2",
+    "SHOT_TYPE": "2PT Field Goal",
+    "FILE_YEAR": 2022,
+    "makes": 17744,
+    "attempts": 33108,
+    "fg_percentage": 0.536,
+    "avg_time_remaining": 352.722
+  },
+  {
+    "GAME_PERIOD": "Q2",
+    "SHOT_TYPE": "2PT Field Goal",
+    "FILE_YEAR": 2023,
+    "makes": 18526,
+    "attempts": 33705,
+    "fg_percentage": 0.55,
+    "avg_time_remaining": 352.194
+  },
+  {
+    "GAME_PERIOD": "Q2",
+    "SHOT_TYPE": "2PT Field Goal",
+    "FILE_YEAR": 2024,
+    "makes": 18105,
+    "attempts": 33029,
+    "fg_percentage": 0.548,
+    "avg_time_remaining": 352.019
+  },
+  {
+    "GAME_PERIOD": "Q2",
+    "SHOT_TYPE": "3PT Field Goal",
+    "FILE_YEAR": 2004,
+    "makes": 2864,
+    "attempts": 8288,
+    "fg_percentage": 0.346,
+    "avg_time_remaining": 318.004
+  },
+  {
+    "GAME_PERIOD": "Q2",
+    "SHOT_TYPE": "3PT Field Goal",
+    "FILE_YEAR": 2005,
+    "makes": 3292,
+    "attempts": 9357,
+    "fg_percentage": 0.352,
+    "avg_time_remaining": 318.225
+  },
+  {
+    "GAME_PERIOD": "Q2",
+    "SHOT_TYPE": "3PT Field Goal",
+    "FILE_YEAR": 2006,
+    "makes": 3391,
+    "attempts": 9427,
+    "fg_percentage": 0.36,
+    "avg_time_remaining": 323.833
+  },
+  {
+    "GAME_PERIOD": "Q2",
+    "SHOT_TYPE": "3PT Field Goal",
+    "FILE_YEAR": 2007,
+    "makes": 3626,
+    "attempts": 10155,
+    "fg_percentage": 0.357,
+    "avg_time_remaining": 328.213
+  },
+  {
+    "GAME_PERIOD": "Q2",
+    "SHOT_TYPE": "3PT Field Goal",
+    "FILE_YEAR": 2008,
+    "makes": 4080,
+    "attempts": 11284,
+    "fg_percentage": 0.362,
+    "avg_time_remaining": 325.078
+  },
+  {
+    "GAME_PERIOD": "Q2",
+    "SHOT_TYPE": "3PT Field Goal",
+    "FILE_YEAR": 2009,
+    "makes": 4045,
+    "attempts": 10919,
+    "fg_percentage": 0.37,
+    "avg_time_remaining": 327.39
+  },
+  {
+    "GAME_PERIOD": "Q2",
+    "SHOT_TYPE": "3PT Field Goal",
+    "FILE_YEAR": 2010,
+    "makes": 3904,
+    "attempts": 10983,
+    "fg_percentage": 0.355,
+    "avg_time_remaining": 327.965
+  },
+  {
+    "GAME_PERIOD": "Q2",
+    "SHOT_TYPE": "3PT Field Goal",
+    "FILE_YEAR": 2011,
+    "makes": 3967,
+    "attempts": 10733,
+    "fg_percentage": 0.37,
+    "avg_time_remaining": 332.793
+  },
+  {
+    "GAME_PERIOD": "Q2",
+    "SHOT_TYPE": "3PT Field Goal",
+    "FILE_YEAR": 2012,
+    "makes": 3048,
+    "attempts": 8804,
+    "fg_percentage": 0.346,
+    "avg_time_remaining": 334.789
+  },
+  {
+    "GAME_PERIOD": "Q2",
+    "SHOT_TYPE": "3PT Field Goal",
+    "FILE_YEAR": 2013,
+    "makes": 4482,
+    "attempts": 12138,
+    "fg_percentage": 0.369,
+    "avg_time_remaining": 344.985
+  },
+  {
+    "GAME_PERIOD": "Q2",
+    "SHOT_TYPE": "3PT Field Goal",
+    "FILE_YEAR": 2014,
+    "makes": 4568,
+    "attempts": 12872,
+    "fg_percentage": 0.355,
+    "avg_time_remaining": 333.861
+  },
+  {
+    "GAME_PERIOD": "Q2",
+    "SHOT_TYPE": "3PT Field Goal",
+    "FILE_YEAR": 2015,
+    "makes": 4734,
+    "attempts": 13493,
+    "fg_percentage": 0.351,
+    "avg_time_remaining": 341.483
+  },
+  {
+    "GAME_PERIOD": "Q2",
+    "SHOT_TYPE": "3PT Field Goal",
+    "FILE_YEAR": 2016,
+    "makes": 5019,
+    "attempts": 14277,
+    "fg_percentage": 0.352,
+    "avg_time_remaining": 336.293
+  },
+  {
+    "GAME_PERIOD": "Q2",
+    "SHOT_TYPE": "3PT Field Goal",
+    "FILE_YEAR": 2017,
+    "makes": 5725,
+    "attempts": 16082,
+    "fg_percentage": 0.356,
+    "avg_time_remaining": 335.69
+  },
+  {
+    "GAME_PERIOD": "Q2",
+    "SHOT_TYPE": "3PT Field Goal",
+    "FILE_YEAR": 2018,
+    "makes": 6243,
+    "attempts": 17371,
+    "fg_percentage": 0.359,
+    "avg_time_remaining": 340.274
+  },
+  {
+    "GAME_PERIOD": "Q2",
+    "SHOT_TYPE": "3PT Field Goal",
+    "FILE_YEAR": 2019,
+    "makes": 6759,
+    "attempts": 19250,
+    "fg_percentage": 0.351,
+    "avg_time_remaining": 341.361
+  },
+  {
+    "GAME_PERIOD": "Q2",
+    "SHOT_TYPE": "3PT Field Goal",
+    "FILE_YEAR": 2020,
+    "makes": 6417,
+    "attempts": 17865,
+    "fg_percentage": 0.359,
+    "avg_time_remaining": 346.818
+  },
+  {
+    "GAME_PERIOD": "Q2",
+    "SHOT_TYPE": "3PT Field Goal",
+    "FILE_YEAR": 2021,
+    "makes": 6604,
+    "attempts": 18327,
+    "fg_percentage": 0.36,
+    "avg_time_remaining": 348.13
+  },
+  {
+    "GAME_PERIOD": "Q2",
+    "SHOT_TYPE": "3PT Field Goal",
+    "FILE_YEAR": 2022,
+    "makes": 7430,
+    "attempts": 21381,
+    "fg_percentage": 0.348,
+    "avg_time_remaining": 348.375
+  },
+  {
+    "GAME_PERIOD": "Q2",
+    "SHOT_TYPE": "3PT Field Goal",
+    "FILE_YEAR": 2023,
+    "makes": 7524,
+    "attempts": 21117,
+    "fg_percentage": 0.356,
+    "avg_time_remaining": 348.668
+  },
+  {
+    "GAME_PERIOD": "Q2",
+    "SHOT_TYPE": "3PT Field Goal",
+    "FILE_YEAR": 2024,
+    "makes": 7946,
+    "attempts": 21633,
+    "fg_percentage": 0.367,
+    "avg_time_remaining": 346.479
+  },
+  {
+    "GAME_PERIOD": "Q3",
+    "SHOT_TYPE": "2PT Field Goal",
+    "FILE_YEAR": 2004,
+    "makes": 17355,
+    "attempts": 37813,
+    "fg_percentage": 0.459,
+    "avg_time_remaining": 359.58
+  },
+  {
+    "GAME_PERIOD": "Q3",
+    "SHOT_TYPE": "2PT Field Goal",
+    "FILE_YEAR": 2005,
+    "makes": 18213,
+    "attempts": 38895,
+    "fg_percentage": 0.468,
+    "avg_time_remaining": 360.924
+  },
+  {
+    "GAME_PERIOD": "Q3",
+    "SHOT_TYPE": "2PT Field Goal",
+    "FILE_YEAR": 2006,
+    "makes": 17808,
+    "attempts": 37366,
+    "fg_percentage": 0.477,
+    "avg_time_remaining": 361.577
+  },
+  {
+    "GAME_PERIOD": "Q3",
+    "SHOT_TYPE": "2PT Field Goal",
+    "FILE_YEAR": 2007,
+    "makes": 18268,
+    "attempts": 37686,
+    "fg_percentage": 0.485,
+    "avg_time_remaining": 360.08
+  },
+  {
+    "GAME_PERIOD": "Q3",
+    "SHOT_TYPE": "2PT Field Goal",
+    "FILE_YEAR": 2008,
+    "makes": 18483,
+    "attempts": 38055,
+    "fg_percentage": 0.486,
+    "avg_time_remaining": 361.561
+  },
+  {
+    "GAME_PERIOD": "Q3",
+    "SHOT_TYPE": "2PT Field Goal",
+    "FILE_YEAR": 2009,
+    "makes": 18266,
+    "attempts": 37584,
+    "fg_percentage": 0.486,
+    "avg_time_remaining": 360.4
+  },
+  {
+    "GAME_PERIOD": "Q3",
+    "SHOT_TYPE": "2PT Field Goal",
+    "FILE_YEAR": 2010,
+    "makes": 18524,
+    "attempts": 37920,
+    "fg_percentage": 0.489,
+    "avg_time_remaining": 359.16
+  },
+  {
+    "GAME_PERIOD": "Q3",
+    "SHOT_TYPE": "2PT Field Goal",
+    "FILE_YEAR": 2011,
+    "makes": 18024,
+    "attempts": 37536,
+    "fg_percentage": 0.48,
+    "avg_time_remaining": 361.434
+  },
+  {
+    "GAME_PERIOD": "Q3",
+    "SHOT_TYPE": "2PT Field Goal",
+    "FILE_YEAR": 2012,
+    "makes": 14330,
+    "attempts": 30301,
+    "fg_percentage": 0.473,
+    "avg_time_remaining": 359.843
+  },
+  {
+    "GAME_PERIOD": "Q3",
+    "SHOT_TYPE": "2PT Field Goal",
+    "FILE_YEAR": 2013,
+    "makes": 17809,
+    "attempts": 37255,
+    "fg_percentage": 0.478,
+    "avg_time_remaining": 359.238
+  },
+  {
+    "GAME_PERIOD": "Q3",
+    "SHOT_TYPE": "2PT Field Goal",
+    "FILE_YEAR": 2014,
+    "makes": 17881,
+    "attempts": 36841,
+    "fg_percentage": 0.485,
+    "avg_time_remaining": 357.738
+  },
+  {
+    "GAME_PERIOD": "Q3",
+    "SHOT_TYPE": "2PT Field Goal",
+    "FILE_YEAR": 2015,
+    "makes": 17909,
+    "attempts": 36694,
+    "fg_percentage": 0.488,
+    "avg_time_remaining": 358.256
+  },
+  {
+    "GAME_PERIOD": "Q3",
+    "SHOT_TYPE": "2PT Field Goal",
+    "FILE_YEAR": 2016,
+    "makes": 17873,
+    "attempts": 36127,
+    "fg_percentage": 0.495,
+    "avg_time_remaining": 356.563
+  },
+  {
+    "GAME_PERIOD": "Q3",
+    "SHOT_TYPE": "2PT Field Goal",
+    "FILE_YEAR": 2017,
+    "makes": 17443,
+    "attempts": 34813,
+    "fg_percentage": 0.501,
+    "avg_time_remaining": 357.78
+  },
+  {
+    "GAME_PERIOD": "Q3",
+    "SHOT_TYPE": "2PT Field Goal",
+    "FILE_YEAR": 2018,
+    "makes": 17267,
+    "attempts": 34257,
+    "fg_percentage": 0.504,
+    "avg_time_remaining": 357.471
+  },
+  {
+    "GAME_PERIOD": "Q3",
+    "SHOT_TYPE": "2PT Field Goal",
+    "FILE_YEAR": 2019,
+    "makes": 17626,
+    "attempts": 34026,
+    "fg_percentage": 0.518,
+    "avg_time_remaining": 357.265
+  },
+  {
+    "GAME_PERIOD": "Q3",
+    "SHOT_TYPE": "2PT Field Goal",
+    "FILE_YEAR": 2020,
+    "makes": 14749,
+    "attempts": 28314,
+    "fg_percentage": 0.521,
+    "avg_time_remaining": 356.186
+  },
+  {
+    "GAME_PERIOD": "Q3",
+    "SHOT_TYPE": "2PT Field Goal",
+    "FILE_YEAR": 2021,
+    "makes": 15261,
+    "attempts": 28597,
+    "fg_percentage": 0.534,
+    "avg_time_remaining": 355.708
+  },
+  {
+    "GAME_PERIOD": "Q3",
+    "SHOT_TYPE": "2PT Field Goal",
+    "FILE_YEAR": 2022,
+    "makes": 17108,
+    "attempts": 31990,
+    "fg_percentage": 0.535,
+    "avg_time_remaining": 358.104
+  },
+  {
+    "GAME_PERIOD": "Q3",
+    "SHOT_TYPE": "2PT Field Goal",
+    "FILE_YEAR": 2023,
+    "makes": 18035,
+    "attempts": 32686,
+    "fg_percentage": 0.552,
+    "avg_time_remaining": 357.728
+  },
+  {
+    "GAME_PERIOD": "Q3",
+    "SHOT_TYPE": "2PT Field Goal",
+    "FILE_YEAR": 2024,
+    "makes": 18034,
+    "attempts": 33184,
+    "fg_percentage": 0.543,
+    "avg_time_remaining": 357.629
+  },
+  {
+    "GAME_PERIOD": "Q3",
+    "SHOT_TYPE": "3PT Field Goal",
+    "FILE_YEAR": 2004,
+    "makes": 3074,
+    "attempts": 8800,
+    "fg_percentage": 0.349,
+    "avg_time_remaining": 326.681
+  },
+  {
+    "GAME_PERIOD": "Q3",
+    "SHOT_TYPE": "3PT Field Goal",
+    "FILE_YEAR": 2005,
+    "makes": 3520,
+    "attempts": 9731,
+    "fg_percentage": 0.362,
+    "avg_time_remaining": 321.8
+  },
+  {
+    "GAME_PERIOD": "Q3",
+    "SHOT_TYPE": "3PT Field Goal",
+    "FILE_YEAR": 2006,
+    "makes": 3714,
+    "attempts": 9991,
+    "fg_percentage": 0.372,
+    "avg_time_remaining": 315.176
+  },
+  {
+    "GAME_PERIOD": "Q3",
+    "SHOT_TYPE": "3PT Field Goal",
+    "FILE_YEAR": 2007,
+    "makes": 3776,
+    "attempts": 10208,
+    "fg_percentage": 0.37,
+    "avg_time_remaining": 321.008
+  },
+  {
+    "GAME_PERIOD": "Q3",
+    "SHOT_TYPE": "3PT Field Goal",
+    "FILE_YEAR": 2008,
+    "makes": 4001,
+    "attempts": 10913,
+    "fg_percentage": 0.367,
+    "avg_time_remaining": 321.897
+  },
+  {
+    "GAME_PERIOD": "Q3",
+    "SHOT_TYPE": "3PT Field Goal",
+    "FILE_YEAR": 2009,
+    "makes": 4114,
+    "attempts": 11079,
+    "fg_percentage": 0.371,
+    "avg_time_remaining": 320.326
+  },
+  {
+    "GAME_PERIOD": "Q3",
+    "SHOT_TYPE": "3PT Field Goal",
+    "FILE_YEAR": 2010,
+    "makes": 3851,
+    "attempts": 11054,
+    "fg_percentage": 0.348,
+    "avg_time_remaining": 321.179
+  },
+  {
+    "GAME_PERIOD": "Q3",
+    "SHOT_TYPE": "3PT Field Goal",
+    "FILE_YEAR": 2011,
+    "makes": 4049,
+    "attempts": 11207,
+    "fg_percentage": 0.361,
+    "avg_time_remaining": 317.865
+  },
+  {
+    "GAME_PERIOD": "Q3",
+    "SHOT_TYPE": "3PT Field Goal",
+    "FILE_YEAR": 2012,
+    "makes": 3192,
+    "attempts": 9090,
+    "fg_percentage": 0.351,
+    "avg_time_remaining": 321.802
+  },
+  {
+    "GAME_PERIOD": "Q3",
+    "SHOT_TYPE": "3PT Field Goal",
+    "FILE_YEAR": 2013,
+    "makes": 4380,
+    "attempts": 12173,
+    "fg_percentage": 0.36,
+    "avg_time_remaining": 323.263
+  },
+  {
+    "GAME_PERIOD": "Q3",
+    "SHOT_TYPE": "3PT Field Goal",
+    "FILE_YEAR": 2014,
+    "makes": 4796,
+    "attempts": 13166,
+    "fg_percentage": 0.364,
+    "avg_time_remaining": 333.035
+  },
+  {
+    "GAME_PERIOD": "Q3",
+    "SHOT_TYPE": "3PT Field Goal",
+    "FILE_YEAR": 2015,
+    "makes": 4794,
+    "attempts": 13527,
+    "fg_percentage": 0.354,
+    "avg_time_remaining": 328.163
+  },
+  {
+    "GAME_PERIOD": "Q3",
+    "SHOT_TYPE": "3PT Field Goal",
+    "FILE_YEAR": 2016,
+    "makes": 5258,
+    "attempts": 14784,
+    "fg_percentage": 0.356,
+    "avg_time_remaining": 334.173
+  },
+  {
+    "GAME_PERIOD": "Q3",
+    "SHOT_TYPE": "3PT Field Goal",
+    "FILE_YEAR": 2017,
+    "makes": 5942,
+    "attempts": 16629,
+    "fg_percentage": 0.357,
+    "avg_time_remaining": 335.885
+  },
+  {
+    "GAME_PERIOD": "Q3",
+    "SHOT_TYPE": "3PT Field Goal",
+    "FILE_YEAR": 2018,
+    "makes": 6605,
+    "attempts": 17961,
+    "fg_percentage": 0.368,
+    "avg_time_remaining": 340.709
+  },
+  {
+    "GAME_PERIOD": "Q3",
+    "SHOT_TYPE": "3PT Field Goal",
+    "FILE_YEAR": 2019,
+    "makes": 7238,
+    "attempts": 19913,
+    "fg_percentage": 0.363,
+    "avg_time_remaining": 343.746
+  },
+  {
+    "GAME_PERIOD": "Q3",
+    "SHOT_TYPE": "3PT Field Goal",
+    "FILE_YEAR": 2020,
+    "makes": 6499,
+    "attempts": 18002,
+    "fg_percentage": 0.361,
+    "avg_time_remaining": 342.473
+  },
+  {
+    "GAME_PERIOD": "Q3",
+    "SHOT_TYPE": "3PT Field Goal",
+    "FILE_YEAR": 2021,
+    "makes": 6854,
+    "attempts": 18634,
+    "fg_percentage": 0.368,
+    "avg_time_remaining": 346.879
+  },
+  {
+    "GAME_PERIOD": "Q3",
+    "SHOT_TYPE": "3PT Field Goal",
+    "FILE_YEAR": 2022,
+    "makes": 7692,
+    "attempts": 21485,
+    "fg_percentage": 0.358,
+    "avg_time_remaining": 345.96
+  },
+  {
+    "GAME_PERIOD": "Q3",
+    "SHOT_TYPE": "3PT Field Goal",
+    "FILE_YEAR": 2023,
+    "makes": 7737,
+    "attempts": 20923,
+    "fg_percentage": 0.37,
+    "avg_time_remaining": 346.613
+  },
+  {
+    "GAME_PERIOD": "Q3",
+    "SHOT_TYPE": "3PT Field Goal",
+    "FILE_YEAR": 2024,
+    "makes": 7946,
+    "attempts": 21204,
+    "fg_percentage": 0.375,
+    "avg_time_remaining": 346.986
+  },
+  {
+    "GAME_PERIOD": "Q4",
+    "SHOT_TYPE": "2PT Field Goal",
+    "FILE_YEAR": 2004,
+    "makes": 15461,
+    "attempts": 34691,
+    "fg_percentage": 0.446,
+    "avg_time_remaining": 353.885
+  },
+  {
+    "GAME_PERIOD": "Q4",
+    "SHOT_TYPE": "2PT Field Goal",
+    "FILE_YEAR": 2005,
+    "makes": 16475,
+    "attempts": 35783,
+    "fg_percentage": 0.46,
+    "avg_time_remaining": 353.322
+  },
+  {
+    "GAME_PERIOD": "Q4",
+    "SHOT_TYPE": "2PT Field Goal",
+    "FILE_YEAR": 2006,
+    "makes": 16283,
+    "attempts": 34765,
+    "fg_percentage": 0.468,
+    "avg_time_remaining": 353.771
+  },
+  {
+    "GAME_PERIOD": "Q4",
+    "SHOT_TYPE": "2PT Field Goal",
+    "FILE_YEAR": 2007,
+    "makes": 16541,
+    "attempts": 34727,
+    "fg_percentage": 0.476,
+    "avg_time_remaining": 354.749
+  },
+  {
+    "GAME_PERIOD": "Q4",
+    "SHOT_TYPE": "2PT Field Goal",
+    "FILE_YEAR": 2008,
+    "makes": 16645,
+    "attempts": 35024,
+    "fg_percentage": 0.475,
+    "avg_time_remaining": 355.364
+  },
+  {
+    "GAME_PERIOD": "Q4",
+    "SHOT_TYPE": "2PT Field Goal",
+    "FILE_YEAR": 2009,
+    "makes": 16669,
+    "attempts": 34957,
+    "fg_percentage": 0.477,
+    "avg_time_remaining": 353.782
+  },
+  {
+    "GAME_PERIOD": "Q4",
+    "SHOT_TYPE": "2PT Field Goal",
+    "FILE_YEAR": 2010,
+    "makes": 16900,
+    "attempts": 35201,
+    "fg_percentage": 0.48,
+    "avg_time_remaining": 357.005
+  },
+  {
+    "GAME_PERIOD": "Q4",
+    "SHOT_TYPE": "2PT Field Goal",
+    "FILE_YEAR": 2011,
+    "makes": 16708,
+    "attempts": 34978,
+    "fg_percentage": 0.478,
+    "avg_time_remaining": 353.109
+  },
+  {
+    "GAME_PERIOD": "Q4",
+    "SHOT_TYPE": "2PT Field Goal",
+    "FILE_YEAR": 2012,
+    "makes": 13200,
+    "attempts": 28382,
+    "fg_percentage": 0.465,
+    "avg_time_remaining": 351.601
+  },
+  {
+    "GAME_PERIOD": "Q4",
+    "SHOT_TYPE": "2PT Field Goal",
+    "FILE_YEAR": 2013,
+    "makes": 16416,
+    "attempts": 34595,
+    "fg_percentage": 0.475,
+    "avg_time_remaining": 353.055
+  },
+  {
+    "GAME_PERIOD": "Q4",
+    "SHOT_TYPE": "2PT Field Goal",
+    "FILE_YEAR": 2014,
+    "makes": 16510,
+    "attempts": 34298,
+    "fg_percentage": 0.481,
+    "avg_time_remaining": 355.054
+  },
+  {
+    "GAME_PERIOD": "Q4",
+    "SHOT_TYPE": "2PT Field Goal",
+    "FILE_YEAR": 2015,
+    "makes": 16406,
+    "attempts": 34300,
+    "fg_percentage": 0.478,
+    "avg_time_remaining": 355.678
+  },
+  {
+    "GAME_PERIOD": "Q4",
+    "SHOT_TYPE": "2PT Field Goal",
+    "FILE_YEAR": 2016,
+    "makes": 16680,
+    "attempts": 34132,
+    "fg_percentage": 0.489,
+    "avg_time_remaining": 356.157
+  },
+  {
+    "GAME_PERIOD": "Q4",
+    "SHOT_TYPE": "2PT Field Goal",
+    "FILE_YEAR": 2017,
+    "makes": 16415,
+    "attempts": 32786,
+    "fg_percentage": 0.501,
+    "avg_time_remaining": 356.417
+  },
+  {
+    "GAME_PERIOD": "Q4",
+    "SHOT_TYPE": "2PT Field Goal",
+    "FILE_YEAR": 2018,
+    "makes": 16395,
+    "attempts": 32141,
+    "fg_percentage": 0.51,
+    "avg_time_remaining": 357.564
+  },
+  {
+    "GAME_PERIOD": "Q4",
+    "SHOT_TYPE": "2PT Field Goal",
+    "FILE_YEAR": 2019,
+    "makes": 16850,
+    "attempts": 32522,
+    "fg_percentage": 0.518,
+    "avg_time_remaining": 360.012
+  },
+  {
+    "GAME_PERIOD": "Q4",
+    "SHOT_TYPE": "2PT Field Goal",
+    "FILE_YEAR": 2020,
+    "makes": 14095,
+    "attempts": 26889,
+    "fg_percentage": 0.524,
+    "avg_time_remaining": 360.256
+  },
+  {
+    "GAME_PERIOD": "Q4",
+    "SHOT_TYPE": "2PT Field Goal",
+    "FILE_YEAR": 2021,
+    "makes": 14084,
+    "attempts": 26777,
+    "fg_percentage": 0.526,
+    "avg_time_remaining": 358.939
+  },
+  {
+    "GAME_PERIOD": "Q4",
+    "SHOT_TYPE": "2PT Field Goal",
+    "FILE_YEAR": 2022,
+    "makes": 16011,
+    "attempts": 30362,
+    "fg_percentage": 0.527,
+    "avg_time_remaining": 357.392
+  },
+  {
+    "GAME_PERIOD": "Q4",
+    "SHOT_TYPE": "2PT Field Goal",
+    "FILE_YEAR": 2023,
+    "makes": 16789,
+    "attempts": 31023,
+    "fg_percentage": 0.541,
+    "avg_time_remaining": 358.272
+  },
+  {
+    "GAME_PERIOD": "Q4",
+    "SHOT_TYPE": "2PT Field Goal",
+    "FILE_YEAR": 2024,
+    "makes": 17078,
+    "attempts": 31078,
+    "fg_percentage": 0.55,
+    "avg_time_remaining": 358.274
+  },
+  {
+    "GAME_PERIOD": "Q4",
+    "SHOT_TYPE": "3PT Field Goal",
+    "FILE_YEAR": 2004,
+    "makes": 3403,
+    "attempts": 10141,
+    "fg_percentage": 0.336,
+    "avg_time_remaining": 313.86
+  },
+  {
+    "GAME_PERIOD": "Q4",
+    "SHOT_TYPE": "3PT Field Goal",
+    "FILE_YEAR": 2005,
+    "makes": 3727,
+    "attempts": 10871,
+    "fg_percentage": 0.343,
+    "avg_time_remaining": 319.039
+  },
+  {
+    "GAME_PERIOD": "Q4",
+    "SHOT_TYPE": "3PT Field Goal",
+    "FILE_YEAR": 2006,
+    "makes": 3779,
+    "attempts": 11042,
+    "fg_percentage": 0.342,
+    "avg_time_remaining": 318.411
+  },
+  {
+    "GAME_PERIOD": "Q4",
+    "SHOT_TYPE": "3PT Field Goal",
+    "FILE_YEAR": 2007,
+    "makes": 4034,
+    "attempts": 11723,
+    "fg_percentage": 0.344,
+    "avg_time_remaining": 317.616
+  },
+  {
+    "GAME_PERIOD": "Q4",
+    "SHOT_TYPE": "3PT Field Goal",
+    "FILE_YEAR": 2008,
+    "makes": 4300,
+    "attempts": 12309,
+    "fg_percentage": 0.349,
+    "avg_time_remaining": 323.164
+  },
+  {
+    "GAME_PERIOD": "Q4",
+    "SHOT_TYPE": "3PT Field Goal",
+    "FILE_YEAR": 2009,
+    "makes": 4334,
+    "attempts": 12253,
+    "fg_percentage": 0.354,
+    "avg_time_remaining": 322.297
+  },
+  {
+    "GAME_PERIOD": "Q4",
+    "SHOT_TYPE": "3PT Field Goal",
+    "FILE_YEAR": 2010,
+    "makes": 4209,
+    "attempts": 12192,
+    "fg_percentage": 0.345,
+    "avg_time_remaining": 317.017
+  },
+  {
+    "GAME_PERIOD": "Q4",
+    "SHOT_TYPE": "3PT Field Goal",
+    "FILE_YEAR": 2011,
+    "makes": 4199,
+    "attempts": 12155,
+    "fg_percentage": 0.345,
+    "avg_time_remaining": 322.702
+  },
+  {
+    "GAME_PERIOD": "Q4",
+    "SHOT_TYPE": "3PT Field Goal",
+    "FILE_YEAR": 2012,
+    "makes": 3358,
+    "attempts": 9889,
+    "fg_percentage": 0.34,
+    "avg_time_remaining": 326.045
+  },
+  {
+    "GAME_PERIOD": "Q4",
+    "SHOT_TYPE": "3PT Field Goal",
+    "FILE_YEAR": 2013,
+    "makes": 4543,
+    "attempts": 13277,
+    "fg_percentage": 0.342,
+    "avg_time_remaining": 333.36
+  },
+  {
+    "GAME_PERIOD": "Q4",
+    "SHOT_TYPE": "3PT Field Goal",
+    "FILE_YEAR": 2014,
+    "makes": 4927,
+    "attempts": 14062,
+    "fg_percentage": 0.35,
+    "avg_time_remaining": 329.284
+  },
+  {
+    "GAME_PERIOD": "Q4",
+    "SHOT_TYPE": "3PT Field Goal",
+    "FILE_YEAR": 2015,
+    "makes": 4915,
+    "attempts": 14745,
+    "fg_percentage": 0.333,
+    "avg_time_remaining": 333.296
+  },
+  {
+    "GAME_PERIOD": "Q4",
+    "SHOT_TYPE": "3PT Field Goal",
+    "FILE_YEAR": 2016,
+    "makes": 5298,
+    "attempts": 15405,
+    "fg_percentage": 0.344,
+    "avg_time_remaining": 331.629
+  },
+  {
+    "GAME_PERIOD": "Q4",
+    "SHOT_TYPE": "3PT Field Goal",
+    "FILE_YEAR": 2017,
+    "makes": 5860,
+    "attempts": 16995,
+    "fg_percentage": 0.345,
+    "avg_time_remaining": 332.302
+  },
+  {
+    "GAME_PERIOD": "Q4",
+    "SHOT_TYPE": "3PT Field Goal",
+    "FILE_YEAR": 2018,
+    "makes": 6252,
+    "attempts": 18062,
+    "fg_percentage": 0.346,
+    "avg_time_remaining": 337.313
+  },
+  {
+    "GAME_PERIOD": "Q4",
+    "SHOT_TYPE": "3PT Field Goal",
+    "FILE_YEAR": 2019,
+    "makes": 6712,
+    "attempts": 19646,
+    "fg_percentage": 0.342,
+    "avg_time_remaining": 338.624
+  },
+  {
+    "GAME_PERIOD": "Q4",
+    "SHOT_TYPE": "3PT Field Goal",
+    "FILE_YEAR": 2020,
+    "makes": 6215,
+    "attempts": 17853,
+    "fg_percentage": 0.348,
+    "avg_time_remaining": 342.92
+  },
+  {
+    "GAME_PERIOD": "Q4",
+    "SHOT_TYPE": "3PT Field Goal",
+    "FILE_YEAR": 2021,
+    "makes": 6526,
+    "attempts": 18451,
+    "fg_percentage": 0.354,
+    "avg_time_remaining": 342.476
+  },
+  {
+    "GAME_PERIOD": "Q4",
+    "SHOT_TYPE": "3PT Field Goal",
+    "FILE_YEAR": 2022,
+    "makes": 7293,
+    "attempts": 21126,
+    "fg_percentage": 0.345,
+    "avg_time_remaining": 346.922
+  },
+  {
+    "GAME_PERIOD": "Q4",
+    "SHOT_TYPE": "3PT Field Goal",
+    "FILE_YEAR": 2023,
+    "makes": 6942,
+    "attempts": 20025,
+    "fg_percentage": 0.347,
+    "avg_time_remaining": 348.914
+  },
+  {
+    "GAME_PERIOD": "Q4",
+    "SHOT_TYPE": "3PT Field Goal",
+    "FILE_YEAR": 2024,
+    "makes": 7291,
+    "attempts": 20905,
+    "fg_percentage": 0.349,
+    "avg_time_remaining": 346.975
+  }
+]
