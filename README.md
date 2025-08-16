@@ -204,39 +204,34 @@ A data analysis tool that uses graph algorithms to analyze airport connections a
   - Thorough testing with over 6 test cases for different scenarios
 
 ### NBA Dashboard Project
-A data visualization project analyzing the NBA’s shift toward three-point shooting from 2004–2024.
+An interactive data visualization exploring the NBA's shift toward three-point shooting from 2004–2024.
 
 - **Features:**
-  - Interactive, narrative visualization of league-wide shot profile changes
-  - Season selector and dynamic charts exploring mid-range vs three-point evolution
-  - Optimized client-side rendering for large datasets
-- **Technologies:** D3.js v7, HTML/CSS/JavaScript
-- **Use Case:** Sports analytics, data storytelling, interactive reports
-- **Implementation Details:**
-  - 4.2M+ shots across 21 seasons (CSV data excluded from repo via `.gitignore`)
-  - Data processing scripts: `process_data.py`, `process_enhanced_nba_data.py`, `process_comprehensive_nba_data.py`
-  - Live demo: `https://arnolda2.github.io/Narrative-Visualization/`
+  - Multi-view D3 visualizations (shot distributions, trends over time)
+  - Season and contextual filtering across 4.2M+ shots
+  - Fast, preprocessed datasets for smooth interactivity
+- **Technologies:** D3.js v7, HTML/CSS/JavaScript, Python (data processing)
+- **Use Case:** Sports analytics, data storytelling, interactive reporting
+- **Live Demo:** [NBA Three-Point Revolution](https://arnolda2.github.io/Narrative-Visualization/)
 
 ### Job Application Tracker v2
-An enhanced iteration of the Job Application Tracker with improved launcher options and workflow polish.
+An updated iteration of the local GUI app for managing job applications with streamlined launchers and tests.
 
 - **Features:**
-  - Same core tracker with auto-complete, filters, and analytics
-  - Multiple launch methods (desktop app, shell launcher, direct script)
-  - Project structure refinements and packaging scripts
+  - Modern, colorful UI with status cards and filter rail
+  - Smart auto-complete for company and role fields
+  - Analytics dashboard (PyQtChart)
+  - Multiple launcher options (desktop app, CLI scripts)
+  - Basic test suite and setup docs
 - **Technologies:** Python, PyQt5, PyQtChart, SQLite
-- **Use Case:** Job search management with streamlined launching
-- **Implementation Details:**
-  - Launcher scripts: `install_launcher.sh`, `launch_app_tracker.sh`
-  - Packaged app artifacts in `ApplicationTracker.app/`
+- **Use Case:** Job search management, personal productivity
 
 ### Job Application Dashboard v3
-Further refined version focusing on stability, scripts, and packaging improvements.
+The latest refinement of the Job Application Tracker with UX polish and deployment conveniences.
 
 - **Features:**
-  - Same capabilities as prior versions with UX and packaging tweaks
-  - Consistent launcher experience
+  - Same core tracking and analytics with UI/UX refinements
+  - Enhanced launcher scripts and packaging
+  - Modular code structure for maintainability
 - **Technologies:** Python, PyQt5, PyQtChart, SQLite
-- **Use Case:** Job tracking with an emphasis on easy deployment
-- **Implementation Details:**
-  - Updated scripts and app bundle in `ApplicationTracker.app/`
+- **Use Case:** Job search analytics and tracking
