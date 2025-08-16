@@ -1,0 +1,33 @@
+# Application Tracker - File Structure
+
+## Root Directory
+- main.py - Main entry point for the application
+- README.md - Project documentation and setup instructions
+- requirements.txt - Python dependencies
+
+## Database
+- database/
+  - db_manager.py - Handles database connections and operations
+  - schema.sql - SQL schema for the application database
+
+## UI Components
+- ui/
+  - dashboard.py - Dashboard UI with status cards and application table
+  - add_application.py - Form for adding new job applications
+  - filter_panel.py - UI for filtering applications
+  - analytics.py - Statistics and visualization components
+
+## Models
+- models/
+  - application.py - Application data model
+
+## Utils
+- utils/
+  - date_helpers.py - Date formatting and calculation utilities
+  - config.py - Application configuration
+  - constants.py - Application constants
+
+## Assets
+- assets/
+  - styles.py - UI styles and theme settings
+  - icons/ - Directory for application icons
