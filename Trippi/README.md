@@ -1,1 +1,1 @@
-Trippi - All in one travel planner.
+All in one savings/budget tracker.
