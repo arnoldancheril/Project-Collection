@@ -1,0 +1,87 @@
+---
+- name: Audit + (optional) remediate TLS 1.0 -> TLS 1.1 (Schannel)
+  hosts: windows
+  gather_facts: true
+
+  vars:
+    schannel_proto_root: 'HKLM:\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols'
+
+    # Desired state for TESTING:
+    # - Disable TLS 1.0 (Client + Server)
+    # - Enable TLS 1.1 (Client + Server)
+    schannel_entries:
+      # TLS 1.0 disable
+      - { proto: 'TLS 1.0', role: 'Client', name: 'Enabled',           data: 0 }
+      - { proto: 'TLS 1.0', role: 'Client', name: 'DisabledByDefault', data: 1 }
+      - { proto: 'TLS 1.0', role: 'Server', name: 'Enabled',           data: 0 }
+      - { proto: 'TLS 1.0', role: 'Server', name: 'DisabledByDefault', data: 1 }
+
+      # TLS 1.1 enable
+      - { proto: 'TLS 1.1', role: 'Client', name: 'Enabled',           data: 1 }
+      - { proto: 'TLS 1.1', role: 'Client', name: 'DisabledByDefault', data: 0 }
+      - { proto: 'TLS 1.1', role: 'Server', name: 'Enabled',           data: 1 }
+      - { proto: 'TLS 1.1', role: 'Server', name: 'DisabledByDefault', data: 0 }
+
+    # Set true to ONLY report, no changes
+    audit_only: false
+
+    # Reboot if changes were made (often needed for Schannel consumers)
+    reboot_after_change: true
+
+  tasks:
+    - name: Read current Schannel registry values
+      ansible.windows.win_reg_stat:
+        path: "{{ schannel_proto_root }}\\{{ item.proto }}\\{{ item.role }}"
+        name: "{{ item.name }}"
+      loop: "{{ schannel_entries }}"
+      register: reg_state
+
+    - name: Build compliance report
+      ansible.builtin.set_fact:
+        noncompliant: >-
+          {{
+            (noncompliant | default([])) + (
+              [] if (
+                (item.exists | default(false)) and
+                ((item.value | int) == (item.item.data | int))
+              )
+              else
+              [ {
+                  'path': (schannel_proto_root ~ '\\' ~ item.item.proto ~ '\\' ~ item.item.role),
+                  'name': item.item.name,
+                  'current': (item.value if (item.exists | default(false)) else 'MISSING'),
+                  'desired': item.item.data
+                } ]
+            )
+          }}
+      loop: "{{ reg_state.results }}"
+
+    - name: Show audit results (what is vulnerable / noncompliant)
+      ansible.builtin.debug:
+        msg:
+          hostname: "{{ ansible_hostname | default(inventory_hostname) }}"
+          noncompliant_count: "{{ noncompliant | length }}"
+          noncompliant_items: "{{ noncompliant }}"
+
+    - name: Stop if audit_only=true
+      ansible.builtin.meta: end_play
+      when: audit_only | bool
+
+    - name: Apply Schannel TLS registry settings (remediation)
+      ansible.windows.win_regedit:
+        path: "{{ schannel_proto_root }}\\{{ item.proto }}\\{{ item.role }}"
+        name: "{{ item.name }}"
+        data: "{{ item.data }}"
+        type: dword
+        state: present
+      loop: "{{ schannel_entries }}"
+      register: reg_write
+      notify: Reboot Windows (if enabled)
+
+  handlers:
+    - name: Reboot Windows (if enabled)
+      ansible.windows.win_reboot:
+        msg: "Reboot initiated by Ansible after Schannel TLS registry changes."
+        pre_reboot_delay: 10
+        post_reboot_delay: 30
+      when: reboot_after_change | bool
