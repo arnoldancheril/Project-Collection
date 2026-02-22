@@ -1,0 +1,27 @@
+## Utah Jazz — Box Score
+
+PLAYER	MIN	FGM	FGA	FG%	3PM	3PA	3P%	FTM	FTA	FT%	OREB	DREB	REB	AST	STL	BLK	TO	PF	PTS	+/-
+Lauri Markkanen	24:38	5	14	0.4	3	8	0.4	4	4	1.0	2	6	8	1	0	0	1	2	17	-6.0
+Jaren Jackson Jr.	24:54	7	19	0.4	2	7	0.3	6	7	0.9	0	5	5	3	2	0	2	3	22	+15.0
+Jusuf Nurkić	24:38	4	9	0.4	1	2	0.5	1	4	0.2	5	11	16	1	0	1	0	4	10	-3.0
+Ace Bailey	36:33	7	14	0.5	0	3	0.0	2	2	1.0	3	5	8	2	1	0	0	4	16	+3.0
+Isaiah Collier	34:27	5	9	0.6	1	2	0.5	2	2	1.0	0	3	3	9	2	0	4	4	13	0.0
+Cody Williams	18:30	1	1	1.0	0	0	0.0	0	0	0.0	0	1	1	0	0	1	0	2	2	-2.0
+Vince Williams Jr.	15:06	2	5	0.4	1	3	0.3	0	0	0.0	1	1	2	7	1	0	2	1	5	+7.0
+Kyle Filipowski	23:22	4	9	0.4	0	2	0.0	8	8	1.0	3	8	11	2	2	0	1	1	16	+7.0
+John Konchar	15:37	0	2	0.0	0	2	0.0	0	0	0.0	0	0	0	2	0	0	0	3	0	+1.0
+Brice Sensabaugh	22:15	4	10	0.4	2	7	0.3	4	4	1.0	1	3	4	2	0	0	2	1	14	-2.0
+
+## Miami Heat — Box Score
+
+PLAYER	MIN	FGM	FGA	FG%	3PM	3PA	3P%	FTM	FTA	FT%	OREB	DREB	REB	AST	STL	BLK	TO	PF	PTS	+/-
+Andrew Wiggins	35:54	9	18	0.5	4	11	0.4	4	8	0.5	1	4	5	2	0	1	1	2	26	-5.0
+Bam Adebayo	37:10	8	18	0.4	1	5	0.2	6	10	0.6	3	8	11	5	0	0	4	4	23	0.0
+Kel'el Ware	14:13	3	6	0.5	1	4	0.2	1	2	0.5	0	6	6	0	1	0	2	6	8	+10.0
+Simone Fontecchio	18:34	1	9	0.1	1	6	0.2	6	6	1.0	2	3	5	2	1	0	1	2	9	+8.0
+Davion Mitchell	30:52	3	3	1.0	1	1	1.0	5	6	0.8	0	2	2	5	0	0	1	4	12	-6.0
+Jaime Jaquez Jr.	30:30	1	7	0.1	1	3	0.3	6	8	0.8	1	3	4	5	2	2	1	2	9	-12.0
+Kasparas Jakučionis	32:14	7	12	0.6	6	10	0.6	0	0	0.0	2	1	3	1	0	0	2	0	20	-10.0
+Nikola Jović	17:02	0	4	0.0	0	4	0.0	0	2	0.0	1	3	4	0	0	0	0	1	0	+5.0
+Dru Smith	17:07	1	1	1.0	0	0	0.0	2	2	1.0	0	3	3	3	2	0	1	0	4	0.0
+Myron Gardner	6:20	0	1	0.0	0	1	0.0	0	0	0.0	0	0	0	1	0	0	1	1	0	-10.0

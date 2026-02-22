@@ -1,0 +1,32 @@
+## Washington Wizards — Box Score
+
+PLAYER	MIN	FGM	FGA	FG%	3PM	3PA	3P%	FTM	FTA	FT%	OREB	DREB	REB	AST	STL	BLK	TO	PF	PTS	+/-
+Bilal Coulibaly	24:24	5	9	0.6	1	4	0.2	2	3	0.7	0	0	0	2	2	1	0	2	13	-18.0
+Kyshawn George	24:24	4	12	0.3	1	4	0.2	8	8	1.0	3	2	5	3	1	0	2	2	17	-18.0
+Jamir Watkins	28:31	7	16	0.4	2	8	0.2	0	2	0.0	2	1	3	2	0	0	1	5	16	-22.0
+Tre Johnson	18:15	4	13	0.3	1	6	0.2	1	1	1.0	1	2	3	2	2	0	0	3	10	-6.0
+Bub Carrington	21:48	4	9	0.4	0	3	0.0	0	0	0.0	1	2	3	4	0	0	3	3	8	-15.0
+Justin Champagnie	24:01	5	9	0.6	2	5	0.4	0	0	0.0	6	2	8	2	3	0	1	2	12	-2.0
+Anthony Gill	19:29	2	5	0.4	0	1	0.0	0	0	0.0	3	1	4	2	1	1	0	1	4	-3.0
+Will Riley	28:49	1	12	0.1	0	4	0.0	2	2	1.0	1	3	4	2	0	0	1	0	4	-11.0
+Sharife Cooper	23:36	4	9	0.4	3	5	0.6	0	0	0.0	0	5	5	5	1	1	3	3	11	-7.0
+Jaden Hardy	14:31	3	7	0.4	3	5	0.6	2	2	1.0	0	2	2	1	0	0	1	0	11	-11.0
+Keshon Gilbert	6:06	1	1	1.0	0	0	0.0	0	0	0.0	1	0	1	0	2	0	2	0	2	-6.0
+Kadary Richmond	6:06	2	2	1.0	1	1	1.0	0	0	0.0	1	1	2	1	1	1	0	0	5	-6.0
+
+## Cleveland Cavaliers — Box Score
+
+PLAYER	MIN	FGM	FGA	FG%	3PM	3PA	3P%	FTM	FTA	FT%	OREB	DREB	REB	AST	STL	BLK	TO	PF	PTS	+/-
+Sam Merrill	24:59	11	12	0.9	9	10	0.9	1	1	1.0	1	4	5	1	1	1	1	1	32	+22.0
+Jaylon Tyson	21:29	2	6	0.3	0	1	0.0	3	4	0.8	1	4	5	1	1	0	0	0	7	+19.0
+Jarrett Allen	26:37	8	8	1.0	0	0	0.0	5	6	0.8	3	6	9	1	0	2	2	1	21	+25.0
+Donovan Mitchell	27:51	11	19	0.6	2	7	0.3	6	6	1.0	0	3	3	5	2	0	5	4	30	+11.0
+James Harden	28:27	1	4	0.2	1	4	0.2	10	12	0.8	0	4	4	11	0	1	6	3	13	+18.0
+Dennis Schröder	17:57	1	5	0.2	1	2	0.5	4	4	1.0	0	3	3	2	0	1	1	2	7	+5.0
+Keon Ellis	27:27	2	4	0.5	1	3	0.3	1	2	0.5	1	3	4	3	1	1	1	1	6	+17.0
+Thomas Bryant	16:18	2	7	0.3	0	4	0.0	2	2	1.0	3	3	6	1	0	1	0	0	6	-6.0
+Nae'Qwan Tomlin	15:59	4	8	0.5	0	2	0.0	0	0	0.0	4	1	5	0	2	0	1	2	8	-4.0
+Craig Porter Jr.	17:41	0	3	0.0	0	1	0.0	0	0	0.0	3	1	4	4	2	1	1	0	0	0.0
+Tristan Enaruna	5:05	1	3	0.3	0	1	0.0	0	0	0.0	0	1	1	0	0	0	0	0	2	+6.0
+Larry Nance Jr.	5:05	1	2	0.5	1	1	1.0	0	0	0.0	0	2	2	1	0	0	0	0	3	+6.0
+Tyrese Proctor	5:05	1	2	0.5	1	2	0.5	0	0	0.0	0	0	0	0	0	0	3	1	3	+6.0

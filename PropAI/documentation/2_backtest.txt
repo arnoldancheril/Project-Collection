@@ -1,0 +1,349 @@
+================================================================================
+                        BACKTESTING GUIDE
+               How to Properly Test and Validate Model Performance
+================================================================================
+
+This guide explains how to run honest backtests, avoid inflated accuracy,
+and properly grade model performance.
+
+================================================================================
+                    SECTION 1: WHY BACKTESTING MATTERS
+================================================================================
+
+PROBLEM: LLM-generated models sometimes have inflated accuracy because:
+1. Using future data that wouldn't be available at prediction time
+2. Comparing against "easy" derived lines instead of real sportsbook lines
+3. Cherry-picking favorable date ranges
+4. Not accounting for line source differences
+5. Bugs that count ties as wins
+
+SOLUTION: This guide ensures HONEST, REPRODUCIBLE backtesting.
+
+================================================================================
+                SECTION 2: DATA REQUIREMENTS
+================================================================================
+
+You need two types of data for proper backtesting:
+
+A. SPORTSBOOK LINES (Preferred - Most Honest)
+   ------------------------------------------
+   Location: data/db/nba_props.sqlite3 → sportsbook_lines table
+   
+   Currently available dates:
+   - 2026-01-02
+   - 2026-02-03
+   - 2026-02-04
+   - 2026-02-05
+   
+   To check available dates:
+   ```sql
+   SELECT DISTINCT as_of_date FROM sportsbook_lines ORDER BY as_of_date;
+   ```
+
+B. DERIVED LINES (Fallback - When Sportsbook Not Available)
+   --------------------------------------------------------
+   Calculated as: L10 average × 1.05, rounded to 0.5
+   
+   This is what models use when sportsbook lines aren't available.
+   
+   IMPORTANT: Derived lines are "easier" to beat than sportsbook lines.
+   Models typically show 5-15% higher accuracy against derived lines.
+
+================================================================================
+            SECTION 3: HOW TO RUN AN HONEST BACKTEST
+================================================================================
+
+STEP 1: Choose Date Range
+-------------------------
+Use dates that have actual game results in the database.
+
+To find valid dates:
+```python
+import sqlite3
+conn = sqlite3.connect('data/db/nba_props.sqlite3')
+dates = conn.execute('''
+    SELECT DISTINCT DATE(game_date) as gd 
+    FROM games 
+    ORDER BY game_date DESC 
+    LIMIT 30
+''').fetchall()
+print([d[0] for d in dates])
+```
+
+STEP 2: Run the Backtest
+------------------------
+Each model has a backtest function. Example:
+
+```python
+from src.nba_props.engine.model_v17_general import run_backtest_v17_general
+
+result = run_backtest_v17_general(
+    start_date='2026-01-25',
+    end_date='2026-02-03'
+)
+```
+
+STEP 3: Extract Honest Metrics
+------------------------------
+Key metrics to record:
+
+```python
+# Total performance
+total_picks = result.total_picks  # or result.picks
+total_hits = result.hits  # or result.total_hits
+hit_rate = total_hits / total_picks
+
+# Line source breakdown (CRITICAL for honesty)
+sportsbook_picks = result.sportsbook_picks
+sportsbook_hits = result.sportsbook_hits
+sportsbook_rate = sportsbook_hits / sportsbook_picks  # TRUE accuracy
+
+derived_picks = result.derived_picks
+derived_hits = result.derived_hits
+derived_rate = derived_hits / derived_picks  # Inflated accuracy
+
+# Prop type breakdown
+pts_rate = result.pts_hits / result.pts_picks
+reb_rate = result.reb_hits / result.reb_picks
+```
+
+================================================================================
+            SECTION 4: DETECTING INFLATED ACCURACY
+================================================================================
+
+RED FLAGS that indicate inflated/unreliable accuracy:
+
+1. NO LINE SOURCE SEPARATION
+   -------------------------
+   If model doesn't track sportsbook vs derived separately, be suspicious.
+   FIX: Add tracking to the model's backtest function.
+
+2. DERIVED RATE >> SPORTSBOOK RATE
+   -------------------------------
+   If derived accuracy is 10%+ higher than sportsbook, the model may be
+   "overfitting" to easy-to-beat derived lines.
+   
+   Example of concern:
+   - Sportsbook: 46.7% (real-world expectation)
+   - Derived: 65.2% (inflated)
+   
+   The TRUE accuracy is closer to the sportsbook rate.
+
+3. INCONSISTENT ATTRIBUTE NAMES
+   ----------------------------
+   Some models use different names for the same metric:
+   - total_picks vs picks vs num_picks
+   - total_hits vs hits vs wins
+   
+   This can cause bugs where metrics aren't tracked correctly.
+
+4. MISSING ACTUAL RESULTS
+   ----------------------
+   Backtest must compare predictions to ACTUAL game results.
+   
+   Verify with:
+   ```sql
+   SELECT COUNT(*) FROM boxscore_player 
+   WHERE game_id IN (SELECT id FROM games WHERE game_date BETWEEN '2026-01-25' AND '2026-02-03');
+   ```
+
+5. TOO-PERFECT RESULTS
+   -------------------
+   If any model shows >80% accuracy consistently, verify:
+   - Is it using future data accidentally?
+   - Is it only counting "confident" picks and ignoring misses?
+   - Is the sample size too small?
+
+================================================================================
+            SECTION 5: GRADING METHODOLOGY
+================================================================================
+
+STEP A: Calculate Projected Line
+--------------------------------
+For each player/prop, calculate what the line "should be":
+
+1. If sportsbook line available → Use it (most accurate)
+2. If not available → Use derived line:
+   ```
+   derived_line = round(L10_average * 1.05 * 2) / 2  # Round to 0.5
+   ```
+
+STEP B: Get Model's Prediction
+------------------------------
+Model outputs:
+- Projected value (what model thinks player will score)
+- Direction (OVER or UNDER)
+- Confidence (PREMIUM, HIGH, STANDARD)
+
+STEP C: Get Actual Result
+-------------------------
+After game is played, get actual stats from boxscore:
+```sql
+SELECT pts, reb, ast FROM boxscore_player 
+WHERE player_id = ? AND game_id = ?;
+```
+
+STEP D: Grade the Pick
+----------------------
+```python
+if direction == "OVER":
+    hit = actual > line
+elif direction == "UNDER":
+    hit = actual < line
+else:  # Exact match (push)
+    hit = None  # Don't count pushes
+```
+
+IMPORTANT: Pushes (actual == line) should NOT be counted as wins.
+
+STEP E: Aggregate Results
+-------------------------
+```python
+hit_rate = total_hits / (total_picks - pushes)
+```
+
+================================================================================
+            SECTION 6: STANDARD BACKTEST COMMANDS
+================================================================================
+
+Run all major models:
+```bash
+python3 -c "
+from src.nba_props.engine.model_v19_general import run_backtest_v19_general
+from src.nba_props.engine.model_v18_general import run_backtest_v18_general
+from src.nba_props.engine.model_v17_general import run_backtest_v17_general
+from src.nba_props.engine.model_v16_general import run_backtest_v16_general
+
+START, END = '2026-01-25', '2026-02-03'
+
+for name, fn in [
+    ('V19', run_backtest_v19_general),
+    ('V18', run_backtest_v18_general),
+    ('V17', run_backtest_v17_general),
+    ('V16', run_backtest_v16_general),
+]:
+    r = fn(START, END)
+    picks = getattr(r, 'total_picks', 0) or getattr(r, 'picks', 0)
+    hits = getattr(r, 'hits', 0) or getattr(r, 'total_hits', 0)
+    print(f'{name}: {hits}/{picks} ({hits/picks:.1%})')
+"
+```
+
+================================================================================
+            SECTION 7: COMPARING LINE PROJECTION METHODS
+================================================================================
+
+We now have THREE ways to generate lines:
+
+1. SPORTSBOOK LINES (from API)
+   - Most accurate representation of market
+   - Limited availability (API quota)
+   - Use when available
+
+2. PROJECTED LINES (new system)
+   - Based on season average, rounded to 0.5
+   - MAE: 1.14 (9.4% better than derived)
+   - Use as primary fallback
+
+3. DERIVED LINES (legacy)
+   - L10 average × 1.05, rounded to 0.5
+   - MAE: 1.26
+   - Keep for backward compatibility
+
+COMPARISON RESULTS:
+```
+PROJECTED LINES:
+  Total comparisons: 1246
+  Mean Absolute Error: 1.14
+  Within 0.5 points: 51.9%
+
+DERIVED LINES (Legacy):
+  Mean Absolute Error: 1.26
+  Within 0.5 points: 47.6%
+
+IMPROVEMENT: Projected lines are 9.4% more accurate
+```
+
+================================================================================
+            SECTION 8: REPORTING STANDARDS
+================================================================================
+
+When reporting model performance, ALWAYS include:
+
+1. Date range tested
+2. Total picks and hits
+3. Overall hit rate
+4. SPORTSBOOK LINE hit rate (if available)
+5. DERIVED LINE hit rate (for comparison)
+6. Breakdown by prop type (PTS, REB)
+7. Sample size warnings if < 30 picks
+
+TEMPLATE:
+```
+Model: [NAME]
+Period: [START] to [END]
+Total: [HITS]/[PICKS] ([RATE]%)
+
+Line Source Performance:
+  Sportsbook: [SB_HITS]/[SB_PICKS] ([SB_RATE]%) ← TRUE ACCURACY
+  Derived: [DER_HITS]/[DER_PICKS] ([DER_RATE]%)
+
+By Prop:
+  PTS: [PTS_RATE]%
+  REB: [REB_RATE]%
+```
+
+================================================================================
+            SECTION 9: MAINTAINING 1_model_performance.txt
+================================================================================
+
+After running backtests, update 1_model_performance.txt with:
+
+1. Run backtests for all active models
+2. Use SAME date range for fair comparison
+3. Sort by hit rate (descending)
+4. Note which models should be archived (<50% or inconsistent)
+5. Include last updated date
+
+COMMAND TO REGENERATE:
+```bash
+python3 run_model_backtest_with_projected_lines.py --days 10
+```
+
+================================================================================
+            SECTION 10: COMMON ISSUES AND FIXES
+================================================================================
+
+ISSUE: "database is locked"
+FIX: Don't run multiple backtests in parallel. Run sequentially.
+
+ISSUE: Different attribute names across models
+FIX: Use getattr with fallbacks:
+```python
+picks = getattr(r, 'total_picks', 0) or getattr(r, 'picks', 0)
+hits = getattr(r, 'hits', 0) or getattr(r, 'total_hits', 0)
+```
+
+ISSUE: Model shows 0 picks
+FIX: Check if model requires specific configuration or data.
+
+ISSUE: Results don't match previous runs
+FIX: Ensure same date range and database state. Some models are
+     non-deterministic if they use randomness.
+
+================================================================================
+                        QUICK REFERENCE
+================================================================================
+
+Profitable threshold at -110 odds: 52.4%
+Good performance: 55-60%
+Excellent performance: 60%+
+Elite performance: 65%+
+
+Sportsbook rate is the TRUE accuracy measure.
+Derived rate is likely inflated by 5-15%.
+
+================================================================================
+Last Updated: February 4, 2026
+See also: DATA_AND_BACKTESTING_GUIDE.md, 1_model_performance.txt
+================================================================================

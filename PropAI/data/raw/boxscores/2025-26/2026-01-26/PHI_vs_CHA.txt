@@ -1,0 +1,31 @@
+## Philadelphia 76ers — Box Score
+
+PLAYER	MIN	FGM	FGA	FG%	3PM	3PA	3P%	FTM	FTA	FT%	OREB	DREB	REB	AST	STL	BLK	TO	PF	PTS	+/-
+Kelly Oubre Jr.	25:08	7	12	0.6	1	4	0.2	2	2	1.0	1	1	2	0	2	0	2	1	17	-40.0
+Dominick Barlow	25:18	4	8	0.5	0	1	0.0	1	2	0.5	1	2	3	1	2	0	0	1	9	-13.0
+Andre Drummond	19:17	2	3	0.7	0	0	0.0	0	2	0.0	5	2	7	1	1	2	3	3	4	-25.0
+VJ Edgecombe	25:44	2	11	0.2	1	4	0.2	4	4	1.0	1	5	6	1	1	0	2	4	9	-36.0
+Tyrese Maxey	25:18	3	12	0.2	0	3	0.0	0	0	0.0	1	1	2	7	0	0	3	0	6	-36.0
+Adem Bona	16:28	1	2	0.5	0	0	0.0	0	0	0.0	1	1	2	0	2	0	1	3	2	-26.0
+Jabari Walker	20:03	3	8	0.4	3	6	0.5	0	0	0.0	1	1	2	0	3	0	0	2	9	+8.0
+Quentin Grimes	26:14	5	11	0.5	0	2	0.0	4	5	0.8	0	3	3	5	1	0	2	2	14	-7.0
+Jared McCain	22:52	6	13	0.5	4	8	0.5	0	0	0.0	0	3	3	3	0	1	3	0	16	+3.0
+Trendon Watford	17:13	1	6	0.2	0	0	0.0	1	2	0.5	0	2	2	0	1	0	1	3	3	-14.0
+Justin Edwards	16:24	1	3	0.3	0	2	0.0	2	2	1.0	1	0	1	2	1	0	0	2	4	+1.0
+
+## Charlotte Hornets — Box Score
+
+PLAYER	MIN	FGM	FGA	FG%	3PM	3PA	3P%	FTM	FTA	FT%	OREB	DREB	REB	AST	STL	BLK	TO	PF	PTS	+/-
+Kon Knueppel	20:22	5	9	0.6	2	5	0.4	0	0	0.0	2	6	8	6	2	0	4	2	12	+28.0
+Miles Bridges	18:57	4	7	0.6	1	3	0.3	1	1	1.0	1	2	3	3	0	1	0	4	10	+22.0
+Moussa Diabaté	20:06	6	7	0.9	0	0	0.0	0	1	0.0	2	3	5	0	0	0	1	1	12	+32.0
+Brandon Miller	27:10	9	11	0.8	6	8	0.8	6	6	1.0	0	8	8	2	2	0	1	1	30	+40.0
+LaMelo Ball	20:23	4	12	0.3	2	6	0.3	1	1	1.0	2	0	2	8	1	0	4	1	11	+36.0
+Josh Green	21:18	3	6	0.5	1	3	0.3	5	5	1.0	2	0	2	4	1	0	2	1	12	+21.0
+Sion James	18:48	0	2	0.0	0	2	0.0	0	0	0.0	0	1	1	1	0	0	1	1	0	0.0
+Ryan Kalkbrenner	25:55	6	8	0.8	0	0	0.0	1	4	0.2	3	6	9	3	1	3	3	3	13	+4.0
+Grant Williams	17:03	3	7	0.4	2	5	0.4	1	3	0.3	1	4	5	0	0	0	1	2	9	+28.0
+Collin Sexton	18:12	3	7	0.4	1	5	0.2	3	4	0.8	0	2	2	3	1	0	3	4	10	+6.0
+Tre Mann	12:00	1	2	0.5	1	2	0.5	1	2	0.5	0	0	0	3	0	0	2	1	4	-13.0
+Tidjane Salaün	12:00	3	5	0.6	1	2	0.5	0	0	0.0	0	6	6	0	0	0	1	1	7	-13.0
+Pat Connaughton	7:45	0	0	0.0	0	0	0.0	0	0	0.0	1	1	2	1	0	0	0	0	0	-6.0

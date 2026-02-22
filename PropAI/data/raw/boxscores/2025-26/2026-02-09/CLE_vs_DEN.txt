@@ -1,0 +1,26 @@
+## Cleveland Cavaliers — Box Score
+
+PLAYER	MIN	FGM	FGA	FG%	3PM	3PA	3P%	FTM	FTA	FT%	OREB	DREB	REB	AST	STL	BLK	TO	PF	PTS	+/-
+Sam Merrill	25:03	3	6	0.5	3	6	0.5	0	0	0.0	1	1	2	1	1	0	1	4	9	+13.0
+Jaylon Tyson	31:10	6	13	0.5	4	9	0.4	0	0	0.0	2	1	3	1	0	0	2	3	16	+11.0
+Jarrett Allen	34:38	10	16	0.6	0	0	0.0	2	4	0.5	4	9	13	1	0	0	0	5	22	+8.0
+Donovan Mitchell	34:08	11	23	0.5	3	10	0.3	7	8	0.9	1	0	1	10	2	2	2	1	32	+3.0
+James Harden	36:01	7	16	0.4	2	7	0.3	6	6	1.0	3	7	10	7	0	3	2	3	22	+9.0
+Keon Ellis	19:33	1	5	0.2	0	4	0.0	0	0	0.0	0	3	3	1	1	1	2	3	2	+2.0
+Dennis Schröder	24:39	2	7	0.3	0	4	0.0	1	2	0.5	0	2	2	3	2	0	1	2	5	-14.0
+Thomas Bryant	13:22	1	3	0.3	1	3	0.3	2	2	1.0	1	2	3	1	0	0	0	4	5	-6.0
+Nae'Qwan Tomlin	12:30	2	3	0.7	2	2	1.0	0	0	0.0	0	1	1	0	0	1	0	3	6	-10.0
+Craig Porter Jr.	8:55	0	0	0.0	0	0	0.0	0	0	0.0	0	1	1	0	0	0	2	1	0	-6.0
+
+## Denver Nuggets — Box Score
+
+PLAYER	MIN	FGM	FGA	FG%	3PM	3PA	3P%	FTM	FTA	FT%	OREB	DREB	REB	AST	STL	BLK	TO	PF	PTS	+/-
+Julian Strawther	28:54	8	16	0.5	2	6	0.3	2	3	0.7	0	6	6	0	0	0	1	4	20	+3.0
+Cameron Johnson	29:23	4	5	0.8	2	3	0.7	0	0	0.0	1	3	4	1	3	0	1	5	10	-7.0
+Nikola Jokić	32:59	6	11	0.5	0	2	0.0	10	12	0.8	2	12	14	11	2	1	7	0	22	-2.0
+Christian Braun	31:52	7	13	0.5	4	8	0.5	2	2	1.0	3	2	5	2	0	0	1	4	20	+3.0
+Jamal Murray	35:36	6	16	0.4	1	6	0.2	4	4	1.0	1	7	8	11	1	0	1	3	17	-4.0
+Tim Hardaway Jr.	29:24	4	10	0.4	3	9	0.3	1	2	0.5	0	1	1	0	1	0	0	1	12	+6.0
+Bruce Brown	25:17	0	6	0.0	0	2	0.0	1	2	0.5	3	1	4	0	2	0	0	4	1	-10.0
+Jonas Valančiūnas	15:01	2	4	0.5	0	1	0.0	8	10	0.8	2	2	4	0	0	0	2	1	12	0.0
+Jalen Pickett	11:34	1	4	0.2	1	3	0.3	0	0	0.0	0	0	0	0	0	0	0	1	3	+1.0

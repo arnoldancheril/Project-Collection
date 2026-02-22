@@ -1,0 +1,33 @@
+## Detroit Pistons — Box Score
+
+PLAYER	MIN	FGM	FGA	FG%	3PM	3PA	3P%	FTM	FTA	FT%	OREB	DREB	REB	AST	STL	BLK	TO	PF	PTS	+/-
+Ausar Thompson	25:08	3	6	0.5	0	0	0.0	0	0	0.0	1	3	4	6	0	0	1	2	6	-3.0
+Tobias Harris	29:32	5	9	0.6	3	4	0.8	0	0	0.0	1	4	5	1	1	0	2	1	13	-2.0
+Jalen Duren	28:17	10	11	0.9	0	0	0.0	3	3	1.0	4	9	13	4	0	1	1	0	23	-1.0
+Duncan Robinson	30:16	4	11	0.4	1	6	0.2	0	0	0.0	0	1	1	1	1	0	0	5	9	-3.0
+Cade Cunningham	33:39	8	22	0.4	2	9	0.2	8	10	0.8	1	2	3	7	3	0	2	1	26	-5.0
+Jaden Ivey	7:21	0	3	0.0	0	1	0.0	0	0	0.0	0	2	2	0	0	0	0	0	0	-9.0
+Isaiah Stewart	23:33	4	5	0.8	0	0	0.0	3	5	0.6	0	2	2	0	1	0	2	4	11	-19.0
+Ronald Holland II	17:01	0	5	0.0	0	3	0.0	0	0	0.0	0	1	1	2	0	1	0	1	0	-17.0
+Daniss Jenkins	22:29	2	8	0.2	0	3	0.0	2	3	0.7	1	2	3	5	0	0	1	2	6	-18.0
+Javonte Green	11:20	0	3	0.0	0	2	0.0	0	0	0.0	1	1	2	0	1	0	0	3	0	-13.0
+Paul Reed	3:47	1	2	0.5	0	0	0.0	0	0	0.0	0	0	0	0	1	0	0	0	2	0.0
+Chaz Lanier	3:47	0	1	0.0	0	1	0.0	0	0	0.0	0	0	0	0	0	0	0	0	0	0.0
+Bobi Klintman	3:47	0	1	0.0	0	0	0.0	0	0	0.0	0	1	1	0	0	0	0	0	0	0.0
+
+## Phoenix Suns — Box Score
+
+PLAYER	MIN	FGM	FGA	FG%	3PM	3PA	3P%	FTM	FTA	FT%	OREB	DREB	REB	AST	STL	BLK	TO	PF	PTS	+/-
+Dillon Brooks	32:41	13	22	0.6	4	7	0.6	10	12	0.8	1	7	8	4	1	1	1	3	40	+14.0
+Royce O'Neale	28:16	4	8	0.5	2	5	0.4	0	0	0.0	0	2	2	2	1	0	2	5	10	+3.0
+Mark Williams	24:46	3	5	0.6	0	0	0.0	0	0	0.0	1	4	5	1	0	1	1	1	6	+2.0
+Grayson Allen	34:06	5	14	0.4	4	12	0.3	10	10	1.0	0	3	3	5	0	1	2	1	24	+18.0
+Collin Gillespie	25:39	5	12	0.4	5	11	0.5	1	1	1.0	0	5	5	2	1	0	3	2	16	-1.0
+Jordan Goodwin	22:38	1	4	0.2	0	2	0.0	0	0	0.0	3	1	4	3	2	0	1	2	2	+21.0
+Oso Ighodaro	20:21	2	3	0.7	0	0	0.0	2	4	0.5	4	5	9	2	1	0	2	5	6	+19.0
+Ryan Dunn	13:09	1	2	0.5	1	1	1.0	0	0	0.0	0	2	2	0	0	0	0	2	3	+5.0
+Jamaree Bouyea	20:00	3	8	0.4	0	3	0.0	0	0	0.0	0	2	2	1	2	0	1	0	6	+15.0
+Isaiah Livers	11:26	0	0	0.0	0	0	0.0	1	2	0.5	2	3	5	2	0	0	0	0	1	+3.0
+Khaman Maluach	2:18	0	0	0.0	0	0	0.0	0	0	0.0	0	0	0	0	0	0	1	2	0	-3.0
+Rasheer Fleming	2:18	0	1	0.0	0	1	0.0	0	0	0.0	0	0	0	0	0	0	1	0	0	-3.0
+Nigel Hayes-Davis	2:18	0	0	0.0	0	0	0.0	0	0	0.0	0	2	2	0	0	0	0	0	0	-3.0

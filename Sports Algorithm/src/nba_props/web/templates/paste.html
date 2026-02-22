@@ -1,0 +1,857 @@
+{% extends "base.html" %}
+
+{% block title %}Add Game Data - NBA Props Predictor{% endblock %}
+{% block page_title %}Add Game Data{% endblock %}
+
+{% block content %}
+<div class="data-entry-page">
+    <!-- Tab Navigation -->
+    <div class="tab-nav">
+        <button class="tab-btn active" onclick="switchTab('boxscore')">
+            <span>📋</span> Box Score
+        </button>
+        <button class="tab-btn" onclick="switchTab('matchups')">
+            <span>🏀</span> Matchups
+        </button>
+        <button class="tab-btn" onclick="switchTab('injuries')">
+            <span>🏥</span> Injury Report
+        </button>
+        <button class="tab-btn" onclick="switchTab('refresh')">
+            <span>🔄</span> Recalculate
+        </button>
+    </div>
+
+    <!-- Box Score Tab -->
+    <div class="tab-content active" id="tab-boxscore">
+        <div class="card paste-card">
+            <div class="card-header">
+                <h2>📋 Paste Box Score</h2>
+            </div>
+            <div class="card-body">
+                <p class="muted" style="margin-bottom: 1.5rem;">
+                    Paste the raw box score text from ESPN. The system will automatically 
+                    detect teams and parse all player stats including DND/DNP and inactive players.
+                </p>
+                
+                <div class="form-group">
+                    <label for="game-date">Game Date</label>
+                    <div style="display: flex; gap: 0.75rem; align-items: center; flex-wrap: wrap;">
+                        <input type="date" id="game-date" class="form-control" style="width: auto;" required>
+                        <select id="recent-dates" class="form-control" style="width: auto; min-width: 160px;">
+                            <option value="">Recent dates...</option>
+                        </select>
+                        <button type="button" class="btn btn-ghost" onclick="setToday()">Today</button>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="box-score-text">Box Score Text</label>
+                    <textarea 
+                        id="box-score-text" 
+                        class="form-control textarea-large" 
+                        style="font-family: var(--font-mono); font-size: 0.8125rem; line-height: 1.6;"
+                        placeholder="Paste the entire box score here...
+
+Example format (from ESPN):
+Houston Rockets
+Click on any linked stat to view the Video and/or Shot Chart
+
+PLAYER	MIN	FGM	FGA	FG%	3PM	3PA	3P%	FTM	FTA	FT%	OREB	DREB	REB	AST	STL	BLK	TO	PF	PTS	+/-
+undefined Headshot
+Kevin Durant
+F
+36:33	8	15	53.3	2	7	28.6	4	4	100	0	5	5	11	0	0	6	2	22	11
+...
+Steven Adams
+DND - Injury/Illness
+...
+Inactive Players
+HOU: Fred VanVleet, Tyler Smith, Isaiah Crawford
+..."
+                        rows="18"
+                    ></textarea>
+                </div>
+                
+                <div class="detected-info" id="detected-info" style="display: none; margin-top: 1rem; padding: 1rem; background: var(--success-bg); border: 1px solid var(--success-border); border-radius: var(--radius-md);">
+                    <div style="display: flex; align-items: center; gap: 0.75rem;">
+                        <span style="font-size: 1.25rem;">✅</span>
+                        <div>
+                            <span style="font-size: 0.75rem; color: var(--text-muted); display: block;">Detected Teams</span>
+                            <span id="detected-teams-list" style="font-weight: 600; color: var(--success);">-</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-actions">
+                    <button type="button" class="btn btn-ghost" onclick="clearBoxscoreForm()">Clear</button>
+                    <button type="button" class="btn btn-primary btn-lg" onclick="ingestBoxScore()" id="ingest-btn">
+                        <span>⬆️</span>
+                        Ingest Box Score
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card help-card">
+            <div class="card-header">
+                <h3>Supported Formats</h3>
+            </div>
+            <div class="card-body">
+                <div style="margin-bottom: 1.5rem;">
+                    <h4 style="font-size: 0.9375rem; font-weight: 600; margin-bottom: 0.5rem; color: var(--accent);">ESPN Box Score Format</h4>
+                    <p style="font-size: 0.875rem; color: var(--text-secondary); line-height: 1.6;">
+                        Copy the entire box score including team names, the "PLAYER MIN FGM..." header, 
+                        all player rows, and the TOTALS line. Include the Inactive Players section if available.
+                    </p>
+                </div>
+                <div>
+                    <h4 style="font-size: 0.9375rem; font-weight: 600; margin-bottom: 0.5rem; color: var(--accent);">What Gets Captured</h4>
+                    <ul style="font-size: 0.875rem; color: var(--text-secondary); padding-left: 1.25rem; line-height: 1.8;">
+                        <li>Player stats: PTS, REB, AST, MIN, FG%, 3P%, FT%, STL, BLK, TO, +/-</li>
+                        <li>Player positions (G, F, C)</li>
+                        <li>Team totals</li>
+                        <li>DNP/DND players with reasons</li>
+                        <li>Inactive players list</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Matchups Tab -->
+    <div class="tab-content" id="tab-matchups">
+        <div class="card paste-card">
+            <div class="card-header">
+                <h2>🏀 Import Matchups</h2>
+            </div>
+            <div class="card-body">
+                <p class="muted" style="margin-bottom: 1.5rem;">
+                    Paste the schedule/matchups data including spreads and over/under lines. 
+                    The system will parse teams, times, and betting lines.
+                </p>
+                
+                <div class="form-group">
+                    <label for="matchups-text">Matchups Text</label>
+                    <textarea 
+                        id="matchups-text" 
+                        class="form-control textarea-large" 
+                        style="font-family: var(--font-mono); font-size: 0.8125rem; line-height: 1.6;"
+                        placeholder="Paste matchups here...
+
+Example format:
+Saturday, January 3, 2026
+MATCHUP
+TIME
+TV
+tickets
+Odds by
+draft kings
+
+Minnesota
+  @  
+
+Miami
+3:00 PM	
+NBA TV
+Tickets as low as $28	
+Line: MIN -2.5
+O/U: 238.5
+
+Philadelphia
+  @  
+
+New York
+5:30 PM	
+NBA TV
+Line: NY -3.5
+O/U: 232.5
+..."
+                        rows="18"
+                    ></textarea>
+                </div>
+                
+                <div id="parsed-matchups" style="display: none; margin-top: 1rem;"></div>
+                
+                <div class="form-actions">
+                    <button type="button" class="btn btn-ghost" onclick="clearMatchupsForm()">Clear</button>
+                    <button type="button" class="btn btn-primary btn-lg" onclick="parseMatchups()" id="parse-matchups-btn">
+                        <span>📊</span>
+                        Import Matchups
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card help-card">
+            <div class="card-header">
+                <h3>Matchup Format</h3>
+            </div>
+            <div class="card-body">
+                <p style="font-size: 0.875rem; color: var(--text-secondary); line-height: 1.6;">
+                    Copy the schedule directly from ESPN or similar. Include:
+                </p>
+                <ul style="font-size: 0.875rem; color: var(--text-secondary); padding-left: 1.25rem; line-height: 1.8;">
+                    <li>Date header (e.g., "Saturday, January 3, 2026")</li>
+                    <li>Away team @ Home team</li>
+                    <li>Game time</li>
+                    <li>Line: TEAM -X.X (spread)</li>
+                    <li>O/U: XXX.X (total)</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Injuries Tab -->
+    <div class="tab-content" id="tab-injuries">
+        <div class="card paste-card">
+            <div class="card-header">
+                <h2>🏥 Import Injury Report</h2>
+            </div>
+            <div class="card-body">
+                <p class="muted" style="margin-bottom: 1.5rem;">
+                    Paste the official NBA injury report. The system will parse player statuses 
+                    and factor injuries into projections.
+                </p>
+                
+                <div class="form-row" style="display: flex; gap: 1rem; margin-bottom: 1rem;">
+                    <div class="form-group" style="flex: 1;">
+                        <label for="injury-date">Filter to Date (optional)</label>
+                        <input type="date" id="injury-date" class="form-control">
+                    </div>
+                    <div class="form-group" style="flex: 1;">
+                        <label style="display: flex; align-items: center; gap: 0.5rem; margin-top: 1.75rem;">
+                            <input type="checkbox" id="include-g-league">
+                            <span>Include G-League assignments</span>
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="injury-text">Injury Report Text</label>
+                    <textarea 
+                        id="injury-text" 
+                        class="form-control textarea-large" 
+                        style="font-family: var(--font-mono); font-size: 0.8125rem; line-height: 1.6;"
+                        placeholder="Paste injury report here...
+
+Example format:
+Injury Report: 01/03/26 02:45 PM
+Page 1 of 6
+Game Date Game Time Matchup Team Player Name Current Status Reason
+01/03/2026 05:00 (ET) MIN@MIA Minnesota Timberwolves Shannon Jr., Terrence Out Injury/Illness - Left Foot; Abductor Hallucis Strain
+Miami Heat Adebayo, Bam Probable Injury/Illness - Lower Back; Soreness
+Miami Heat Herro, Tyler Out Injury/Illness - Right Big Toe; Contusion
+..."
+                        rows="18"
+                    ></textarea>
+                </div>
+                
+                <div id="parsed-injuries" style="display: none; margin-top: 1rem;"></div>
+                
+                <div class="form-actions">
+                    <button type="button" class="btn btn-ghost" onclick="clearInjuriesForm()">Clear</button>
+                    <button type="button" class="btn btn-warning" onclick="clearInjuryReportDB()" id="clear-injuries-btn">
+                        <span>🗑️</span>
+                        Clear Stored Injuries
+                    </button>
+                    <button type="button" class="btn btn-primary btn-lg" onclick="ingestInjuryReport()" id="ingest-injuries-btn">
+                        <span>⬆️</span>
+                        Import Injury Report
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card help-card">
+            <div class="card-header">
+                <h3>Injury Report Impact</h3>
+            </div>
+            <div class="card-body">
+                <p style="font-size: 0.875rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: 1rem;">
+                    Injuries affect projections in several ways:
+                </p>
+                <ul style="font-size: 0.875rem; color: var(--text-secondary); padding-left: 1.25rem; line-height: 1.8;">
+                    <li><strong>OUT players:</strong> Usage redistributed to remaining players</li>
+                    <li><strong>Questionable:</strong> Highlighted in analysis as risk factors</li>
+                    <li><strong>Star player out:</strong> Major boost to teammates' projections</li>
+                    <li><strong>Elite defender out:</strong> Boosts opponent scoring projections</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Recalculate Tab -->
+    <div class="tab-content" id="tab-refresh">
+        <div class="card paste-card">
+            <div class="card-header">
+                <h2>🔄 Recalculate Projections</h2>
+            </div>
+            <div class="card-body">
+                <p class="muted" style="margin-bottom: 1.5rem;">
+                    After adding all box scores for a day, click below to recalculate 
+                    team defense ratings and update the projection model.
+                </p>
+                
+                <div class="form-group">
+                    <label for="recalc-date">Target Date (for reference)</label>
+                    <input type="date" id="recalc-date" class="form-control" style="width: auto;">
+                </div>
+                
+                <div id="current-stats" class="stats-panel" style="margin: 1.5rem 0; padding: 1.5rem; background: var(--bg-tertiary); border-radius: var(--radius-md);">
+                    <h4 style="margin-bottom: 1rem; font-size: 0.9375rem;">Current Database Status</h4>
+                    <div class="stats-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1rem;">
+                        <div class="stat-item">
+                            <div class="stat-label">Total Games</div>
+                            <div class="stat-value" id="stat-games">--</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-label">Total Players</div>
+                            <div class="stat-value" id="stat-players">--</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-label">Latest Game</div>
+                            <div class="stat-value" id="stat-latest">--</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-label">Teams w/ Data</div>
+                            <div class="stat-value" id="stat-teams">--</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div id="recalc-result" style="display: none; margin-top: 1rem; padding: 1rem; border-radius: var(--radius-md);"></div>
+                
+                <div class="form-actions">
+                    <button type="button" class="btn btn-ghost" onclick="loadCurrentStats()">Refresh Stats</button>
+                    <button type="button" class="btn btn-primary btn-lg" onclick="recalculateModel()" id="recalc-btn">
+                        <span>🔄</span>
+                        Recalculate Model
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card help-card">
+            <div class="card-header">
+                <h3>What Gets Recalculated</h3>
+            </div>
+            <div class="card-body">
+                <ul style="font-size: 0.875rem; color: var(--text-secondary); padding-left: 1.25rem; line-height: 1.8;">
+                    <li><strong>Team Defense Ratings:</strong> Points/Rebounds/Assists allowed per game</li>
+                    <li><strong>Position Defense:</strong> Defense vs Guards/Forwards/Centers</li>
+                    <li><strong>Player Trends:</strong> Recent vs season averages</li>
+                    <li><strong>Usage Patterns:</strong> How stats distribute on each team</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+.data-entry-page {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.tab-nav {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+    padding: 0.5rem;
+    background: var(--bg-tertiary);
+    border-radius: var(--radius-lg);
+    flex-wrap: wrap;
+}
+
+.tab-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.25rem;
+    border: none;
+    background: transparent;
+    color: var(--text-secondary);
+    font-size: 0.9375rem;
+    font-weight: 500;
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.tab-btn:hover {
+    background: var(--bg-card);
+    color: var(--text-primary);
+}
+
+.tab-btn.active {
+    background: var(--accent);
+    color: white;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1.5rem;
+}
+
+@media (max-width: 900px) {
+    .tab-content.active {
+        grid-template-columns: 1fr;
+    }
+}
+
+.paste-card {
+    grid-column: 1;
+}
+
+.help-card {
+    grid-column: 2;
+}
+
+@media (max-width: 900px) {
+    .help-card {
+        grid-column: 1;
+    }
+}
+
+.form-row {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-label {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.stat-value {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--accent);
+    font-family: var(--font-mono);
+}
+
+.matchup-preview {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.75rem 1rem;
+    background: var(--bg-tertiary);
+    border-radius: var(--radius-md);
+    margin-bottom: 0.5rem;
+}
+
+.matchup-teams {
+    font-weight: 600;
+    flex: 1;
+}
+
+.matchup-line {
+    font-family: var(--font-mono);
+    font-size: 0.875rem;
+    color: var(--accent);
+}
+
+.injury-preview {
+    padding: 0.5rem 1rem;
+    background: var(--bg-tertiary);
+    border-radius: var(--radius-md);
+    margin-bottom: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.injury-player {
+    font-weight: 500;
+}
+
+.injury-status {
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.injury-status.out { background: rgba(239, 68, 68, 0.2); color: #ef4444; }
+.injury-status.questionable { background: rgba(251, 191, 36, 0.2); color: #fbbf24; }
+.injury-status.probable { background: rgba(34, 197, 94, 0.2); color: #22c55e; }
+.injury-status.doubtful { background: rgba(249, 115, 22, 0.2); color: #f97316; }
+
+.btn-warning {
+    background: var(--warning);
+    color: white;
+}
+
+.btn-warning:hover {
+    background: #d97706;
+}
+</style>
+
+<script>
+let debounceTimer;
+let detectedTeams = [];
+let parsedMatchupsList = [];
+
+document.addEventListener('DOMContentLoaded', async () => {
+    // Load recent dates
+    try {
+        const data = await fetchAPI('/api/recent-dates');
+        const select = document.getElementById('recent-dates');
+        data.dates.forEach(d => {
+            const opt = document.createElement('option');
+            opt.value = d;
+            opt.textContent = d;
+            select.appendChild(opt);
+        });
+    } catch (e) {
+        console.error('Failed to load recent dates:', e);
+    }
+    
+    // Set default dates to today
+    setToday();
+    document.getElementById('recalc-date').value = new Date().toISOString().split('T')[0];
+    
+    // Set up event listeners
+    document.getElementById('recent-dates').addEventListener('change', function() {
+        if (this.value) {
+            document.getElementById('game-date').value = this.value;
+        }
+    });
+    
+    document.getElementById('box-score-text').addEventListener('input', function() {
+        clearTimeout(debounceTimer);
+        debounceTimer = setTimeout(() => detectTeamsAndSuggestDate(this.value), 500);
+    });
+    
+    document.getElementById('box-score-text').addEventListener('paste', function(e) {
+        setTimeout(() => detectTeamsAndSuggestDate(this.value), 100);
+    });
+    
+    // Load current stats
+    loadCurrentStats();
+});
+
+function switchTab(tabName) {
+    // Update buttons
+    document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+    event.target.closest('.tab-btn').classList.add('active');
+    
+    // Update content
+    document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
+    document.getElementById('tab-' + tabName).classList.add('active');
+}
+
+function setToday() {
+    const today = new Date().toISOString().split('T')[0];
+    document.getElementById('game-date').value = today;
+}
+
+async function detectTeamsAndSuggestDate(text) {
+    if (!text || text.length < 50) {
+        document.getElementById('detected-info').style.display = 'none';
+        return;
+    }
+    
+    try {
+        const teamData = await fetchAPI('/api/detect-teams', {
+            method: 'POST',
+            body: JSON.stringify({ text })
+        });
+        
+        if (teamData.teams && teamData.teams.length > 0) {
+            detectedTeams = teamData.teams;
+            const teamsStr = teamData.teams.map(t => `${t.name} (${t.abbrev})`).join(' vs ');
+            document.getElementById('detected-teams-list').textContent = teamsStr;
+            document.getElementById('detected-info').style.display = 'block';
+            
+            if (teamData.teams.length >= 2) {
+                const currentDate = document.getElementById('game-date').value;
+                const today = new Date().toISOString().split('T')[0];
+                
+                if (currentDate === today) {
+                    try {
+                        const dateData = await fetchAPI('/api/suggest-date', {
+                            method: 'POST',
+                            body: JSON.stringify({ teams: teamData.teams.map(t => t.abbrev) })
+                        });
+                        
+                        if (dateData.date && dateData.source !== 'default') {
+                            document.getElementById('game-date').value = dateData.date;
+                            showToast(`Date auto-set to ${dateData.date}`, 'info');
+                        }
+                    } catch (e) {}
+                }
+            }
+        } else {
+            document.getElementById('detected-info').style.display = 'none';
+        }
+    } catch (e) {
+        console.error('Failed to detect teams:', e);
+    }
+}
+
+function clearBoxscoreForm() {
+    document.getElementById('box-score-text').value = '';
+    document.getElementById('detected-info').style.display = 'none';
+}
+
+function clearMatchupsForm() {
+    document.getElementById('matchups-text').value = '';
+    document.getElementById('parsed-matchups').style.display = 'none';
+    parsedMatchupsList = [];
+}
+
+function clearInjuriesForm() {
+    document.getElementById('injury-text').value = '';
+    document.getElementById('parsed-injuries').style.display = 'none';
+}
+
+async function ingestBoxScore() {
+    const text = document.getElementById('box-score-text').value.trim();
+    const gameDate = document.getElementById('game-date').value;
+    
+    if (!text) {
+        showToast('Please paste a box score first', 'error');
+        return;
+    }
+    
+    if (!gameDate) {
+        showToast('Please select a game date', 'error');
+        return;
+    }
+    
+    const btn = document.getElementById('ingest-btn');
+    btn.disabled = true;
+    btn.innerHTML = '<span>⏳</span> Processing...';
+    
+    try {
+        const result = await fetchAPI('/api/ingest/boxscore', {
+            method: 'POST',
+            body: JSON.stringify({
+                text: text,
+                date: gameDate,
+                label: 'PASTE'
+            })
+        });
+        
+        if (result.success) {
+            showToast(`Game ingested successfully! (ID: ${result.game_id})`, 'success');
+            clearBoxscoreForm();
+            updateStats();
+            loadCurrentStats();
+        } else {
+            showToast(result.error || 'Failed to ingest box score', 'error');
+        }
+    } catch (e) {
+        showToast(e.message || 'Failed to ingest box score', 'error');
+    } finally {
+        btn.disabled = false;
+        btn.innerHTML = '<span>⬆️</span> Ingest Box Score';
+    }
+}
+
+async function parseMatchups() {
+    const text = document.getElementById('matchups-text').value.trim();
+    
+    if (!text) {
+        showToast('Please paste matchups first', 'error');
+        return;
+    }
+    
+    const btn = document.getElementById('parse-matchups-btn');
+    btn.disabled = true;
+    btn.innerHTML = '<span>⏳</span> Importing...';
+    
+    try {
+        // Use the scheduled-games/parse endpoint which both parses AND saves to database
+        const result = await fetchAPI('/api/scheduled-games/parse', {
+            method: 'POST',
+            body: JSON.stringify({ text })
+        });
+        
+        if (result.success && result.matchups) {
+            parsedMatchupsList = result.matchups;
+            
+            // Display parsed and saved matchups
+            let html = `<div style="margin-bottom: 1rem; padding: 0.75rem; background: var(--success-bg); border: 1px solid var(--success-border); border-radius: var(--radius-md);"><strong>✅ ${result.count} matchups imported and saved!</strong></div>`;
+            result.matchups.forEach(m => {
+                html += `
+                    <div class="matchup-preview">
+                        <div class="matchup-teams">${m.away} @ ${m.home}</div>
+                        <div class="matchup-line">
+                            ${m.spread ? `Line: ${m.spread > 0 ? '+' : ''}${m.spread}` : ''}
+                            ${m.ou ? ` | O/U: ${m.ou}` : ''}
+                        </div>
+                    </div>
+                `;
+            });
+            
+            document.getElementById('parsed-matchups').innerHTML = html;
+            document.getElementById('parsed-matchups').style.display = 'block';
+            
+            showToast(`${result.count} matchups imported successfully!`, 'success');
+        } else {
+            showToast(result.error || 'No matchups could be parsed', 'error');
+        }
+    } catch (e) {
+        showToast(e.message || 'Failed to import matchups', 'error');
+    } finally {
+        btn.disabled = false;
+        btn.innerHTML = '<span>📊</span> Import Matchups';
+    }
+}
+
+async function ingestInjuryReport() {
+    const text = document.getElementById('injury-text').value.trim();
+    const filterDate = document.getElementById('injury-date').value;
+    const includeGLeague = document.getElementById('include-g-league').checked;
+    
+    if (!text) {
+        showToast('Please paste an injury report first', 'error');
+        return;
+    }
+    
+    const btn = document.getElementById('ingest-injuries-btn');
+    btn.disabled = true;
+    btn.innerHTML = '<span>⏳</span> Processing...';
+    
+    try {
+        const result = await fetchAPI('/api/ingest/injury-report', {
+            method: 'POST',
+            body: JSON.stringify({
+                text: text,
+                date: filterDate || null,
+                include_g_league: includeGLeague
+            })
+        });
+        
+        if (result.success) {
+            // Display summary
+            let html = `
+                <div style="padding: 1rem; background: var(--success-bg); border: 1px solid var(--success-border); border-radius: var(--radius-md);">
+                    <strong>✅ Imported ${result.ingested} injuries</strong>
+                    <span style="color: var(--text-muted); margin-left: 0.5rem;">(${result.skipped} skipped)</span>
+                </div>
+            `;
+            
+            if (result.summary && result.summary.by_team) {
+                html += '<div style="margin-top: 1rem;"><strong>By Team:</strong></div>';
+                for (const [team, injuries] of Object.entries(result.summary.by_team)) {
+                    html += `<div style="margin: 0.5rem 0; padding: 0.5rem; background: var(--bg-tertiary); border-radius: var(--radius-sm);">`;
+                    html += `<strong>${team}:</strong> `;
+                    html += injuries.map(i => `${i.player} (${i.status})`).join(', ');
+                    html += `</div>`;
+                }
+            }
+            
+            document.getElementById('parsed-injuries').innerHTML = html;
+            document.getElementById('parsed-injuries').style.display = 'block';
+            
+            showToast(`Injury report imported: ${result.ingested} entries`, 'success');
+        } else {
+            showToast(result.error || 'Failed to import injury report', 'error');
+        }
+    } catch (e) {
+        showToast(e.message || 'Failed to import injury report', 'error');
+    } finally {
+        btn.disabled = false;
+        btn.innerHTML = '<span>⬆️</span> Import Injury Report';
+    }
+}
+
+async function clearInjuryReportDB() {
+    if (!confirm('Are you sure you want to clear all stored injury data?')) {
+        return;
+    }
+    
+    try {
+        const result = await fetchAPI('/api/injuries/clear', {
+            method: 'POST',
+            body: JSON.stringify({})
+        });
+        
+        if (result.success) {
+            showToast('Injury data cleared', 'success');
+            document.getElementById('parsed-injuries').style.display = 'none';
+        } else {
+            showToast(result.error || 'Failed to clear injuries', 'error');
+        }
+    } catch (e) {
+        showToast(e.message || 'Failed to clear injuries', 'error');
+    }
+}
+
+async function loadCurrentStats() {
+    try {
+        const data = await fetchAPI('/api/stats');
+        document.getElementById('stat-games').textContent = data.games || 0;
+        document.getElementById('stat-players').textContent = data.players || 0;
+        document.getElementById('stat-latest').textContent = data.latest_game_date || 'None';
+        document.getElementById('stat-teams').textContent = data.teams || 0;
+    } catch (e) {
+        console.error('Failed to load stats:', e);
+    }
+}
+
+async function recalculateModel() {
+    const targetDate = document.getElementById('recalc-date').value;
+    
+    const btn = document.getElementById('recalc-btn');
+    btn.disabled = true;
+    btn.innerHTML = '<span>⏳</span> Recalculating...';
+    
+    try {
+        const result = await fetchAPI('/api/recalculate', {
+            method: 'POST',
+            body: JSON.stringify({ date: targetDate })
+        });
+        
+        if (result.success) {
+            // Update stats display
+            if (result.stats) {
+                document.getElementById('stat-games').textContent = result.stats.total_games || 0;
+                document.getElementById('stat-players').textContent = result.stats.total_players || 0;
+                document.getElementById('stat-latest').textContent = result.stats.latest_game_date || 'None';
+                document.getElementById('stat-teams').textContent = result.stats.teams_with_defense_data || 0;
+            }
+            
+            // Show success message
+            document.getElementById('recalc-result').innerHTML = `
+                <div style="background: var(--success-bg); border: 1px solid var(--success-border); padding: 1rem; border-radius: var(--radius-md);">
+                    <strong>✅ Model recalculated successfully!</strong>
+                    <ul style="margin-top: 0.5rem; margin-bottom: 0; padding-left: 1.25rem;">
+                        <li>Games for ${targetDate}: ${result.stats.games_for_date}</li>
+                        <li>Total games: ${result.stats.total_games}</li>
+                        <li>Teams with defense data: ${result.stats.teams_with_defense_data}</li>
+                    </ul>
+                </div>
+            `;
+            document.getElementById('recalc-result').style.display = 'block';
+            
+            showToast('Model recalculated successfully!', 'success');
+            updateStats();
+        } else {
+            showToast(result.error || 'Recalculation failed', 'error');
+        }
+    } catch (e) {
+        showToast(e.message || 'Recalculation failed', 'error');
+    } finally {
+        btn.disabled = false;
+        btn.innerHTML = '<span>🔄</span> Recalculate Model';
+    }
+}
+</script>
+{% endblock %}

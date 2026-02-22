@@ -1,0 +1,27 @@
+## Brooklyn Nets — Box Score
+
+PLAYER	MIN	FGM	FGA	FG%	3PM	3PA	3P%	FTM	FTA	FT%	OREB	DREB	REB	AST	STL	BLK	TO	PF	PTS	+/-
+Terance Mann	28:20	3	6	0.5	1	3	0.3	0	0	0.0	1	1	2	1	1	0	1	1	7	-5.0
+Danny Wolf	28:29	6	11	0.5	2	7	0.3	0	2	0.0	2	3	5	2	0	1	1	4	14	-6.0
+Nic Claxton	30:11	3	7	0.4	0	0	0.0	0	6	0.0	2	7	9	3	3	2	2	3	6	-2.0
+Egor Dëmin	29:23	8	16	0.5	6	12	0.5	3	4	0.8	1	9	10	4	0	0	1	3	25	+2.0
+Nolan Traore	25:39	3	8	0.4	0	2	0.0	1	1	1.0	0	2	2	6	0	2	1	1	7	-9.0
+Day'Ron Sharpe	17:49	4	5	0.8	1	1	1.0	7	9	0.8	3	6	9	1	0	0	2	2	16	+12.0
+Cam Thomas	24:02	7	15	0.5	1	6	0.2	6	6	1.0	1	1	2	4	0	0	3	1	21	+14.0
+Ben Saraf	20:35	1	6	0.2	0	3	0.0	0	0	0.0	0	3	3	2	1	0	1	2	2	+14.0
+Drake Powell	16:01	1	1	1.0	0	0	0.0	0	0	0.0	1	1	2	1	0	0	0	2	2	+14.0
+Jalen Wilson	19:31	3	7	0.4	3	6	0.5	0	0	0.0	0	3	3	3	1	0	0	1	9	+16.0
+
+## Utah Jazz — Box Score
+
+PLAYER	MIN	FGM	FGA	FG%	3PM	3PA	3P%	FTM	FTA	FT%	OREB	DREB	REB	AST	STL	BLK	TO	PF	PTS	+/-
+Svi Mykhailiuk	21:06	1	6	0.2	1	4	0.2	0	0	0.0	0	2	2	3	0	0	0	2	3	-6.0
+Cody Williams	28:29	3	6	0.5	0	0	0.0	0	0	0.0	1	1	2	1	1	1	1	2	6	+6.0
+Kyle Filipowski	28:29	6	9	0.7	2	3	0.7	0	2	0.0	1	11	12	2	1	1	2	5	14	+6.0
+Ace Bailey	29:17	5	10	0.5	2	5	0.4	0	0	0.0	1	1	2	0	2	0	0	2	12	+5.0
+Keyonte George	32:18	9	11	0.8	1	3	0.3	7	10	0.7	1	2	3	7	0	1	3	1	26	-5.0
+Isaiah Collier	26:33	5	10	0.5	0	1	0.0	0	0	0.0	0	2	2	7	1	0	4	2	10	-7.0
+Brice Sensabaugh	26:08	6	14	0.4	3	8	0.4	3	3	1.0	1	4	5	0	0	0	0	3	18	-12.0
+Taylor Hendricks	15:05	3	7	0.4	1	4	0.2	0	2	0.0	1	2	3	1	0	0	0	1	7	-12.0
+Kyle Anderson	19:31	1	2	0.5	0	0	0.0	0	0	0.0	0	1	1	4	1	0	0	4	2	-16.0
+Walter Clayton Jr.	13:04	0	3	0.0	0	1	0.0	1	2	0.5	0	1	1	1	0	1	1	1	1	-9.0

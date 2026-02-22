@@ -1,0 +1,502 @@
+================================================================================
+                    NBA PROPS MODEL COMPARISON GUIDE
+              A Concise Overview of All Prediction Models (V9-V19)
+================================================================================
+
+Last Updated: February 4, 2026
+
+This document provides a concise comparison of all NBA player props prediction
+models in PropAI, from V9 through V19, plus specialized models (RCM, Under V2).
+
+================================================================================
+                         QUICK REFERENCE TABLE
+================================================================================
+
+Model    | Hit Rate | Picks | Key Innovation                    | Status
+---------|----------|-------|-----------------------------------|-------------
+V9       | 68.6%    | 86    | Line source tracking              | Legacy
+V10      | 61.1%    | 768   | Sportsbook line requirement       | Legacy
+V14      | 57.9%    | 145   | Dual-model architecture           | Legacy
+V15      | 72.6%    | 124   | Honest line handling              | Legacy
+V16      | 72.4%    | 127   | Pattern-based, weak disabled      | RECOMMENDED
+V17      | 61.8%    | 817   | Holistic multi-factor             | Active
+V18      | 58.2%    | 1324  | Full box score analysis           | Active
+V19      | 56.3%    | 1718  | Multi-factor requirements (2+)    | Latest
+---------|----------|-------|-----------------------------------|-------------
+RCM      | 60.4%    | 316   | Contribution rate modeling        | Specialized
+Under V2 | 66.3%*   | varies| Defense-first UNDER model         | Specialized
+
+*Premium picks (Elite Defense + Cold Streak)
+
+================================================================================
+                    THE DERIVED LINE FALLACY
+================================================================================
+
+ALL models V9+ address this critical flaw discovered in earlier versions:
+
+PROBLEM: Previous models tested picks against derived lines (player averages)
+instead of actual sportsbook lines. This inflated hit rates by 5-15%.
+
+EXAMPLE:
+  Player L10 average: 22.5 PTS
+  Model "line": 22.5 × 1.05 = 23.6
+  Actual DraftKings: 25.5 PTS
+  Model predicts: OVER 23.6 → counts as HIT if actual = 24
+  Reality: OVER 25.5 → MISS if actual = 24
+
+SOLUTION: Track line source separately, require sportsbook lines when possible.
+
+================================================================================
+                    MODEL V9 - LINE-AWARE MODEL
+================================================================================
+
+Version: 9.0 | Created: January 2026
+
+PERFORMANCE:
+  Overall: 68.6% (59/86 picks)
+  Sportsbook lines: Track separately (TRUE accuracy)
+  Derived lines: Track separately (likely inflated)
+
+KEY INNOVATION:
+  First model to track line source (sportsbook vs derived)
+  - Sportsbook line: Use directly
+  - Derived line: Player avg × 1.05 adjustment
+  - Warning system for line discrepancies
+
+PATTERNS:
+  - Cold Bounce (PREMIUM): L5 15%+ below L15, last game recovering
+  - Hot Sustained (HIGH): L5 20%+ above L15, maintaining momentum
+
+CONFIGURATION:
+  use_sportsbook_lines: true
+  line_adjustment_factor: 1.05
+  min_edge_vs_actual_line: 5.0%
+  max_picks_per_player: 1
+
+WHY SUPERSEDED:
+  - Still allowed too many derived line picks
+  - Needed stricter filtering
+
+================================================================================
+                    MODEL V10 - MARKET-AWARE MODEL
+================================================================================
+
+Version: 10.0 | Created: February 2026
+
+PERFORMANCE:
+  Overall: 61.1% (469/768 with derived lines)
+  PREMIUM tier: 67.2% (164/244)
+  HIGH tier: 60.1% (244/406)
+
+KEY INNOVATION:
+  Mandatory sportsbook line requirement (when available)
+  - No line = No pick (by default)
+  - Pattern confirmation required
+
+DIRECTION STRATEGY (from RCM analysis):
+  PTS: UNDER preferred (63.9% vs 48.3% OVER)
+  REB: Both directions (~59% both ways)
+  AST: EXCLUDED (~54% is coin flip)
+
+PATTERNS BY HIT RATE:
+  Cold Bounce (OVER):   65.9% (27/41)
+  Elite Defense (UNDER): 62.2% (206/331)
+  Cold Streak (UNDER):  57.9% (205/354)
+  Hot Sustained (OVER): 55.6% (10/18)
+
+PROJECTION FORMULA:
+  projection = (L5 × 0.20) + (L10 × 0.30) + (L15 × 0.25) + (Season × 0.25)
+
+DEFENSE ADJUSTMENTS:
+  Elite defense: -12%
+  Good defense: -6%
+  Weak defense: +6%
+
+================================================================================
+                    MODEL V14 - DUAL-MODEL ARCHITECTURE
+================================================================================
+
+Version: 14.0 | Created: February 2026
+
+PERFORMANCE:
+  General Model: 57.9% (84/145)
+    - OVER: 64.7% (22/34)
+    - UNDER: 55.9% (62/111)
+  Under Model: 56.8% (192/338)
+    - PTS UNDER: 59.2% (90/152)
+    - REB UNDER: 54.4% (93/171)
+
+KEY INNOVATION:
+  Split into two specialized models:
+  1. General Model (OVER + REB UNDER)
+  2. Under Model (defense-first approach)
+
+BEST PATTERNS:
+  Cold Bounce: 84.6% (11/13) - Best OVER pattern ever!
+  B2B Fatigue: 60.5% (98/162) - Strong UNDER signal
+
+FACTOR SCORING (Under Model):
+  defense_elite: 30 points
+  cold_streak_severe: 22 points
+  b2b_second: 8 points
+  injury_first_back: 18 points
+
+CONFIDENCE TIERS:
+  PREMIUM: ≥50 score
+  HIGH: ≥35 score
+
+================================================================================
+                    MODEL V15 - HONEST LINE HANDLING
+================================================================================
+
+Version: 15.0 | Created: February 2026
+
+PERFORMANCE:
+  Overall: 72.6% (90/124)
+  PREMIUM: 76.9% (40/52)
+  HIGH: 72.5% (50/69)
+
+KEY INNOVATION:
+  Sportsbook-first with hybrid fallback
+  - Transparent reporting (sportsbook vs derived separated)
+  - Pattern validation with actual data
+
+VALIDATED PATTERNS:
+  Cold Bounce: 75.0% (40 picks)
+  B2B Under: 83.3% (6 picks) - small sample
+  Elite Def Under: 75.0% (48 picks)
+  Cold Streak Under: 63.6% (11 picks)
+
+KEY TUNING DECISIONS:
+  - REB UNDER disabled (52.2% even with elite defense)
+  - Elite Defense = Top 3 only (Top 4-5 was 27.3%!)
+  - Standard tier essentially eliminated
+
+PROJECTION WEIGHTS:
+  L3: 0.30 (recent form)
+  L5: 0.25
+  L10: 0.20
+  L15: 0.15
+  Season: 0.10
+
+================================================================================
+                    MODEL V16 - PATTERN-BASED (RECOMMENDED)
+================================================================================
+
+Version: 16.1 | Created: February 2026
+
+PERFORMANCE:
+  Overall: 72.4% (92/127) - BEST HIT RATE
+  PTS OVER: 90.5% (19/21) - Exceptional
+  PTS UNDER: 70.5% (62/88)
+  REB OVER: 61.1% (11/18)
+
+KEY INNOVATION:
+  Disabled weak patterns based on backtest data
+  - Quality over quantity (127 picks vs 1000+)
+  - Focus on validated high-confidence patterns
+
+ENABLED PATTERNS (High Hit Rate):
+  Cold Bounce: 76.9% (30/39)
+  Elite Defense: 67.9% (38/56)
+  B2B Fatigue: 75.0% (24/32)
+
+DISABLED PATTERNS (Poor Performance):
+  Hot Sustained: 25.8% - Way below coin flip
+  Cold Streak: 51.6% - Barely above coin flip
+  REB UNDER: 51.6% - Too volatile
+  Usage Boost: 33.3% - Unpredictable
+  AST: ~54% - Coin flip
+
+EDGE REQUIREMENTS:
+  Sportsbook line: 6%
+  Derived line: 10%
+  Premium tier: 15%
+
+WHY RECOMMENDED:
+  - Highest quality picks
+  - Best pattern validation
+  - Fewer but more confident picks
+
+================================================================================
+                    MODEL V17 - HOLISTIC MULTI-FACTOR
+================================================================================
+
+Version: 17.0 | Created: February 2026
+
+PERFORMANCE:
+  Overall: 61.8% (505/817)
+  OVER: 80.0% (12/15) - Very selective
+  UNDER: 61.5% (493/802)
+
+KEY INNOVATION:
+  Holistic analysis (not just cold bounce)
+  - Factor-based filtering
+  - Data-driven factor weights
+
+UNDER FACTOR WEIGHTS (Validated):
+  defense_elite: 45 (71.1% hit rate)
+  b2b_fatigue: 35 (69.5%)
+  injury_rust_first: 25 (69.6%)
+  defense_good: 25 (67.3%)
+  cold_streak_mild: 20 (57.8%)
+  cold_streak_severe: 8 (48.6% - needs support!)
+
+OVER FACTOR WEIGHTS (Cautious):
+  cold_bounce: 35 (80.0% - primary trigger)
+  hot_form: 0 (ELIMINATED - 43.3%)
+  defense_weak: 10 (43.3% - heavily reduced)
+
+PROJECTION WEIGHTS:
+  L3: 0.08 (reduced - too volatile)
+  L5: 0.20
+  L10: 0.30 (highest)
+  L15: 0.22
+  Season: 0.20
+
+================================================================================
+                    MODEL V18 - COMPREHENSIVE BOX SCORE
+================================================================================
+
+Version: 18.0 | Created: February 2026
+
+PERFORMANCE:
+  Overall: 58.2% (770/1324)
+  Theoretical ROI: +11.0%
+  HIGH tier: 60.7% (317/522) - Best tier
+
+KEY INNOVATION:
+  Full box score analysis beyond PTS/REB/AST
+  - Plus/Minus (+/-): Consistency indicator
+  - Shooting Efficiency: FG%, TS% trends
+  - Minutes Trends: Role change detection
+
+FACTOR BREAKDOWN BY HIT RATE:
+  cold_bounce: 75.0% (9/12)
+  defense_good: 68.0% (70/103)
+  defense_elite: 67.4% (64/95)
+  injury_rust_first: 64.6% (42/65)
+  b2b_fatigue: 58.7% (250/426)
+  cold_streak_mild: 57.4% (205/357)
+  third_in_four: 50.7% (108/213)
+
+BY EDGE RANGE:
+  30%+: 63.2% - Highest edge = best results
+  25-29%: 55.3%
+  20-24%: 58.3%
+  15-19%: 58.5%
+
+V18.5 UNDER MODEL:
+  Specialized UNDER-only with factor scoring
+  Blowout prediction implemented
+  Rest advantage scoring
+
+================================================================================
+                    MODEL V19 - MULTI-FACTOR REQUIREMENTS
+================================================================================
+
+Version: 19.0 | Created: February 2026
+
+PERFORMANCE:
+  Overall: 56.3% (967/1718)
+  PREMIUM: 58.9% (586/995)
+  Theoretical ROI: +7.5%
+
+KEY INNOVATION:
+  Requires 2+ factors for any pick (no single-factor picks)
+  - 15% minimum edge for derived lines (stricter)
+  - Comprehensive box score with efficiency metrics
+
+FACTOR COUNT ANALYSIS:
+  2 factors: 55.0% (11/20)
+  3 factors: 74.4% (64/86) ← BEST PERFORMANCE!
+  4 factors: 53.9% (167/310)
+  5 factors: 56.9% (259/455)
+  6 factors: 53.0% (227/428)
+
+KEY FINDING: 3 factors is optimal. Beyond that, diminishing returns.
+
+PRIMARY FACTORS BY HIT RATE:
+  defense_elite: 68.0% (66/97) ✓ High value
+  injury_rust_first: 64.7% (44/68) ✓ High value
+  poor_efficiency_trend: 63.9% (23/36) ✓ New in V19
+  defense_good: 61.5% (75/122) ✓ Good value
+  cold_streak_mild: 56.4% (244/433) Solid
+  b2b_fatigue: 56.1% (248/442) Solid
+  third_in_four: 52.8% (224/424) Marginal
+  negative_plus_minus: 46.3% (19/41) ✗ Poor
+  minutes_decline: 43.1% (22/51) ✗ Poor
+
+CONFIGURATION:
+  min_edge_sportsbook: 6.0%
+  min_edge_derived: 15.0% (stricter than all previous)
+  require_multiple_factors_under: true
+  min_factors_required: 2
+  include_ast: false
+
+================================================================================
+            REGRESSION CONTRIBUTION MODEL (RCM)
+================================================================================
+
+Version: 1.4 | Created: January 2026
+
+PERFORMANCE:
+  Overall: 60.4% (191/316)
+  PREMIUM: 87.5% (8 picks) - Exceptional on small sample
+  HIGH: 59.9% (289 picks)
+
+KEY INNOVATION:
+  Models contribution RATE not raw stats
+  - Contribution Rate = Player Stat / Team Stat
+  - More stable than raw stats
+  - Naturally adjusts for pace and game flow
+
+METHODOLOGY:
+  1. Calculate contribution rates at L5/L10/Season
+  2. Blend with 35% regression to mean (Bayesian)
+  3. Project team totals
+  4. Apply opponent DVP adjustments
+
+STRATEGIC DECISIONS:
+  PTS UNDER only (63.9% vs 48.3% OVER)
+  No AST (44.8% OVER was terrible)
+  REB both ways (~59% both)
+
+CONFIGURATION:
+  min_games_required: 10
+  min_edge_pct: 10.0% (OVER)
+  min_edge_under: 8.0% (UNDER)
+  regression_strength: 0.35
+
+================================================================================
+                    UNDER MODEL V2
+================================================================================
+
+Version: 2.2 | Created: January 2026
+
+PERFORMANCE:
+  Premium (Elite Defense + Cold): 66.27%
+  HIGH confidence: 60-65%
+  Overall: ~55%
+
+KEY INNOVATION:
+  Defense-first UNDER specialist
+  - Factor-based scoring system
+  - Multiple negative factors compound
+
+CORE PHILOSOPHY:
+  "UNDER picks are more predictable than OVER because negative factors
+   compound more reliably than positive ones."
+
+FACTOR WEIGHTS:
+  defense_elite: 30 points (0.90 multiplier)
+  cold_streak_severe: 20 points (0.88 multiplier)
+  injury_first_back: 18 points (0.82 multiplier)
+  defense_good: 15 points (0.95 multiplier)
+  cold_streak_mild: 12 points (0.94 multiplier)
+  b2b_second: 8 points (0.96 multiplier)
+
+CONFIDENCE SCORING:
+  Score ≥85 → HIGH tier
+  Score ≥65 → MEDIUM tier
+  Score ≥55 → LOW tier
+
+DATA SOURCES (Priority):
+  1. Defense vs Position (Hashtag Basketball) - PRIMARY
+  2. Player performance history (L5/L10/L20/Season)
+  3. Game context (B2B, injuries)
+  4. Elite individual defenders (archetype database)
+
+================================================================================
+                    KEY LEARNINGS ACROSS ALL MODELS
+================================================================================
+
+1. SPORTSBOOK LINES MATTER
+   - Derived line hit rates are 5-15% inflated
+   - Always report sportsbook vs derived separately
+   - TRUE accuracy = sportsbook line performance
+
+2. PATTERN VALIDATION IS CRITICAL
+   - Cold Bounce: 65-85% hit rate (BEST OVER pattern)
+   - Hot Sustained: 25-55% (UNRELIABLE - disable it)
+   - Elite Defense: 62-72% (STRONG UNDER signal)
+   - B2B Fatigue: 56-75% (SOLID UNDER signal)
+
+3. DIRECTION STRATEGY
+   - PTS: UNDER preferred (63% vs 48% OVER)
+   - REB: Both directions work (~59%)
+   - AST: EXCLUDE entirely (~54% = coin flip)
+
+4. QUALITY vs QUANTITY TRADEOFF
+   - V16: 127 picks at 72.4% (BEST)
+   - V19: 1,718 picks at 56.3%
+   - Fewer high-confidence picks > many marginal picks
+
+5. FACTOR COUNT SWEET SPOT
+   - 3 factors optimal (74.4% hit rate)
+   - Beyond 3 factors: diminishing returns
+   - Single-factor picks underperform
+
+6. DEFENSE RANKINGS
+   - Elite = Top 3 (not Top 5!)
+   - Top 4-5 defense only 27-40% for UNDER
+   - Be strict about "elite" classification
+
+================================================================================
+                    RECOMMENDATION SUMMARY
+================================================================================
+
+FOR PRODUCTION USE:
+  → Model V16 General (72.4%, fewer but better picks)
+
+FOR HIGH VOLUME:
+  → Model V17 General (61.8%, more picks)
+
+FOR UNDER FOCUS:
+  → Under Model V2 with V16 Under patterns
+
+FOR EXPERIMENTATION:
+  → Model V18/V19 (latest features, more factors)
+
+AVOID:
+  - Hot Sustained pattern (25-43%)
+  - Single-factor picks
+  - AST props entirely
+  - REB UNDER (too volatile)
+
+================================================================================
+                    FILES REFERENCE
+================================================================================
+
+Model Files (src/nba_props/engine/):
+  model_v9.py                    - Line-aware model
+  model_v10.py                   - Market-aware model
+  model_v14_general.py           - V14 general
+  model_v14_under.py             - V14 under
+  model_v14_shared.py            - V14 shared utilities
+  model_v15_general.py           - V15 general
+  model_v15_shared.py            - V15 shared
+  model_v16_general.py           - V16 general (RECOMMENDED)
+  model_v16_under.py             - V16 under
+  model_v16_shared.py            - V16 shared
+  model_v17_general.py           - V17 general
+  model_v17_under.py             - V17 under
+  model_v17_shared.py            - V17 shared
+  model_v18_general.py           - V18 general
+  model_v18_under.py             - V18 under
+  model_v18_shared.py            - V18 shared
+  model_v19_general.py           - V19 general (LATEST)
+  model_v19_under.py             - V19 under
+  model_v19_shared.py            - V19 shared
+  regression_contribution_model.py - RCM
+  under_model_v2.py              - Under specialist
+
+Documentation (documentation/):
+  MODEL_V9.md through MODEL_V19.md  - Individual model docs
+  REGRESSION_CONTRIBUTION_MODEL.md  - RCM documentation
+  UNDER_MODEL_V2.md                 - Under model docs
+  UNDER_MODEL_V2_GUIDE.md           - Under model guide
+
+================================================================================
+                        END OF COMPARISON GUIDE
+================================================================================

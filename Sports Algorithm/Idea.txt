@@ -1,0 +1,41 @@
+Goal is to find the best NBA player props offered. I will provide the full box score for each game. The box scores up until todays games have been provided. The only player props we are going to be targeting is points (over/under), rebounds (over/under), and likely assists. Also if we can predict which team will win, that would be awesome as well, given all the match ups, and then what we know of who is playing and who isn't, and what we know of how the other team is doing (streaks, injuries, defense, etc).
+
+Model will be graded on the top picks for the day, if there are at least 6 games. Trying to aim for 3 picks per game, If there is less that 6 games, likely best to add 3 picks per game.
+Pick History tab will try to have all the best picks (decide different parameters based on how many games there are that day)
+
+I want to be able to analyze the teams playing, and the different players. 
+The data we have, is any and all recorded data of NBA players. I do not want to scrape the data, I can enter the data daily and give you all the data. I have given example files of how the data will look.
+
+Let me know what other data would be useful to have. I will also provide the sports books lines when they are avalaible the next day, so the algorithm can give me the best decisions/match ups.
+The challenges will be to understand which players will preform better vs a given team. 
+Instead of providing the sportsbook indvidual line per player, can you calculate the players line as the average of their preformance of the last 10 games, and if that is not avaliable the last 7 games, and if they do not have 7 games played then the last 5 games they have, and if that is not avaliable suggest a warning saying they have not played enough games but do not remove them from pick suggestions.
+
+Challenge: there are different positions in the game, and different players do play basketball differently, but for the most part there are a standard amount for example all basketball teams have a center position, but this can include: modern "point centers" (playmakers), "stretch fives" (outside shooters), "rim runners" (vertical threats), and versatile "two-way centers", so we will have to group the centers into that category so we know which kind of center does well against certain teams, and we will have to apply this logic to all the positions. 
+Another factor that needs to be considered is injuries, and some players are obviously just much better. For example some of the best players right now are Luka Donic, and Shai Gilgeous-Alexander so even though they may preform well against certain teams, that position is not guarenteed to preform well against that team. 
+
+We only want to identify player props for the top players on a team, we do not want to get risky and get involved with late bench players etc (people that enter the game, after it is basically done). Ideally on the matchups page, list the top players to target that day.
+
+I will provide data when I can, so this application will need to have an easy way of storing that data, and then incorporating it into the algorithm, and updating the remaining calculations. 
+
+I will tell you which teams are playing that night, and can provide an injury report so the model can take those factors into account and see who is not playing, and then the algorithm will have to run and project which players should in theory preform well, and around how many points to expect. (Will have to consider players coming back injury, and how this will affect, this is IMPORTANT)
+
+Another factor to consider is sometimes teams play back to back, so one teams players might be more tired, this is an important factor to consider.
+
+And we generally want to target games that should be closer, for example games where the book predict the spread will be 6 points or less, I can provide the spread information for that game as well (however the spred will change so this would need to be updated, so if I add this information periodically it should over write the previously entered information). 
+
+Another factor to consider is team playing styles, some teams do play similarily and if teams with similar playing styles.
+
+Sometimes players just tend to do better against certain teams as well, likely because they found some defensive system they can take advantage of.
+
+Focus primarily on data from the last 20 games, because teams can change line ups and how they play, but considering any head to head mathces and any teams that played similarly (will tie in with defesnes and coaching). 
+
+
+
+
+Ignore for now: 
+Incorporate hashtag basketball 
+Improve model based on suggestions, see where model went wrong
+Appears to be two Kel'el Ware for the Miami heat, one of his games was not registered properly. Fix issue so this does not happen in the future for other players, put in checks, and if unsure have it ask me to make sure something was entered properly just to be safe.
+Have any players that average over 23 min automatically marked as star player. 
+I was trying to designate a specific player who has under 23 min as a star player but it does not seem to save when I mark them as a star player.
+Make sure doesn’t go stale like a giant Python dict.

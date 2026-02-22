@@ -1,0 +1,28 @@
+## Chicago Bulls — Box Score
+
+PLAYER	MIN	FGM	FGA	FG%	3PM	3PA	3P%	FTM	FTA	FT%	OREB	DREB	REB	AST	STL	BLK	TO	PF	PTS	+/-
+Patrick Williams	34:31	5	10	0.5	2	5	0.4	0	0	0.0	3	0	3	6	3	0	1	1	12	-16.0
+Matas Buzelis	28:42	6	13	0.5	3	7	0.4	0	0	0.0	0	8	8	4	1	2	2	2	15	-9.0
+Guerschon Yabusele	25:17	5	12	0.4	2	5	0.4	1	2	0.5	1	1	2	2	0	0	0	2	13	-22.0
+Anfernee Simons	27:53	3	9	0.3	1	6	0.2	0	0	0.0	1	4	5	1	0	0	2	1	7	-13.0
+Collin Sexton	31:44	6	13	0.5	1	4	0.2	2	2	1.0	1	2	3	1	2	0	3	3	15	-4.0
+Nick Richards	20:50	1	5	0.2	1	1	1.0	2	2	1.0	2	2	4	0	0	2	2	3	5	-15.0
+Jaden Ivey	28:35	4	9	0.4	1	5	0.2	1	1	1.0	0	3	3	4	0	1	0	1	10	-14.0
+Rob Dillingham	30:06	6	12	0.5	0	2	0.0	4	5	0.8	0	1	1	7	3	0	3	4	16	-17.0
+Lachlan Olbrich	5:29	3	4	0.8	1	1	1.0	0	0	0.0	1	1	2	0	0	0	0	0	7	+7.0
+Leonard Miller	6:53	2	2	1.0	0	0	0.0	1	1	1.0	0	3	3	0	0	0	0	1	5	+8.0
+
+## Boston Celtics — Box Score
+
+PLAYER	MIN	FGM	FGA	FG%	3PM	3PA	3P%	FTM	FTA	FT%	OREB	DREB	REB	AST	STL	BLK	TO	PF	PTS	+/-
+Jaylen Brown	28:55	9	20	0.5	2	9	0.2	4	4	1.0	0	4	4	4	0	0	2	1	24	+15.0
+Sam Hauser	21:43	4	9	0.4	4	7	0.6	0	0	0.0	1	1	2	0	0	1	0	1	12	+8.0
+Neemias Queta	14:44	4	4	1.0	0	0	0.0	0	0	0.0	2	4	6	1	0	1	2	3	8	+1.0
+Baylor Scheierman	23:35	4	7	0.6	2	5	0.4	0	0	0.0	1	4	5	1	1	0	0	1	10	-7.0
+Derrick White	29:41	3	9	0.3	2	5	0.4	1	2	0.5	1	3	4	9	2	2	0	0	9	+22.0
+Nikola Vučević	26:23	7	12	0.6	4	5	0.8	1	2	0.5	3	8	11	3	1	2	4	3	19	+26.0
+Payton Pritchard	33:40	11	18	0.6	3	8	0.4	1	2	0.5	0	5	5	8	2	0	5	0	26	+13.0
+Ron Harper Jr.	16:19	0	2	0.0	0	2	0.0	0	0	0.0	1	2	3	1	0	0	0	0	0	+5.0
+Hugo González	9:02	0	1	0.0	0	0	0.0	0	0	0.0	0	2	2	0	0	0	1	1	0	+5.0
+Jordan Walsh	29:04	7	12	0.6	1	4	0.2	1	1	1.0	4	2	6	2	3	2	0	4	16	+15.0
+Luka Garza	6:53	0	1	0.0	0	0	0.0	0	2	0.0	0	0	0	0	0	0	0	1	0	-8.0

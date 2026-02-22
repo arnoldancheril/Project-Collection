@@ -1,0 +1,25 @@
+## Miami Heat — Box Score
+
+PLAYER	MIN	FGM	FGA	FG%	3PM	3PA	3P%	FTM	FTA	FT%	OREB	DREB	REB	AST	STL	BLK	TO	PF	PTS	+/-
+Myron Gardner	22:56	3	7	0.4	2	5	0.4	0	0	0.0	4	6	10	3	1	1	0	2	8	+11.0
+Bam Adebayo	36:59	6	19	0.3	2	9	0.2	13	17	0.8	2	12	14	4	0	4	3	1	27	+15.0
+Kel'el Ware	27:38	7	15	0.5	2	3	0.7	0	0	0.0	7	5	12	0	1	2	0	2	16	+18.0
+Simone Fontecchio	26:52	5	14	0.4	4	12	0.3	1	1	1.0	2	2	4	1	2	0	1	3	15	+23.0
+Davion Mitchell	27:47	3	10	0.3	2	6	0.3	1	2	0.5	0	1	1	5	0	0	0	2	9	+18.0
+Jaime Jaquez Jr.	34:52	10	22	0.5	0	5	0.0	3	4	0.8	1	7	8	4	3	2	2	2	23	0.0
+Dru Smith	19:56	2	4	0.5	0	0	0.0	2	3	0.7	2	1	3	4	0	0	0	0	6	-12.0
+Kasparas Jakučionis	25:19	3	7	0.4	1	5	0.2	4	4	1.0	0	3	3	4	0	0	1	2	11	-3.0
+Nikola Jović	17:41	3	4	0.8	1	2	0.5	1	2	0.5	0	1	1	0	1	0	1	1	8	-10.0
+
+## New Orleans Pelicans — Box Score
+
+PLAYER	MIN	FGM	FGA	FG%	3PM	3PA	3P%	FTM	FTA	FT%	OREB	DREB	REB	AST	STL	BLK	TO	PF	PTS	+/-
+Saddiq Bey	36:21	4	15	0.3	4	9	0.4	2	2	1.0	1	8	9	4	0	0	2	2	14	-21.0
+Zion Williamson	33:20	12	19	0.6	0	0	0.0	1	2	0.5	3	1	4	3	0	0	4	2	25	-18.0
+Derik Queen	31:07	4	8	0.5	1	2	0.5	3	4	0.8	0	5	5	0	0	1	1	4	12	-17.0
+Trey Murphy III	26:59	7	15	0.5	2	8	0.2	3	3	1.0	0	4	4	6	0	0	1	3	19	-13.0
+Herbert Jones	32:47	3	6	0.5	1	3	0.3	0	0	0.0	0	4	4	2	2	1	4	4	7	-14.0
+Bryce McGowens	21:15	2	5	0.4	1	3	0.3	7	8	0.9	0	1	1	3	1	0	0	2	12	+1.0
+Karlo Matković	13:25	1	1	1.0	1	1	1.0	0	0	0.0	0	0	0	1	0	0	0	0	3	+10.0
+Jeremiah Fears	30:51	6	18	0.3	1	5	0.2	0	0	0.0	1	9	10	8	2	0	1	4	13	+8.0
+Kevon Looney	13:53	3	5	0.6	0	0	0.0	0	0	0.0	3	6	9	0	0	1	0	2	6	+4.0

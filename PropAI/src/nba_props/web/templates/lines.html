@@ -1,0 +1,822 @@
+{% extends "base.html" %}
+
+{% block title %}Sportsbook Lines - NBA Props Predictor{% endblock %}
+{% block page_title %}Sportsbook Lines{% endblock %}
+
+{% block header_actions %}
+<div class="freshness-indicator" id="freshness-indicator">
+    <span class="freshness-dot"></span>
+    <span class="freshness-text" id="lines-count">Loading...</span>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="lines-page">
+    <!-- Quick Actions Bar -->
+    <div class="quick-actions">
+        <div class="date-selector">
+            <label>Lines Date</label>
+            <input type="date" id="lines-date" class="form-control" value="">
+        </div>
+        <div class="prop-filter">
+            <label>Prop Type</label>
+            <select id="prop-type-filter" class="form-control">
+                <option value="all">All Props</option>
+                <option value="PTS">Points</option>
+                <option value="REB">Rebounds</option>
+                <option value="AST">Assists</option>
+            </select>
+        </div>
+        <div class="book-filter">
+            <label>Sportsbook</label>
+            <select id="book-filter" class="form-control">
+                <option value="all">All Books</option>
+                <option value="draftkings">DraftKings</option>
+                <option value="fanduel">FanDuel</option>
+                <option value="betmgm">BetMGM</option>
+                <option value="caesars">Caesars</option>
+                <option value="pointsbet">PointsBet</option>
+            </select>
+        </div>
+        <div class="search-filter">
+            <label>Search Player</label>
+            <input type="text" id="player-search" class="form-control" placeholder="Player name...">
+        </div>
+        <button class="btn btn-ghost" onclick="loadLines()">
+            <span>🔄</span> Refresh
+        </button>
+        <button class="btn btn-primary" onclick="fetchNewLines()">
+            <span>📡</span> Fetch Lines (API)
+        </button>
+    </div>
+
+    <!-- API Status Card -->
+    <div class="api-status-card" id="api-status">
+        <div class="api-status-content">
+            <div class="api-stat">
+                <span class="stat-label">API Quota</span>
+                <span class="stat-value" id="api-quota">--</span>
+            </div>
+            <div class="api-stat">
+                <span class="stat-label">Last Fetch</span>
+                <span class="stat-value" id="last-fetch">--</span>
+            </div>
+            <div class="api-stat">
+                <span class="stat-label">Lines in DB</span>
+                <span class="stat-value" id="total-lines">--</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Prop Type Tabs -->
+    <div class="lines-tabs">
+        <button class="tab-btn active" data-prop="all" onclick="switchPropTab('all')">
+            <span class="tab-icon">📊</span>
+            <span>All Props</span>
+            <span class="tab-count" id="count-all">--</span>
+        </button>
+        <button class="tab-btn" data-prop="PTS" onclick="switchPropTab('PTS')">
+            <span class="tab-icon">🎯</span>
+            <span>Points</span>
+            <span class="tab-count" id="count-pts">--</span>
+        </button>
+        <button class="tab-btn" data-prop="REB" onclick="switchPropTab('REB')">
+            <span class="tab-icon">🏀</span>
+            <span>Rebounds</span>
+            <span class="tab-count" id="count-reb">--</span>
+        </button>
+        <button class="tab-btn" data-prop="AST" onclick="switchPropTab('AST')">
+            <span class="tab-icon">🤝</span>
+            <span>Assists</span>
+            <span class="tab-count" id="count-ast">--</span>
+        </button>
+    </div>
+
+    <!-- Lines Table -->
+    <div class="card">
+        <div class="card-body" style="padding: 0;">
+            <div class="lines-table-container" style="overflow-x: auto;">
+                <table class="data-table" id="lines-table">
+                    <thead>
+                        <tr>
+                            <th>Player</th>
+                            <th>Team</th>
+                            <th>Prop</th>
+                            <th>Line</th>
+                            <th>Odds</th>
+                            <th>Sportsbook</th>
+                            <th>Date</th>
+                        </tr>
+                    </thead>
+                    <tbody id="lines-tbody">
+                        <tr><td colspan="7" class="loading">Loading lines...</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Lines by Player Summary -->
+    <div class="card" id="player-summary-card" style="margin-top: 1.5rem; display: none;">
+        <div class="card-header">
+            <h2>📈 Lines by Player</h2>
+            <span class="muted" id="summary-count">--</span>
+        </div>
+        <div class="card-body">
+            <div class="player-lines-grid" id="player-lines-grid">
+                <!-- Populated by JS -->
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Fetch Lines Modal -->
+<div class="modal hidden" id="fetch-modal">
+    <div class="modal-backdrop" onclick="hideFetchModal()"></div>
+    <div class="modal-content">
+        <div class="modal-header">
+            <h2>📡 Fetch Sportsbook Lines</h2>
+            <button class="modal-close" onclick="hideFetchModal()">×</button>
+        </div>
+        <div class="modal-body">
+            <div class="fetch-info">
+                <p>Fetch real-time player prop lines from The Odds API.</p>
+                <ul class="info-list">
+                    <li><strong>Cost:</strong> ~2 requests per game (points/rebounds for each)</li>
+                    <li><strong>Markets:</strong> Points, Rebounds, Assists</li>
+                    <li><strong>Books:</strong> DraftKings, FanDuel, BetMGM, and more</li>
+                </ul>
+            </div>
+            <div class="form-group">
+                <label>Date to Fetch</label>
+                <input type="date" id="fetch-date" class="form-control">
+            </div>
+            <div class="form-group">
+                <label>Props to Fetch</label>
+                <div class="checkbox-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="fetch-pts" checked>
+                        <span>Points</span>
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="fetch-reb" checked>
+                        <span>Rebounds</span>
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="fetch-ast">
+                        <span>Assists</span>
+                    </label>
+                </div>
+            </div>
+            <div class="form-actions">
+                <button class="btn btn-ghost" onclick="hideFetchModal()">Cancel</button>
+                <button class="btn btn-primary" onclick="executeFetch()">
+                    <span>📡</span> Fetch Lines
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Fetch Progress Modal -->
+<div class="modal hidden" id="progress-modal">
+    <div class="modal-backdrop"></div>
+    <div class="modal-content">
+        <div class="modal-header">
+            <h2>📡 Fetching Lines...</h2>
+        </div>
+        <div class="modal-body">
+            <div class="progress-container">
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progress-fill"></div>
+                </div>
+                <div class="progress-text" id="progress-text">Starting...</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+/* Lines Page Styles */
+.lines-page {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.quick-actions {
+    display: flex;
+    align-items: flex-end;
+    gap: 1rem;
+    padding: 1rem 1.5rem;
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-lg);
+    flex-wrap: wrap;
+}
+
+.quick-actions > div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.375rem;
+}
+
+.quick-actions label {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    font-weight: 500;
+}
+
+.quick-actions .form-control {
+    min-width: 140px;
+}
+
+.quick-actions .search-filter .form-control {
+    min-width: 180px;
+}
+
+/* API Status Card */
+.api-status-card {
+    background: linear-gradient(135deg, var(--bg-card) 0%, rgba(59, 130, 246, 0.05) 100%);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-lg);
+    padding: 1rem 1.5rem;
+}
+
+.api-status-content {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+.api-stat {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.api-stat .stat-label {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.025em;
+}
+
+.api-stat .stat-value {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+/* Lines Tabs */
+.lines-tabs {
+    display: flex;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-lg);
+}
+
+.tab-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.25rem;
+    background: transparent;
+    border: none;
+    border-radius: var(--radius-md);
+    color: var(--text-secondary);
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.tab-btn:hover {
+    background: var(--bg-hover);
+    color: var(--text-primary);
+}
+
+.tab-btn.active {
+    background: var(--accent);
+    color: white;
+}
+
+.tab-icon {
+    font-size: 1rem;
+}
+
+.tab-count {
+    font-size: 0.75rem;
+    padding: 0.125rem 0.5rem;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 9999px;
+}
+
+.tab-btn:not(.active) .tab-count {
+    background: var(--bg-tertiary);
+    color: var(--text-muted);
+}
+
+/* Lines Table */
+.lines-table-container {
+    max-height: 60vh;
+    overflow-y: auto;
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.data-table th,
+.data-table td {
+    padding: 0.75rem 1rem;
+    text-align: left;
+    border-bottom: 1px solid var(--border-subtle);
+}
+
+.data-table th {
+    background: var(--bg-tertiary);
+    font-weight: 600;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.025em;
+    color: var(--text-muted);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.data-table tbody tr:hover {
+    background: var(--bg-hover);
+}
+
+/* Prop badges */
+.prop-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.prop-badge.pts {
+    background: rgba(239, 68, 68, 0.1);
+    color: #ef4444;
+}
+
+.prop-badge.reb {
+    background: rgba(59, 130, 246, 0.1);
+    color: #3b82f6;
+}
+
+.prop-badge.ast {
+    background: rgba(34, 197, 94, 0.1);
+    color: #22c55e;
+}
+
+/* Line value styling */
+.line-value {
+    font-weight: 600;
+    font-size: 1rem;
+    font-family: 'JetBrains Mono', monospace;
+}
+
+.odds-value {
+    color: var(--text-muted);
+    font-family: 'JetBrains Mono', monospace;
+}
+
+.odds-value.positive {
+    color: #22c55e;
+}
+
+.odds-value.negative {
+    color: #ef4444;
+}
+
+/* Book badge */
+.book-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    background: var(--bg-tertiary);
+    color: var(--text-secondary);
+}
+
+.book-badge.draftkings { background: rgba(0, 175, 102, 0.15); color: #00af66; }
+.book-badge.fanduel { background: rgba(29, 113, 184, 0.15); color: #1d71b8; }
+.book-badge.betmgm { background: rgba(191, 160, 84, 0.15); color: #bfa054; }
+.book-badge.caesars { background: rgba(0, 140, 78, 0.15); color: #008c4e; }
+.book-badge.pointsbet { background: rgba(255, 87, 51, 0.15); color: #ff5733; }
+
+/* Player Lines Grid */
+.player-lines-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1rem;
+}
+
+.player-line-card {
+    background: var(--bg-tertiary);
+    border-radius: var(--radius-md);
+    padding: 1rem;
+}
+
+.player-line-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.75rem;
+}
+
+.player-line-name {
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.player-line-team {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+}
+
+.player-line-props {
+    display: flex;
+    gap: 0.75rem;
+}
+
+.player-prop {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.5rem 0.75rem;
+    background: var(--bg-card);
+    border-radius: var(--radius-sm);
+}
+
+.player-prop .prop-label {
+    font-size: 0.65rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+}
+
+.player-prop .prop-value {
+    font-size: 1.125rem;
+    font-weight: 600;
+    font-family: 'JetBrains Mono', monospace;
+}
+
+/* Modal styles */
+.fetch-info {
+    margin-bottom: 1.5rem;
+}
+
+.info-list {
+    margin: 0.75rem 0;
+    padding-left: 1.25rem;
+}
+
+.info-list li {
+    margin: 0.375rem 0;
+    color: var(--text-secondary);
+}
+
+.checkbox-group {
+    display: flex;
+    gap: 1rem;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+}
+
+.checkbox-label input {
+    width: 1rem;
+    height: 1rem;
+}
+
+/* Progress bar */
+.progress-container {
+    padding: 1rem 0;
+}
+
+.progress-bar {
+    height: 8px;
+    background: var(--bg-tertiary);
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 0.75rem;
+}
+
+.progress-fill {
+    height: 100%;
+    background: var(--accent);
+    border-radius: 4px;
+    transition: width 0.3s;
+    width: 0%;
+}
+
+.progress-text {
+    text-align: center;
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+}
+
+.loading, .empty-state, .error {
+    text-align: center;
+    padding: 2rem;
+    color: var(--text-muted);
+}
+
+.error {
+    color: #ef4444;
+}
+</style>
+
+<script>
+let allLines = [];
+let currentPropFilter = 'all';
+
+document.addEventListener('DOMContentLoaded', async () => {
+    // Set default date to today
+    const today = new Date().toISOString().split('T')[0];
+    document.getElementById('lines-date').value = today;
+    document.getElementById('fetch-date').value = today;
+    
+    // Load initial data
+    await Promise.all([loadLines(), loadApiStatus()]);
+    
+    // Set up event listeners
+    document.getElementById('lines-date').addEventListener('change', loadLines);
+    document.getElementById('prop-type-filter').addEventListener('change', filterLines);
+    document.getElementById('book-filter').addEventListener('change', filterLines);
+    document.getElementById('player-search').addEventListener('input', filterLines);
+});
+
+async function loadLines() {
+    const date = document.getElementById('lines-date').value;
+    const tbody = document.getElementById('lines-tbody');
+    tbody.innerHTML = '<tr><td colspan="7" class="loading">Loading lines...</td></tr>';
+    
+    try {
+        const data = await fetchAPI(`/api/lines?date=${date}`);
+        allLines = data.lines || [];
+        updateCounts();
+        filterLines();
+    } catch (e) {
+        console.error('Failed to load lines:', e);
+        tbody.innerHTML = '<tr><td colspan="7" class="error">Failed to load lines</td></tr>';
+    }
+}
+
+async function loadApiStatus() {
+    try {
+        const data = await fetchAPI('/api/lines/status');
+        document.getElementById('api-quota').textContent = `${data.requests_remaining || '--'}/${data.requests_limit || '--'}`;
+        document.getElementById('last-fetch').textContent = data.last_fetch || 'Never';
+        document.getElementById('total-lines').textContent = data.total_lines || '0';
+    } catch (e) {
+        console.error('Failed to load API status:', e);
+    }
+}
+
+function updateCounts() {
+    const counts = {
+        all: allLines.length,
+        PTS: allLines.filter(l => l.prop_type === 'PTS').length,
+        REB: allLines.filter(l => l.prop_type === 'REB').length,
+        AST: allLines.filter(l => l.prop_type === 'AST').length
+    };
+    
+    document.getElementById('count-all').textContent = counts.all;
+    document.getElementById('count-pts').textContent = counts.PTS;
+    document.getElementById('count-reb').textContent = counts.REB;
+    document.getElementById('count-ast').textContent = counts.AST;
+    document.getElementById('lines-count').textContent = `${counts.all} lines`;
+}
+
+function switchPropTab(prop) {
+    document.querySelectorAll('.tab-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.prop === prop);
+    });
+    document.getElementById('prop-type-filter').value = prop;
+    currentPropFilter = prop;
+    filterLines();
+}
+
+function filterLines() {
+    const propType = document.getElementById('prop-type-filter').value;
+    const book = document.getElementById('book-filter').value;
+    const search = document.getElementById('player-search').value.toLowerCase();
+    
+    let filtered = allLines;
+    
+    if (propType !== 'all') {
+        filtered = filtered.filter(l => l.prop_type === propType);
+    }
+    
+    if (book !== 'all') {
+        filtered = filtered.filter(l => l.book === book);
+    }
+    
+    if (search) {
+        filtered = filtered.filter(l => 
+            l.player_name.toLowerCase().includes(search) ||
+            (l.team_abbrev && l.team_abbrev.toLowerCase().includes(search))
+        );
+    }
+    
+    renderLines(filtered);
+    renderPlayerSummary(filtered);
+}
+
+function renderLines(lines) {
+    const tbody = document.getElementById('lines-tbody');
+    
+    if (lines.length === 0) {
+        tbody.innerHTML = '<tr><td colspan="7" class="empty-state">No lines found. Use "Fetch Lines (API)" to get current lines.</td></tr>';
+        return;
+    }
+    
+    // Sort by player name, then prop type
+    lines.sort((a, b) => {
+        const nameCompare = a.player_name.localeCompare(b.player_name);
+        if (nameCompare !== 0) return nameCompare;
+        return a.prop_type.localeCompare(b.prop_type);
+    });
+    
+    tbody.innerHTML = lines.map(line => {
+        const propClass = line.prop_type.toLowerCase();
+        const bookClass = (line.book || '').toLowerCase().replace(/\s/g, '');
+        const oddsClass = line.odds_american >= 0 ? 'positive' : 'negative';
+        const oddsDisplay = line.odds_american >= 0 ? `+${line.odds_american}` : line.odds_american;
+        
+        return `
+            <tr>
+                <td><strong>${escapeHtml(line.player_name)}</strong></td>
+                <td>${line.team_abbrev || '--'}</td>
+                <td><span class="prop-badge ${propClass}">${line.prop_type}</span></td>
+                <td><span class="line-value">${line.line}</span></td>
+                <td><span class="odds-value ${oddsClass}">${oddsDisplay || '--'}</span></td>
+                <td><span class="book-badge ${bookClass}">${line.book || '--'}</span></td>
+                <td>${line.as_of_date}</td>
+            </tr>
+        `;
+    }).join('');
+}
+
+function renderPlayerSummary(lines) {
+    const card = document.getElementById('player-summary-card');
+    const grid = document.getElementById('player-lines-grid');
+    const count = document.getElementById('summary-count');
+    
+    if (lines.length === 0) {
+        card.style.display = 'none';
+        return;
+    }
+    
+    // Group by player
+    const byPlayer = {};
+    lines.forEach(l => {
+        if (!byPlayer[l.player_name]) {
+            byPlayer[l.player_name] = { 
+                team: l.team_abbrev, 
+                props: {} 
+            };
+        }
+        // Keep best book (prefer DraftKings, then FanDuel)
+        const existing = byPlayer[l.player_name].props[l.prop_type];
+        if (!existing || (l.book === 'draftkings') || (l.book === 'fanduel' && existing.book !== 'draftkings')) {
+            byPlayer[l.player_name].props[l.prop_type] = {
+                line: l.line,
+                book: l.book
+            };
+        }
+    });
+    
+    const players = Object.entries(byPlayer).sort((a, b) => a[0].localeCompare(b[0]));
+    count.textContent = `${players.length} players`;
+    
+    grid.innerHTML = players.map(([name, data]) => {
+        const props = ['PTS', 'REB', 'AST']
+            .filter(p => data.props[p])
+            .map(p => `
+                <div class="player-prop">
+                    <span class="prop-label">${p}</span>
+                    <span class="prop-value">${data.props[p].line}</span>
+                </div>
+            `).join('');
+        
+        return `
+            <div class="player-line-card">
+                <div class="player-line-header">
+                    <span class="player-line-name">${escapeHtml(name)}</span>
+                    <span class="player-line-team">${data.team || '--'}</span>
+                </div>
+                <div class="player-line-props">
+                    ${props || '<span class="muted">No props</span>'}
+                </div>
+            </div>
+        `;
+    }).join('');
+    
+    card.style.display = 'block';
+}
+
+function fetchNewLines() {
+    document.getElementById('fetch-date').value = document.getElementById('lines-date').value;
+    document.getElementById('fetch-modal').classList.remove('hidden');
+}
+
+function hideFetchModal() {
+    document.getElementById('fetch-modal').classList.add('hidden');
+}
+
+async function executeFetch() {
+    const date = document.getElementById('fetch-date').value;
+    const fetchPts = document.getElementById('fetch-pts').checked;
+    const fetchReb = document.getElementById('fetch-reb').checked;
+    const fetchAst = document.getElementById('fetch-ast').checked;
+    
+    const markets = [];
+    if (fetchPts) markets.push('player_points');
+    if (fetchReb) markets.push('player_rebounds');
+    if (fetchAst) markets.push('player_assists');
+    
+    if (markets.length === 0) {
+        alert('Please select at least one prop type to fetch.');
+        return;
+    }
+    
+    hideFetchModal();
+    showProgress();
+    
+    try {
+        const response = await fetch('/api/lines/fetch', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ date, markets })
+        });
+        
+        const data = await response.json();
+        
+        if (data.error) {
+            hideProgress();
+            alert('Error fetching lines: ' + data.error);
+            return;
+        }
+        
+        // Update progress
+        updateProgress(100, `Fetched ${data.props_fetched || 0} props from ${data.events_processed || 0} events`);
+        
+        setTimeout(() => {
+            hideProgress();
+            loadLines();
+            loadApiStatus();
+        }, 1500);
+    } catch (e) {
+        hideProgress();
+        alert('Error fetching lines: ' + e.message);
+    }
+}
+
+function showProgress() {
+    document.getElementById('progress-modal').classList.remove('hidden');
+    updateProgress(10, 'Fetching NBA events...');
+}
+
+function hideProgress() {
+    document.getElementById('progress-modal').classList.add('hidden');
+}
+
+function updateProgress(percent, text) {
+    document.getElementById('progress-fill').style.width = `${percent}%`;
+    document.getElementById('progress-text').textContent = text;
+}
+
+function escapeHtml(text) {
+    if (!text) return '';
+    const div = document.createElement('div');
+    div.textContent = text;
+    return div.innerHTML;
+}
+
+// Utility from base
+async function fetchAPI(url) {
+    const response = await fetch(url);
+    if (!response.ok) {
+        throw new Error(`API error: ${response.status}`);
+    }
+    return response.json();
+}
+</script>
+{% endblock %}

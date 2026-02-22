@@ -1,0 +1,411 @@
+{% extends "base.html" %}
+
+{% block title %}Projections - NBA Props Predictor{% endblock %}
+{% block page_title %}Projections & Props{% endblock %}
+
+{% block content %}
+<div class="projections-page" style="display: flex; flex-direction: column; gap: 1.5rem;">
+    <!-- Game Selection -->
+    <div class="card">
+        <div class="card-header">
+            <h2>Select Matchup</h2>
+        </div>
+        <div class="card-body">
+            <div class="matchup-selector">
+                <div class="form-group">
+                    <label>Away Team</label>
+                    <select id="away-team" class="form-control">
+                        <option value="">Select team...</option>
+                    </select>
+                </div>
+                <div class="vs-separator">@</div>
+                <div class="form-group">
+                    <label>Home Team</label>
+                    <select id="home-team" class="form-control">
+                        <option value="">Select team...</option>
+                    </select>
+                </div>
+                <button class="btn btn-primary" onclick="generateProjections()">
+                    <span>🎯</span> Generate Projections
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Context Info -->
+    <div class="card context-card" id="context-card" style="display: none;">
+        <div class="card-body">
+            <div class="context-grid" id="context-content" style="display: flex; flex-wrap: wrap; gap: 2rem;">
+                <!-- Filled by JS -->
+            </div>
+        </div>
+    </div>
+    
+    <!-- Projections Results -->
+    <div class="card" id="projections-card" style="display: none;">
+        <div class="card-header">
+            <h2>Player Projections</h2>
+            <span class="muted" style="font-size: 0.875rem;">Top 7 players per team • Adjusted for matchup</span>
+        </div>
+        <div class="card-body">
+            <div id="projections-content">
+                <!-- Filled by JS -->
+            </div>
+        </div>
+    </div>
+    
+    <!-- Lines Comparison -->
+    <div class="card">
+        <div class="card-header">
+            <h2>Sportsbook Lines</h2>
+        </div>
+        <div class="card-body">
+            <div class="lines-input-section" style="padding-bottom: 1.5rem; margin-bottom: 1.5rem; border-bottom: 1px solid var(--border-subtle);">
+                <div class="form-group">
+                    <label>Paste Lines</label>
+                    <textarea id="lines-text" class="form-control" rows="6" style="font-family: var(--font-mono); font-size: 0.8125rem;" placeholder="Points line:
+Player Name: 22.5 -115
+Player Name: 18.5 -110
+
+Player Rebounds:
+Player Name: 8.5 -120
+..."></textarea>
+                </div>
+                <div class="form-row" style="display: flex; gap: 1rem; flex-wrap: wrap; align-items: flex-end;">
+                    <div class="form-group" style="flex: 1; min-width: 140px;">
+                        <label>As-of Date</label>
+                        <input type="date" id="lines-date" class="form-control">
+                    </div>
+                    <div class="form-group" style="flex: 1; min-width: 140px;">
+                        <label>Book</label>
+                        <input type="text" id="lines-book" class="form-control" placeholder="e.g. DraftKings">
+                    </div>
+                    <button class="btn btn-primary" onclick="ingestLines()">Save Lines</button>
+                </div>
+            </div>
+            
+            <div class="lines-list" id="lines-list">
+                <div class="loading-state">
+                    <div class="spinner"></div>
+                    <p>Loading saved lines...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Prop Recommendations -->
+    <div class="card" id="recommendations-card" style="display: none;">
+        <div class="card-header">
+            <h2>🎯 Recommended Props</h2>
+        </div>
+        <div class="card-body">
+            <div id="recommendations-content">
+                <!-- Filled by JS after engine is implemented -->
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+const teams = [
+    {abbrev: 'ATL', name: 'Atlanta Hawks'},
+    {abbrev: 'BOS', name: 'Boston Celtics'},
+    {abbrev: 'BKN', name: 'Brooklyn Nets'},
+    {abbrev: 'CHA', name: 'Charlotte Hornets'},
+    {abbrev: 'CHI', name: 'Chicago Bulls'},
+    {abbrev: 'CLE', name: 'Cleveland Cavaliers'},
+    {abbrev: 'DAL', name: 'Dallas Mavericks'},
+    {abbrev: 'DEN', name: 'Denver Nuggets'},
+    {abbrev: 'DET', name: 'Detroit Pistons'},
+    {abbrev: 'GSW', name: 'Golden State Warriors'},
+    {abbrev: 'HOU', name: 'Houston Rockets'},
+    {abbrev: 'IND', name: 'Indiana Pacers'},
+    {abbrev: 'LAC', name: 'Los Angeles Clippers'},
+    {abbrev: 'LAL', name: 'Los Angeles Lakers'},
+    {abbrev: 'MEM', name: 'Memphis Grizzlies'},
+    {abbrev: 'MIA', name: 'Miami Heat'},
+    {abbrev: 'MIL', name: 'Milwaukee Bucks'},
+    {abbrev: 'MIN', name: 'Minnesota Timberwolves'},
+    {abbrev: 'NOP', name: 'New Orleans Pelicans'},
+    {abbrev: 'NYK', name: 'New York Knicks'},
+    {abbrev: 'OKC', name: 'Oklahoma City Thunder'},
+    {abbrev: 'ORL', name: 'Orlando Magic'},
+    {abbrev: 'PHI', name: 'Philadelphia 76ers'},
+    {abbrev: 'PHX', name: 'Phoenix Suns'},
+    {abbrev: 'POR', name: 'Portland Trail Blazers'},
+    {abbrev: 'SAC', name: 'Sacramento Kings'},
+    {abbrev: 'SAS', name: 'San Antonio Spurs'},
+    {abbrev: 'TOR', name: 'Toronto Raptors'},
+    {abbrev: 'UTA', name: 'Utah Jazz'},
+    {abbrev: 'WAS', name: 'Washington Wizards'},
+];
+
+document.addEventListener('DOMContentLoaded', async () => {
+    // Populate team selects
+    const awaySelect = document.getElementById('away-team');
+    const homeSelect = document.getElementById('home-team');
+    
+    teams.forEach(t => {
+        awaySelect.innerHTML += `<option value="${t.abbrev}">${t.abbrev} - ${t.name}</option>`;
+        homeSelect.innerHTML += `<option value="${t.abbrev}">${t.abbrev} - ${t.name}</option>`;
+    });
+    
+    // Set today's date as default for lines
+    document.getElementById('lines-date').value = new Date().toISOString().split('T')[0];
+    
+    // Load existing lines
+    loadLines();
+});
+
+async function generateProjections() {
+    const away = document.getElementById('away-team').value;
+    const home = document.getElementById('home-team').value;
+    
+    if (!away || !home) {
+        showToast('Please select both teams', 'error');
+        return;
+    }
+    
+    if (away === home) {
+        showToast('Please select different teams', 'error');
+        return;
+    }
+    
+    const contextCard = document.getElementById('context-card');
+    const projectionsCard = document.getElementById('projections-card');
+    const recommendationsCard = document.getElementById('recommendations-card');
+    const content = document.getElementById('projections-content');
+    const contextContent = document.getElementById('context-content');
+    const recsContent = document.getElementById('recommendations-content');
+    
+    projectionsCard.style.display = 'block';
+    content.innerHTML = '<div class="loading-state"><div class="spinner"></div><p>Generating projections with matchup analysis...</p></div>';
+    
+    try {
+        const gameDate = new Date().toISOString().split('T')[0];
+        const report = await fetchAPI('/api/projections', {
+            method: 'POST',
+            body: JSON.stringify({
+                away: away,
+                home: home,
+                date: gameDate
+            })
+        });
+        
+        // Show context info
+        contextCard.style.display = 'block';
+        contextContent.innerHTML = `
+            <div class="context-item">
+                <span class="context-label">${away} Rest</span>
+                <span class="context-value ${report.context.away_b2b ? 'warning' : ''}" style="font-family: var(--font-mono); font-weight: 600; ${report.context.away_b2b ? 'color: var(--warning);' : ''}">${report.context.away_b2b ? 'Back-to-Back' : report.context.away_rest_days + ' days'}</span>
+            </div>
+            <div class="context-item">
+                <span class="context-label">${home} Rest</span>
+                <span class="context-value ${report.context.home_b2b ? 'warning' : ''}" style="font-family: var(--font-mono); font-weight: 600; ${report.context.home_b2b ? 'color: var(--warning);' : ''}">${report.context.home_b2b ? 'Back-to-Back' : report.context.home_rest_days + ' days'}</span>
+            </div>
+            ${report.defense_ratings.home ? `
+            <div class="context-item">
+                <span class="context-label">${home} DEF (vs ${away})</span>
+                <span class="context-value" style="font-family: var(--font-mono);">PTS: ${(report.defense_ratings.home.pts_factor * 100).toFixed(0)}%</span>
+            </div>
+            ` : ''}
+            ${report.defense_ratings.away ? `
+            <div class="context-item">
+                <span class="context-label">${away} DEF (vs ${home})</span>
+                <span class="context-value" style="font-family: var(--font-mono);">PTS: ${(report.defense_ratings.away.pts_factor * 100).toFixed(0)}%</span>
+            </div>
+            ` : ''}
+        `;
+        
+        // Render projections
+        const renderTeamProjections = (projections, teamAbbrev, role) => {
+            if (!projections || projections.length === 0) {
+                return `<div class="empty-state">No projection data for ${teamAbbrev}</div>`;
+            }
+            
+            const teamName = teams.find(t => t.abbrev === teamAbbrev)?.name || teamAbbrev;
+            
+            return `
+                <div class="projection-team">
+                    <h3 style="font-size: 1rem; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
+                        <span style="color: var(--accent);">${teamAbbrev}</span>
+                        <span style="color: var(--text-secondary); font-weight: 400;">${teamName}</span>
+                        <span style="margin-left: auto; font-size: 0.75rem; background: var(--bg-tertiary); padding: 0.25rem 0.5rem; border-radius: var(--radius-sm); color: var(--text-muted);">${role}</span>
+                    </h3>
+                    <div style="overflow-x: auto;">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>Player</th>
+                                    <th>MIN</th>
+                                    <th>PTS</th>
+                                    <th>REB</th>
+                                    <th>AST</th>
+                                    <th>GP</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                ${projections.map((p, i) => `
+                                    <tr style="${i < 7 ? 'background: var(--accent-bg);' : ''}">
+                                        <td>
+                                            <span style="font-weight: 500;">${p.player}</span>
+                                            ${i < 7 ? '<span style="margin-left: 0.5rem; font-size: 0.625rem; background: var(--accent); color: white; padding: 0.125rem 0.375rem; border-radius: 3px;">TOP 7</span>' : ''}
+                                        </td>
+                                        <td style="font-family: var(--font-mono);">${p.minutes.toFixed(0)}</td>
+                                        <td style="font-family: var(--font-mono); font-weight: 600; color: var(--accent);">${p.pts.toFixed(1)}</td>
+                                        <td style="font-family: var(--font-mono);">${p.reb.toFixed(1)}</td>
+                                        <td style="font-family: var(--font-mono);">${p.ast.toFixed(1)}</td>
+                                        <td style="font-family: var(--font-mono); color: var(--text-muted);">${p.games}</td>
+                                    </tr>
+                                `).join('')}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            `;
+        };
+        
+        content.innerHTML = `
+            <div class="projections-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 2rem;">
+                ${renderTeamProjections(report.away_projections, away, 'Away')}
+                ${renderTeamProjections(report.home_projections, home, 'Home')}
+            </div>
+        `;
+        
+        // Show recommendations if we have lines
+        if (report.recommendations && report.recommendations.length > 0) {
+            recommendationsCard.style.display = 'block';
+            recsContent.innerHTML = `
+                <div style="overflow-x: auto;">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Player</th>
+                                <th>Prop</th>
+                                <th>Line</th>
+                                <th>Projected</th>
+                                <th>Edge</th>
+                                <th>Rec</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            ${report.recommendations.map(r => `
+                                <tr style="${r.recommendation === 'OVER' ? 'background: var(--success-bg);' : r.recommendation === 'UNDER' ? 'background: var(--warning-bg);' : ''}">
+                                    <td>
+                                        <span style="font-weight: 500;">${r.player}</span>
+                                        <span style="margin-left: 0.5rem; font-size: 0.625rem; background: var(--bg-tertiary); color: var(--text-muted); padding: 0.125rem 0.375rem; border-radius: 3px;">${r.team}</span>
+                                    </td>
+                                    <td>${r.prop}</td>
+                                    <td style="font-family: var(--font-mono);">${r.line}</td>
+                                    <td style="font-family: var(--font-mono); font-weight: 600; color: var(--accent);">${r.projected.toFixed(1)}</td>
+                                    <td style="font-family: var(--font-mono); color: ${r.edge_pct > 0 ? 'var(--success)' : 'var(--error)'};">${r.edge_pct.toFixed(1)}%</td>
+                                    <td>
+                                        <span class="rec-badge rec-${r.recommendation.toLowerCase()}">${r.recommendation}</span>
+                                    </td>
+                                </tr>
+                            `).join('')}
+                        </tbody>
+                    </table>
+                </div>
+            `;
+        } else {
+            recommendationsCard.style.display = 'block';
+            recsContent.innerHTML = `
+                <div class="empty-state">
+                    <p>No sportsbook lines found for comparison.</p>
+                    <p class="muted" style="margin-top: 0.5rem;">Add lines in the section above to get prop recommendations.</p>
+                </div>
+            `;
+        }
+        
+    } catch (e) {
+        content.innerHTML = `<div class="error-state">Failed to generate projections: ${e.message}</div>`;
+    }
+}
+
+async function loadLines() {
+    const container = document.getElementById('lines-list');
+    
+    try {
+        const data = await fetchAPI('/api/lines?limit=50');
+        
+        if (!data.lines || data.lines.length === 0) {
+            container.innerHTML = '<div class="empty-state"><p>No lines saved yet</p></div>';
+            return;
+        }
+        
+        // Group by date
+        const byDate = {};
+        data.lines.forEach(l => {
+            if (!byDate[l.as_of_date]) byDate[l.as_of_date] = [];
+            byDate[l.as_of_date].push(l);
+        });
+        
+        container.innerHTML = Object.entries(byDate).map(([date, lines]) => `
+            <div class="lines-date-group" style="margin-bottom: 1.5rem;">
+                <h4 style="font-size: 0.875rem; font-weight: 600; margin-bottom: 0.75rem; color: var(--text-secondary);">${date}</h4>
+                <div style="overflow-x: auto;">
+                    <table class="data-table" style="font-size: 0.8125rem;">
+                        <thead>
+                            <tr>
+                                <th>Player</th>
+                                <th>Type</th>
+                                <th>Line</th>
+                                <th>Odds</th>
+                                <th>Book</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            ${lines.map(l => `
+                                <tr>
+                                    <td style="font-weight: 500;">${l.player}</td>
+                                    <td>${l.prop_type}</td>
+                                    <td style="font-family: var(--font-mono);">${l.line}</td>
+                                    <td style="font-family: var(--font-mono);">${l.odds_american ? (l.odds_american > 0 ? '+' : '') + l.odds_american : '-'}</td>
+                                    <td style="color: var(--text-muted);">${l.book || '-'}</td>
+                                </tr>
+                            `).join('')}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        `).join('');
+    } catch (e) {
+        container.innerHTML = `<div class="error-state">Failed to load lines: ${e.message}</div>`;
+    }
+}
+
+async function ingestLines() {
+    const text = document.getElementById('lines-text').value.trim();
+    const date = document.getElementById('lines-date').value;
+    const book = document.getElementById('lines-book').value.trim();
+    
+    if (!text) {
+        showToast('Please paste some lines first', 'error');
+        return;
+    }
+    
+    if (!date) {
+        showToast('Please select a date', 'error');
+        return;
+    }
+    
+    try {
+        const result = await fetchAPI('/api/ingest/lines', {
+            method: 'POST',
+            body: JSON.stringify({ text, date, book })
+        });
+        
+        if (result.success) {
+            showToast(`Saved ${result.count} lines`, 'success');
+            document.getElementById('lines-text').value = '';
+            loadLines();
+        } else {
+            showToast(result.error || 'Failed to save lines', 'error');
+        }
+    } catch (e) {
+        showToast(e.message || 'Failed to save lines', 'error');
+    }
+}
+</script>
+{% endblock %}

@@ -1,0 +1,26 @@
+## Minnesota Timberwolves — Box Score
+
+PLAYER	MIN	FGM	FGA	FG%	3PM	3PA	3P%	FTM	FTA	FT%	OREB	DREB	REB	AST	STL	BLK	TO	PF	PTS	+/-
+Jaden McDaniels	36:50	11	14	0.8	5	7	0.7	2	2	1.0	3	1	4	3	0	0	0	4	29	+2.0
+Julius Randle	40:15	5	14	0.4	1	6	0.2	8	8	1.0	1	7	8	8	0	1	3	5	19	+5.0
+Rudy Gobert	25:09	3	5	0.6	0	0	0.0	1	2	0.5	3	7	10	0	0	2	1	3	7	-8.0
+Anthony Edwards	39:41	13	27	0.5	3	9	0.3	10	14	0.7	1	6	7	3	1	0	2	2	39	+2.0
+Donte DiVincenzo	33:39	7	9	0.8	5	7	0.7	2	4	0.5	2	1	3	4	2	0	1	2	21	-3.0
+Naz Reid	25:49	4	12	0.3	1	6	0.2	1	1	1.0	3	3	6	1	1	4	2	3	10	-18.0
+Mike Conley	14:21	0	3	0.0	0	2	0.0	0	0	0.0	0	1	1	2	0	0	0	1	0	-13.0
+Jaylen Clark	7:42	0	2	0.0	0	1	0.0	0	0	0.0	0	0	0	0	0	0	0	3	0	-6.0
+Bones Hyland	16:33	1	4	0.2	1	3	0.3	0	0	0.0	0	1	1	3	0	0	0	2	3	-6.0
+
+## Memphis Grizzlies — Box Score
+
+PLAYER	MIN	FGM	FGA	FG%	3PM	3PA	3P%	FTM	FTA	FT%	OREB	DREB	REB	AST	STL	BLK	TO	PF	PTS	+/-
+Jaylen Wells	25:42	6	9	0.7	4	5	0.8	2	2	1.0	0	1	1	2	1	0	1	5	18	+5.0
+Jaren Jackson Jr.	30:58	8	17	0.5	3	6	0.5	11	11	1.0	1	5	6	2	0	1	1	3	30	+7.0
+Jock Landale	28:19	2	7	0.3	0	3	0.0	0	0	0.0	3	3	6	2	0	0	0	2	4	+6.0
+Cedric Coward	27:42	5	10	0.5	1	4	0.2	3	4	0.8	0	4	4	1	0	0	1	2	14	+13.0
+Ty Jerome	20:24	6	10	0.6	2	5	0.4	5	6	0.8	2	4	6	8	1	0	3	2	19	+4.0
+Kentavious Caldwell-Pope	19:03	2	6	0.3	0	1	0.0	0	0	0.0	0	3	3	3	0	0	1	3	4	-3.0
+GG Jackson	21:14	6	10	0.6	1	4	0.2	0	1	0.0	3	5	8	1	0	1	1	0	13	+14.0
+Cam Spencer	25:04	4	9	0.4	3	5	0.6	5	5	1.0	0	4	4	5	0	0	1	1	16	+4.0
+Vince Williams Jr.	22:29	4	7	0.6	4	6	0.7	4	6	0.7	0	1	1	5	2	0	0	3	16	-11.0
+Olivier-Maxence Prosper	19:03	1	3	0.3	1	2	0.5	0	0	0.0	3	3	6	2	1	0	0	1	3	+6.0

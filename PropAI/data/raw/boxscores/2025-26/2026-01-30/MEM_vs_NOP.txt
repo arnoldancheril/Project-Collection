@@ -1,0 +1,27 @@
+## Memphis Grizzlies — Box Score
+
+PLAYER	MIN	FGM	FGA	FG%	3PM	3PA	3P%	FTM	FTA	FT%	OREB	DREB	REB	AST	STL	BLK	TO	PF	PTS	+/-
+Cedric Coward	23:29	5	12	0.4	2	5	0.4	1	1	1.0	1	4	5	5	0	0	5	2	13	-13.0
+Jaren Jackson Jr.	33:42	6	19	0.3	2	10	0.2	2	2	1.0	3	6	9	2	6	2	2	5	16	-6.0
+Jock Landale	30:50	5	12	0.4	0	1	0.0	2	2	1.0	6	2	8	0	1	0	1	2	12	0.0
+Jaylen Wells	26:01	3	8	0.4	1	4	0.2	3	3	1.0	1	3	4	4	1	0	0	2	10	+4.0
+Cam Spencer	23:56	6	7	0.9	4	4	1.0	0	0	0.0	0	1	1	3	0	0	1	0	16	+8.0
+Kentavious Caldwell-Pope	24:35	4	5	0.8	0	1	0.0	3	4	0.8	0	2	2	2	1	0	2	2	11	+4.0
+GG Jackson	18:25	2	10	0.2	0	4	0.0	0	0	0.0	1	7	8	5	0	0	0	2	4	-4.0
+Vince Williams Jr.	24:56	4	10	0.4	2	7	0.3	3	3	1.0	3	0	3	3	2	0	5	4	13	-16.0
+John Konchar	22:06	4	6	0.7	1	3	0.3	0	0	0.0	0	4	4	2	0	0	2	0	9	-12.0
+Olivier-Maxence Prosper	11:57	1	4	0.2	0	2	0.0	0	0	0.0	1	1	2	0	0	1	1	0	2	-5.0
+
+## New Orleans Pelicans — Box Score
+
+PLAYER	MIN	FGM	FGA	FG%	3PM	3PA	3P%	FTM	FTA	FT%	OREB	DREB	REB	AST	STL	BLK	TO	PF	PTS	+/-
+Saddiq Bey	34:12	9	19	0.5	2	7	0.3	2	2	1.0	3	5	8	2	3	0	2	1	22	+12.0
+Zion Williamson	33:02	7	10	0.7	0	0	0.0	7	8	0.9	3	4	7	4	0	2	2	3	21	+14.0
+Derik Queen	33:53	8	12	0.7	0	0	0.0	6	7	0.9	4	5	9	7	0	2	5	1	22	+11.0
+Trey Murphy III	33:15	2	14	0.1	0	7	0.0	4	5	0.8	0	1	1	2	2	1	1	2	8	-1.0
+Herbert Jones	29:58	7	9	0.8	1	3	0.3	1	2	0.5	0	4	4	1	3	0	2	3	16	+10.0
+Jeremiah Fears	16:56	3	8	0.4	0	3	0.0	0	0	0.0	2	2	4	3	2	0	3	1	6	-5.0
+Karlo Matković	14:26	2	4	0.5	1	3	0.3	0	0	0.0	1	3	4	1	2	1	0	2	5	+1.0
+Micah Peavy	7:20	1	2	0.5	1	2	0.5	0	0	0.0	0	0	0	1	0	0	0	1	3	-4.0
+Yves Missi	14:07	0	0	0.0	0	0	0.0	0	2	0.0	1	3	4	1	0	0	0	1	0	-3.0
+Jose Alvarado	22:50	4	10	0.4	3	8	0.4	0	0	0.0	0	1	1	2	1	0	0	1	11	+5.0

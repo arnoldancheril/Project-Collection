@@ -1,0 +1,27 @@
+## Indiana Pacers — Box Score
+
+PLAYER	MIN	FGM	FGA	FG%	3PM	3PA	3P%	FTM	FTA	FT%	OREB	DREB	REB	AST	STL	BLK	TO	PF	PTS	+/-
+Aaron Nesmith	36:30	4	10	0.4	1	3	0.3	2	2	1.0	2	6	8	0	0	2	2	5	11	0.0
+Pascal Siakam	36:57	11	26	0.4	3	10	0.3	5	10	0.5	0	6	6	4	3	0	1	0	30	-7.0
+Micah Potter	28:47	3	9	0.3	2	7	0.3	2	2	1.0	0	2	2	3	0	0	2	4	10	+2.0
+Quenton Jackson	28:02	5	7	0.7	4	6	0.7	5	6	0.8	2	4	6	3	1	1	1	1	19	0.0
+Andrew Nembhard	36:42	9	16	0.6	4	8	0.5	2	2	1.0	0	4	4	10	0	0	3	2	24	0.0
+Kobe Brown	18:52	3	4	0.8	1	1	1.0	1	2	0.5	2	4	6	1	1	0	1	3	8	+13.0
+Ben Sheppard	17:15	4	5	0.8	2	3	0.7	0	0	0.0	0	7	7	2	0	0	0	0	10	+2.0
+Jay Huff	24:06	4	9	0.4	1	6	0.2	1	1	1.0	0	2	2	3	1	1	0	4	10	+4.0
+Kam Jones	21:28	1	2	0.5	0	1	0.0	0	0	0.0	0	1	1	1	0	0	0	3	2	-2.0
+T.J. McConnell	16:18	6	9	0.7	0	0	0.0	1	1	1.0	0	1	1	3	0	0	1	1	13	+3.0
+
+## New York Knicks — Box Score
+
+PLAYER	MIN	FGM	FGA	FG%	3PM	3PA	3P%	FTM	FTA	FT%	OREB	DREB	REB	AST	STL	BLK	TO	PF	PTS	+/-
+Mikal Bridges	42:46	9	15	0.6	2	6	0.3	2	2	1.0	1	5	6	3	1	1	1	5	22	-5.0
+Josh Hart	40:37	5	8	0.6	2	3	0.7	3	4	0.8	0	11	11	11	2	1	3	3	15	+11.0
+Karl-Anthony Towns	31:51	8	17	0.5	1	6	0.2	5	6	0.8	3	11	14	3	0	0	5	6	22	+6.0
+Jalen Brunson	41:47	15	31	0.5	4	14	0.3	6	8	0.8	2	3	5	8	1	0	1	3	40	+3.0
+Landry Shamet	37:40	6	14	0.4	4	11	0.4	1	3	0.3	0	2	2	1	0	1	0	2	17	+1.0
+Jordan Clarkson	12:34	2	4	0.5	0	1	0.0	0	0	0.0	0	0	0	0	0	0	1	1	4	-4.0
+Mohamed Diawara	18:28	1	2	0.5	1	2	0.5	0	0	0.0	0	2	2	1	0	0	0	4	3	-17.0
+Ariel Hukporti	20:55	3	4	0.8	0	0	0.0	1	1	1.0	2	3	5	1	0	1	0	2	7	-7.0
+Jose Alvarado	18:13	1	5	0.2	0	3	0.0	2	3	0.7	0	1	1	5	0	0	1	4	4	-6.0
+Tyler Kolek	0:05	0	0	0.0	0	0	0.0	0	0	0.0	0	0	0	0	0	0	0	0	0	+3.0

@@ -1,0 +1,1045 @@
+{% extends "base.html" %}
+
+{% block title %}Documentation - NBA Props Predictor{% endblock %}
+{% block page_title %}📚 Documentation{% endblock %}
+
+{% block extra_css %}
+<style>
+    .docs-container {
+        display: flex;
+        gap: 2rem;
+        max-width: 1400px;
+    }
+    
+    /* Sidebar Navigation */
+    .docs-nav {
+        width: 280px;
+        flex-shrink: 0;
+        position: sticky;
+        top: 2rem;
+        height: fit-content;
+        max-height: calc(100vh - 4rem);
+        overflow-y: auto;
+    }
+    
+    .docs-nav-section {
+        background: var(--card-bg);
+        border-radius: 16px;
+        border: 1px solid var(--border);
+        padding: 1.5rem;
+        margin-bottom: 1rem;
+    }
+    
+    .docs-nav-title {
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        color: var(--text-muted);
+        margin-bottom: 1rem;
+        font-weight: 600;
+    }
+    
+    .docs-nav-links {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    
+    .docs-nav-links li {
+        margin-bottom: 0.5rem;
+    }
+    
+    .docs-nav-links a {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        padding: 0.75rem 1rem;
+        border-radius: 8px;
+        color: var(--text);
+        text-decoration: none;
+        font-size: 0.9rem;
+        transition: all 0.2s;
+    }
+    
+    .docs-nav-links a:hover {
+        background: rgba(139, 92, 246, 0.1);
+    }
+    
+    .docs-nav-links a.active {
+        background: linear-gradient(135deg, #8b5cf6, #6d28d9);
+        color: white;
+    }
+    
+    .docs-nav-links .badge {
+        margin-left: auto;
+        font-size: 0.7rem;
+        padding: 0.2rem 0.5rem;
+        border-radius: 4px;
+        background: rgba(16, 185, 129, 0.2);
+        color: #10b981;
+    }
+    
+    .docs-nav-links .badge.recommended {
+        background: linear-gradient(135deg, rgba(16, 185, 129, 0.3), rgba(5, 150, 105, 0.3));
+        color: #34d399;
+    }
+    
+    /* Main Content */
+    .docs-content {
+        flex: 1;
+        min-width: 0;
+    }
+    
+    .doc-section {
+        display: none;
+        animation: fadeIn 0.3s ease;
+    }
+    
+    .doc-section.active {
+        display: block;
+    }
+    
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(10px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+    
+    .doc-card {
+        background: var(--card-bg);
+        border-radius: 16px;
+        border: 1px solid var(--border);
+        padding: 2rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .doc-card h2 {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        margin-bottom: 1.5rem;
+        font-size: 1.5rem;
+    }
+    
+    .doc-card h3 {
+        font-size: 1.125rem;
+        margin: 1.5rem 0 1rem 0;
+        color: #a78bfa;
+    }
+    
+    .doc-card h4 {
+        font-size: 1rem;
+        margin: 1rem 0 0.75rem 0;
+        color: var(--text-muted);
+    }
+    
+    .doc-card p {
+        color: var(--text-muted);
+        line-height: 1.7;
+        margin-bottom: 1rem;
+    }
+    
+    .doc-card ul, .doc-card ol {
+        color: var(--text-muted);
+        padding-left: 1.5rem;
+        margin-bottom: 1rem;
+    }
+    
+    .doc-card li {
+        margin-bottom: 0.5rem;
+        line-height: 1.6;
+    }
+    
+    /* Stats Grid */
+    .stats-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 1rem;
+        margin: 1.5rem 0;
+    }
+    
+    .stat-box {
+        background: var(--bg);
+        border-radius: 12px;
+        padding: 1.25rem;
+        text-align: center;
+        border: 1px solid var(--border);
+    }
+    
+    .stat-box.premium {
+        border-color: rgba(16, 185, 129, 0.5);
+        background: linear-gradient(135deg, rgba(16, 185, 129, 0.1), rgba(5, 150, 105, 0.1));
+    }
+    
+    .stat-box .value {
+        font-size: 1.75rem;
+        font-weight: 700;
+        font-family: 'JetBrains Mono', monospace;
+        color: #10b981;
+    }
+    
+    .stat-box .label {
+        font-size: 0.75rem;
+        color: var(--text-muted);
+        text-transform: uppercase;
+        margin-top: 0.25rem;
+    }
+    
+    /* Code Block */
+    .code-block {
+        background: rgba(0, 0, 0, 0.3);
+        border-radius: 12px;
+        padding: 1.25rem;
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 0.85rem;
+        overflow-x: auto;
+        margin: 1rem 0;
+        border: 1px solid var(--border);
+    }
+    
+    .code-block code {
+        color: #a5f3fc;
+    }
+    
+    .code-block .comment {
+        color: #6b7280;
+    }
+    
+    .code-block .keyword {
+        color: #c084fc;
+    }
+    
+    .code-block .string {
+        color: #86efac;
+    }
+    
+    .code-block .number {
+        color: #fbbf24;
+    }
+    
+    /* Table Styles */
+    .doc-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 1rem 0;
+        font-size: 0.9rem;
+    }
+    
+    .doc-table th, .doc-table td {
+        padding: 0.875rem 1rem;
+        text-align: left;
+        border-bottom: 1px solid var(--border);
+    }
+    
+    .doc-table th {
+        background: rgba(139, 92, 246, 0.1);
+        color: var(--text);
+        font-weight: 600;
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+    }
+    
+    .doc-table tr:hover {
+        background: rgba(139, 92, 246, 0.05);
+    }
+    
+    .doc-table td code {
+        background: rgba(139, 92, 246, 0.2);
+        padding: 0.2rem 0.4rem;
+        border-radius: 4px;
+        font-size: 0.8rem;
+    }
+    
+    /* Alert Boxes */
+    .alert {
+        padding: 1rem 1.25rem;
+        border-radius: 12px;
+        margin: 1rem 0;
+        display: flex;
+        align-items: flex-start;
+        gap: 0.75rem;
+    }
+    
+    .alert-warning {
+        background: rgba(245, 158, 11, 0.1);
+        border: 1px solid rgba(245, 158, 11, 0.3);
+        color: #fbbf24;
+    }
+    
+    .alert-success {
+        background: rgba(16, 185, 129, 0.1);
+        border: 1px solid rgba(16, 185, 129, 0.3);
+        color: #34d399;
+    }
+    
+    .alert-info {
+        background: rgba(59, 130, 246, 0.1);
+        border: 1px solid rgba(59, 130, 246, 0.3);
+        color: #60a5fa;
+    }
+    
+    .alert-icon {
+        font-size: 1.25rem;
+        flex-shrink: 0;
+    }
+    
+    .alert-content {
+        flex: 1;
+    }
+    
+    .alert-content strong {
+        display: block;
+        margin-bottom: 0.25rem;
+        color: inherit;
+    }
+    
+    /* Pattern Card */
+    .pattern-card {
+        background: var(--bg);
+        border-radius: 12px;
+        padding: 1.25rem;
+        margin: 1rem 0;
+        border-left: 4px solid #8b5cf6;
+    }
+    
+    .pattern-card.over {
+        border-left-color: #10b981;
+    }
+    
+    .pattern-card.under {
+        border-left-color: #f59e0b;
+    }
+    
+    .pattern-card .pattern-name {
+        font-weight: 600;
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+    
+    .pattern-card .pattern-rate {
+        font-family: 'JetBrains Mono', monospace;
+        color: #10b981;
+        font-weight: 600;
+    }
+    
+    .pattern-card .pattern-desc {
+        color: var(--text-muted);
+        font-size: 0.9rem;
+    }
+    
+    /* Hero Banner */
+    .model-hero {
+        background: linear-gradient(135deg, rgba(16, 185, 129, 0.15), rgba(139, 92, 246, 0.15));
+        border-radius: 20px;
+        padding: 2rem;
+        margin-bottom: 1.5rem;
+        border: 2px solid rgba(16, 185, 129, 0.3);
+    }
+    
+    .model-hero h1 {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+    }
+    
+    .model-hero .subtitle {
+        color: var(--text-muted);
+        font-size: 1.1rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .model-hero .badges {
+        display: flex;
+        gap: 0.75rem;
+        flex-wrap: wrap;
+    }
+    
+    .model-hero .badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.5rem 1rem;
+        border-radius: 20px;
+        font-size: 0.85rem;
+        font-weight: 500;
+    }
+    
+    .model-hero .badge.green {
+        background: rgba(16, 185, 129, 0.2);
+        color: #34d399;
+    }
+    
+    .model-hero .badge.purple {
+        background: rgba(139, 92, 246, 0.2);
+        color: #a78bfa;
+    }
+    
+    .model-hero .badge.blue {
+        background: rgba(59, 130, 246, 0.2);
+        color: #60a5fa;
+    }
+    
+    /* Responsive */
+    @media (max-width: 1024px) {
+        .docs-container {
+            flex-direction: column;
+        }
+        
+        .docs-nav {
+            width: 100%;
+            position: relative;
+            top: 0;
+        }
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="docs-container">
+    <!-- Sidebar Navigation -->
+    <nav class="docs-nav">
+        <div class="docs-nav-section">
+            <div class="docs-nav-title">Models</div>
+            <ul class="docs-nav-links">
+                <li>
+                    <a href="#" class="active" data-section="model-v10">
+                        🏆 Model V10
+                        <span class="badge recommended">Recommended</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" data-section="model-comparison">
+                        📊 Model Comparison
+                    </a>
+                </li>
+                <li>
+                    <a href="#" data-section="derived-line-fallacy">
+                        ⚠️ Derived Line Fallacy
+                    </a>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="docs-nav-section">
+            <div class="docs-nav-title">Data Sources</div>
+            <ul class="docs-nav-links">
+                <li>
+                    <a href="#" data-section="sportsbook-lines">
+                        📋 Sportsbook Lines
+                    </a>
+                </li>
+                <li>
+                    <a href="#" data-section="defense-position">
+                        🛡️ Defense vs Position
+                    </a>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="docs-nav-section">
+            <div class="docs-nav-title">Guides</div>
+            <ul class="docs-nav-links">
+                <li>
+                    <a href="#" data-section="getting-started">
+                        🚀 Getting Started
+                    </a>
+                </li>
+                <li>
+                    <a href="#" data-section="best-practices">
+                        ✅ Best Practices
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    
+    <!-- Main Content -->
+    <div class="docs-content">
+        <!-- Model V10 Section -->
+        <section id="model-v10" class="doc-section active">
+            <div class="model-hero">
+                <h1>🏆 Model V10 - Market-Aware Model</h1>
+                <p class="subtitle">The first PropAI model that measures true market edge by requiring actual sportsbook lines.</p>
+                <div class="badges">
+                    <span class="badge green">✓ Production Ready</span>
+                    <span class="badge purple">Requires Sportsbook Lines</span>
+                    <span class="badge blue">61.1% Hit Rate*</span>
+                </div>
+            </div>
+            
+            <div class="alert alert-warning">
+                <span class="alert-icon">⚠️</span>
+                <div class="alert-content">
+                    <strong>Important: Why Previous Models Were Misleading</strong>
+                    All previous models (V2-V9, Production, RCM) tested predictions against derived lines (player averages), 
+                    artificially inflating hit rates by 5-15%. Model V10 addresses this by requiring actual sportsbook lines.
+                </div>
+            </div>
+            
+            <div class="doc-card">
+                <h2>📈 Performance Summary</h2>
+                <p>Backtest results from December 2025 - February 2026 using derived lines for comparison:</p>
+                
+                <div class="stats-grid">
+                    <div class="stat-box premium">
+                        <div class="value">67.2%</div>
+                        <div class="label">Premium Tier</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="value">64.1%</div>
+                        <div class="label">PTS Props</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="value">61.1%</div>
+                        <div class="label">Overall</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="value">62.2%</div>
+                        <div class="label">Elite Defense</div>
+                    </div>
+                </div>
+                
+                <h3>By Direction</h3>
+                <table class="doc-table">
+                    <thead>
+                        <tr>
+                            <th>Direction</th>
+                            <th>Hit Rate</th>
+                            <th>Picks</th>
+                            <th>Key Insight</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>UNDER</code></td>
+                            <td>60.9%</td>
+                            <td>709</td>
+                            <td>Primary focus per RCM analysis</td>
+                        </tr>
+                        <tr>
+                            <td><code>OVER</code></td>
+                            <td>62.7%</td>
+                            <td>59</td>
+                            <td>Selective - only clear patterns</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <h3>By Prop Type</h3>
+                <table class="doc-table">
+                    <thead>
+                        <tr>
+                            <th>Prop</th>
+                            <th>Hit Rate</th>
+                            <th>Strategy</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>PTS</code></td>
+                            <td>64.1%</td>
+                            <td>UNDER preferred (63.9% vs 48.3% OVER)</td>
+                        </tr>
+                        <tr>
+                            <td><code>REB</code></td>
+                            <td>59.7%</td>
+                            <td>Both directions (~59% both ways)</td>
+                        </tr>
+                        <tr>
+                            <td><code>AST</code></td>
+                            <td>N/A</td>
+                            <td>EXCLUDED - too volatile (~54%)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="doc-card">
+                <h2>🎯 Pattern Detection</h2>
+                <p>Model V10 requires pattern confirmation for all picks. No "generic edge" picks are generated.</p>
+                
+                <h3>OVER Patterns</h3>
+                
+                <div class="pattern-card over">
+                    <div class="pattern-name">
+                        Cold Bounce 
+                        <span class="pattern-rate">65.9% hit rate</span>
+                    </div>
+                    <div class="pattern-desc">
+                        Player's L5 is 20%+ below their L15 average (cold streak), but their last game 
+                        showed recovery above L10. Regression to mean is expected.
+                    </div>
+                </div>
+                
+                <div class="pattern-card over">
+                    <div class="pattern-name">
+                        Hot Sustained 
+                        <span class="pattern-rate">55.6% hit rate</span>
+                    </div>
+                    <div class="pattern-desc">
+                        Player's L5 is 30%+ above their L15 average, L3 ≥ L5 (still maintaining), 
+                        and 3+ of last 5 games were above L15. Momentum continuation expected.
+                    </div>
+                </div>
+                
+                <h3>UNDER Patterns</h3>
+                
+                <div class="pattern-card under">
+                    <div class="pattern-name">
+                        Elite Defense 
+                        <span class="pattern-rate">62.2% hit rate</span>
+                    </div>
+                    <div class="pattern-desc">
+                        Opponent ranks TOP 5 in Defense vs Position for the player's position and stat type.
+                        Elite defenses consistently limit production.
+                    </div>
+                </div>
+                
+                <div class="pattern-card under">
+                    <div class="pattern-name">
+                        Cold Streak 
+                        <span class="pattern-rate">57.9% hit rate</span>
+                    </div>
+                    <div class="pattern-desc">
+                        Player's L5 is 15%+ below their season average. Cold players tend to 
+                        stay cold in the short term.
+                    </div>
+                </div>
+            </div>
+            
+            <div class="doc-card">
+                <h2>⚙️ Configuration</h2>
+                <p>Model V10 uses the following default configuration:</p>
+                
+                <div class="code-block">
+                    <code>
+<span class="keyword">@dataclass</span>
+<span class="keyword">class</span> ModelConfigV10:
+    <span class="comment"># CORE PRINCIPLE</span>
+    require_sportsbook_line: <span class="keyword">bool</span> = <span class="keyword">True</span>  <span class="comment"># CRITICAL</span>
+    
+    <span class="comment"># Data requirements</span>
+    min_games_required: <span class="keyword">int</span> = <span class="number">10</span>
+    min_avg_minutes: <span class="keyword">float</span> = <span class="number">23.0</span>  <span class="comment"># Established players only</span>
+    
+    <span class="comment"># Edge requirements (vs ACTUAL lines)</span>
+    min_edge_over: <span class="keyword">float</span> = <span class="number">8.0</span>
+    min_edge_under: <span class="keyword">float</span> = <span class="number">6.0</span>
+    min_edge_premium: <span class="keyword">float</span> = <span class="number">12.0</span>
+    
+    <span class="comment"># Strategic direction</span>
+    pts_direction: <span class="keyword">str</span> = <span class="string">"UNDER_PREFERRED"</span>
+    reb_direction: <span class="keyword">str</span> = <span class="string">"BOTH"</span>
+    include_ast: <span class="keyword">bool</span> = <span class="keyword">False</span>  <span class="comment"># EXCLUDED</span>
+                    </code>
+                </div>
+                
+                <h3>Key Parameters Explained</h3>
+                <table class="doc-table">
+                    <thead>
+                        <tr>
+                            <th>Parameter</th>
+                            <th>Default</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>require_sportsbook_line</code></td>
+                            <td><code>True</code></td>
+                            <td>The core principle - no line = no pick</td>
+                        </tr>
+                        <tr>
+                            <td><code>min_avg_minutes</code></td>
+                            <td><code>23.0</code></td>
+                            <td>Only established starters/key rotation players</td>
+                        </tr>
+                        <tr>
+                            <td><code>pts_direction</code></td>
+                            <td><code>UNDER_PREFERRED</code></td>
+                            <td>PTS UNDER hits at 63.9% vs OVER at 48.3%</td>
+                        </tr>
+                        <tr>
+                            <td><code>include_ast</code></td>
+                            <td><code>False</code></td>
+                            <td>AST props excluded (~54% = coin flip)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="doc-card">
+                <h2>🚀 Usage</h2>
+                
+                <h3>Generate Daily Picks</h3>
+                <div class="code-block">
+                    <code>
+<span class="keyword">from</span> src.nba_props.engine.model_v10 <span class="keyword">import</span> (
+    get_daily_picks_v10,
+    ModelConfigV10,
+)
+
+<span class="comment"># Standard usage (requires sportsbook lines)</span>
+picks = get_daily_picks_v10(<span class="string">"2026-02-03"</span>)
+<span class="keyword">print</span>(picks.summary())
+
+<span class="comment"># Custom configuration</span>
+config = ModelConfigV10()
+config.min_edge_under = <span class="number">8.0</span>  <span class="comment"># Stricter edge</span>
+picks = get_daily_picks_v10(<span class="string">"2026-02-03"</span>, config=config)
+                    </code>
+                </div>
+                
+                <h3>Run Backtest</h3>
+                <div class="code-block">
+                    <code>
+<span class="keyword">from</span> src.nba_props.engine.model_v10 <span class="keyword">import</span> run_backtest_v10
+
+<span class="comment"># Run comprehensive backtest</span>
+result = run_backtest_v10(
+    <span class="string">"2025-12-01"</span>,
+    <span class="string">"2026-02-02"</span>,
+    verbose=<span class="keyword">True</span>
+)
+<span class="keyword">print</span>(result.summary())
+                    </code>
+                </div>
+                
+                <h3>Fetch Sportsbook Lines First</h3>
+                <div class="code-block">
+                    <code>
+<span class="comment"># Fetch today's lines before generating picks</span>
+python3 run_cli.py fetch-lines-api --pts --reb
+
+<span class="comment"># Check API quota</span>
+python3 run_cli.py api-status
+                    </code>
+                </div>
+            </div>
+            
+            <div class="alert alert-success">
+                <span class="alert-icon">💡</span>
+                <div class="alert-content">
+                    <strong>Best Practice</strong>
+                    Fetch sportsbook lines daily before generating picks. Focus on PREMIUM tier picks only 
+                    for highest confidence. Prioritize UNDER picks, especially for PTS props.
+                </div>
+            </div>
+        </section>
+        
+        <!-- Model Comparison Section -->
+        <section id="model-comparison" class="doc-section">
+            <div class="doc-card">
+                <h2>📊 Model Comparison</h2>
+                <p>All PropAI models compared by performance and features:</p>
+                
+                <table class="doc-table">
+                    <thead>
+                        <tr>
+                            <th>Rank</th>
+                            <th>Model</th>
+                            <th>Hit Rate</th>
+                            <th>Focus</th>
+                            <th>Uses Real Lines?</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="background: rgba(16, 185, 129, 0.1);">
+                            <td>🥇 1</td>
+                            <td><strong>Model V10</strong></td>
+                            <td>61.1%*</td>
+                            <td>Market-Aware</td>
+                            <td>⚠️ Derived (comparison)</td>
+                        </tr>
+                        <tr>
+                            <td>🥈 2</td>
+                            <td>Model V9</td>
+                            <td>68.6%*</td>
+                            <td>Line-Aware</td>
+                            <td>Partial</td>
+                        </tr>
+                        <tr>
+                            <td>🥉 3</td>
+                            <td>Production</td>
+                            <td>66.7%*</td>
+                            <td>Pattern Detection</td>
+                            <td>❌ Derived</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Hybrid v1.2</td>
+                            <td>66.6%*</td>
+                            <td>RCM + Patterns</td>
+                            <td>❌ Derived</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>RCM v1.4</td>
+                            <td>60.4%*</td>
+                            <td>Contribution Rate</td>
+                            <td>❌ Derived</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <p><em>* Hit rates marked with asterisk are measured against derived lines and are inflated by 5-15%</em></p>
+            </div>
+        </section>
+        
+        <!-- Derived Line Fallacy Section -->
+        <section id="derived-line-fallacy" class="doc-section">
+            <div class="doc-card">
+                <h2>⚠️ The Derived Line Fallacy</h2>
+                <p>Understanding why previous model performance was overstated.</p>
+                
+                <h3>The Problem</h3>
+                <p>Previous models calculated "betting lines" as player averages:</p>
+                
+                <div class="code-block">
+                    <code>
+<span class="comment"># Previous approach (WRONG)</span>
+"Line" = L10_average × <span class="number">1.05</span>  <span class="comment"># Simple 5% buffer</span>
+                    </code>
+                </div>
+                
+                <h3>Real Example</h3>
+                <table class="doc-table">
+                    <thead>
+                        <tr>
+                            <th>Metric</th>
+                            <th>Derived Line</th>
+                            <th>Actual DraftKings Line</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Peyton Watson - Rebounds</td>
+                            <td>4.9 (L10 avg) → 5.15 adjusted</td>
+                            <td>6.5</td>
+                        </tr>
+                        <tr>
+                            <td>Model Projection</td>
+                            <td>6.0 rebounds</td>
+                            <td>6.0 rebounds</td>
+                        </tr>
+                        <tr>
+                            <td>Model Pick</td>
+                            <td>OVER 5.15 → HIT ✅</td>
+                            <td>UNDER 6.5 → HIT ✅</td>
+                        </tr>
+                        <tr>
+                            <td>If Actual = 6</td>
+                            <td>OVER 5.15 → HIT ✅</td>
+                            <td>UNDER 6.5 → HIT ✅</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <h3>Why It Matters</h3>
+                <p>The model was measuring: <strong>"Can we predict if a player exceeds their average?"</strong></p>
+                <p>But betting requires: <strong>"Can we beat the sportsbook's line?"</strong></p>
+                
+                <div class="alert alert-info">
+                    <span class="alert-icon">ℹ️</span>
+                    <div class="alert-content">
+                        <strong>Model V10 Solution</strong>
+                        Model V10 requires actual sportsbook lines, ensuring edge calculations reflect 
+                        real betting opportunities. No line = No pick.
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Sportsbook Lines Section -->
+        <section id="sportsbook-lines" class="doc-section">
+            <div class="doc-card">
+                <h2>📋 Sportsbook Lines Integration</h2>
+                <p>How to fetch and use real betting lines from sportsbooks.</p>
+                
+                <h3>Fetching Lines via CLI</h3>
+                <div class="code-block">
+                    <code>
+<span class="comment"># Fetch PTS and REB lines for today</span>
+python3 run_cli.py fetch-lines-api
+
+<span class="comment"># Fetch for a specific date</span>
+python3 run_cli.py fetch-lines-api --date 2026-02-03
+
+<span class="comment"># Check remaining API quota</span>
+python3 run_cli.py api-status
+
+<span class="comment"># View stored lines</span>
+python3 run_cli.py list-lines --date 2026-02-03
+                    </code>
+                </div>
+                
+                <h3>Supported Bookmakers</h3>
+                <table class="doc-table">
+                    <thead>
+                        <tr>
+                            <th>Priority</th>
+                            <th>Bookmaker</th>
+                            <th>Key</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>1</td><td>DraftKings</td><td>draftkings</td></tr>
+                        <tr><td>2</td><td>FanDuel</td><td>fanduel</td></tr>
+                        <tr><td>3</td><td>BetMGM</td><td>betmgm</td></tr>
+                        <tr><td>4</td><td>Caesars</td><td>caesars</td></tr>
+                        <tr><td>5</td><td>PointsBet</td><td>pointsbet</td></tr>
+                    </tbody>
+                </table>
+                
+                <h3>API Quota</h3>
+                <p>The Odds API free tier provides 500 requests/month. Each market (PTS, REB) for each game costs 1 credit.</p>
+            </div>
+        </section>
+        
+        <!-- Defense vs Position Section -->
+        <section id="defense-position" class="doc-section">
+            <div class="doc-card">
+                <h2>🛡️ Defense vs Position (DVP)</h2>
+                <p>How team defense ratings affect player prop predictions.</p>
+                
+                <h3>What It Measures</h3>
+                <p>For each NBA team and each position (PG, SG, SF, PF, C), DVP data shows:</p>
+                <ul>
+                    <li><strong>PTS Allowed Rank</strong> - How many points they allow to that position (1 = best defense)</li>
+                    <li><strong>REB Allowed Rank</strong> - How many rebounds they allow (1 = best)</li>
+                    <li><strong>AST Allowed Rank</strong> - How many assists they allow (1 = best)</li>
+                </ul>
+                
+                <h3>Rating Thresholds</h3>
+                <table class="doc-table">
+                    <thead>
+                        <tr>
+                            <th>Rating</th>
+                            <th>Rank Range</th>
+                            <th>Model Adjustment</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span style="color: #ef4444;">Elite</span></td>
+                            <td>1-5</td>
+                            <td>-12% projection</td>
+                        </tr>
+                        <tr>
+                            <td><span style="color: #f59e0b;">Good</span></td>
+                            <td>6-10</td>
+                            <td>-6% projection</td>
+                        </tr>
+                        <tr>
+                            <td>Average</td>
+                            <td>11-20</td>
+                            <td>No adjustment</td>
+                        </tr>
+                        <tr>
+                            <td><span style="color: #10b981;">Weak</span></td>
+                            <td>21-30</td>
+                            <td>+6% projection</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <h3>Data Source</h3>
+                <p>DVP data is sourced from <a href="https://hashtagbasketball.com/nba-defense-vs-position" target="_blank">Hashtag Basketball</a>.</p>
+            </div>
+        </section>
+        
+        <!-- Getting Started Section -->
+        <section id="getting-started" class="doc-section">
+            <div class="doc-card">
+                <h2>🚀 Getting Started</h2>
+                <p>Quick guide to generating your first Model V10 picks.</p>
+                
+                <h3>Step 1: Fetch Sportsbook Lines</h3>
+                <div class="code-block">
+                    <code>
+python3 run_cli.py fetch-lines-api --pts --reb
+                    </code>
+                </div>
+                
+                <h3>Step 2: Generate Picks via Web Interface</h3>
+                <ol>
+                    <li>Go to <strong>Model Performance</strong> page</li>
+                    <li>Select <strong>V10 - Market-Aware (Recommended)</strong> from the model dropdown</li>
+                    <li>Choose your date</li>
+                    <li>Click <strong>Generate Picks</strong></li>
+                </ol>
+                
+                <h3>Step 3: Focus on Premium Tier</h3>
+                <p>Premium tier picks have:</p>
+                <ul>
+                    <li>Confidence score ≥ 85</li>
+                    <li>Edge vs line ≥ 12%</li>
+                    <li>Pattern confirmation</li>
+                    <li>67.2% historical hit rate</li>
+                </ul>
+            </div>
+        </section>
+        
+        <!-- Best Practices Section -->
+        <section id="best-practices" class="doc-section">
+            <div class="doc-card">
+                <h2>✅ Best Practices</h2>
+                
+                <h3>Do's</h3>
+                <ul>
+                    <li>✅ Fetch sportsbook lines daily before generating picks</li>
+                    <li>✅ Focus on PREMIUM tier picks for highest confidence</li>
+                    <li>✅ Prioritize UNDER picks, especially for PTS props</li>
+                    <li>✅ Check for elite defense matchups</li>
+                    <li>✅ Monitor your API quota (500/month free tier)</li>
+                </ul>
+                
+                <h3>Don'ts</h3>
+                <ul>
+                    <li>❌ Don't bet on AST props (~54% = coin flip)</li>
+                    <li>❌ Don't rely on derived lines for performance measurement</li>
+                    <li>❌ Don't ignore pattern confirmation requirements</li>
+                    <li>❌ Don't bet on players with &lt;23 min average</li>
+                    <li>❌ Don't expect 66%+ hit rates with actual lines (realistic: 55-60%)</li>
+                </ul>
+                
+                <h3>Bankroll Management</h3>
+                <ul>
+                    <li>Break-even at -110 odds: 52.4%</li>
+                    <li>Expected Model V10 edge: 3-8% above break-even</li>
+                    <li>Recommended: Flat betting 1-2% of bankroll per pick</li>
+                    <li>Track performance separately for PREMIUM vs HIGH tier</li>
+                </ul>
+            </div>
+        </section>
+    </div>
+</div>
+
+<script>
+// Navigation handling
+document.querySelectorAll('.docs-nav-links a').forEach(link => {
+    link.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        // Update active link
+        document.querySelectorAll('.docs-nav-links a').forEach(l => l.classList.remove('active'));
+        this.classList.add('active');
+        
+        // Show corresponding section
+        const sectionId = this.dataset.section;
+        document.querySelectorAll('.doc-section').forEach(section => {
+            section.classList.remove('active');
+        });
+        document.getElementById(sectionId).classList.add('active');
+        
+        // Scroll to top of content
+        document.querySelector('.docs-content').scrollTop = 0;
+    });
+});
+</script>
+{% endblock %}

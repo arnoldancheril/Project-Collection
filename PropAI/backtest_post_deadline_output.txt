@@ -1,0 +1,150 @@
+================================================================================
+NBA PROPS — POST-TRADE-DEADLINE BACKTEST (V19.2)
+Trade Deadline: 2026-02-06
+Post-Deadline Period: 2026-02-06 to 2026-02-12
+Started: 2026-02-19 18:02:03
+================================================================================
+
+📊 Running pre-deadline backtest (2025-12-01 to 2026-02-05)...
+
+======================================================================
+  Post-Trade-Deadline Backtest: PRE-DEADLINE
+  Period: 2025-12-01 to 2026-02-05 (67 days)
+======================================================================
+
+🔍 Scanning boxscores for player team changes since 2026-01-30...
+  No new trades detected.
+
+📊 Auto-updating team roster status from trade data...
+  🏀 Competing TOR: 1 out / 1 in (stability: 0.84)
+  🏀 Competing BKN: 1 out / 1 in (stability: 0.84)
+  🏀 Competing DET: 1 out / 1 in (stability: 0.84)
+  🏳️ TANKING UTA: 3 out / 3 in (stability: 0.52)
+  🏀 Competing CHI: 6 out / 6 in (stability: 0.30)
+  🏀 Competing LAC: 3 out / 2 in (stability: 0.60)
+  🏀 Competing MIL: 1 out / 2 in (stability: 0.76)
+  🏀 Competing MIN: 2 out / 2 in (stability: 0.68)
+  🏀 Competing ORL: 1 out / 1 in (stability: 0.84)
+  🏀 Competing MEM: 4 out / 3 in (stability: 0.44)
+  🏀 Competing PHX: 0 out / 1 in (stability: 0.92)
+  🏀 Competing NYK: 1 out / 1 in (stability: 0.84)
+  🏀 Competing NOP: 1 out / 0 in (stability: 0.92)
+  🏀 Competing GSW: 2 out / 0 in (stability: 0.84)
+  🏀 Competing CHA: 1 out / 1 in (stability: 0.84)
+  🏀 Competing LAL: 1 out / 1 in (stability: 0.84)
+  🏀 Competing OKC: 1 out / 1 in (stability: 0.84)
+  🏀 Competing SAC: 2 out / 1 in (stability: 0.76)
+  🏀 Competing POR: 0 out / 1 in (stability: 0.92)
+  🏀 Competing DAL: 1 out / 4 in (stability: 0.60)
+  🏀 Competing IND: 2 out / 1 in (stability: 0.76)
+  🏀 Competing ATL: 2 out / 3 in (stability: 0.60)
+  🏀 Competing PHI: 1 out / 2 in (stability: 0.76)
+  🏀 Competing CLE: 1 out / 3 in (stability: 0.68)
+  🏀 Competing BOS: 2 out / 1 in (stability: 0.76)
+  🏳️ TANKING WAS: 3 out / 1 in (stability: 0.68)
+  Updated roster status for 26 teams.
+  Traded players detected: 44
+  Tanking teams detected: 10
+    Teams: BKN, DAL, IND, MEM, MIL, NOP, POR, SAC, UTA, WAS
+
+  Processing 2025-12-01 (1%)...  Processing 2025-12-06 (9%)...  Processing 2025-12-11 (16%)...  Processing 2025-12-16 (24%)...  Processing 2025-12-21 (31%)...  Processing 2025-12-26 (39%)...  Processing 2025-12-31 (46%)...  Processing 2026-01-05 (54%)...  Processing 2026-01-10 (61%)...  Processing 2026-01-15 (69%)...  Processing 2026-01-20 (76%)...  Processing 2026-01-25 (84%)...  Processing 2026-01-30 (91%)...  Processing 2026-02-04 (99%)...
+📊 Running post-deadline backtest (2026-02-06 to 2026-02-12)...
+
+======================================================================
+  Post-Trade-Deadline Backtest: POST-DEADLINE
+  Period: 2026-02-06 to 2026-02-12 (7 days)
+======================================================================
+
+🔍 Scanning boxscores for player team changes since 2026-01-30...
+  No new trades detected.
+
+📊 Auto-updating team roster status from trade data...
+  🏀 Competing TOR: 1 out / 1 in (stability: 0.84)
+  🏀 Competing BKN: 1 out / 1 in (stability: 0.84)
+  🏀 Competing DET: 1 out / 1 in (stability: 0.84)
+  🏳️ TANKING UTA: 3 out / 3 in (stability: 0.52)
+  🏀 Competing CHI: 6 out / 6 in (stability: 0.30)
+  🏀 Competing LAC: 3 out / 2 in (stability: 0.60)
+  🏀 Competing MIL: 1 out / 2 in (stability: 0.76)
+  🏀 Competing MIN: 2 out / 2 in (stability: 0.68)
+  🏀 Competing ORL: 1 out / 1 in (stability: 0.84)
+  🏀 Competing MEM: 4 out / 3 in (stability: 0.44)
+  🏀 Competing PHX: 0 out / 1 in (stability: 0.92)
+  🏀 Competing NYK: 1 out / 1 in (stability: 0.84)
+  🏀 Competing NOP: 1 out / 0 in (stability: 0.92)
+  🏀 Competing GSW: 2 out / 0 in (stability: 0.84)
+  🏀 Competing CHA: 1 out / 1 in (stability: 0.84)
+  🏀 Competing LAL: 1 out / 1 in (stability: 0.84)
+  🏀 Competing OKC: 1 out / 1 in (stability: 0.84)
+  🏀 Competing SAC: 2 out / 1 in (stability: 0.76)
+  🏀 Competing POR: 0 out / 1 in (stability: 0.92)
+  🏀 Competing DAL: 1 out / 4 in (stability: 0.60)
+  🏀 Competing IND: 2 out / 1 in (stability: 0.76)
+  🏀 Competing ATL: 2 out / 3 in (stability: 0.60)
+  🏀 Competing PHI: 1 out / 2 in (stability: 0.76)
+  🏀 Competing CLE: 1 out / 3 in (stability: 0.68)
+  🏀 Competing BOS: 2 out / 1 in (stability: 0.76)
+  🏳️ TANKING WAS: 3 out / 1 in (stability: 0.68)
+  Updated roster status for 26 teams.
+  Traded players detected: 44
+  Tanking teams detected: 9
+    Teams: BKN, DAL, IND, MEM, MIL, NOP, SAC, UTA, WAS
+
+  Processing 2026-02-06 (14%)...  Processing 2026-02-11 (86%)...
+================================================================================
+POST-TRADE-DEADLINE BACKTEST REPORT
+================================================================================
+
+Metric                                    Pre-Deadline      Post-Deadline      Delta
+-------------------------------------------------------------------------------------
+
+  📊 OVERALL
+  Total                               794/1407 (56.4%)     69/126 (54.8%)     -1.7%
+
+  📈 BY DIRECTION
+  UNDER                               787/1399 (56.3%)     69/126 (54.8%)     -1.5%
+  OVER                                     7/8 (87.5%)         0/0 (0.0%)    -87.5%
+
+  🏀 BY PROP TYPE
+  PTS                                  535/978 (54.7%)      39/76 (51.3%)     -3.4%
+  REB                                  259/429 (60.4%)      30/50 (60.0%)     -0.4%
+
+  ⭐ BY CONFIDENCE TIER
+  PREMIUM                              519/898 (57.8%)      29/52 (55.8%)     -2.0%
+  HIGH                                 207/394 (52.5%)      25/46 (54.3%) +     1.8%
+  STANDARD                              68/115 (59.1%)      15/28 (53.6%)     -5.6%
+
+  📊 BY LINE SOURCE
+  Sportsbook                             36/68 (52.9%)      11/13 (84.6%) +    31.7%
+  Derived                             758/1339 (56.6%)     58/113 (51.3%)     -5.3%
+
+================================================================================
+TRADE-SPECIFIC ANALYSIS (Post-Deadline)
+================================================================================
+  Traded player picks                    0/0    (0.0%)
+  Non-traded player picks               69/126  (54.8%)
+  Tanking team picks                    47/88   (53.4%)
+  Trade factor active picks             51/93   (54.8%)
+
+  Players skipped (trade):   18
+  Players skipped (tank):    0
+
+  💰 ROI: +4.55% ($+572.79 on $12600 wagered)
+
+================================================================================
+DAILY BREAKDOWN (Post-Deadline)
+================================================================================
+  Date            Picks   Hits     Rate    Skipped
+  --------------------------------------------------
+  2026-02-06         23     12    52.2%        3  ⚠️
+  2026-02-07         23     13    56.5%        0  ✅
+  2026-02-08         18     13    72.2%        1  ✅
+  2026-02-09         19     13    68.4%        6  ✅
+  2026-02-10         11      4    36.4%        0  ❌
+  2026-02-11         17      9    52.9%        8  ⚠️
+  2026-02-12         15      5    33.3%        0  ❌
+
+  Runtime: 13.6s
+================================================================================
+
+Completed: 2026-02-19 18:04:17

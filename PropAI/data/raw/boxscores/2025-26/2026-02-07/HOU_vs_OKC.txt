@@ -1,0 +1,26 @@
+## Houston Rockets — Box Score
+
+PLAYER	MIN	FGM	FGA	FG%	3PM	3PA	3P%	FTM	FTA	FT%	OREB	DREB	REB	AST	STL	BLK	TO	PF	PTS	+/-
+Kevin Durant	40:23	6	10	0.6	2	5	0.4	6	9	0.7	0	1	1	4	1	1	4	3	20	+10.0
+Jabari Smith Jr.	43:14	5	12	0.4	3	7	0.4	9	11	0.8	3	7	10	0	1	1	0	1	22	+7.0
+Alperen Sengun	36:49	6	12	0.5	1	1	1.0	4	4	1.0	2	10	12	11	3	3	1	2	17	+13.0
+Tari Eason	34:21	10	22	0.5	5	13	0.4	1	2	0.5	2	6	8	1	3	0	3	5	26	+12.0
+Reed Sheppard	31:48	7	12	0.6	1	4	0.2	1	2	0.5	1	2	3	6	3	0	4	3	16	-3.0
+Dorian Finney-Smith	16:03	1	6	0.2	1	6	0.2	0	0	0.0	0	0	0	1	0	0	0	2	3	-9.0
+JD Davison	17:54	3	5	0.6	2	4	0.5	0	0	0.0	0	4	4	1	0	0	1	3	8	+16.0
+Clint Capela	7:37	0	1	0.0	0	0	0.0	0	0	0.0	1	0	1	1	0	0	1	0	0	-12.0
+Josh Okogie	11:48	0	3	0.0	0	3	0.0	0	0	0.0	1	1	2	0	1	0	0	4	0	-4.0
+
+## Oklahoma City Thunder — Box Score
+
+PLAYER	MIN	FGM	FGA	FG%	3PM	3PA	3P%	FTM	FTA	FT%	OREB	DREB	REB	AST	STL	BLK	TO	PF	PTS	+/-
+Aaron Wiggins	26:24	6	15	0.4	3	7	0.4	2	4	0.5	1	1	2	1	0	0	0	2	17	-24.0
+Chet Holmgren	34:40	5	10	0.5	1	3	0.3	6	8	0.8	3	11	14	0	0	0	1	3	17	+5.0
+Isaiah Hartenstein	25:06	2	4	0.5	0	0	0.0	0	3	0.0	3	5	8	11	0	1	3	0	4	+11.0
+Luguentz Dort	26:46	1	6	0.2	0	4	0.0	0	2	0.0	1	1	2	3	0	0	1	2	2	-20.0
+Cason Wallace	34:19	10	16	0.6	1	3	0.3	2	2	1.0	1	3	4	4	4	0	3	1	23	+7.0
+Alex Caruso	26:24	3	9	0.3	2	6	0.3	0	1	0.0	1	1	2	1	2	1	1	4	8	-16.0
+Jaylin Williams	15:01	2	4	0.5	2	3	0.7	0	0	0.0	0	3	3	1	1	0	0	1	6	-16.0
+Isaiah Joe	29:06	5	11	0.5	3	6	0.5	8	8	1.0	0	3	3	2	3	0	1	5	21	+18.0
+Kenrich Williams	8:15	1	1	1.0	1	1	1.0	0	0	0.0	1	1	2	1	0	0	4	2	3	-7.0
+Jared McCain	13:56	2	6	0.3	1	3	0.3	0	0	0.0	2	0	2	1	0	0	2	0	5	+12.0

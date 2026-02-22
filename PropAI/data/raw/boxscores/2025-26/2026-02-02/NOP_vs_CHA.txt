@@ -1,0 +1,26 @@
+## New Orleans Pelicans — Box Score
+
+PLAYER	MIN	FGM	FGA	FG%	3PM	3PA	3P%	FTM	FTA	FT%	OREB	DREB	REB	AST	STL	BLK	TO	PF	PTS	+/-
+Saddiq Bey	34:57	2	12	0.2	1	6	0.2	3	4	0.8	0	3	3	5	1	0	0	1	8	-6.0
+Zion Williamson	30:50	5	13	0.4	0	0	0.0	4	9	0.4	3	8	11	4	0	0	1	4	14	-7.0
+Derik Queen	30:59	5	9	0.6	1	2	0.5	5	6	0.8	0	8	8	3	3	1	2	4	16	-9.0
+Trey Murphy III	37:20	10	20	0.5	3	8	0.4	4	4	1.0	0	1	1	4	1	0	2	1	27	-10.0
+Herbert Jones	36:09	4	9	0.4	4	7	0.6	0	0	0.0	1	6	7	2	1	1	0	4	12	-8.0
+Karlo Matković	13:47	1	5	0.2	0	3	0.0	0	0	0.0	0	1	1	2	1	1	0	1	2	+1.0
+Jeremiah Fears	15:18	3	7	0.4	1	2	0.5	2	2	1.0	1	1	2	0	2	1	1	2	9	0.0
+Jose Alvarado	30:01	1	7	0.1	1	6	0.2	0	0	0.0	0	0	0	3	0	0	0	3	3	+2.0
+Yves Missi	10:38	2	2	1.0	0	0	0.0	0	0	0.0	0	1	1	0	0	0	1	3	4	+2.0
+
+## Charlotte Hornets — Box Score
+
+PLAYER	MIN	FGM	FGA	FG%	3PM	3PA	3P%	FTM	FTA	FT%	OREB	DREB	REB	AST	STL	BLK	TO	PF	PTS	+/-
+Kon Knueppel	35:35	4	13	0.3	4	12	0.3	5	6	0.8	2	7	9	2	0	0	4	1	17	+11.0
+Miles Bridges	30:35	3	11	0.3	0	4	0.0	3	4	0.8	0	4	4	1	0	0	2	4	9	+13.0
+Moussa Diabaté	28:17	1	2	0.5	0	0	0.0	0	0	0.0	2	7	9	2	0	0	0	1	2	+2.0
+Brandon Miller	36:42	7	21	0.3	2	12	0.2	0	0	0.0	2	6	8	4	1	0	2	3	16	+7.0
+LaMelo Ball	29:58	8	20	0.4	3	14	0.2	5	5	1.0	0	8	8	5	2	0	2	2	24	+24.0
+Sion James	19:06	1	2	0.5	0	1	0.0	1	2	0.5	1	4	5	0	0	0	1	2	3	-13.0
+Josh Green	10:19	0	0	0.0	0	0	0.0	0	0	0.0	0	0	0	0	0	0	1	1	0	-2.0
+Ryan Kalkbrenner	17:50	3	5	0.6	0	0	0.0	4	6	0.7	3	4	7	1	0	3	2	3	10	+7.0
+Grant Williams	19:33	5	7	0.7	2	4	0.5	4	4	1.0	3	6	9	1	0	0	1	2	16	-10.0
+Collin Sexton	12:03	2	4	0.5	1	3	0.3	0	0	0.0	0	0	0	0	0	0	1	0	5	-4.0

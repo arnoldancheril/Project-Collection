@@ -1,0 +1,26 @@
+## Philadelphia 76ers — Box Score
+
+PLAYER	MIN	FGM	FGA	FG%	3PM	3PA	3P%	FTM	FTA	FT%	OREB	DREB	REB	AST	STL	BLK	TO	PF	PTS	+/-
+Kelly Oubre Jr.	38:11	6	14	0.4	3	7	0.4	3	4	0.8	2	4	6	2	2	0	1	4	18	-3.0
+Dominick Barlow	17:35	3	4	0.8	0	1	0.0	0	1	0.0	1	3	4	0	0	0	1	2	6	+5.0
+Joel Embiid	32:59	9	19	0.5	4	7	0.6	11	13	0.8	1	8	9	3	0	1	2	3	33	-10.0
+VJ Edgecombe	25:13	2	4	0.5	1	2	0.5	0	0	0.0	1	5	6	2	0	0	1	4	5	-5.0
+Tyrese Maxey	39:50	8	21	0.4	3	10	0.3	10	11	0.9	0	9	9	6	1	0	3	2	29	+14.0
+Trendon Watford	26:39	2	4	0.5	0	1	0.0	2	2	1.0	2	5	7	2	0	2	4	4	6	-8.0
+Quentin Grimes	28:12	2	4	0.5	0	1	0.0	2	3	0.7	1	3	4	3	0	0	2	4	6	+2.0
+Justin Edwards	16:32	1	1	1.0	0	0	0.0	0	0	0.0	0	0	0	0	1	0	1	1	2	+16.0
+Adem Bona	14:47	2	3	0.7	0	0	0.0	0	0	0.0	3	2	5	0	1	1	2	1	4	+19.0
+
+## Phoenix Suns — Box Score
+
+PLAYER	MIN	FGM	FGA	FG%	3PM	3PA	3P%	FTM	FTA	FT%	OREB	DREB	REB	AST	STL	BLK	TO	PF	PTS	+/-
+Dillon Brooks	35:45	11	23	0.5	2	10	0.2	4	4	1.0	1	1	2	2	1	0	0	4	28	+10.0
+Royce O'Neale	33:35	5	10	0.5	4	9	0.4	0	0	0.0	4	7	11	3	2	0	3	3	14	+6.0
+Mark Williams	30:43	4	7	0.6	0	0	0.0	3	5	0.6	2	9	11	2	2	0	0	3	11	0.0
+Devin Booker	32:07	5	12	0.4	1	7	0.1	10	11	0.9	0	2	2	9	0	0	4	5	21	+10.0
+Collin Gillespie	28:25	2	11	0.2	2	10	0.2	0	0	0.0	0	4	4	2	2	0	1	2	6	-24.0
+Jalen Green	16:42	2	6	0.3	0	3	0.0	4	4	1.0	0	3	3	3	0	0	1	0	8	+7.0
+Oso Ighodaro	16:59	1	2	0.5	0	0	0.0	1	2	0.5	1	2	3	1	0	0	1	1	3	-7.0
+Jordan Goodwin	27:02	2	7	0.3	1	4	0.2	2	3	0.7	3	0	3	0	1	0	0	4	7	-6.0
+Ryan Dunn	10:34	1	5	0.2	1	3	0.3	0	0	0.0	1	0	1	0	0	0	0	1	3	-11.0
+Jamaree Bouyea	8:07	0	0	0.0	0	0	0.0	2	2	1.0	0	0	0	0	0	0	2	0	2	-15.0

@@ -1,0 +1,27 @@
+## Brooklyn Nets — Box Score
+
+PLAYER	MIN	FGM	FGA	FG%	3PM	3PA	3P%	FTM	FTA	FT%	OREB	DREB	REB	AST	STL	BLK	TO	PF	PTS	+/-
+Terance Mann	29:55	3	5	0.6	0	2	0.0	1	1	1.0	1	2	3	2	0	0	3	4	7	-14.0
+Michael Porter Jr.	36:58	15	24	0.6	6	10	0.6	0	1	0.0	2	3	5	3	3	0	3	3	36	0.0
+Nic Claxton	28:41	2	6	0.3	0	0	0.0	4	6	0.7	3	2	5	8	0	2	2	3	8	-9.0
+Drake Powell	8:28	0	0	0.0	0	0	0.0	0	0	0.0	0	0	0	0	0	0	1	0	0	-9.0
+Egor Dëmin	31:09	5	9	0.6	3	7	0.4	2	2	1.0	1	4	5	3	0	0	3	3	15	-2.0
+Cam Thomas	24:56	4	10	0.4	0	2	0.0	3	5	0.6	0	3	3	3	0	0	2	0	11	0.0
+Ziaire Williams	27:41	3	9	0.3	3	7	0.4	2	2	1.0	0	1	1	5	1	0	1	3	11	+15.0
+Day'Ron Sharpe	19:19	3	5	0.6	0	0	0.0	1	2	0.5	3	4	7	2	3	0	0	1	7	+5.0
+Danny Wolf	14:10	2	6	0.3	0	3	0.0	0	0	0.0	1	4	5	0	0	0	2	3	4	-3.0
+Ben Saraf	18:41	1	1	1.0	1	1	1.0	0	0	0.0	1	0	1	2	2	0	3	1	3	-3.0
+
+## Phoenix Suns — Box Score
+
+PLAYER	MIN	FGM	FGA	FG%	3PM	3PA	3P%	FTM	FTA	FT%	OREB	DREB	REB	AST	STL	BLK	TO	PF	PTS	+/-
+Dillon Brooks	34:08	9	15	0.6	2	5	0.4	6	6	1.0	0	3	3	3	1	1	3	2	26	+4.0
+Royce O'Neale	34:25	2	9	0.2	0	5	0.0	3	3	1.0	1	1	2	4	2	1	1	4	7	+1.0
+Mark Williams	30:04	13	16	0.8	0	0	0.0	1	1	1.0	3	3	6	1	1	1	0	2	27	+7.0
+Grayson Allen	34:08	7	11	0.6	2	4	0.5	2	3	0.7	1	2	3	6	1	0	2	1	18	+4.0
+Jordan Goodwin	28:59	2	6	0.3	0	2	0.0	0	0	0.0	3	6	9	3	1	0	3	3	4	-7.0
+Ryan Dunn	21:26	4	6	0.7	1	2	0.5	0	0	0.0	1	1	2	2	4	0	0	1	9	-7.0
+Jamaree Bouyea	24:29	5	11	0.5	0	2	0.0	0	0	0.0	0	3	3	1	1	1	2	2	10	+9.0
+Oso Ighodaro	17:30	1	1	1.0	0	0	0.0	1	3	0.3	1	1	2	1	1	0	4	2	3	-6.0
+Nigel Hayes-Davis	7:16	0	1	0.0	0	0	0.0	1	2	0.5	0	1	1	0	0	1	0	1	1	+9.0
+Rasheer Fleming	7:32	0	1	0.0	0	0	0.0	1	2	0.5	0	1	1	1	0	0	0	0	1	+6.0

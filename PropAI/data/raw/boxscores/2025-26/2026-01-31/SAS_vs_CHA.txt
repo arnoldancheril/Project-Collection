@@ -1,0 +1,26 @@
+## San Antonio Spurs — Box Score
+
+PLAYER	MIN	FGM	FGA	FG%	3PM	3PA	3P%	FTM	FTA	FT%	OREB	DREB	REB	AST	STL	BLK	TO	PF	PTS	+/-
+Devin Vassell	30:23	5	10	0.5	2	7	0.3	1	2	0.5	0	5	5	2	1	1	0	0	13	+7.0
+Julian Champagnie	28:52	4	7	0.6	4	6	0.7	1	1	1.0	0	5	5	1	0	2	0	1	13	-2.0
+Victor Wembanyama	30:36	6	15	0.4	0	3	0.0	4	4	1.0	3	5	8	1	1	0	2	2	16	-14.0
+Stephon Castle	35:02	5	11	0.5	1	2	0.5	5	6	0.8	2	3	5	9	0	1	3	4	16	+4.0
+De'Aaron Fox	32:04	5	13	0.4	1	5	0.2	0	0	0.0	0	2	2	7	2	0	1	3	11	-15.0
+Dylan Harper	23:14	9	13	0.7	2	3	0.7	0	0	0.0	0	1	1	2	1	1	2	2	20	-6.0
+Luke Kornet	19:06	0	0	0.0	0	0	0.0	0	0	0.0	0	5	5	1	1	1	1	2	0	0.0
+Keldon Johnson	15:54	1	5	0.2	0	3	0.0	4	4	1.0	1	1	2	1	1	0	0	0	6	-3.0
+Harrison Barnes	24:48	3	6	0.5	3	5	0.6	2	2	1.0	0	3	3	2	0	0	1	2	11	+4.0
+
+## Charlotte Hornets — Box Score
+
+PLAYER	MIN	FGM	FGA	FG%	3PM	3PA	3P%	FTM	FTA	FT%	OREB	DREB	REB	AST	STL	BLK	TO	PF	PTS	+/-
+Kon Knueppel	35:03	5	11	0.5	1	4	0.2	2	3	0.7	1	5	6	4	1	0	2	1	13	+1.0
+Miles Bridges	31:27	5	12	0.4	1	6	0.2	3	3	1.0	2	4	6	2	2	0	1	4	14	-11.0
+Moussa Diabaté	33:17	6	9	0.7	0	0	0.0	0	0	0.0	4	6	10	6	0	2	0	3	12	+19.0
+Brandon Miller	34:51	7	21	0.3	3	9	0.3	9	9	1.0	3	5	8	2	1	1	2	1	26	+13.0
+LaMelo Ball	31:53	5	15	0.3	2	6	0.3	4	5	0.8	0	8	8	8	0	0	3	3	16	+7.0
+Josh Green	11:23	0	1	0.0	0	1	0.0	0	0	0.0	1	0	1	2	0	0	0	1	0	-2.0
+Ryan Kalkbrenner	14:15	3	4	0.8	0	0	0.0	0	0	0.0	2	2	4	0	0	2	0	0	6	-14.0
+Grant Williams	17:57	1	5	0.2	1	4	0.2	0	0	0.0	0	4	4	2	0	0	0	3	3	+10.0
+Sion James	12:13	0	2	0.0	0	0	0.0	0	0	0.0	1	3	4	1	0	0	2	1	0	+6.0
+Collin Sexton	17:37	7	8	0.9	5	5	1.0	2	2	1.0	0	0	0	3	1	0	1	2	21	-4.0

@@ -1,0 +1,2117 @@
+{% extends "base.html" %}
+
+{% block title %}Model Lab - NBA Props Predictor{% endblock %}
+{% block page_title %}🧪 Model Lab{% endblock %}
+
+{% block extra_css %}
+<style>
+    .lab-container {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    
+    /* Tab Navigation */
+    .lab-tabs {
+        display: flex;
+        gap: 0.25rem;
+        background: var(--card-bg);
+        padding: 0.5rem;
+        border-radius: 12px;
+        border: 1px solid var(--border);
+        flex-wrap: wrap;
+    }
+    
+    .lab-tab {
+        padding: 0.75rem 1.25rem;
+        background: transparent;
+        border: none;
+        color: var(--text-muted);
+        font-weight: 600;
+        cursor: pointer;
+        border-radius: 8px;
+        transition: all 0.2s;
+        font-size: 0.9rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+    
+    .lab-tab:hover {
+        background: rgba(139, 92, 246, 0.1);
+        color: var(--text);
+    }
+    
+    .lab-tab.active {
+        background: linear-gradient(135deg, #8b5cf6, #6d28d9);
+        color: white;
+    }
+    
+    .tab-panel {
+        display: none;
+    }
+    
+    .tab-panel.active {
+        display: block;
+    }
+    
+    /* Cards */
+    .lab-card {
+        background: var(--card-bg);
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        padding: 1.5rem;
+    }
+    
+    .lab-card-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1rem;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+    
+    .lab-card h3 {
+        margin: 0;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 1.1rem;
+    }
+    
+    .lab-card p {
+        color: var(--text-muted);
+        font-size: 0.875rem;
+        margin: 0;
+    }
+    
+    /* Controls */
+    .controls-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 1rem;
+        margin-bottom: 1rem;
+    }
+    
+    .form-group {
+        display: flex;
+        flex-direction: column;
+        gap: 0.375rem;
+    }
+    
+    .form-group label {
+        font-size: 0.75rem;
+        font-weight: 600;
+        color: var(--text-muted);
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+    }
+    
+    .form-input, .form-select {
+        background: var(--bg);
+        border: 1px solid var(--border);
+        padding: 0.625rem 0.875rem;
+        border-radius: 8px;
+        color: var(--text);
+        font-size: 0.875rem;
+        width: 100%;
+    }
+    
+    .form-input:focus, .form-select:focus {
+        outline: none;
+        border-color: #8b5cf6;
+        box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.2);
+    }
+    
+    /* Buttons */
+    .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        padding: 0.75rem 1.5rem;
+        border-radius: 10px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.2s;
+        font-size: 0.9rem;
+        border: none;
+    }
+    
+    .btn-primary {
+        background: linear-gradient(135deg, #8b5cf6, #6d28d9);
+        color: white;
+    }
+    
+    .btn-primary:hover:not(:disabled) {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(139, 92, 246, 0.4);
+    }
+    
+    .btn-success {
+        background: linear-gradient(135deg, #10b981, #059669);
+        color: white;
+    }
+    
+    .btn-success:hover:not(:disabled) {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(16, 185, 129, 0.4);
+    }
+    
+    .btn-secondary {
+        background: var(--bg);
+        color: var(--text);
+        border: 1px solid var(--border);
+    }
+    
+    .btn-secondary:hover {
+        border-color: #8b5cf6;
+        background: rgba(139, 92, 246, 0.1);
+    }
+    
+    .btn:disabled {
+        opacity: 0.7;
+        cursor: not-allowed;
+        transform: none !important;
+    }
+    
+    .btn-group {
+        display: flex;
+        gap: 0.5rem;
+        flex-wrap: wrap;
+    }
+    
+    /* Model Selection Grid */
+    .model-selection-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 0.75rem;
+        max-height: 400px;
+        overflow-y: auto;
+        padding: 0.5rem;
+        background: var(--bg);
+        border-radius: 12px;
+        border: 1px solid var(--border);
+    }
+    
+    .model-select-card {
+        background: var(--card-bg);
+        border: 2px solid var(--border);
+        border-radius: 10px;
+        padding: 0.875rem;
+        cursor: pointer;
+        transition: all 0.2s;
+        position: relative;
+    }
+    
+    .model-select-card:hover {
+        border-color: rgba(139, 92, 246, 0.5);
+        transform: translateY(-2px);
+    }
+    
+    .model-select-card.selected {
+        border-color: #8b5cf6;
+        background: rgba(139, 92, 246, 0.1);
+    }
+    
+    .model-select-card.selected::after {
+        content: '✓';
+        position: absolute;
+        top: 0.5rem;
+        right: 0.5rem;
+        width: 20px;
+        height: 20px;
+        background: #8b5cf6;
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.7rem;
+        font-weight: bold;
+    }
+    
+    .model-name {
+        font-weight: 700;
+        font-size: 0.9rem;
+        margin-bottom: 0.25rem;
+    }
+    
+    .model-version {
+        font-size: 0.7rem;
+        background: rgba(139, 92, 246, 0.2);
+        color: #8b5cf6;
+        padding: 0.15rem 0.4rem;
+        border-radius: 4px;
+        display: inline-block;
+        margin-bottom: 0.375rem;
+    }
+    
+    .model-category {
+        font-size: 0.7rem;
+        color: var(--text-muted);
+    }
+    
+    .model-capabilities {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.25rem;
+        margin-top: 0.375rem;
+    }
+    
+    .capability-tag {
+        font-size: 0.6rem;
+        padding: 0.1rem 0.3rem;
+        border-radius: 3px;
+        background: var(--bg);
+        color: var(--text-muted);
+    }
+    
+    /* Select All Buttons */
+    .model-select-actions {
+        display: flex;
+        gap: 0.5rem;
+        margin-bottom: 0.75rem;
+    }
+    
+    .model-select-actions button {
+        font-size: 0.75rem;
+        padding: 0.375rem 0.75rem;
+    }
+    
+    /* Ranking Dashboard */
+    .ranking-dashboard {
+        display: grid;
+        grid-template-columns: 1fr 300px;
+        gap: 1.5rem;
+    }
+    
+    @media (max-width: 1100px) {
+        .ranking-dashboard {
+            grid-template-columns: 1fr;
+        }
+    }
+    
+    .ranking-table-container {
+        overflow-x: auto;
+    }
+    
+    .ranking-table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 0.875rem;
+    }
+    
+    .ranking-table th, .ranking-table td {
+        padding: 0.875rem 0.75rem;
+        text-align: left;
+        border-bottom: 1px solid var(--border);
+    }
+    
+    .ranking-table th {
+        color: var(--text-muted);
+        font-weight: 600;
+        font-size: 0.7rem;
+        text-transform: uppercase;
+        background: rgba(0, 0, 0, 0.1);
+        position: sticky;
+        top: 0;
+    }
+    
+    .ranking-table th.sortable {
+        cursor: pointer;
+    }
+    
+    .ranking-table th.sortable:hover {
+        color: #8b5cf6;
+    }
+    
+    .ranking-table tbody tr:hover {
+        background: rgba(139, 92, 246, 0.05);
+    }
+    
+    .rank-badge {
+        width: 28px;
+        height: 28px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        font-weight: 700;
+        font-size: 0.8rem;
+    }
+    
+    .rank-1 { background: linear-gradient(135deg, #fbbf24, #f59e0b); color: #78350f; }
+    .rank-2 { background: linear-gradient(135deg, #d1d5db, #9ca3af); color: #374151; }
+    .rank-3 { background: linear-gradient(135deg, #cd7f32, #b8860b); color: #44200a; }
+    
+    .rate-badge {
+        padding: 0.25rem 0.5rem;
+        border-radius: 6px;
+        font-weight: 600;
+        font-size: 0.8rem;
+        font-family: 'JetBrains Mono', monospace;
+    }
+    
+    .rate-excellent { background: rgba(16, 185, 129, 0.2); color: #10b981; }
+    .rate-good { background: rgba(59, 130, 246, 0.2); color: #3b82f6; }
+    .rate-moderate { background: rgba(245, 158, 11, 0.2); color: #f59e0b; }
+    .rate-poor { background: rgba(239, 68, 68, 0.2); color: #ef4444; }
+    
+    /* Leaderboard Sidebar */
+    .leaderboard {
+        background: var(--bg);
+        border-radius: 12px;
+        padding: 1rem;
+        border: 1px solid var(--border);
+    }
+    
+    .leaderboard h4 {
+        margin: 0 0 1rem 0;
+        font-size: 0.9rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+    
+    .leaderboard-item {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        padding: 0.75rem;
+        border-radius: 8px;
+        margin-bottom: 0.5rem;
+        background: var(--card-bg);
+        border: 1px solid var(--border);
+    }
+    
+    .leaderboard-item.gold {
+        border-color: #fbbf24;
+        background: linear-gradient(135deg, rgba(251, 191, 36, 0.1), rgba(245, 158, 11, 0.1));
+    }
+    
+    .leaderboard-position {
+        font-size: 1.25rem;
+        font-weight: 800;
+        width: 30px;
+    }
+    
+    .leaderboard-info {
+        flex: 1;
+    }
+    
+    .leaderboard-model {
+        font-weight: 600;
+        font-size: 0.875rem;
+    }
+    
+    .leaderboard-stat {
+        font-size: 0.75rem;
+        color: var(--text-muted);
+    }
+    
+    .leaderboard-rate {
+        font-family: 'JetBrains Mono', monospace;
+        font-weight: 700;
+        font-size: 1rem;
+    }
+    
+    /* Factor Configuration */
+    .factor-config-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 1rem;
+    }
+    
+    .factor-card {
+        background: var(--bg);
+        border: 1px solid var(--border);
+        border-radius: 10px;
+        padding: 1rem;
+    }
+    
+    .factor-card h4 {
+        margin: 0 0 0.75rem 0;
+        font-size: 0.9rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+    
+    .factor-slider-group {
+        margin-bottom: 0.75rem;
+    }
+    
+    .factor-slider-label {
+        display: flex;
+        justify-content: space-between;
+        font-size: 0.75rem;
+        margin-bottom: 0.25rem;
+    }
+    
+    .factor-slider-label span:first-child {
+        color: var(--text-muted);
+    }
+    
+    .factor-slider-label span:last-child {
+        font-family: 'JetBrains Mono', monospace;
+        color: #8b5cf6;
+    }
+    
+    input[type="range"] {
+        width: 100%;
+        height: 6px;
+        -webkit-appearance: none;
+        background: var(--border);
+        border-radius: 3px;
+        outline: none;
+    }
+    
+    input[type="range"]::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        width: 16px;
+        height: 16px;
+        background: #8b5cf6;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+    
+    .factor-toggle {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0.5rem 0;
+        border-bottom: 1px solid var(--border);
+    }
+    
+    .factor-toggle:last-child {
+        border-bottom: none;
+    }
+    
+    .factor-toggle label {
+        font-size: 0.8rem;
+        cursor: pointer;
+    }
+    
+    .toggle-switch {
+        position: relative;
+        width: 40px;
+        height: 22px;
+    }
+    
+    .toggle-switch input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+    
+    .toggle-slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: var(--border);
+        border-radius: 22px;
+        transition: 0.3s;
+    }
+    
+    .toggle-slider:before {
+        position: absolute;
+        content: "";
+        height: 16px;
+        width: 16px;
+        left: 3px;
+        bottom: 3px;
+        background-color: white;
+        border-radius: 50%;
+        transition: 0.3s;
+    }
+    
+    .toggle-switch input:checked + .toggle-slider {
+        background-color: #8b5cf6;
+    }
+    
+    .toggle-switch input:checked + .toggle-slider:before {
+        transform: translateX(18px);
+    }
+    
+    /* Progress Section */
+    .progress-section {
+        background: var(--bg);
+        border-radius: 12px;
+        padding: 1.5rem;
+        text-align: center;
+        border: 1px solid var(--border);
+    }
+    
+    .progress-bar-container {
+        width: 100%;
+        height: 24px;
+        background: var(--border);
+        border-radius: 12px;
+        overflow: hidden;
+        margin: 1rem 0;
+    }
+    
+    .progress-bar {
+        height: 100%;
+        background: linear-gradient(90deg, #8b5cf6, #6d28d9);
+        border-radius: 12px;
+        transition: width 0.3s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-weight: 600;
+        font-size: 0.75rem;
+        min-width: 50px;
+    }
+    
+    .progress-status {
+        display: flex;
+        justify-content: space-between;
+        font-size: 0.8rem;
+        color: var(--text-muted);
+    }
+    
+    .current-model {
+        color: var(--text);
+        font-weight: 600;
+    }
+    
+    /* Stats Cards */
+    .stats-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 0.75rem;
+    }
+    
+    .stat-card {
+        background: var(--bg);
+        border-radius: 10px;
+        padding: 1rem;
+        text-align: center;
+        border: 1px solid var(--border);
+    }
+    
+    .stat-value {
+        font-size: 1.5rem;
+        font-weight: 800;
+        font-family: 'JetBrains Mono', monospace;
+    }
+    
+    .stat-label {
+        font-size: 0.7rem;
+        color: var(--text-muted);
+        text-transform: uppercase;
+        margin-top: 0.25rem;
+    }
+    
+    /* Best Model Cards */
+    .best-models-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1rem;
+    }
+    
+    .best-model-card {
+        background: var(--bg);
+        border-radius: 12px;
+        padding: 1rem;
+        border: 1px solid var(--border);
+        text-align: center;
+    }
+    
+    .best-model-card.highlight {
+        border-color: #fbbf24;
+        background: linear-gradient(135deg, rgba(251, 191, 36, 0.1), rgba(245, 158, 11, 0.05));
+    }
+    
+    .best-model-icon {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .best-model-category {
+        font-size: 0.75rem;
+        color: var(--text-muted);
+        text-transform: uppercase;
+        margin-bottom: 0.25rem;
+    }
+    
+    .best-model-name {
+        font-weight: 700;
+        font-size: 1rem;
+        color: #8b5cf6;
+        margin-bottom: 0.25rem;
+    }
+    
+    .best-model-stat {
+        font-size: 0.85rem;
+        color: var(--text-muted);
+    }
+    
+    /* Detailed Results Panel */
+    .detail-panel {
+        background: var(--bg);
+        border-radius: 12px;
+        padding: 1rem;
+        border: 1px solid var(--border);
+        margin-top: 1rem;
+    }
+    
+    .detail-panel h4 {
+        margin: 0 0 1rem 0;
+        font-size: 0.9rem;
+    }
+    
+    .detail-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 1rem;
+    }
+    
+    .detail-box {
+        background: var(--card-bg);
+        border-radius: 8px;
+        padding: 0.75rem;
+        border: 1px solid var(--border);
+    }
+    
+    .detail-box-title {
+        font-size: 0.7rem;
+        color: var(--text-muted);
+        text-transform: uppercase;
+        margin-bottom: 0.5rem;
+    }
+    
+    .detail-row {
+        display: flex;
+        justify-content: space-between;
+        font-size: 0.8rem;
+        padding: 0.25rem 0;
+    }
+    
+    .detail-row-value {
+        font-family: 'JetBrains Mono', monospace;
+        font-weight: 600;
+    }
+    
+    /* Strength/Weakness Tags */
+    .strength-tag {
+        display: inline-block;
+        padding: 0.25rem 0.5rem;
+        margin: 0.125rem;
+        border-radius: 4px;
+        font-size: 0.75rem;
+        background: rgba(16, 185, 129, 0.1);
+        color: #10b981;
+        border-left: 2px solid #10b981;
+    }
+    
+    .weakness-tag {
+        display: inline-block;
+        padding: 0.25rem 0.5rem;
+        margin: 0.125rem;
+        border-radius: 4px;
+        font-size: 0.75rem;
+        background: rgba(239, 68, 68, 0.1);
+        color: #ef4444;
+        border-left: 2px solid #ef4444;
+    }
+    
+    /* Line Source Toggle */
+    .line-source-toggle {
+        display: flex;
+        background: var(--bg);
+        border-radius: 8px;
+        padding: 0.25rem;
+        border: 1px solid var(--border);
+    }
+    
+    .line-source-btn {
+        flex: 1;
+        padding: 0.5rem 1rem;
+        border: none;
+        background: transparent;
+        color: var(--text-muted);
+        font-weight: 600;
+        font-size: 0.8rem;
+        cursor: pointer;
+        border-radius: 6px;
+        transition: all 0.2s;
+    }
+    
+    .line-source-btn.active {
+        background: #8b5cf6;
+        color: white;
+    }
+    
+    /* Loading Spinner */
+    .loading-spinner {
+        width: 20px;
+        height: 20px;
+        border: 2px solid var(--border);
+        border-top-color: #8b5cf6;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+    }
+    
+    @keyframes spin {
+        to { transform: rotate(360deg); }
+    }
+    
+    /* Empty State */
+    .empty-state {
+        text-align: center;
+        padding: 3rem;
+        color: var(--text-muted);
+    }
+    
+    .empty-state-icon {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+        opacity: 0.5;
+    }
+    
+    /* Responsive */
+    @media (max-width: 768px) {
+        .controls-grid {
+            grid-template-columns: 1fr;
+        }
+        
+        .model-selection-grid {
+            grid-template-columns: 1fr;
+        }
+        
+        .ranking-dashboard {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="lab-container">
+    <!-- Tab Navigation -->
+    <div class="lab-tabs">
+        <button class="lab-tab active" onclick="switchTab('test')">
+            🔬 Test Models
+        </button>
+        <button class="lab-tab" onclick="switchTab('rankings')">
+            🏆 Rankings
+        </button>
+        <button class="lab-tab" onclick="switchTab('factors')">
+            ⚙️ Factor Config
+        </button>
+        <button class="lab-tab" onclick="switchTab('compare')">
+            📊 Compare
+        </button>
+        <button class="lab-tab" onclick="switchTab('history')">
+            📜 Test History
+        </button>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- TAB 1: TEST MODELS -->
+    <!-- ============================================================ -->
+    <div id="tab-test" class="tab-panel active">
+        <!-- Configuration Card -->
+        <div class="lab-card">
+            <div class="lab-card-header">
+                <div>
+                    <h3>🔬 Model Testing Configuration</h3>
+                    <p>Select models to test against actual line data or projection data</p>
+                </div>
+            </div>
+            
+            <div class="controls-grid">
+                <div class="form-group">
+                    <label>Start Date</label>
+                    <input type="date" id="test-start-date" class="form-input" value="2025-10-22">
+                </div>
+                <div class="form-group">
+                    <label>End Date</label>
+                    <input type="date" id="test-end-date" class="form-input">
+                </div>
+                <div class="form-group">
+                    <label>Line Data Source</label>
+                    <div class="line-source-toggle">
+                        <button class="line-source-btn active" onclick="setLineSource('sportsbook')" id="btn-sportsbook">
+                            📋 Actual Lines
+                        </button>
+                        <button class="line-source-btn" onclick="setLineSource('projections')" id="btn-projections">
+                            🎯 Projections
+                        </button>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Quick Select</label>
+                    <select id="model-preset" class="form-select" onchange="applyPreset()">
+                        <option value="">Custom Selection</option>
+                        <option value="latest">Latest Models (v16-v19)</option>
+                        <option value="all-general">All General Models</option>
+                        <option value="all-under">All UNDER Models</option>
+                        <option value="legacy">Legacy Models (v2-v10)</option>
+                        <option value="specialized">Specialized Models</option>
+                        <option value="all">All 19 Models</option>
+                    </select>
+                </div>
+            </div>
+            
+            <!-- Model Selection -->
+            <div class="model-select-actions">
+                <button class="btn btn-secondary" onclick="selectAllModels()">Select All</button>
+                <button class="btn btn-secondary" onclick="deselectAllModels()">Deselect All</button>
+                <span style="color: var(--text-muted); font-size: 0.8rem; margin-left: 0.5rem;">
+                    <span id="selected-count">0</span> models selected
+                </span>
+            </div>
+            
+            <div class="model-selection-grid" id="model-grid">
+                <!-- Populated by JS -->
+                <div class="empty-state">
+                    <div class="loading-spinner"></div>
+                    <p>Loading models...</p>
+                </div>
+            </div>
+            
+            <div style="margin-top: 1rem; display: flex; gap: 0.75rem; flex-wrap: wrap;">
+                <button class="btn btn-primary" id="run-test-btn" onclick="runModelTest()">
+                    ▶️ Run Test
+                </button>
+                <button class="btn btn-secondary" onclick="runQuickTest()">
+                    ⚡ Quick Test (7 days)
+                </button>
+            </div>
+        </div>
+        
+        <!-- Progress Section -->
+        <div class="lab-card" id="progress-section" style="display: none;">
+            <h3>🔄 Testing in Progress...</h3>
+            <div class="progress-section">
+                <p class="current-model" id="current-model">Initializing...</p>
+                <div class="progress-bar-container">
+                    <div class="progress-bar" id="progress-bar" style="width: 0%;">0%</div>
+                </div>
+                <div class="progress-status">
+                    <span id="progress-count">Model 0 of 0</span>
+                    <span id="progress-time">Elapsed: 0s</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Results Summary -->
+        <div class="lab-card" id="results-section" style="display: none;">
+            <div class="lab-card-header">
+                <h3>📊 Test Results Summary</h3>
+                <div class="btn-group">
+                    <button class="btn btn-secondary" onclick="exportResults()">📥 Export</button>
+                    <button class="btn btn-secondary" onclick="saveToHistory()">💾 Save to History</button>
+                </div>
+            </div>
+            
+            <div class="stats-grid" id="summary-stats">
+                <!-- Populated by JS -->
+            </div>
+            
+            <!-- Best Performing Models -->
+            <div style="margin-top: 1.5rem;">
+                <h4 style="margin-bottom: 1rem;">🏆 Best Performing Models</h4>
+                <div class="best-models-grid" id="best-models">
+                    <!-- Populated by JS -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- TAB 2: RANKINGS DASHBOARD -->
+    <!-- ============================================================ -->
+    <div id="tab-rankings" class="tab-panel">
+        <div class="lab-card">
+            <div class="lab-card-header">
+                <div>
+                    <h3>🏆 Model Rankings Dashboard</h3>
+                    <p>Live rankings based on latest test results. Click column headers to sort.</p>
+                </div>
+                <div class="btn-group">
+                    <select id="rank-sort" class="form-select" onchange="sortRankings()">
+                        <option value="quality">Sort by Quality Score</option>
+                        <option value="hitrate">Sort by Hit Rate</option>
+                        <option value="picks">Sort by Total Picks</option>
+                        <option value="overrate">Sort by OVER Rate</option>
+                        <option value="underrate">Sort by UNDER Rate</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="ranking-dashboard">
+                <!-- Rankings Table -->
+                <div class="ranking-table-container">
+                    <table class="ranking-table" id="rankings-table">
+                        <thead>
+                            <tr>
+                                <th>Rank</th>
+                                <th class="sortable" onclick="sortBy('model')">Model</th>
+                                <th class="sortable" onclick="sortBy('hitrate')">Hit Rate</th>
+                                <th class="sortable" onclick="sortBy('quality')">Quality</th>
+                                <th class="sortable" onclick="sortBy('picks')">Picks</th>
+                                <th class="sortable" onclick="sortBy('ppd')">Picks/Day</th>
+                                <th class="sortable" onclick="sortBy('over')">OVER</th>
+                                <th class="sortable" onclick="sortBy('under')">UNDER</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="rankings-body">
+                            <tr>
+                                <td colspan="9" class="empty-state">
+                                    <div class="empty-state-icon">📊</div>
+                                    <p>No test results yet. Run a model test to see rankings.</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <!-- Leaderboard Sidebar -->
+                <div class="leaderboard">
+                    <h4>👑 Top 5 Models</h4>
+                    <div id="leaderboard-list">
+                        <div class="empty-state" style="padding: 1rem;">
+                            <p style="font-size: 0.85rem;">Run tests to see leaderboard</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Detailed Model View -->
+        <div class="lab-card" id="model-detail-card" style="display: none;">
+            <div class="lab-card-header">
+                <h3>📋 Model Details: <span id="detail-model-name">--</span></h3>
+                <button class="btn btn-secondary" onclick="closeModelDetail()">✕ Close</button>
+            </div>
+            
+            <div class="detail-grid" id="model-detail-grid">
+                <!-- Populated by JS -->
+            </div>
+            
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1rem;">
+                <div>
+                    <h4 style="margin-bottom: 0.5rem; color: #10b981;">✓ Strengths</h4>
+                    <div id="model-strengths"></div>
+                </div>
+                <div>
+                    <h4 style="margin-bottom: 0.5rem; color: #ef4444;">✗ Weaknesses</h4>
+                    <div id="model-weaknesses"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- TAB 3: FACTOR CONFIGURATION -->
+    <!-- ============================================================ -->
+    <div id="tab-factors" class="tab-panel">
+        <div class="lab-card">
+            <div class="lab-card-header">
+                <div>
+                    <h3>⚙️ Factor Configuration</h3>
+                    <p>Adjust model factors and re-run tests to find optimal settings</p>
+                </div>
+                <div class="btn-group">
+                    <button class="btn btn-secondary" onclick="resetFactors()">↻ Reset to Defaults</button>
+                    <button class="btn btn-success" onclick="applyAndTest()">▶️ Apply & Test</button>
+                </div>
+            </div>
+            
+            <div class="factor-config-grid">
+                <!-- Edge Thresholds -->
+                <div class="factor-card">
+                    <h4>📏 Edge Thresholds</h4>
+                    <div class="factor-slider-group">
+                        <div class="factor-slider-label">
+                            <span>Min Edge Required</span>
+                            <span id="min-edge-value">2.5</span>
+                        </div>
+                        <input type="range" id="min-edge" min="0.5" max="10" step="0.5" value="2.5" 
+                               oninput="updateSliderValue('min-edge')">
+                    </div>
+                    <div class="factor-slider-group">
+                        <div class="factor-slider-label">
+                            <span>Premium Edge Threshold</span>
+                            <span id="premium-edge-value">5.0</span>
+                        </div>
+                        <input type="range" id="premium-edge" min="3" max="15" step="0.5" value="5.0"
+                               oninput="updateSliderValue('premium-edge')">
+                    </div>
+                </div>
+                
+                <!-- Confidence Weights -->
+                <div class="factor-card">
+                    <h4>⚖️ Confidence Weights</h4>
+                    <div class="factor-slider-group">
+                        <div class="factor-slider-label">
+                            <span>Recent Form Weight</span>
+                            <span id="form-weight-value">0.30</span>
+                        </div>
+                        <input type="range" id="form-weight" min="0.1" max="0.6" step="0.05" value="0.30"
+                               oninput="updateSliderValue('form-weight')">
+                    </div>
+                    <div class="factor-slider-group">
+                        <div class="factor-slider-label">
+                            <span>Defense Weight</span>
+                            <span id="defense-weight-value">0.25</span>
+                        </div>
+                        <input type="range" id="defense-weight" min="0.1" max="0.5" step="0.05" value="0.25"
+                               oninput="updateSliderValue('defense-weight')">
+                    </div>
+                    <div class="factor-slider-group">
+                        <div class="factor-slider-label">
+                            <span>H2H Weight</span>
+                            <span id="h2h-weight-value">0.20</span>
+                        </div>
+                        <input type="range" id="h2h-weight" min="0.05" max="0.4" step="0.05" value="0.20"
+                               oninput="updateSliderValue('h2h-weight')">
+                    </div>
+                </div>
+                
+                <!-- Game Context Factors -->
+                <div class="factor-card">
+                    <h4>🏟️ Game Context</h4>
+                    <div class="factor-toggle">
+                        <label for="b2b-factor">Back-to-Back Adjustment</label>
+                        <div class="toggle-switch">
+                            <input type="checkbox" id="b2b-factor" checked>
+                            <span class="toggle-slider"></span>
+                        </div>
+                    </div>
+                    <div class="factor-toggle">
+                        <label for="home-factor">Home/Away Adjustment</label>
+                        <div class="toggle-switch">
+                            <input type="checkbox" id="home-factor" checked>
+                            <span class="toggle-slider"></span>
+                        </div>
+                    </div>
+                    <div class="factor-toggle">
+                        <label for="pace-factor">Pace Adjustment</label>
+                        <div class="toggle-switch">
+                            <input type="checkbox" id="pace-factor" checked>
+                            <span class="toggle-slider"></span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Filtering Options -->
+                <div class="factor-card">
+                    <h4>🔍 Filtering Options</h4>
+                    <div class="factor-slider-group">
+                        <div class="factor-slider-label">
+                            <span>Min Games Required</span>
+                            <span id="min-games-value">5</span>
+                        </div>
+                        <input type="range" id="min-games" min="3" max="15" step="1" value="5"
+                               oninput="updateSliderValue('min-games')">
+                    </div>
+                    <div class="factor-slider-group">
+                        <div class="factor-slider-label">
+                            <span>Max Picks Per Day</span>
+                            <span id="max-picks-value">20</span>
+                        </div>
+                        <input type="range" id="max-picks" min="5" max="50" step="5" value="20"
+                               oninput="updateSliderValue('max-picks')">
+                    </div>
+                </div>
+                
+                <!-- UNDER Model Specific -->
+                <div class="factor-card">
+                    <h4>⬇️ UNDER Model Settings</h4>
+                    <div class="factor-slider-group">
+                        <div class="factor-slider-label">
+                            <span>Cold Streak Threshold</span>
+                            <span id="cold-streak-value">0.80</span>
+                        </div>
+                        <input type="range" id="cold-streak" min="0.6" max="0.95" step="0.05" value="0.80"
+                               oninput="updateSliderValue('cold-streak')">
+                    </div>
+                    <div class="factor-toggle">
+                        <label for="elite-defense-only">Elite Defense Only</label>
+                        <div class="toggle-switch">
+                            <input type="checkbox" id="elite-defense-only">
+                            <span class="toggle-slider"></span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Direction Preferences -->
+                <div class="factor-card">
+                    <h4>↕️ Direction Preferences</h4>
+                    <div class="factor-toggle">
+                        <label for="allow-over">Allow OVER Picks</label>
+                        <div class="toggle-switch">
+                            <input type="checkbox" id="allow-over" checked>
+                            <span class="toggle-slider"></span>
+                        </div>
+                    </div>
+                    <div class="factor-toggle">
+                        <label for="allow-under">Allow UNDER Picks</label>
+                        <div class="toggle-switch">
+                            <input type="checkbox" id="allow-under" checked>
+                            <span class="toggle-slider"></span>
+                        </div>
+                    </div>
+                    <div class="factor-toggle">
+                        <label for="prefer-under">Prefer UNDER Direction</label>
+                        <div class="toggle-switch">
+                            <input type="checkbox" id="prefer-under">
+                            <span class="toggle-slider"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Saved Configurations -->
+        <div class="lab-card">
+            <h3>💾 Saved Configurations</h3>
+            <div id="saved-configs">
+                <div class="empty-state" style="padding: 1.5rem;">
+                    <p>No saved configurations yet. Adjust factors and save for later.</p>
+                </div>
+            </div>
+            <div style="margin-top: 1rem;">
+                <button class="btn btn-secondary" onclick="saveCurrentConfig()">
+                    💾 Save Current Config
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- TAB 4: COMPARE MODELS -->
+    <!-- ============================================================ -->
+    <div id="tab-compare" class="tab-panel">
+        <div class="lab-card">
+            <div class="lab-card-header">
+                <div>
+                    <h3>📊 Side-by-Side Model Comparison</h3>
+                    <p>Compare up to 4 models directly</p>
+                </div>
+            </div>
+            
+            <div class="controls-grid" style="grid-template-columns: repeat(4, 1fr);">
+                <div class="form-group">
+                    <label>Model 1</label>
+                    <select id="compare-model-1" class="form-select">
+                        <option value="">Select model...</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Model 2</label>
+                    <select id="compare-model-2" class="form-select">
+                        <option value="">Select model...</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Model 3</label>
+                    <select id="compare-model-3" class="form-select">
+                        <option value="">Select model...</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Model 4</label>
+                    <select id="compare-model-4" class="form-select">
+                        <option value="">Select model...</option>
+                    </select>
+                </div>
+            </div>
+            
+            <button class="btn btn-primary" onclick="compareModels()">📊 Compare Selected</button>
+        </div>
+        
+        <div class="lab-card" id="comparison-results" style="display: none;">
+            <h3>📊 Comparison Results</h3>
+            <div id="comparison-grid">
+                <!-- Populated by JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- TAB 5: TEST HISTORY -->
+    <!-- ============================================================ -->
+    <div id="tab-history" class="tab-panel">
+        <div class="lab-card">
+            <div class="lab-card-header">
+                <div>
+                    <h3>📜 Test History</h3>
+                    <p>View and compare previous test runs</p>
+                </div>
+                <button class="btn btn-secondary" onclick="clearHistory()">🗑️ Clear History</button>
+            </div>
+            
+            <div id="history-list">
+                <div class="empty-state">
+                    <div class="empty-state-icon">📜</div>
+                    <p>No test history yet. Results will appear here after running tests.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+// ============================================================
+// GLOBAL STATE
+// ============================================================
+let allModels = [];
+let selectedModels = new Set();
+let testResults = [];
+let lineSource = 'sportsbook';
+let testHistory = JSON.parse(localStorage.getItem('modelLabHistory') || '[]');
+let savedConfigs = JSON.parse(localStorage.getItem('modelLabConfigs') || '[]');
+
+// ============================================================
+// INITIALIZATION
+// ============================================================
+document.addEventListener('DOMContentLoaded', async () => {
+    // Set default dates
+    const today = new Date().toISOString().split('T')[0];
+    document.getElementById('test-end-date').value = today;
+    
+    // Load models
+    await loadModels();
+    
+    // Populate compare dropdowns
+    populateCompareDropdowns();
+    
+    // Load history
+    renderHistory();
+    
+    // Load saved configs
+    renderSavedConfigs();
+});
+
+// ============================================================
+// TAB SWITCHING
+// ============================================================
+function switchTab(tabName) {
+    document.querySelectorAll('.lab-tab').forEach(btn => btn.classList.remove('active'));
+    document.querySelectorAll('.tab-panel').forEach(panel => panel.classList.remove('active'));
+    
+    document.querySelector(`.lab-tab[onclick="switchTab('${tabName}')"]`).classList.add('active');
+    document.getElementById(`tab-${tabName}`).classList.add('active');
+}
+
+// ============================================================
+// MODEL LOADING
+// ============================================================
+async function loadModels() {
+    try {
+        const response = await fetchAPI('/api/modellab/models');
+        if (response.error) throw new Error(response.error);
+        
+        allModels = response.models;
+        renderModelGrid();
+        populateCompareDropdowns();
+        
+    } catch (error) {
+        console.error('Error loading models:', error);
+        showToast('Error loading models: ' + error.message, 'error');
+    }
+}
+
+function renderModelGrid() {
+    const grid = document.getElementById('model-grid');
+    
+    if (!allModels.length) {
+        grid.innerHTML = '<div class="empty-state"><p>No models found</p></div>';
+        return;
+    }
+    
+    // Sort models: multi-file first (latest), then single-file, then specialized
+    const sorted = [...allModels].sort((a, b) => {
+        const order = { 'multi_file': 0, 'single_file': 1, 'specialized': 2 };
+        return (order[a.category] || 3) - (order[b.category] || 3);
+    });
+    
+    grid.innerHTML = sorted.map(m => `
+        <div class="model-select-card ${selectedModels.has(m.id) ? 'selected' : ''}" 
+             onclick="toggleModel('${m.id}')" data-model-id="${m.id}">
+            <div class="model-name">${m.name}</div>
+            <span class="model-version">v${m.version}</span>
+            <div class="model-category">${getCategoryLabel(m.category)}</div>
+            <div class="model-capabilities">
+                ${m.capabilities.slice(0, 4).map(c => `<span class="capability-tag">${c}</span>`).join('')}
+            </div>
+        </div>
+    `).join('');
+    
+    updateSelectedCount();
+}
+
+function getCategoryLabel(category) {
+    const labels = {
+        'multi_file': '🆕 Multi-File (Latest)',
+        'single_file': '📄 Single-File (Legacy)',
+        'specialized': '⭐ Specialized'
+    };
+    return labels[category] || category;
+}
+
+function toggleModel(modelId) {
+    if (selectedModels.has(modelId)) {
+        selectedModels.delete(modelId);
+    } else {
+        selectedModels.add(modelId);
+    }
+    
+    const card = document.querySelector(`[data-model-id="${modelId}"]`);
+    if (card) {
+        card.classList.toggle('selected', selectedModels.has(modelId));
+    }
+    
+    updateSelectedCount();
+}
+
+function selectAllModels() {
+    allModels.forEach(m => selectedModels.add(m.id));
+    renderModelGrid();
+}
+
+function deselectAllModels() {
+    selectedModels.clear();
+    renderModelGrid();
+}
+
+function updateSelectedCount() {
+    document.getElementById('selected-count').textContent = selectedModels.size;
+}
+
+function applyPreset() {
+    const preset = document.getElementById('model-preset').value;
+    selectedModels.clear();
+    
+    if (preset === 'latest') {
+        allModels.filter(m => ['v16', 'v17', 'v18', 'v19'].some(v => m.id.includes(v)))
+            .forEach(m => selectedModels.add(m.id));
+    } else if (preset === 'all-general') {
+        allModels.filter(m => m.id.includes('general') || !m.id.includes('under'))
+            .forEach(m => selectedModels.add(m.id));
+    } else if (preset === 'all-under') {
+        allModels.filter(m => m.id.includes('under'))
+            .forEach(m => selectedModels.add(m.id));
+    } else if (preset === 'legacy') {
+        allModels.filter(m => m.category === 'single_file')
+            .forEach(m => selectedModels.add(m.id));
+    } else if (preset === 'specialized') {
+        allModels.filter(m => m.category === 'specialized')
+            .forEach(m => selectedModels.add(m.id));
+    } else if (preset === 'all') {
+        allModels.forEach(m => selectedModels.add(m.id));
+    }
+    
+    renderModelGrid();
+}
+
+// ============================================================
+// LINE SOURCE TOGGLE
+// ============================================================
+function setLineSource(source) {
+    lineSource = source;
+    document.getElementById('btn-sportsbook').classList.toggle('active', source === 'sportsbook');
+    document.getElementById('btn-projections').classList.toggle('active', source === 'projections');
+}
+
+// ============================================================
+// RUN MODEL TEST
+// ============================================================
+async function runModelTest() {
+    if (selectedModels.size === 0) {
+        showToast('Please select at least one model', 'error');
+        return;
+    }
+    
+    const startDate = document.getElementById('test-start-date').value;
+    const endDate = document.getElementById('test-end-date').value;
+    
+    if (!startDate || !endDate) {
+        showToast('Please select start and end dates', 'error');
+        return;
+    }
+    
+    const btn = document.getElementById('run-test-btn');
+    const progressSection = document.getElementById('progress-section');
+    const resultsSection = document.getElementById('results-section');
+    
+    btn.disabled = true;
+    btn.innerHTML = '<span class="loading-spinner"></span> Running...';
+    progressSection.style.display = 'block';
+    resultsSection.style.display = 'none';
+    
+    // Setup progress tracking
+    let progress = 0;
+    const progressBar = document.getElementById('progress-bar');
+    const progressCount = document.getElementById('progress-count');
+    const totalModels = selectedModels.size;
+    
+    const startTime = Date.now();
+    const timeInterval = setInterval(() => {
+        const elapsed = Math.round((Date.now() - startTime) / 1000);
+        document.getElementById('progress-time').textContent = `Elapsed: ${elapsed}s`;
+    }, 1000);
+    
+    // Simulated progress for long-running test
+    const progressInterval = setInterval(() => {
+        if (progress < 90) {
+            progress += Math.random() * 3;
+            progressBar.style.width = Math.min(progress, 90) + '%';
+            progressBar.textContent = Math.round(Math.min(progress, 90)) + '%';
+        }
+    }, 800);
+    
+    try {
+        const modelIds = Array.from(selectedModels);
+        
+        document.getElementById('current-model').textContent = 'Testing ' + modelIds.length + ' models...';
+        progressCount.textContent = `Model 0 of ${totalModels}`;
+        
+        const response = await fetchAPI('/api/modellab/comprehensive-backtest', {
+            method: 'POST',
+            body: JSON.stringify({
+                start_date: startDate,
+                end_date: endDate,
+                model_ids: modelIds,
+                line_source: lineSource
+            })
+        });
+        
+        clearInterval(progressInterval);
+        clearInterval(timeInterval);
+        
+        if (response.error) throw new Error(response.error);
+        
+        progressBar.style.width = '100%';
+        progressBar.textContent = '100%';
+        
+        testResults = response.results || [];
+        
+        // Display results
+        displayResults(response);
+        
+        progressSection.style.display = 'none';
+        resultsSection.style.display = 'block';
+        
+        // Update rankings tab
+        updateRankings();
+        
+        showToast(`Test complete! ${testResults.length} models tested.`, 'success');
+        
+    } catch (error) {
+        clearInterval(progressInterval);
+        clearInterval(timeInterval);
+        progressSection.style.display = 'none';
+        showToast('Error: ' + error.message, 'error');
+    } finally {
+        btn.disabled = false;
+        btn.innerHTML = '▶️ Run Test';
+    }
+}
+
+async function runQuickTest() {
+    // Set dates to last 7 days
+    const today = new Date();
+    const weekAgo = new Date(today);
+    weekAgo.setDate(weekAgo.getDate() - 7);
+    
+    document.getElementById('test-end-date').value = today.toISOString().split('T')[0];
+    document.getElementById('test-start-date').value = weekAgo.toISOString().split('T')[0];
+    
+    // Select top models if none selected
+    if (selectedModels.size === 0) {
+        allModels.filter(m => ['v18_general', 'v19_general', 'v17_general', 'under_v2'].includes(m.id))
+            .forEach(m => selectedModels.add(m.id));
+        renderModelGrid();
+    }
+    
+    await runModelTest();
+}
+
+// ============================================================
+// DISPLAY RESULTS
+// ============================================================
+function displayResults(response) {
+    const stats = document.getElementById('summary-stats');
+    const bestModels = document.getElementById('best-models');
+    
+    // Summary stats
+    const totalPicks = testResults.reduce((sum, r) => sum + (r.total_picks || 0), 0);
+    const avgHitRate = testResults.length > 0 
+        ? (testResults.reduce((sum, r) => sum + (r.hit_rate || 0), 0) / testResults.length).toFixed(1)
+        : 0;
+    
+    stats.innerHTML = `
+        <div class="stat-card">
+            <div class="stat-value">${response.models_tested || 0}</div>
+            <div class="stat-label">Models Tested</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-value" style="color: #10b981;">${response.models_succeeded || 0}</div>
+            <div class="stat-label">Succeeded</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-value" style="color: #ef4444;">${response.models_failed || 0}</div>
+            <div class="stat-label">Failed</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-value">${totalPicks}</div>
+            <div class="stat-label">Total Picks</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-value">${avgHitRate}%</div>
+            <div class="stat-label">Avg Hit Rate</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-value">${Math.round(response.total_elapsed_seconds || 0)}s</div>
+            <div class="stat-label">Test Time</div>
+        </div>
+    `;
+    
+    // Best models
+    const recs = response.recommendations || {};
+    let bestHtml = '';
+    
+    if (recs.best_overall) {
+        bestHtml += `
+            <div class="best-model-card highlight">
+                <div class="best-model-icon">🏆</div>
+                <div class="best-model-category">Best Overall</div>
+                <div class="best-model-name">${recs.best_overall.model_name}</div>
+                <div class="best-model-stat">${recs.best_overall.hit_rate}% hit rate</div>
+            </div>
+        `;
+    }
+    
+    if (recs.best_under) {
+        bestHtml += `
+            <div class="best-model-card">
+                <div class="best-model-icon">⬇️</div>
+                <div class="best-model-category">Best UNDER</div>
+                <div class="best-model-name">${recs.best_under.model_name}</div>
+                <div class="best-model-stat">${recs.best_under.rate}% (${recs.best_under.picks} picks)</div>
+            </div>
+        `;
+    }
+    
+    if (recs.best_over) {
+        bestHtml += `
+            <div class="best-model-card">
+                <div class="best-model-icon">⬆️</div>
+                <div class="best-model-category">Best OVER</div>
+                <div class="best-model-name">${recs.best_over.model_name}</div>
+                <div class="best-model-stat">${recs.best_over.rate}% (${recs.best_over.picks} picks)</div>
+            </div>
+        `;
+    }
+    
+    if (recs.best_pts) {
+        bestHtml += `
+            <div class="best-model-card">
+                <div class="best-model-icon">🏀</div>
+                <div class="best-model-category">Best PTS</div>
+                <div class="best-model-name">${recs.best_pts.model_name}</div>
+                <div class="best-model-stat">${recs.best_pts.rate}% (${recs.best_pts.picks} picks)</div>
+            </div>
+        `;
+    }
+    
+    if (recs.best_reb) {
+        bestHtml += `
+            <div class="best-model-card">
+                <div class="best-model-icon">🪣</div>
+                <div class="best-model-category">Best REB</div>
+                <div class="best-model-name">${recs.best_reb.model_name}</div>
+                <div class="best-model-stat">${recs.best_reb.rate}% (${recs.best_reb.picks} picks)</div>
+            </div>
+        `;
+    }
+    
+    bestModels.innerHTML = bestHtml || '<p style="color: var(--text-muted);">No recommendations available</p>';
+}
+
+// ============================================================
+// RANKINGS
+// ============================================================
+function updateRankings() {
+    if (!testResults.length) return;
+    
+    // Sort by quality score
+    const sorted = [...testResults].sort((a, b) => (b.quality_score || 0) - (a.quality_score || 0));
+    
+    // Update table
+    const tbody = document.getElementById('rankings-body');
+    tbody.innerHTML = sorted.map((r, i) => `
+        <tr>
+            <td><span class="rank-badge ${i < 3 ? 'rank-' + (i+1) : ''}">${i + 1}</span></td>
+            <td style="font-weight: 600;">${r.model_name}</td>
+            <td><span class="rate-badge ${getRateClass(r.hit_rate)}">${r.hit_rate}%</span></td>
+            <td>${Math.round(r.quality_score || 0)}</td>
+            <td>${r.total_picks}</td>
+            <td>${r.picks_per_day}</td>
+            <td>${r.over_picks > 0 ? r.over_rate + '%' : '--'}</td>
+            <td>${r.under_picks > 0 ? r.under_rate + '%' : '--'}</td>
+            <td>
+                <button class="btn btn-secondary" style="padding: 0.25rem 0.5rem; font-size: 0.75rem;"
+                        onclick="showModelDetail('${r.model_id}')">
+                    View
+                </button>
+            </td>
+        </tr>
+    `).join('');
+    
+    // Update leaderboard
+    const leaderboard = document.getElementById('leaderboard-list');
+    leaderboard.innerHTML = sorted.slice(0, 5).map((r, i) => `
+        <div class="leaderboard-item ${i === 0 ? 'gold' : ''}">
+            <div class="leaderboard-position">${['🥇', '🥈', '🥉', '4', '5'][i]}</div>
+            <div class="leaderboard-info">
+                <div class="leaderboard-model">${r.model_name}</div>
+                <div class="leaderboard-stat">${r.total_picks} picks | Quality: ${Math.round(r.quality_score || 0)}</div>
+            </div>
+            <div class="leaderboard-rate ${getRateClass(r.hit_rate)}">${r.hit_rate}%</div>
+        </div>
+    `).join('');
+}
+
+function getRateClass(rate) {
+    if (rate >= 58) return 'rate-excellent';
+    if (rate >= 53) return 'rate-good';
+    if (rate >= 48) return 'rate-moderate';
+    return 'rate-poor';
+}
+
+function showModelDetail(modelId) {
+    const model = testResults.find(r => r.model_id === modelId);
+    if (!model) return;
+    
+    document.getElementById('detail-model-name').textContent = model.model_name;
+    
+    const grid = document.getElementById('model-detail-grid');
+    grid.innerHTML = `
+        <div class="detail-box">
+            <div class="detail-box-title">Direction Breakdown</div>
+            <div class="detail-row">
+                <span>OVER:</span>
+                <span class="detail-row-value">${model.over_picks > 0 ? model.over_rate + '% (' + model.over_hits + '/' + model.over_picks + ')' : '--'}</span>
+            </div>
+            <div class="detail-row">
+                <span>UNDER:</span>
+                <span class="detail-row-value">${model.under_picks > 0 ? model.under_rate + '% (' + model.under_hits + '/' + model.under_picks + ')' : '--'}</span>
+            </div>
+        </div>
+        <div class="detail-box">
+            <div class="detail-box-title">Prop Types</div>
+            <div class="detail-row">
+                <span>PTS:</span>
+                <span class="detail-row-value">${model.pts_picks > 0 ? model.pts_rate + '% (' + model.pts_hits + '/' + model.pts_picks + ')' : '--'}</span>
+            </div>
+            <div class="detail-row">
+                <span>REB:</span>
+                <span class="detail-row-value">${model.reb_picks > 0 ? model.reb_rate + '% (' + model.reb_hits + '/' + model.reb_picks + ')' : '--'}</span>
+            </div>
+            <div class="detail-row">
+                <span>AST:</span>
+                <span class="detail-row-value">${model.ast_picks > 0 ? model.ast_rate + '% (' + model.ast_hits + '/' + model.ast_picks + ')' : '--'}</span>
+            </div>
+        </div>
+        <div class="detail-box">
+            <div class="detail-box-title">Confidence Tiers</div>
+            <div class="detail-row">
+                <span>Premium:</span>
+                <span class="detail-row-value">${model.premium_picks > 0 ? model.premium_rate + '% (' + model.premium_hits + '/' + model.premium_picks + ')' : '--'}</span>
+            </div>
+            <div class="detail-row">
+                <span>High:</span>
+                <span class="detail-row-value">${model.high_picks > 0 ? model.high_rate + '% (' + model.high_hits + '/' + model.high_picks + ')' : '--'}</span>
+            </div>
+            <div class="detail-row">
+                <span>Standard:</span>
+                <span class="detail-row-value">${model.standard_picks > 0 ? model.standard_rate + '% (' + model.standard_hits + '/' + model.standard_picks + ')' : '--'}</span>
+            </div>
+        </div>
+        <div class="detail-box">
+            <div class="detail-box-title">Line Source</div>
+            <div class="detail-row">
+                <span>Sportsbook:</span>
+                <span class="detail-row-value">${model.sportsbook_picks > 0 ? model.sportsbook_rate + '% (' + model.sportsbook_hits + '/' + model.sportsbook_picks + ')' : '--'}</span>
+            </div>
+            <div class="detail-row">
+                <span>Derived:</span>
+                <span class="detail-row-value">${model.derived_picks > 0 ? model.derived_rate + '% (' + model.derived_hits + '/' + model.derived_picks + ')' : '--'}</span>
+            </div>
+        </div>
+    `;
+    
+    // Strengths
+    document.getElementById('model-strengths').innerHTML = 
+        (model.strengths || []).map(s => `<span class="strength-tag">✓ ${s}</span>`).join('') ||
+        '<span style="color: var(--text-muted);">No strengths identified</span>';
+    
+    // Weaknesses
+    document.getElementById('model-weaknesses').innerHTML = 
+        (model.weaknesses || []).map(w => `<span class="weakness-tag">✗ ${w}</span>`).join('') ||
+        '<span style="color: var(--text-muted);">No weaknesses identified</span>';
+    
+    document.getElementById('model-detail-card').style.display = 'block';
+    
+    // Switch to rankings tab
+    switchTab('rankings');
+}
+
+function closeModelDetail() {
+    document.getElementById('model-detail-card').style.display = 'none';
+}
+
+function sortRankings() {
+    const sortBy = document.getElementById('rank-sort').value;
+    
+    testResults.sort((a, b) => {
+        switch(sortBy) {
+            case 'hitrate': return (b.hit_rate || 0) - (a.hit_rate || 0);
+            case 'picks': return (b.total_picks || 0) - (a.total_picks || 0);
+            case 'overrate': return (b.over_rate || 0) - (a.over_rate || 0);
+            case 'underrate': return (b.under_rate || 0) - (a.under_rate || 0);
+            default: return (b.quality_score || 0) - (a.quality_score || 0);
+        }
+    });
+    
+    updateRankings();
+}
+
+// ============================================================
+// FACTOR CONFIGURATION
+// ============================================================
+function updateSliderValue(sliderId) {
+    const slider = document.getElementById(sliderId);
+    const valueSpan = document.getElementById(sliderId + '-value');
+    valueSpan.textContent = slider.value;
+}
+
+function resetFactors() {
+    // Reset all sliders to defaults
+    document.getElementById('min-edge').value = 2.5;
+    document.getElementById('premium-edge').value = 5.0;
+    document.getElementById('form-weight').value = 0.30;
+    document.getElementById('defense-weight').value = 0.25;
+    document.getElementById('h2h-weight').value = 0.20;
+    document.getElementById('min-games').value = 5;
+    document.getElementById('max-picks').value = 20;
+    document.getElementById('cold-streak').value = 0.80;
+    
+    // Reset toggles
+    document.getElementById('b2b-factor').checked = true;
+    document.getElementById('home-factor').checked = true;
+    document.getElementById('pace-factor').checked = true;
+    document.getElementById('elite-defense-only').checked = false;
+    document.getElementById('allow-over').checked = true;
+    document.getElementById('allow-under').checked = true;
+    document.getElementById('prefer-under').checked = false;
+    
+    // Update all value displays
+    ['min-edge', 'premium-edge', 'form-weight', 'defense-weight', 'h2h-weight', 
+     'min-games', 'max-picks', 'cold-streak'].forEach(id => updateSliderValue(id));
+    
+    showToast('Factors reset to defaults', 'info');
+}
+
+function getFactorConfig() {
+    return {
+        min_edge: parseFloat(document.getElementById('min-edge').value),
+        premium_edge: parseFloat(document.getElementById('premium-edge').value),
+        form_weight: parseFloat(document.getElementById('form-weight').value),
+        defense_weight: parseFloat(document.getElementById('defense-weight').value),
+        h2h_weight: parseFloat(document.getElementById('h2h-weight').value),
+        min_games: parseInt(document.getElementById('min-games').value),
+        max_picks: parseInt(document.getElementById('max-picks').value),
+        cold_streak_threshold: parseFloat(document.getElementById('cold-streak').value),
+        use_b2b_adjustment: document.getElementById('b2b-factor').checked,
+        use_home_adjustment: document.getElementById('home-factor').checked,
+        use_pace_adjustment: document.getElementById('pace-factor').checked,
+        elite_defense_only: document.getElementById('elite-defense-only').checked,
+        allow_over: document.getElementById('allow-over').checked,
+        allow_under: document.getElementById('allow-under').checked,
+        prefer_under: document.getElementById('prefer-under').checked,
+    };
+}
+
+function applyAndTest() {
+    const config = getFactorConfig();
+    showToast('Factor configuration applied. Running test...', 'info');
+    
+    // Switch to test tab and run
+    switchTab('test');
+    runModelTest();
+}
+
+function saveCurrentConfig() {
+    const name = prompt('Enter a name for this configuration:');
+    if (!name) return;
+    
+    const config = {
+        name: name,
+        date: new Date().toISOString(),
+        factors: getFactorConfig()
+    };
+    
+    savedConfigs.push(config);
+    localStorage.setItem('modelLabConfigs', JSON.stringify(savedConfigs));
+    renderSavedConfigs();
+    showToast('Configuration saved', 'success');
+}
+
+function renderSavedConfigs() {
+    const container = document.getElementById('saved-configs');
+    
+    if (!savedConfigs.length) {
+        container.innerHTML = '<div class="empty-state" style="padding: 1.5rem;"><p>No saved configurations yet.</p></div>';
+        return;
+    }
+    
+    container.innerHTML = savedConfigs.map((cfg, i) => `
+        <div style="display: flex; justify-content: space-between; align-items: center; padding: 0.75rem; 
+                    background: var(--bg); border-radius: 8px; margin-bottom: 0.5rem; border: 1px solid var(--border);">
+            <div>
+                <strong>${cfg.name}</strong>
+                <div style="font-size: 0.75rem; color: var(--text-muted);">${new Date(cfg.date).toLocaleDateString()}</div>
+            </div>
+            <div class="btn-group">
+                <button class="btn btn-secondary" style="padding: 0.25rem 0.5rem;" onclick="loadConfig(${i})">Load</button>
+                <button class="btn btn-secondary" style="padding: 0.25rem 0.5rem;" onclick="deleteConfig(${i})">🗑️</button>
+            </div>
+        </div>
+    `).join('');
+}
+
+function loadConfig(index) {
+    const cfg = savedConfigs[index];
+    if (!cfg) return;
+    
+    const f = cfg.factors;
+    document.getElementById('min-edge').value = f.min_edge;
+    document.getElementById('premium-edge').value = f.premium_edge;
+    document.getElementById('form-weight').value = f.form_weight;
+    document.getElementById('defense-weight').value = f.defense_weight;
+    document.getElementById('h2h-weight').value = f.h2h_weight;
+    document.getElementById('min-games').value = f.min_games;
+    document.getElementById('max-picks').value = f.max_picks;
+    document.getElementById('cold-streak').value = f.cold_streak_threshold;
+    document.getElementById('b2b-factor').checked = f.use_b2b_adjustment;
+    document.getElementById('home-factor').checked = f.use_home_adjustment;
+    document.getElementById('pace-factor').checked = f.use_pace_adjustment;
+    document.getElementById('elite-defense-only').checked = f.elite_defense_only;
+    document.getElementById('allow-over').checked = f.allow_over;
+    document.getElementById('allow-under').checked = f.allow_under;
+    document.getElementById('prefer-under').checked = f.prefer_under;
+    
+    ['min-edge', 'premium-edge', 'form-weight', 'defense-weight', 'h2h-weight', 
+     'min-games', 'max-picks', 'cold-streak'].forEach(id => updateSliderValue(id));
+    
+    showToast(`Loaded config: ${cfg.name}`, 'success');
+}
+
+function deleteConfig(index) {
+    savedConfigs.splice(index, 1);
+    localStorage.setItem('modelLabConfigs', JSON.stringify(savedConfigs));
+    renderSavedConfigs();
+    showToast('Configuration deleted', 'info');
+}
+
+// ============================================================
+// COMPARE MODELS
+// ============================================================
+function populateCompareDropdowns() {
+    const options = '<option value="">Select model...</option>' + 
+        allModels.map(m => `<option value="${m.id}">${m.name}</option>`).join('');
+    
+    for (let i = 1; i <= 4; i++) {
+        document.getElementById(`compare-model-${i}`).innerHTML = options;
+    }
+}
+
+function compareModels() {
+    const modelIds = [];
+    for (let i = 1; i <= 4; i++) {
+        const id = document.getElementById(`compare-model-${i}`).value;
+        if (id) modelIds.push(id);
+    }
+    
+    if (modelIds.length < 2) {
+        showToast('Please select at least 2 models to compare', 'error');
+        return;
+    }
+    
+    // Find results for selected models
+    const compareResults = modelIds.map(id => testResults.find(r => r.model_id === id)).filter(Boolean);
+    
+    if (compareResults.length < 2) {
+        showToast('Models must be tested first. Run a test including these models.', 'error');
+        return;
+    }
+    
+    const grid = document.getElementById('comparison-grid');
+    grid.innerHTML = `
+        <table class="ranking-table">
+            <thead>
+                <tr>
+                    <th>Metric</th>
+                    ${compareResults.map(r => `<th>${r.model_name}</th>`).join('')}
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Hit Rate</td>
+                    ${compareResults.map(r => `<td><span class="rate-badge ${getRateClass(r.hit_rate)}">${r.hit_rate}%</span></td>`).join('')}
+                </tr>
+                <tr>
+                    <td>Quality Score</td>
+                    ${compareResults.map(r => `<td>${Math.round(r.quality_score || 0)}</td>`).join('')}
+                </tr>
+                <tr>
+                    <td>Total Picks</td>
+                    ${compareResults.map(r => `<td>${r.total_picks}</td>`).join('')}
+                </tr>
+                <tr>
+                    <td>Picks/Day</td>
+                    ${compareResults.map(r => `<td>${r.picks_per_day}</td>`).join('')}
+                </tr>
+                <tr>
+                    <td>OVER Rate</td>
+                    ${compareResults.map(r => `<td>${r.over_picks > 0 ? r.over_rate + '%' : '--'}</td>`).join('')}
+                </tr>
+                <tr>
+                    <td>UNDER Rate</td>
+                    ${compareResults.map(r => `<td>${r.under_picks > 0 ? r.under_rate + '%' : '--'}</td>`).join('')}
+                </tr>
+                <tr>
+                    <td>PTS Rate</td>
+                    ${compareResults.map(r => `<td>${r.pts_picks > 0 ? r.pts_rate + '%' : '--'}</td>`).join('')}
+                </tr>
+                <tr>
+                    <td>REB Rate</td>
+                    ${compareResults.map(r => `<td>${r.reb_picks > 0 ? r.reb_rate + '%' : '--'}</td>`).join('')}
+                </tr>
+            </tbody>
+        </table>
+    `;
+    
+    document.getElementById('comparison-results').style.display = 'block';
+}
+
+// ============================================================
+// HISTORY
+// ============================================================
+function saveToHistory() {
+    if (!testResults.length) {
+        showToast('No results to save', 'error');
+        return;
+    }
+    
+    const historyEntry = {
+        date: new Date().toISOString(),
+        startDate: document.getElementById('test-start-date').value,
+        endDate: document.getElementById('test-end-date').value,
+        lineSource: lineSource,
+        modelsCount: testResults.length,
+        results: testResults.slice(0, 5), // Save top 5 for summary
+        avgHitRate: (testResults.reduce((sum, r) => sum + (r.hit_rate || 0), 0) / testResults.length).toFixed(1)
+    };
+    
+    testHistory.unshift(historyEntry);
+    testHistory = testHistory.slice(0, 20); // Keep last 20
+    localStorage.setItem('modelLabHistory', JSON.stringify(testHistory));
+    
+    renderHistory();
+    showToast('Results saved to history', 'success');
+}
+
+function renderHistory() {
+    const container = document.getElementById('history-list');
+    
+    if (!testHistory.length) {
+        container.innerHTML = `
+            <div class="empty-state">
+                <div class="empty-state-icon">📜</div>
+                <p>No test history yet.</p>
+            </div>
+        `;
+        return;
+    }
+    
+    container.innerHTML = testHistory.map((h, i) => `
+        <div style="background: var(--bg); border-radius: 10px; padding: 1rem; margin-bottom: 0.75rem; border: 1px solid var(--border);">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                <strong>${new Date(h.date).toLocaleDateString()} ${new Date(h.date).toLocaleTimeString()}</strong>
+                <span style="font-size: 0.8rem; color: var(--text-muted);">${h.startDate} to ${h.endDate}</span>
+            </div>
+            <div style="display: flex; gap: 1rem; font-size: 0.85rem;">
+                <span>${h.modelsCount} models</span>
+                <span>|</span>
+                <span>Avg: ${h.avgHitRate}%</span>
+                <span>|</span>
+                <span>${h.lineSource === 'sportsbook' ? '📋 Actual Lines' : '🎯 Projections'}</span>
+            </div>
+            ${h.results && h.results.length > 0 ? `
+                <div style="margin-top: 0.5rem; font-size: 0.8rem; color: var(--text-muted);">
+                    Top: ${h.results.slice(0, 3).map(r => r.model_name + ' (' + r.hit_rate + '%)').join(', ')}
+                </div>
+            ` : ''}
+        </div>
+    `).join('');
+}
+
+function clearHistory() {
+    if (confirm('Are you sure you want to clear all test history?')) {
+        testHistory = [];
+        localStorage.setItem('modelLabHistory', JSON.stringify(testHistory));
+        renderHistory();
+        showToast('History cleared', 'info');
+    }
+}
+
+function exportResults() {
+    if (!testResults.length) {
+        showToast('No results to export', 'error');
+        return;
+    }
+    
+    const csv = [
+        ['Model', 'Hit Rate', 'Quality Score', 'Total Picks', 'Picks/Day', 'OVER Rate', 'UNDER Rate', 'PTS Rate', 'REB Rate'].join(','),
+        ...testResults.map(r => [
+            r.model_name,
+            r.hit_rate,
+            r.quality_score,
+            r.total_picks,
+            r.picks_per_day,
+            r.over_rate || 0,
+            r.under_rate || 0,
+            r.pts_rate || 0,
+            r.reb_rate || 0
+        ].join(','))
+    ].join('\n');
+    
+    const blob = new Blob([csv], { type: 'text/csv' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `model-lab-results-${new Date().toISOString().split('T')[0]}.csv`;
+    a.click();
+    URL.revokeObjectURL(url);
+    
+    showToast('Results exported', 'success');
+}
+</script>
+{% endblock %}

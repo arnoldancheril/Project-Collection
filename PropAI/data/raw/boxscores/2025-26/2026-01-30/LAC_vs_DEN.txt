@@ -1,0 +1,31 @@
+## Los Angeles Clippers — Box Score
+
+PLAYER	MIN	FGM	FGA	FG%	3PM	3PA	3P%	FTM	FTA	FT%	OREB	DREB	REB	AST	STL	BLK	TO	PF	PTS	+/-
+Kawhi Leonard	31:08	8	18	0.4	1	4	0.2	4	5	0.8	0	3	3	6	2	0	2	2	21	-4.0
+John Collins	31:11	7	11	0.6	4	7	0.6	0	1	0.0	3	3	6	4	1	1	0	4	18	-15.0
+Ivica Zubac	29:41	6	10	0.6	0	0	0.0	1	2	0.5	2	5	7	2	0	0	2	3	13	-6.0
+Kris Dunn	25:28	2	9	0.2	1	6	0.2	0	0	0.0	1	1	2	5	0	0	0	3	5	-5.0
+James Harden	33:55	8	17	0.5	4	10	0.4	5	5	1.0	1	4	5	9	0	1	4	2	25	-17.0
+Kobe Sanders	22:32	3	7	0.4	2	5	0.4	0	0	0.0	1	1	2	2	0	0	0	1	8	-8.0
+Brook Lopez	16:19	0	0	0.0	0	0	0.0	0	0	0.0	0	3	3	0	2	1	1	4	0	-10.0
+Jordan Miller	18:40	3	6	0.5	0	2	0.0	1	3	0.3	2	1	3	0	1	0	0	2	7	-5.0
+Nicolas Batum	21:49	2	6	0.3	2	6	0.3	0	0	0.0	1	2	3	1	1	0	0	0	6	-2.0
+Cam Christie	3:38	1	1	1.0	0	0	0.0	1	1	1.0	0	0	0	0	0	0	0	0	3	+2.0
+Kobe Brown	3:38	0	0	0.0	0	0	0.0	3	4	0.8	0	0	0	0	0	0	0	0	3	+2.0
+Yanic Konan Niederhäuser	2:00	0	1	0.0	0	0	0.0	0	0	0.0	0	0	0	0	0	0	0	0	0	+3.0
+
+## Denver Nuggets — Box Score
+
+PLAYER	MIN	FGM	FGA	FG%	3PM	3PA	3P%	FTM	FTA	FT%	OREB	DREB	REB	AST	STL	BLK	TO	PF	PTS	+/-
+Spencer Jones	35:08	1	4	0.2	1	1	1.0	1	2	0.5	1	5	6	1	1	1	0	3	4	+3.0
+Peyton Watson	35:18	9	17	0.5	2	5	0.4	1	2	0.5	2	2	4	3	0	0	3	1	21	+22.0
+Nikola Jokić	24:32	8	11	0.7	2	3	0.7	13	17	0.8	2	10	12	5	3	0	1	3	31	+11.0
+Jalen Pickett	14:11	0	4	0.0	0	4	0.0	0	0	0.0	2	1	3	3	0	0	0	1	0	-8.0
+Jamal Murray	35:52	7	10	0.7	4	5	0.8	2	2	1.0	0	4	4	9	1	0	3	1	20	+25.0
+Tim Hardaway Jr.	24:37	6	9	0.7	5	7	0.7	5	5	1.0	0	2	2	0	0	0	0	1	22	+10.0
+Jonas Valančiūnas	21:28	5	11	0.5	0	0	0.0	1	1	1.0	0	6	6	2	0	2	2	2	11	+5.0
+Bruce Brown	26:20	1	3	0.3	1	2	0.5	3	3	1.0	0	2	2	3	1	0	2	4	6	+17.0
+Julian Strawther	16:33	1	2	0.5	1	1	1.0	0	0	0.0	0	3	3	3	1	1	0	1	3	-11.0
+Hunter Tyson	2:00	0	0	0.0	0	0	0.0	0	0	0.0	0	1	1	1	0	0	0	0	0	-3.0
+DaRon Holmes II	2:00	1	1	1.0	0	0	0.0	0	0	0.0	0	0	0	0	0	0	0	1	2	-3.0
+Zeke Nnaji	2:00	1	1	1.0	0	0	0.0	0	0	0.0	0	0	0	0	0	0	1	0	2	-3.0

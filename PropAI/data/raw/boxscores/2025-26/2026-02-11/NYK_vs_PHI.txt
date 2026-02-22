@@ -1,0 +1,32 @@
+## New York Knicks — Box Score
+
+PLAYER	MIN	FGM	FGA	FG%	3PM	3PA	3P%	FTM	FTA	FT%	OREB	DREB	REB	AST	STL	BLK	TO	PF	PTS	+/-
+Josh Hart	29:16	2	9	0.2	1	3	0.3	1	1	1.0	2	5	7	9	1	0	1	0	6	+32.0
+Mikal Bridges	28:51	9	15	0.6	1	5	0.2	3	3	1.0	0	5	5	6	2	0	2	3	22	+20.0
+Karl-Anthony Towns	25:33	8	13	0.6	1	1	1.0	4	4	1.0	4	7	11	5	1	1	2	3	21	+29.0
+Landry Shamet	24:01	4	6	0.7	1	3	0.3	0	0	0.0	0	1	1	5	1	0	1	2	9	+26.0
+Jalen Brunson	29:59	3	6	0.5	2	3	0.7	0	0	0.0	1	3	4	4	0	0	2	1	8	+21.0
+Jordan Clarkson	12:46	2	5	0.4	1	3	0.3	3	4	0.8	0	0	0	0	0	1	1	0	8	+14.0
+Mitchell Robinson	15:01	3	3	1.0	0	0	0.0	5	8	0.6	3	3	6	0	0	4	1	2	11	+15.0
+Mohamed Diawara	20:29	5	10	0.5	4	8	0.5	0	0	0.0	0	5	5	2	1	0	1	0	14	+19.0
+Jose Alvarado	18:37	8	13	0.6	8	13	0.6	2	3	0.7	0	3	3	4	5	0	2	3	26	+35.0
+Kevin McCullar Jr.	9:33	2	4	0.5	0	1	0.0	0	0	0.0	1	0	1	0	1	0	0	0	4	+10.0
+Tyler Kolek	9:33	1	4	0.2	1	3	0.3	0	0	0.0	0	2	2	3	0	0	1	0	3	+10.0
+Ariel Hukporti	9:33	1	1	1.0	0	0	0.0	0	0	0.0	0	4	4	1	0	0	1	1	2	+10.0
+Dillon Jones	6:47	0	2	0.0	0	1	0.0	4	4	1.0	1	1	2	2	1	0	0	1	4	+4.0
+
+## Philadelphia 76ers — Box Score
+
+PLAYER	MIN	FGM	FGA	FG%	3PM	3PA	3P%	FTM	FTA	FT%	OREB	DREB	REB	AST	STL	BLK	TO	PF	PTS	+/-
+Kelly Oubre Jr.	30:13	0	6	0.0	0	5	0.0	2	4	0.5	1	6	7	4	0	1	3	2	2	-30.0
+Dominick Barlow	30:37	6	10	0.6	1	2	0.5	0	0	0.0	1	3	4	1	2	1	2	2	13	-31.0
+Adem Bona	22:42	2	4	0.5	0	0	0.0	2	2	1.0	4	1	5	0	2	0	2	4	6	-24.0
+VJ Edgecombe	32:16	6	16	0.4	0	5	0.0	2	2	1.0	1	3	4	2	0	1	1	0	14	-29.0
+Tyrese Maxey	32:07	9	21	0.4	3	8	0.4	11	13	0.8	0	2	2	2	1	0	1	4	32	-26.0
+Andre Drummond	10:38	1	2	0.5	0	0	0.0	0	0	0.0	1	3	4	0	1	0	2	0	2	-10.0
+Justin Edwards	22:20	2	7	0.3	0	3	0.0	0	0	0.0	1	2	3	1	1	0	0	3	4	-26.0
+Trendon Watford	24:49	3	10	0.3	0	2	0.0	0	0	0.0	2	2	4	4	1	0	3	2	6	-27.0
+MarJon Beauchamp	16:06	3	7	0.4	2	5	0.4	0	0	0.0	0	3	3	1	0	1	3	0	8	-27.0
+Charles Bassey	4:38	1	1	1.0	0	0	0.0	0	0	0.0	0	0	0	0	0	1	0	0	2	-7.0
+Dalen Terry	6:47	0	2	0.0	0	1	0.0	0	0	0.0	0	1	1	1	0	0	1	0	0	-4.0
+Johni Broome	6:47	0	2	0.0	0	1	0.0	0	0	0.0	1	0	1	0	1	1	0	1	0	-4.0

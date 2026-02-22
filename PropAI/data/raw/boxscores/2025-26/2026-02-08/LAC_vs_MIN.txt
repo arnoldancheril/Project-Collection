@@ -1,0 +1,32 @@
+## Los Angeles Clippers — Box Score
+
+PLAYER	MIN	FGM	FGA	FG%	3PM	3PA	3P%	FTM	FTA	FT%	OREB	DREB	REB	AST	STL	BLK	TO	PF	PTS	+/-
+Kawhi Leonard	33:32	14	30	0.5	5	11	0.5	8	10	0.8	2	6	8	2	4	0	2	0	41	+20.0
+John Collins	29:17	6	9	0.7	3	3	1.0	0	0	0.0	2	2	4	0	1	1	3	4	15	+25.0
+Brook Lopez	26:24	2	5	0.4	1	3	0.3	0	0	0.0	0	2	2	2	0	2	1	1	5	+18.0
+Derrick Jones Jr.	28:24	2	3	0.7	1	1	1.0	0	0	0.0	1	3	4	4	3	1	1	3	5	+22.0
+Kris Dunn	28:24	3	6	0.5	1	1	1.0	2	2	1.0	0	5	5	6	1	0	1	2	9	+29.0
+Kobe Sanders	23:30	3	5	0.6	2	4	0.5	2	3	0.7	0	4	4	2	0	0	1	1	10	+7.0
+Jordan Miller	22:41	1	6	0.2	0	2	0.0	6	6	1.0	0	1	1	4	0	0	1	2	8	-4.0
+Nicolas Batum	11:32	1	1	1.0	1	1	1.0	0	0	0.0	0	3	3	0	0	0	1	1	3	-5.0
+Cam Christie	10:26	1	4	0.2	0	1	0.0	0	0	0.0	0	0	0	1	0	0	0	1	2	-12.0
+Yanic Konan Niederhäuser	17:23	5	5	1.0	0	0	0.0	5	7	0.7	3	3	6	2	0	1	1	6	15	+7.0
+TyTy Washington Jr.	4:13	0	0	0.0	0	0	0.0	0	0	0.0	0	0	0	2	2	1	0	0	0	-6.0
+Dalano Banton	4:13	1	2	0.5	0	0	0.0	0	0	0.0	0	0	0	0	0	0	1	0	2	-6.0
+
+## Minnesota Timberwolves — Box Score
+
+PLAYER	MIN	FGM	FGA	FG%	3PM	3PA	3P%	FTM	FTA	FT%	OREB	DREB	REB	AST	STL	BLK	TO	PF	PTS	+/-
+Jaden McDaniels	28:14	1	4	0.2	0	0	0.0	0	0	0.0	0	2	2	0	1	0	2	2	2	-12.0
+Julius Randle	33:26	6	14	0.4	1	5	0.2	4	6	0.7	2	6	8	2	0	0	1	3	17	-14.0
+Rudy Gobert	29:49	5	7	0.7	0	0	0.0	0	1	0.0	3	4	7	2	0	1	5	0	10	-16.0
+Anthony Edwards	34:52	7	18	0.4	1	8	0.1	8	10	0.8	0	4	4	2	2	0	5	1	23	-23.0
+Donte DiVincenzo	23:53	0	3	0.0	0	3	0.0	1	2	0.5	0	4	4	2	1	0	2	6	1	-3.0
+Ayo Dosunmu	25:27	4	11	0.4	3	7	0.4	0	0	0.0	0	1	1	1	2	0	1	3	11	-33.0
+Naz Reid	23:55	4	9	0.4	0	3	0.0	0	0	0.0	3	6	9	3	1	0	1	4	8	-17.0
+Bones Hyland	19:19	4	8	0.5	2	5	0.4	0	0	0.0	0	1	1	2	0	0	1	1	10	-7.0
+Joe Ingles	4:13	0	1	0.0	0	1	0.0	0	0	0.0	0	1	1	2	0	0	0	0	0	+6.0
+Julian Phillips	4:13	1	1	1.0	0	0	0.0	0	0	0.0	0	0	0	0	0	0	0	1	2	+6.0
+Joan Beringer	4:13	2	3	0.7	0	0	0.0	0	0	0.0	1	0	1	1	0	1	1	1	4	+6.0
+Jaylen Clark	4:13	3	4	0.8	1	1	1.0	1	3	0.3	1	0	1	0	1	0	1	0	8	+6.0
+Enrique Freeman	4:13	0	0	0.0	0	0	0.0	0	0	0.0	0	2	2	0	0	0	0	0	0	+6.0

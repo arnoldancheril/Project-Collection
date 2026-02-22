@@ -1,0 +1,284 @@
+# NBA Props Predictor
+
+A **100% local** application for analyzing NBA player props, projecting player stats, and identifying valuable betting opportunities. Runs entirely on your machine - no cloud hosting, no subscriptions, no data leaving your computer.
+
+## 🎯 What This Does
+
+- Analyze NBA player performance data
+- Project PTS/REB/AST for upcoming games
+- Compare projections to sportsbook lines
+- Find the best prop betting opportunities
+- Track player archetypes and defensive matchups
+
+## ✅ Features
+
+### Data Ingestion
+- **Easy Box Score Ingestion**: Copy-paste raw box scores directly from ESPN
+- **Multiple Formats**: Handles raw ESPN format, markdown tables, CSV
+- **Automatic Team Detection**: Smart parsing recognizes team names
+- **Injury Tracking**: Captures DND, DNP, and Inactive players automatically
+
+### Player Analysis
+- **Player Archetypes**: Modern NBA roles beyond traditional positions
+  - "Point Centers" (playmakers like Jokic)
+  - "Stretch Fives" (shooters like KAT)
+  - "Rim Runners" (vertical threats)
+  - "3-and-D Wings", "Hub Bigs", etc.
+- **Top 7 Rule**: Focus only on rotation players, avoid risky bench bets
+- **Elite Defender Tracking**: Know when to avoid betting OVER
+- **Salary Integration**: Use salary as a proxy for player importance
+
+### Projections & Props
+- **Statistical Projections**: PTS/REB/AST based on recent performance
+- **Matchup Adjustments**: Factor in opponent defense ratings
+- **Back-to-Back Fatigue**: Automatic detection and adjustments
+- **Close Game Filter**: Target games with spread ≤ 6 points
+- **Prop Edge Calculator**: Compare projections to lines
+
+### Database
+- **Database-Backed Archetypes**: Editable, not hard-coded! Update players after trades without changing code
+- **SQLite Storage**: Everything stored locally in one file
+- **No External Dependencies**: Core CLI works without internet
+
+---
+
+## 🚀 Quick Start
+
+### 1. Install
+
+**Option A: Minimal (CLI only)**
+```bash
+pip install -e .
+```
+
+**Option B: With Web Interface (recommended)**
+```bash
+pip install -e ".[web]"
+# or just: pip install flask
+```
+
+### 2. Launch
+
+```bash
+python3 run_cli.py gui
+```
+
+Then open **http://127.0.0.1:5050** in your browser.
+
+> **Note**: The "development server" warning is normal! This is exactly how you run it locally for personal use. The 127.0.0.1 address means only your computer can access it.
+
+### 3. Add Your First Game
+
+1. Go to the **Paste** page
+2. Set the game date
+3. Copy a box score from ESPN (Ctrl+C the whole thing)
+4. Paste it in the text area
+5. Click **Ingest Box Score**
+
+---
+
+## 📊 Daily Workflow
+
+Here's how to use this app day-to-day:
+
+### Morning (After Games)
+1. Go to ESPN and copy box scores from last night's games
+2. Paste each one into the app (set correct date)
+3. The database updates automatically
+
+### Before Tonight's Games
+1. Add today's sportsbook lines (Data page)
+2. Go to Projections page
+3. Select the matchup (e.g., LAL @ BOS)
+4. Review projections vs lines
+5. Look for edges (projections significantly different from lines)
+
+### Weekly
+1. Update injury report as needed
+2. Add game spreads/lines for close game targeting
+3. Run `seed-archetypes --overwrite` if players were traded
+
+---
+
+## 💻 CLI Commands
+
+All commands work without Flask (except `gui`):
+
+```bash
+# Launch web interface
+python3 run_cli.py gui
+
+# Database
+python3 run_cli.py init-db           # Initialize database
+python3 run_cli.py summary           # Show data counts
+
+# Box Scores
+python3 run_cli.py ingest-boxscore "path/to/file.txt"
+python3 run_cli.py list-games --limit 20
+python3 run_cli.py show-game 1
+
+# Sportsbook Lines
+python3 run_cli.py ingest-lines-stdin --date 2026-01-02 --book DK
+python3 run_cli.py list-lines
+
+# Player Archetypes
+python3 run_cli.py seed-archetypes              # Populate from defaults
+python3 run_cli.py seed-archetypes --overwrite  # Update all
+python3 run_cli.py list-archetypes --tier 1     # Show MVP candidates
+python3 run_cli.py show-archetype "LeBron James"
+
+# Team Stats
+python3 run_cli.py top-players --team PHX
+python3 run_cli.py show-team-stats --team PHX
+```
+
+---
+
+## 🏀 Player Archetypes
+
+The system classifies players beyond traditional positions:
+
+| Tier | Description | Examples |
+|------|-------------|----------|
+| 1 | MVP Candidates | Luka, SGA, Jokic, Giannis |
+| 2 | Two-Way Stars | Tatum, Edwards, KD, Kawhi |
+| 3 | Elite Bigs | Wemby, Bam, Sabonis, Gobert |
+| 4 | Elite Role Players | OG, Mikal, Derrick White |
+| 5 | Specialists | Tyler Herro, CJ McCollum |
+| 6 | Rotation Pieces | Role players, young players |
+
+**Archetypes are stored in the database**, so you can:
+- Update player teams after trades
+- Add new players
+- Adjust tiers based on performance
+
+```bash
+# View a player's archetype
+python3 run_cli.py show-archetype "Kevin Durant"
+
+# Seed database with ~200 built-in profiles
+python3 run_cli.py seed-archetypes
+```
+
+---
+
+## 📁 Data Storage
+
+```
+Sports Predictor/
+├── data/
+│   ├── db/
+│   │   └── nba_props.sqlite3    # All your data lives here
+│   ├── raw/
+│   │   └── boxscores/           # Raw pasted text files
+│   └── exports/                 # Future: exported picks
+```
+
+---
+
+## 🔧 Supported Box Score Formats
+
+### ESPN Raw Format (Primary)
+Copy directly from ESPN box score page:
+
+```
+Minnesota Timberwolves
+Click on any linked stat to view the Video and/or Shot Chart
+
+PLAYER	MIN	FGM	FGA	FG%	3PM	3PA	3P%	...
+undefined Headshot
+Anthony Edwards
+G
+36:33	10	22	45.5	3	9	33.3	...
+```
+
+The parser handles:
+- Team name headers
+- "undefined Headshot" noise (filtered)
+- Position lines (G/F/C)
+- DNP/DND entries
+- TOTALS rows
+- Inactive Players sections
+
+---
+
+## 🎯 Finding Good Props
+
+The app helps you find edges by:
+
+1. **Projecting stats** based on recent performance
+2. **Adjusting for matchups** (opponent defense)
+3. **Adjusting for rest** (back-to-back = -8%)
+4. **Comparing to lines** you enter
+5. **Flagging elite defenders** to avoid
+
+### Example
+```
+Player: Anthony Edwards
+Projection: 26.5 PTS
+Line: 24.5 PTS
+Edge: +2.0 (Consider OVER)
+Warning: None (no elite defenders)
+```
+
+---
+
+## ❓ FAQ
+
+### Is this free?
+Yes, 100% free and runs locally on your machine.
+
+### Do I need to host this somewhere?
+No! It runs on your computer at `http://127.0.0.1:5050`. Only you can access it.
+
+### What's the "development server" warning?
+That's Flask being cautious about production use. For personal local use, it's perfectly fine and expected.
+
+### How much data do I need?
+Start with a few games. The more data you add, the better the projections.
+
+### Can I update player info after trades?
+Yes! Player archetypes are stored in the database, not hard-coded. Use `seed-archetypes --overwrite` or edit via the web interface.
+
+---
+
+## 📈 Project Status
+
+### ✅ Implemented
+- Box score ingestion (multiple formats)
+- SQLite database storage
+- Player archetype system (DB-backed)
+- Projection engine (PTS/REB/AST)
+- Back-to-back detection
+- Team defense ratings
+- Sportsbook lines ingestion
+- Elite defender tracking
+- Web interface
+
+### 🔄 In Progress
+- Matchup-aware prop recommendations
+- Prop edge visualization
+- Historical backtesting
+
+### 📋 Planned
+- Usage redistribution when stars out
+- Automated line comparison alerts
+- Season-long tracking dashboard
+
+---
+
+## 🛠 Development
+
+```bash
+# Run with debug mode
+python3 run_cli.py gui --port 5050
+
+# Different port
+python3 run_cli.py gui --port 8080
+```
+
+---
+
+## 📄 License
+
+Personal use. Not for commercial distribution.

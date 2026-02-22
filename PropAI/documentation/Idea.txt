@@ -1,0 +1,101 @@
+Goal is to find the best NBA player props offered. I will provide the full box score for each game. The box scores up until todays games have been provided. The only player props we are going to be targeting is points (over/under), rebounds (over/under), and in some cases: assists. Also try to project which team will win based on all factors including lines,matchups etc, and then what we know of who is playing and who isn't, and what we know of how the other team is doing (streaks, injuries, defense, etc).
+
+Model should be graded on a variety of metrics. Trying to aim for 3 picks per game. 
+Pick History tab will try to have all the best picks
+
+The challenges will be to understand which players will preform better vs a given team. 
+Calculate the lines based on the new line projection model found in (1_LINE_PROJECTION_MODEL.md) and if that is not avaliable suggest a warning saying they have not played enough games with this new team but do not remove them from pick suggestions.
+
+Challenge: there are different positions in the game, and different players do play basketball differently, but for the most part there are a standard amount for example all basketball teams have a center position, but this can include: modern "point centers" (playmakers), "stretch fives" (outside shooters), "rim runners" (vertical threats), and versatile "two-way centers", so we will have to group the centers into that category so we know which kind of center does well against certain teams, and we will have to apply this logic to all the positions. 
+Another factor that needs to be considered is injuries, and some players are obviously just much better. For example some of the best players right now are Luka Donic, and Shai Gilgeous-Alexander so even though they may preform well against certain teams, that position is not guarenteed to preform well against that team. 
+
+We only want to identify player props for the top players on a team, we do not want to get risky and get involved with late bench players etc (people that enter the game, after it is basically done). Ideally on the matchups page, list the top players to target that day.
+
+I will provide data when I can, so this application should have a good way of storing the data, and then incorporating it into the algorithm, and updating the remaining calculations. 
+
+Matchups for the day will be scraped and added, and so will the injury report so the model can take those factors into account and see who is not playing, and then the algorithm will have to run and project which players should in theory preform well, and around how many points to expect. (Will have to consider players coming back injury, and how this will affect, this is IMPORTANT)
+
+Another factor to consider is sometimes teams play back to back, so one teams players might be more tired, this is an important factor to consider.
+
+And we generally want to target games that should be closer, for example games where the book predict the spread will be 6 points or less, I can provide the spread information for that game as well (however the spred will change so this would need to be updated, so if I add this information periodically it should over write the previously entered information). 
+
+Another factor to consider is team playing styles, some teams do play similarily and if teams with similar playing styles.
+
+Sometimes players just tend to do better against certain teams as well, likely because they found some defensive system they can take advantage of.
+
+Focus primarily on data from the last 20 games, because teams can change line ups and how they play, but considering any head to head matchups and any teams that played similarly (will tie in with defenses and coaching). 
+
+Important: Avoid assist props other than people who average more than 4 assists
+
+Also do not just suggest based on cold bounces, that can be a factor to consider, but a lot of the times I worry that it may be a result of another factor. For example a player getting hurt, a player getting traded, changes in the game plan, changes in minutes being played, minutes restrictions.
+
+
+Ignore for now: 
+Incorporate hashtag basketball 
+Improve model based on suggestions, see where model went wrong
+Appears to be two Kel'el Ware for the Miami heat, one of his games was not registered properly. Fix issue so this does not happen in the future for other players, put in checks, and if unsure have it ask me to make sure something was entered properly just to be safe.
+Have any players that average over 23 min automatically marked as star player. 
+I was trying to designate a specific player who has under 23 min as a star player but it does not seem to save when I mark them as a star player.
+Make sure doesn’t go stale like a giant Python dict.
+This application works now, but the models need work. We want to have two completely seperate models, one for unders, one for general peformance, and we need to back test the model so we can develop it properly. Lets just focus on one model, just the general model not the under model. I do not mind if the model takes a while to run, we want to generate suggestions and picks and need to analyze the last 20 games per player, the longer and more thorough analysis the better. Lets just focus on just the general model, back test the model and make it the best model you can. So far you have tried a few times and not made a thorough model and the models have proven to be rather poor and gotten bad results, create the best model, and only focus on one model right, and thoroughly document the model once you are done. You are a bettter AI than the models you have made so far. Think about the ideas and concerns in idea.txt.
+
+Need to improve star player logic, if a starter is out for the game, then go back and see historically who takes up his minutes, and the count that player as a star player for that game if they average above 23 minutes when some injured player is out, and you can suggest player props for them.
+
+
+Build and test a regression contribution model. 
+
+
+
+
+
+
+
+
+
+It is now time to work on model 2.0, we have made significant improvements to back testing and we have a better idea of what we want. We want a context-aware ensemble.
+We want to incorporate multiple models, focusing on the various strengths of each model. We can use a multi-modal approach because some models have high success rates but only focus on specific factors. So those picks should be suggested with the reasoning, and marked as higher confidence, but that should also not be the only pick suggested. The application should suggest more picks, but different models have different strengths. The Cold Bounce is also a little risky, and should be marked as such, because a lot of the time the cold bounce could also indicate in changes in how the team plays, rosters could have changed since today was the trade deadline so be weary of suggesting players, because past performances and things could have been very different and players projections are likely be different today since players have moved around. 
+
+A. The "Usage Vacuum" Logic (Injury Handling)
+From Idea.txt: "If a starter is out... see historically who takes up his minutes."
+
+Current Flaw: Most models just look at season averages.
+New Logic:
+Check the Injury Report.
+If a Star Player (>23 min/g) is OUT: Identify the specific "Next Man Up" based on position depth charts.
+Usage Boost Factor: Apply a dynamic multiplier (e.g., 1.15x) to the fga (field goal attempts) and usage_rate of the remaining stars (e.g., Player is out -> Next players line projection increases significantly). But the sportbook will take that into affect, so it depends on how the player performs and the role that they play, so the line will also move. (might have to update the line projection model on this too)
+
+B. The "Game Script" Filter
+From Idea.txt: "Target games that should be closer... spread 6 points or less."
+
+Blowout Protection: If the spread is >12, reduce confidence on OVER props for stars (as they sit the 4th quarter).
+Close Game Boost: If the spread is <6, increase confidence slightly on OVER props for stars (they play crunch time minutes).
+C. Archetype vs. Defense Matrix
+From Idea.txt: "Group centers... rim runners vs stretch fives."
+
+Implementation: Add a tag to players in your database parameters: Archetype (e.g., Center_RimRunner, Guard_Slasher).
+Logic:
+If Defense_vs_Center is poor (Rank 25-30), check why. Do they allow paint points? Use the Center_RimRunner archetype. Do they allow 3s? Use Center_Stretch.
+Instead of generic "vs Position" stats, use "vs Archetype" stats.
+D. The "Assist Floor" Hard Filter
+From Idea.txt: "Avoid assist props other than people who average more than 4."
+
+hard_filter: if prop_type == 'AST' and Last20_Avg < 4.0: return SKIP.
+Low-volume assist props are high variance (luck-based) rather than skill-based.
+E. "Recency Bias" Control
+From Idea.txt: "Calculate average of last 10... if not, last 5."
+
+Weighted Recency: Continue using the L10/L5 logic, but weight the most recent 3 games higher IF the minutes played has remained consistent.
+The "Cold Streak" Trap: If a player is "cold" (under in 4/5) but minutes matches their average, do not bet UNDER. This is usually a regression candidate (bounce back). (Risky - that can be a factor to consider, but a lot of the times I worry that it may be a result of another factor. For example a player getting hurt, a player getting traded, changes in the game plan, changes in minutes being played, minutes restrictions.)
+F. Example Confidence Scoring Overhaul
+Instead of just (Projected - Line) / Line, calculate confidence like this:
+Base_Edge = (Projected_Val - Sportsbook_Line) / Sportsbook_Line
+Context_Score = 0
+
+if Days_Rest == 0 (Back-to-Back): Context_Score -= 2
+if Opponent_Def_Rank > 25: Context_Score += 2
+if Spread < 6: Context_Score += 1
+
+Final_Confidence = Base_Edge * (1 + (Context_Score * 0.1))
+
+
+

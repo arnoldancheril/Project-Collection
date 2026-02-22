@@ -1,0 +1,29 @@
+## Dallas Mavericks — Box Score
+
+PLAYER	MIN	FGM	FGA	FG%	3PM	3PA	3P%	FTM	FTA	FT%	OREB	DREB	REB	AST	STL	BLK	TO	PF	PTS	+/-
+Cooper Flagg	35:42	8	20	0.4	0	1	0.0	11	14	0.8	1	4	5	2	1	0	3	0	27	+10.0
+P.J. Washington	26:05	4	9	0.4	2	6	0.3	3	5	0.6	0	5	5	1	0	0	2	0	13	-8.0
+Daniel Gafford	16:58	2	2	1.0	0	0	0.0	0	0	0.0	1	3	4	0	1	3	4	4	4	-16.0
+Max Christie	31:29	2	8	0.2	0	3	0.0	1	1	1.0	0	6	6	3	1	2	0	2	5	+2.0
+Tyus Jones	15:21	1	4	0.2	0	3	0.0	0	0	0.0	0	2	2	3	1	0	1	0	2	-11.0
+Naji Marshall	36:13	12	17	0.7	2	4	0.5	5	7	0.7	1	3	4	2	1	0	2	0	31	+5.0
+Marvin Bagley III	24:13	4	4	1.0	0	0	0.0	1	4	0.2	4	4	8	2	0	0	1	2	9	+7.0
+Brandon Williams	17:45	2	8	0.2	0	3	0.0	1	2	0.5	0	2	2	2	1	0	1	1	5	-4.0
+Khris Middleton	21:37	2	5	0.4	1	2	0.5	8	9	0.9	1	4	5	2	0	0	1	2	13	-10.0
+Caleb Martin	10:46	0	0	0.0	0	0	0.0	2	2	1.0	0	1	1	0	0	0	0	0	2	-18.0
+Dwight Powell	3:28	0	0	0.0	0	0	0.0	0	0	0.0	0	0	0	1	1	0	1	1	0	-2.0
+AJ Johnson	0:19	0	0	0.0	0	0	0.0	0	0	0.0	0	0	0	0	0	0	0	0	0	0.0
+
+## Phoenix Suns — Box Score
+
+PLAYER	MIN	FGM	FGA	FG%	3PM	3PA	3P%	FTM	FTA	FT%	OREB	DREB	REB	AST	STL	BLK	TO	PF	PTS	+/-
+Dillon Brooks	31:25	11	26	0.4	1	10	0.1	0	0	0.0	2	2	4	1	0	0	2	3	23	0.0
+Royce O'Neale	22:48	4	8	0.5	4	7	0.6	0	0	0.0	1	3	4	2	2	0	1	4	12	-2.0
+Mark Williams	24:42	6	7	0.9	0	0	0.0	1	2	0.5	4	5	9	1	0	0	0	0	13	-8.0
+Devin Booker	32:28	7	16	0.4	3	7	0.4	2	3	0.7	1	3	4	6	2	0	3	4	19	-2.0
+Collin Gillespie	30:32	2	7	0.3	1	5	0.2	0	0	0.0	1	7	8	8	1	0	3	3	5	+25.0
+Jalen Green	20:21	5	14	0.4	2	8	0.2	0	0	0.0	0	1	1	4	0	0	2	0	12	-6.0
+Jordan Goodwin	24:43	3	10	0.3	2	8	0.2	0	0	0.0	1	2	3	3	2	1	0	4	8	+11.0
+Oso Ighodaro	23:18	5	6	0.8	0	0	0.0	0	0	0.0	6	4	10	4	0	2	0	4	10	+17.0
+Ryan Dunn	16:35	4	5	0.8	2	3	0.7	2	2	1.0	1	3	4	2	0	0	1	1	12	+9.0
+Amir Coffey	13:08	2	3	0.7	1	2	0.5	1	2	0.5	1	1	2	1	1	0	1	4	6	+1.0

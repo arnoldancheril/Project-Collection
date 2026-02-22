@@ -1,0 +1,33 @@
+## Cleveland Cavaliers — Box Score
+
+PLAYER	MIN	FGM	FGA	FG%	3PM	3PA	3P%	FTM	FTA	FT%	OREB	DREB	REB	AST	STL	BLK	TO	PF	PTS	+/-
+Jaylon Tyson	24:32	7	10	0.7	3	3	1.0	0	3	0.0	2	2	4	1	1	0	2	1	17	+20.0
+Dean Wade	19:37	2	5	0.4	1	3	0.3	0	0	0.0	0	3	3	3	1	0	0	1	5	+12.0
+Jarrett Allen	23:23	5	8	0.6	0	0	0.0	0	2	0.0	3	8	11	3	2	1	0	0	10	+20.0
+Sam Merrill	21:03	4	6	0.7	3	5	0.6	0	0	0.0	1	0	1	0	0	0	1	1	11	+21.0
+Donovan Mitchell	30:05	10	19	0.5	3	9	0.3	6	6	1.0	0	5	5	9	4	0	2	1	29	+24.0
+Dennis Schröder	19:13	5	14	0.4	1	5	0.2	0	0	0.0	0	2	2	6	3	0	3	0	11	+15.0
+Nae'Qwan Tomlin	20:16	1	7	0.1	0	4	0.0	2	2	1.0	0	1	1	2	2	2	0	4	4	+16.0
+Thomas Bryant	16:30	4	6	0.7	0	1	0.0	0	0	0.0	3	5	8	0	0	2	0	0	8	+8.0
+Craig Porter Jr.	24:46	3	5	0.6	1	2	0.5	0	0	0.0	1	1	2	2	1	0	0	2	7	+11.0
+Keon Ellis	18:32	2	5	0.4	2	4	0.5	0	0	0.0	0	3	3	0	2	0	1	1	6	+3.0
+Larry Nance Jr.	8:07	3	4	0.8	2	3	0.7	0	0	0.0	0	1	1	1	0	0	0	1	8	+5.0
+Tristan Enaruna	6:58	1	2	0.5	0	0	0.0	0	0	0.0	3	0	3	1	0	0	0	0	2	+5.0
+Tyrese Proctor	6:58	3	7	0.4	0	2	0.0	0	0	0.0	0	0	0	2	1	0	0	0	6	+5.0
+
+## Los Angeles Clippers — Box Score
+
+PLAYER	MIN	FGM	FGA	FG%	3PM	3PA	3P%	FTM	FTA	FT%	OREB	DREB	REB	AST	STL	BLK	TO	PF	PTS	+/-
+Kawhi Leonard	26:38	10	20	0.5	2	6	0.3	3	3	1.0	0	7	7	4	1	0	4	1	25	-4.0
+John Collins	27:04	8	11	0.7	0	1	0.0	3	3	1.0	2	5	7	0	0	0	1	2	19	-33.0
+Brook Lopez	23:05	2	6	0.3	1	4	0.2	0	0	0.0	1	1	2	1	1	0	0	1	5	-17.0
+Kobe Sanders	19:58	2	6	0.3	0	3	0.0	0	0	0.0	0	2	2	2	1	0	2	3	4	-7.0
+Kris Dunn	20:30	1	4	0.2	0	1	0.0	0	0	0.0	1	2	3	6	1	0	3	0	2	-24.0
+Bogdan Bogdanović	11:56	1	4	0.2	0	2	0.0	0	0	0.0	0	1	1	1	0	0	3	0	2	-16.0
+Yanic Konan Niederhäuser	24:55	4	4	1.0	0	0	0.0	2	2	1.0	0	8	8	0	0	2	3	4	10	-16.0
+Jordan Miller	29:41	2	10	0.2	1	4	0.2	0	0	0.0	1	3	4	3	1	0	2	0	5	-25.0
+Nicolas Batum	5:48	0	0	0.0	0	0	0.0	0	0	0.0	0	0	0	0	0	0	1	0	0	-2.0
+Derrick Jones Jr.	21:26	2	6	0.3	0	2	0.0	3	4	0.8	1	1	2	0	0	1	0	1	7	-9.0
+Cam Christie	12:00	1	3	0.3	0	1	0.0	0	0	0.0	0	1	1	0	1	1	1	0	2	-7.0
+Kobe Brown	8:52	4	5	0.8	2	3	0.7	0	0	0.0	0	0	0	0	0	0	3	1	10	0.0
+TyTy Washington Jr.	8:07	0	1	0.0	0	1	0.0	0	0	0.0	0	0	0	3	0	0	1	0	0	-5.0

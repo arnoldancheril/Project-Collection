@@ -1,0 +1,49 @@
+I want to build a local app with a GUI to track jobs that I apply to. Possibly using SQLite as a local storage option. I just want the information such as company, role, date applied, and what the status is, etc to be tracked. I want to be able to use a GUI to quickly add whenever I apply for a job, I also want to use the GUI to filter through and show me all the applications I have sent to that company recently  with all the dates or if I want to see how many applications I have sent in the past week etc. I want a user engaging, colorful, and modern GUI. Can you help build this application for me. I want the information to be saved every time I exit or close the application, and I will only open the application when I am applying to jobs and when I open the application I want only my previous applications to be pre-populated.
+
+Can either use swift or python, which ever would be a more modern and clean look.
+
+I have attached a reference image. Right now I want to set up the directory. I want different parts of the application to be made in different files so it is easier to debug and improve the application as opposed to have a large app.py file. Everytime a new file is made I want it to be added to @filestructure.txt, with a description of the file. I also want a description of the file at the top of each file. I want to get everything setup before we start developing the first step which will be the dashboard.
+
+
+Now I want to start working on the dashboard. I have attached a reference image. Let's start piece by piece, can we start by making a dashboard:
+1 · Dashboard
+Gradient header with app title and global search.
+
+Status-summary cards (Applied, Interviewing, Offer, Rejected) use bright, accessible colors.
+
+Left filter rail lets you click quick time-frames (“Past 7 days”, “Past 30 days”, etc.).
+
+Central table shows the latest applications; pill badges echo the card colors so status is glanceable.
+ I want different parts of the application to be made in different files so it is easier to debug and improve the application as opposed to have a large app.py file. Can you make the dashboard based on the attached image and run and test the dashboard.
+
+
+@README.md @filestructure.txt 
+I have attached what the current analytics dashboard looks like, it is really cut off and just quickly created. I have also attached the dashboard we are trying to achieve. Can you create that dashboard.
+
+
+
+
+
+
+
+
+The app seems to be working, but there are still some things that need to be fixed. I have attached a screenshot of what the "Applications" tab looks like now, as you can see there is some issue with the status column, where the status is cut off. Also the colors of the statuses do not match the colors of the same satuses in the dashboard tab (the color for rejected should be a red and can have white text). Also on the "Quick Answers" tab can you remove the "+ Category" button from the top right corner, and can you add that a smaller and more minimalistic button next to the "Categories" title. Also the form to add a new category looks really bad, you cannot even see anything, the text box to type is really poorly formatted and you cannot see anything inside the text box.
+
+Also for the Analytics tab, can you create a system to easily create an output file, ouput a csv, and output a file that I can easily copy and paste, with specific paramaters like to see the positions I applied for today, positions applied this week, etc.
+
+Also when I add a new application, I am not sure how it formats, because I was hoping it would order in chronological order, however while I was adding applications today, it seemed to be adding them to the bottom. Can you also create some system in the "Applications" tab to be able to sort the database. 
+
+Can you also add some analytics to the dashboard tab.
+
+Also for the add application form, can you ensure it opens so that I do not have to scroll as much, right now the pop up window is a little small and you can only see the top few questions when I initially open the application. 
+Also for the new application form can you improve the auto complete. For example if I start typing the letters "m" and "me" the top suggestion is not the word with the most matches but it is something else, I was expecting the top suggestion to be Meta. 
+As for the "role" portion of the form, for example if I start typing software, I would expect the top suggestion to be "Software Engineer" because that is the most common selection, for the role part of the form can you have the top suggestions, be the roles that I have most frequently applied to in the database. 
+Can you also add auto complete for the location section of the form, for example if I start typing "San" then the top suggestion should be "San Francisco, CA" because a lot of the jobs I apply to are there, can you make sure that works for all the big cities I may apply to, so that the form is overall more efficient.
+Also for location, a lot of the times the position may have more than one location, so can you incorporate a way so that I can add multiple locations for new positions. Also in the applications table can you ensure that at least the top location is listed correctly in the table, because right now a lot of the locations are cut off it will look like "San Fran...", I would like for at least one city to be listed fully in the table.
+
+
+You are an AI agent and capable of thinking please keep going until the job is completely solved before ending your turn.
+
+If you are not sure about file content or codebase structure pertaining to the request, open them and do not hallucinate.
+
+You must plan extensively before each function call, and reflect extensively on the outcomes.

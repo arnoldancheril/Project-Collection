@@ -1,0 +1,280 @@
+================================================================================
+                      IMPORTANT FACTORS FOR NBA PLAYER PROPS
+                         Reference Guide for Model Development
+================================================================================
+
+This document outlines ALL critical factors to consider when analyzing NBA
+player props. These factors are derived from Idea.txt and real-world analysis.
+
+================================================================================
+                         TIER 1: CRITICAL FACTORS
+                    (Must be considered for every pick)
+================================================================================
+
+1. PLAYER BASELINE STATISTICS
+   -------------------------
+   - Season average (most stable predictor)
+   - Last 10 games average (recent form)
+   - Last 5 games average (immediate trend)
+   - Standard deviation / consistency
+   - Minutes played average
+
+   KEY FINDING: Sportsbook lines closely match season averages rounded to 0.5
+
+2. INJURY STATUS
+   -------------
+   - Is the player injured? (DNP = no pick)
+   - Coming back from injury? (Expect rust, reduced minutes)
+   - First game back vs 2nd/3rd game back
+   - Minutes restrictions (CRITICAL - reduces all stats proportionally)
+   - Teammate injuries (affects usage/opportunities)
+   - Should also consider the upside for the other team, depending on that player that is injured.
+
+   IMPORTANT: Players returning from injury are HIGH RISK
+   - First game: Expect 70-80% of normal production
+   - Weeks 1-2: Gradual ramp-up
+   - Watch for minutes limits
+
+3. BACK-TO-BACK GAMES (B2B)
+   ------------------------
+   - Second night of B2B = fatigue factor
+   - Expect 5-10% reduction in production
+   - Veterans more affected than young players
+   - Watch for "rest days" (star players sit)
+   
+   FINDING: B2B factor has 86.7% hit rate when used correctly
+
+4. MINUTES PROJECTION
+   ------------------
+   - Expected minutes vs average minutes
+   - Blowout risk (winning/losing by 15+ = bench time)
+   - Rotation changes
+   - Foul trouble history
+   
+   RULE: Stats scale roughly linearly with minutes
+
+================================================================================
+                         TIER 2: MATCHUP FACTORS
+                    (Analyze opponent for adjustment)
+================================================================================
+
+5. OPPONENT DEFENSE VS POSITION
+   ----------------------------
+   - Elite defense (top 5) = reduce projection 5-10%
+   - Good defense (6-10) = reduce projection 3-5%
+   - Average defense (11-20) = no adjustment
+   - Poor defense (21-25) = increase projection 3-5%
+   - Terrible defense (26-30) = increase projection 5-10%
+
+   Track separately for:
+   - Points allowed to position
+   - Rebounds allowed to position
+   - Assists allowed to position
+
+6. PACE OF PLAY
+   ------------
+   - Fast-paced teams = more possessions = more opportunities
+   - Slow teams = fewer possessions
+   - Adjust projections based on expected pace
+   
+   FORMULA: Adjusted = Base * (Matchup_Pace / League_Avg_Pace)
+
+7. HOME/AWAY SPLITS
+   ----------------
+   - Some players perform better at home
+   - Consider travel fatigue (West coast to East coast)
+   - Altitude adjustment (Denver games)
+   
+   NOTE: Home advantage is ~3 points for team, ~1-2% for individuals
+
+================================================================================
+                         TIER 3: SITUATIONAL FACTORS
+                    (Check when applicable)
+================================================================================
+
+8. COLD STREAKS / HOT STREAKS
+   --------------------------
+   COLD STREAK INDICATORS:
+   - Below average in 3+ consecutive games
+   - Shooting percentage down
+   - Plus/minus negative
+   
+   CAUTION: Don't over-rely on "cold bounce" theory
+   - Cold streak could indicate underlying issue:
+     * Injury not disclosed
+     * Trade rumors / distractions
+     * Coaching/rotation changes
+     * Personal issues
+
+   HOT STREAK INDICATORS:
+   - Above average in 3+ consecutive games
+   - Shooting percentage up
+   - Plus/minus positive
+   
+   NOTE: Hot streaks tend to regress faster than cold streaks
+
+9. SCHEDULE CONTEXT
+   ----------------
+   - Third game in four nights (3-in-4)
+   - End of road trip fatigue
+   - Before/after All-Star break
+   - Playoff push vs tanking team
+   - Rivalry games (higher intensity)
+
+10. TEAM GAME SCRIPT EXPECTATION
+    ---------------------------
+    - Expected close game = starters play more
+    - Expected blowout (either direction) = risk of reduced minutes
+    - Underdog = may garbage time stats
+    
+    SPREAD GUIDELINE from Idea.txt:
+    - Target games with spread < 6 points (closer games)
+
+================================================================================
+                         TIER 4: PLAYER-SPECIFIC FACTORS
+                    (Build player profiles over time)
+================================================================================
+
+11. PLAYER ARCHETYPES
+    -----------------
+    Centers:
+    - Point centers (playmakers) - more assists
+    - Stretch fives (shooters) - more 3PA, variable scoring
+    - Rim runners (vertical threats) - consistent around rim
+    - Two-way centers - defense affects rebounds
+    
+    Guards:
+    - Score-first guards - volume shooters
+    - Pass-first guards - assist heavy
+    - 3-and-D guards - consistent but lower volume
+    
+    Forwards:
+    - Stretch fours - 3-point heavy
+    - Traditional PFs - post scoring, rebounds
+    - Point forwards - playmaking, assists
+
+12. STAR PLAYER STATUS
+    ------------------
+    Definition (from Idea.txt):
+    - Average 23+ minutes per game, OR
+    - Starter when key players are out
+    
+    Why it matters:
+    - Star players have higher floors
+    - More consistent usage
+    - Don't target deep bench players
+
+13. HEAD-TO-HEAD HISTORY
+    -------------------
+    - How does player perform vs specific team?
+    - Some players exploit certain defenses
+    - Personal rivalries can boost performance
+    
+    SAMPLE SIZE: Need 3+ games for reliability
+
+================================================================================
+                         TIER 5: LINE-RELATED FACTORS
+                    (How we compare to sportsbook)
+================================================================================
+
+14. LINE SOURCE
+    -----------
+    - Sportsbook line (real market) vs Derived line (our calculation)
+    - Sportsbook lines are harder to beat (sharper)
+    - Derived lines may be "easier" (less efficient)
+    
+    KEY INSIGHT: Models perform better against derived lines
+    - V16: 75% SB vs 67% Derived
+    - This suggests true edge is lower than backtests show
+
+15. LINE MOVEMENT
+    -------------
+    - If line moves toward our projection = confirmation
+    - If line moves away = smart money disagrees
+    - Large moves (1+ points) indicate significant info
+
+16. EDGE CALCULATION
+    ----------------
+    Edge = (Projection - Line) / Line * 100
+    
+    Minimum edges by line source:
+    - Sportsbook lines: 8-10% minimum
+    - Derived lines: 12-15% minimum (higher bar)
+
+================================================================================
+                    FACTORS TO AVOID (RED FLAGS)
+================================================================================
+
+1. AVOID relying solely on "cold bounce" without other factors
+   - Could be injury/personal issue not reported
+
+2. AVOID late bench players
+   - High variance, unpredictable minutes
+
+3. AVOID assist props for players averaging < 4 APG
+   - From Idea.txt: Too volatile
+
+4. AVOID first-week players for new teams (trades)
+   - Role not established yet
+
+5. AVOID expecting immediate bounce from multi-game cold streak
+   - Regression is gradual, not instant
+
+================================================================================
+                      FACTOR WEIGHTING GUIDE
+================================================================================
+
+When multiple factors conflict, prioritize:
+
+1. Injury status (HIGHEST - can invalidate all other analysis)
+2. Minutes projection
+3. B2B / schedule fatigue
+4. Season average baseline
+5. Opponent defense
+6. Recent form (L5, L10)
+7. Head-to-head history
+8. Situational factors (LOWEST - use as tiebreaker)
+
+================================================================================
+                      CONFIDENCE SCORING
+================================================================================
+
+PREMIUM CONFIDENCE (Best picks):
+- 4+ positive factors aligned
+- No major red flags
+- Edge > 15% with sportsbook line
+- Player is established star
+
+HIGH CONFIDENCE:
+- 3+ positive factors
+- Minor concerns only
+- Edge > 10%
+- Solid sample size
+
+STANDARD CONFIDENCE:
+- 2+ positive factors
+- Some uncertainty
+- Edge > 8%
+- Use for volume plays
+
+PASS (Don't bet):
+- Conflicting factors
+- Major red flags
+- Edge < 8%
+- Insufficient data
+
+================================================================================
+                      MODEL-SPECIFIC FACTOR USAGE
+================================================================================
+
+V9 (Best performer): Simple weighted averages
+V10: Selective, high-confidence only
+V13: High volume, basic factors
+V16: Multi-factor with good sportsbook performance
+V17: Focus on cold streaks + B2B
+V18/V19: Comprehensive multi-factor (may be over-engineered)
+
+================================================================================
+Last Updated: February 4, 2026
+Source: Idea.txt, DATA_AND_BACKTESTING_GUIDE.md, Model Analysis
+================================================================================
