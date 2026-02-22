@@ -42,14 +42,6 @@ This repository is a comprehensive collection of software projects spanning **ma
 
 <table>
 <tr>
-<td width="120"><strong>Complexity</strong></td>
-<td>⬛⬛⬛⬛⬛ Very High</td>
-</tr>
-<tr>
-<td><strong>Lines of Code</strong></td>
-<td>~83,000+</td>
-</tr>
-<tr>
 <td><strong>Stack</strong></td>
 <td>Python · Flask · SQLite · Statistical Modeling · CLI</td>
 </tr>
