@@ -99,14 +99,6 @@ PropAI/
 
 <table>
 <tr>
-<td width="120"><strong>Complexity</strong></td>
-<td>⬛⬛⬛⬛◻ High</td>
-</tr>
-<tr>
-<td><strong>Lines of Code</strong></td>
-<td>~5,500</td>
-</tr>
-<tr>
 <td><strong>Stack</strong></td>
 <td>D3.js v7 · JavaScript · HTML5/CSS3 · GitHub Pages</td>
 </tr>
@@ -130,14 +122,6 @@ An interactive **narrative visualization** exploring the NBA's strategic transfo
 ## 3 · Job Application Dashboard
 
 <table>
-<tr>
-<td width="120"><strong>Complexity</strong></td>
-<td>⬛⬛⬛⬛◻ High</td>
-</tr>
-<tr>
-<td><strong>Lines of Code</strong></td>
-<td>~8,200</td>
-</tr>
 <tr>
 <td><strong>Stack</strong></td>
 <td>Python · PyQt6 · SQLite · Matplotlib · Custom Theming</td>
@@ -183,14 +167,6 @@ Job Application Dashboard/
 
 <table>
 <tr>
-<td width="120"><strong>Complexity</strong></td>
-<td>⬛⬛⬛⬛◻ High</td>
-</tr>
-<tr>
-<td><strong>Lines of Code</strong></td>
-<td>~760</td>
-</tr>
-<tr>
 <td><strong>Stack</strong></td>
 <td>Python · pyparsing · B-Tree · ACID Transactions · PyQt5</td>
 </tr>
@@ -228,14 +204,6 @@ Building a DBMS from scratch demonstrates deep understanding of systems internal
 
 <table>
 <tr>
-<td width="120"><strong>Complexity</strong></td>
-<td>⬛⬛⬛⬛◻ High</td>
-</tr>
-<tr>
-<td><strong>Lines of Code</strong></td>
-<td>~870 (C++) + Python parsers</td>
-</tr>
-<tr>
 <td><strong>Stack</strong></td>
 <td>C++14 · Graph Algorithms · Makefile · Catch2 Testing</td>
 </tr>
@@ -264,14 +232,6 @@ A C++ **graph analysis engine** using real-world data from OpenFlights.org to an
 
 <table>
 <tr>
-<td width="120"><strong>Complexity</strong></td>
-<td>⬛⬛⬛◻◻ Medium-High</td>
-</tr>
-<tr>
-<td><strong>Lines of Code</strong></td>
-<td>~620 (Swift)</td>
-</tr>
-<tr>
 <td><strong>Stack</strong></td>
 <td>Swift · SwiftUI · SwiftData · MVVM · Xcode</td>
 </tr>
@@ -294,14 +254,6 @@ A native **iOS roommate-finding app** with a Tinder-style swipe interface, profi
 ## 7 · AlgoNest — Algorithmic Trading Platform
 
 <table>
-<tr>
-<td width="120"><strong>Complexity</strong></td>
-<td>⬛⬛⬛◻◻ Medium-High</td>
-</tr>
-<tr>
-<td><strong>Lines of Code</strong></td>
-<td>~1,850</td>
-</tr>
 <tr>
 <td><strong>Stack</strong></td>
 <td>Django · Bootstrap 5 · Chart.js · Prism.js · SQLite</td>
@@ -345,14 +297,6 @@ A **subscription-based platform** for algorithmic trading bots with user authent
 
 <table>
 <tr>
-<td width="120"><strong>Complexity</strong></td>
-<td>⬛⬛⬛◻◻ Medium</td>
-</tr>
-<tr>
-<td><strong>Lines of Code</strong></td>
-<td>~615</td>
-</tr>
-<tr>
 <td><strong>Stack</strong></td>
 <td>React · TypeScript · Node.js · Express · MySQL · Google Cloud SQL</td>
 </tr>
@@ -372,14 +316,6 @@ A **full-stack web application** providing comprehensive crime statistics for Lo
 ## 9 · AI Article Summarizer
 
 <table>
-<tr>
-<td width="120"><strong>Complexity</strong></td>
-<td>⬛⬛⬛◻◻ Medium</td>
-</tr>
-<tr>
-<td><strong>Lines of Code</strong></td>
-<td>~144</td>
-</tr>
 <tr>
 <td><strong>Stack</strong></td>
 <td>Flask · HuggingFace Transformers · NLTK · PyTorch/TensorFlow</td>
@@ -404,14 +340,6 @@ A Flask web application offering **dual-mode article summarization** — compari
 
 <table>
 <tr>
-<td width="120"><strong>Complexity</strong></td>
-<td>⬛⬛⬛◻◻ Medium</td>
-</tr>
-<tr>
-<td><strong>Lines of Code</strong></td>
-<td>~491</td>
-</tr>
-<tr>
 <td><strong>Stack</strong></td>
 <td>Python · Tkinter · tkcalendar · SQLite · bcrypt · Matplotlib · plyer</td>
 </tr>
@@ -432,14 +360,6 @@ A **desktop academic planner** with secure authentication, calendar-based event 
 ## 11 · TicTacToeAI
 
 <table>
-<tr>
-<td width="120"><strong>Complexity</strong></td>
-<td>⬛⬛◻◻◻ Low-Medium</td>
-</tr>
-<tr>
-<td><strong>Lines of Code</strong></td>
-<td>~183</td>
-</tr>
 <tr>
 <td><strong>Stack</strong></td>
 <td>Python · Tkinter · Minimax Algorithm</td>
@@ -520,6 +440,6 @@ make
 
 <div align="center">
 
-**Built with curiosity, shipped with care.**
+**Built with curiosity.**
 
 </div>
