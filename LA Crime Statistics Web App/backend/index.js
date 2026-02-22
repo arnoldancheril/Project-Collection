@@ -5,22 +5,15 @@ const cloudSql = require("@google-cloud/sql");
 
 
 var db = mysql.createConnection({
-    host:'34.71.91.245',
-    //port: '3306',
-    user: 'root',
-    password:'aneenajoseph',
-    database:'Crime_Data',
-    socketPath: '/cloudsql/cs411-team096-m411umob:us-central1:m411u'
+    host: process.env.DB_HOST || 'localhost',
+    user: process.env.DB_USER || 'root',
+    password: process.env.DB_PASSWORD || '',
+    database: process.env.DB_NAME || 'Crime_Data',
+    socketPath: process.env.DB_SOCKET || ''
 })
 
-// const db = mysql.createConnection({
-//     user: 'root',
-//     password: 'aneenajoseph',
-//     database: 'Crime_Data',
-//     config: {
-//         socketPath: '/cloudsql/cs411-team096-m411umob:us-central1:m411u'
-//     }
-// });
+// Database connection configured via environment variables:
+// DB_HOST, DB_USER, DB_PASSWORD, DB_NAME, DB_SOCKET
 
 app.get('/', (require, response) => {
     const sqlQuery = 'SELECT COUNT(*) AS weaponCount FROM Victims_table;';

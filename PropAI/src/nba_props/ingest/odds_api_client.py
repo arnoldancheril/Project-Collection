@@ -31,8 +31,8 @@ except ImportError:
 # Configuration
 # ============================================================================
 
-# Default API key - can be overridden via environment variable or function parameter
-DEFAULT_API_KEY = "00ecbed197d3a7be09df31d336d2afaa"
+# API key - set via ODDS_API_KEY environment variable
+DEFAULT_API_KEY = os.environ.get("ODDS_API_KEY", "")
 
 # API base URL
 API_BASE_URL = "https://api.the-odds-api.com"
