@@ -488,7 +488,7 @@ An **unbeatable Tic-Tac-Toe AI** using the minimax algorithm with depth-based sc
 
 ```
 Project-Collection/
-├── PropAI/                         # NBA props prediction engine (83K+ LOC)
+├── PropAI/                         # NBA props prediction engine 
 ├── Sports Algorithm/               # Earlier PropAI iteration
 ├── NBA Dashboard Project/          # D3.js three-point revolution viz
 ├── Job Application Dashboard/      # PyQt6 desktop tracker (latest)
@@ -503,7 +503,7 @@ Project-Collection/
 ├── AI Article Summarizer/          # Flask NLP/AI summarizer
 ├── school_scheduler/               # Desktop academic planner
 ├── TicTacToeAI/                    # Minimax game AI
-└── Trippi/                         # Budget tracker (planned)
+└── Trippi/                         # Budget tracker
 ```
 
 ---
