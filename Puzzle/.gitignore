@@ -1,0 +1,14 @@
+# Local ignores for the Puzzle project
+
+.DS_Store
+__pycache__/
+*.py[cod]
+
+# Environments
+.venv/
+venv/
+.env
+.env.*
+
+# Generated outputs
+focused_output/
