@@ -184,8 +184,7 @@ multidict==6.0.5
 multiprocess==0.70.18
 multitasking==0.0.11
 mypy_extensions==1.1.0
-# Editable install with no version control (nba-props==0.3.0)
--e /Users/arnoldancheril/Personal/Github/Sports Algorithm
+# nba-props==0.3.0 (local package)
 nbclient==0.10.2
 nbconvert==7.16.6
 nbformat==5.10.4
