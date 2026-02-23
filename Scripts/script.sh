@@ -11,26 +11,30 @@ echo "         Paddock Environment Setup"
 echo "============================================"
 echo ""
 
-# ── 1. Get the Windows folder path where the setup files live ──────────────────
-echo "Enter the Windows path to the folder containing the setup files."
-echo "Example: C:\\paddock   or   C:\\Users\\you\\Downloads\\paddock"
-read -rp "Windows folder path: " WIN_PATH
+# ── 1. Get the path where the setup files live ────────────────────────────────
+echo "Enter the path to the folder containing the setup files."
+echo "You can enter either a Windows path or an already-converted WSL path:"
+echo "  Windows example : C:\\paddock"
+echo "  WSL example     : /mnt/c/paddock"
+read -rp "Path: " WIN_PATH
 
-# Convert Windows path to WSL mount path:
-#   C:\paddock  ->  /mnt/c/paddock
-#   Handles both forward- and back-slash separators.
-WIN_PATH_NORMALIZED="${WIN_PATH//\\//}"          # backslashes -> forward slashes
+# If the user already provided a Linux/WSL path (starts with /), use it directly.
+# Otherwise convert a Windows path (C:\paddock) to a WSL mount path (/mnt/c/paddock).
+if [[ "${WIN_PATH}" == /* ]]; then
+    WSL_PATH="${WIN_PATH}"
+else
+    # Normalise: backslashes -> forward slashes
+    WIN_PATH_NORMALIZED="${WIN_PATH//\\//}"
 
-# Extract drive letter (first character, lowercased)
-DRIVE_LETTER=$(echo "${WIN_PATH_NORMALIZED:0:1}" | tr '[:upper:]' '[:lower:]')
+    # Extract drive letter (first character, lowercased) and strip "X:"
+    DRIVE_LETTER=$(echo "${WIN_PATH_NORMALIZED:0:1}" | tr '[:upper:]' '[:lower:]')
+    REST_OF_PATH="${WIN_PATH_NORMALIZED:2}"
 
-# Strip the drive letter and colon from the front
-REST_OF_PATH="${WIN_PATH_NORMALIZED:2}"          # remove "C:"
-
-WSL_PATH="/mnt/${DRIVE_LETTER}${REST_OF_PATH}"
+    WSL_PATH="/mnt/${DRIVE_LETTER}${REST_OF_PATH}"
+fi
 
 echo ""
-echo "Resolved WSL path: ${WSL_PATH}"
+echo "Resolved path: ${WSL_PATH}"
 
 # Verify the folder exists
 if [ ! -d "${WSL_PATH}" ]; then
@@ -140,13 +144,13 @@ echo ""
 echo "============================================"
 echo "Running dnf update..."
 echo "============================================"
-sudo dnf update -y
+sudo dnf update -y --nobest --skip-broken
 
 echo ""
 echo "============================================"
 echo "Installing paddock_main.rpm..."
 echo "============================================"
-sudo dnf install -y paddock_main.rpm
+sudo dnf install -y --nobest "${WSL_PATH}/paddock_main.rpm"
 
 # ── Done ──────────────────────────────────────────────────────────────────────
 echo ""
