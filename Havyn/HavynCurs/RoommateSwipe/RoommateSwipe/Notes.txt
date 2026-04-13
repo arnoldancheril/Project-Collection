@@ -1,0 +1,452 @@
+File Structure
+
+This is the current file structure:
+
+HAVYNCURS
+├── ProfileImages
+└── RoommateSwipe
+    ├── RoommateSwipe
+    │   ├── Assets.xcassets
+    │   ├── Models
+    │   │   ├── Profile.swift
+    │   │   └── UserProfile.swift
+    │   ├── Preview Content
+    │   │   └── Preview Assets.xcassets
+    │   ├── ViewModels
+    │   │   └── RoommateViewModel.swift
+    │   ├── Views
+    │   │   ├── ApartmentListingSignUpView.swift
+    │   │   ├── BasicInfoView.swift
+    │   │   ├── DetailedProfileView.swift
+    │   │   ├── DetailedPropertyView.swift
+    │   │   ├── FormComponents.swift
+    │   │   ├── HaveRoomSignUpView.swift
+    │   │   ├── LifestyleQuestionsView.swift
+    │   │   ├── LikedView.swift
+    │   │   ├── LoadingView.swift
+    │   │   ├── LoginView.swift
+    │   │   ├── MapPropertyView.swift
+    │   │   ├── MapView.swift
+    │   │   ├── MatchedProfileView.swift
+    │   │   ├── MatchesView.swift
+    │   │   ├── PhotoUploadView.swift
+    │   │   ├── PreferencesView.swift
+    │   │   ├── ProfileDisplayView.swift
+    │   │   ├── ProfileEditView.swift
+    │   │   ├── ProfileTypeSelectionView.swift
+    │   │   ├── ProfileView.swift
+    │   │   ├── PropertyPreferencesView.swift
+    │   │   ├── RootTabView.swift
+    │   │   ├── ScheduleView.swift
+    │   │   ├── SignUpView.swift
+    │   │   ├── SwipeCardView.swift
+    │   │   └── SwipeView.swift
+    │   ├── AllCode.txt
+    │   ├── ApartmentListingRegistrationData.swift
+    │   ├── ContentView.swift
+    │   ├── GoogleService-Info.plist
+    │   ├── HaveRoomRegistrationData.swift
+    │   ├── Info.plist
+    │   ├── Item.swift
+    │   ├── Notes.txt
+    │   ├── RoommateSwipe.entitlements
+    │   ├── RoommateSwipeApp.swift
+    │   └── UserRegistrationData.swift
+    ├── RoommateSwipe.xcodeproj
+    ├── project.xcworkspace
+    ├── project.pbxproj
+    ├── RoommateSwipeTests
+    │   └── RoommateSwipeTests.swift
+    └── RoommateSwipeUITests
+        ├── RoommateSwipeUITests.swift
+        └── RoommateSwipeUITestsLaunchTests.swift
+
+
+
+
+02-27-2025
+When you swipe on a profile only the main picture goes with it, the picture of the property lags
+
+02-28-2025
+Above issue should be fixed. Made a more detailed profile page, still needs to be populated.
+There is an issue with browse tab close to the bottom where the tabs are and at the top with the filters.
+Also need to start figuring out how we want to do the backend.
+
+03-19-2025
+Did a lot of clean up on each individual views. Added a map with locations of each apartment. Created a much better sign up page.
+
+03-24-2025
+Improved sign up process, got different profile types and different questions added.
+
+
+
+Possible Features to Add:
+Add profile verification badges
+Implement a compatibility score between users
+Add personality quizzes to improve matching
+Include social media integration
+Add profile badges for verified properties
+Add profile highlights (e.g., "Verified Student", "Pet Friendly", etc.)
+Include loading animations with custom illustrations
+Add micro-interactions (small animations when tapping buttons)
+Implement pull-to-refresh functionality
+Add skeleton loading screens while content is loading
+Add push notifications
+Add property comparison tool to compare multiple listings
+Include neighborhood safety scores
+Add commute time calculator to nearby amenities
+Implement property wishlist feature
+Add property alerts for new listings matching preferences
+Include utility cost estimates
+Implement background checks
+Add identity verification
+Implement a reporting system for inappropriate behavior
+Add user ratings and reviews
+Add budget planning tools
+Add public transport accessibility scores
+Include neighborhood walkability scores
+Add nearby points of interest
+Add advanced search filters
+Implement saved searches
+Add haptic feedback for swipe actions
+Need to fix the browse view so that you can't see all the cards underneath the first card and need to move the name to the bottom above the root bar
+
+
+On the browse page it appears theres a slight cosmetic issue. Can you fix it so that the name, and all the information appear right above the root bar as opposed to be in the middle of the page. Also it seems, since the different profile cards are different lengths the bottom of the page does not look as clean since you can see the different cards underneath, can you fix this issue so that it looks more clean and more modern and user friendly. 
+
+
+
+
+
+
+
+
+
+Other:
+
+This is the beginning of an app called Havyn. Below is a sample MVP, there is a lot of work that needs to be done for this app can you help implement the features below. Currently this app works by users can swipe on profile cards on the main page. On the profile card there is a picture of the user and if they have a rental property that they are listing there is a picture of the property in the top right corner that when clicked on will expand and provide more information. Can you implement more of the features that are required for this project.
+
+MVP Description: Roommate-Swipe Matching App
+Overview: Havyn is a streamlined, user-friendly mobile application designed to help individuals find compatible roommates and apartments through an intuitive swipe-based matching interface similar to popular dating apps.
+Core Features:
+1.    Core User Features:
+o    User registration and authentication
+o    Profile creation with essential information:
+•    Basic info (name, age, gender)
+•    Current living situation (has room/needs room)
+•    Location preferences
+•    Budget range
+•    Move-in timeline
+•    Lifestyle preferences (cleanliness, partying, pets, etc.)
+•    Profile photos
+•    Bio/description
+2.    Matching Interface:
+o    Tinder-like swipe interface
+o    Left swipe for "pass"
+o    Right swipe for "like"
+o    Profile cards showing:
+o    Profile photo
+o    Basic info
+o    Living situation
+o    Budget range
+o    Key preferences
+o    Match notification when both users swipe right
+3.    Multiple User Types and Profiles:
+o    Individual Profiles: Users looking for roommates or housing create personal profiles including photos, bio, lifestyle preferences, budget, preferred move-in dates, and neighborhoods of interest.
+o    Apartment Company Profiles: Apartment companies list available apartments with detailed information such as location, price, amenities, availability, and images.
+o    Profiles clearly indicate the user's intent: offering a room, looking for roommates, or listing an apartment.
+4.    Safety & Trust:
+o    Basic profile verification
+o    Report user functionality
+o    Block user capability
+5.    Swipe Matching:
+o    Users swipe right on profiles to indicate interest or left to skip.
+o    Matches occur in two ways: a. Mutual interest between individual users generates a match and initiates a chat conversation. b. Users interested in the same apartment listing can see potential roommate matches.
+6.    Filtering & Preferences:
+o    Users can filter searches based on criteria like budget range, move-in date, neighborhood, smoking preference, pet ownership, and type of accommodation (roommate match or apartment listing).
+7.    Integrated Chat:
+o    Matches have access to a built-in messaging platform, facilitating easy communication without immediately sharing personal contact details.
+o    In-app chat between matched users
+o    Basic text messaging functionality
+o    Ability to share photos in chat
+8.    Location & Search:
+o    Users select or input their desired city, ensuring localized matching for roommates and apartments.
+o    City/area selection
+o    Basic filtering options:
+o    Price range
+o    Move-in date
+o    Room availability
+o    Gender preference
+9.    Signup and Login System:
+o    Secure user authentication for all user types, enabling easy profile management and secure access to matching features.
+10.    Technical Requirements:
+o    Mobile app (iOS)
+o    Backend API
+o    Real-time messaging
+o    Image storage
+o    User authentication
+o    Location services
+Technical Requirements:
+•    Secure authentication and data storage.
+•    Responsive UI/UX optimized for mobile.
+•    Robust backend architecture for user management, matching logic, and apartment listing management.
+Value Proposition: Havyn simplifies and accelerates the roommate and housing search process by leveraging the familiarity of swipe-based interfaces. It provides multiple pathways to finding suitable roommates and apartments, ensuring flexibility, safety, and efficiency for all users.
+This MVP focuses on the core functionality of connecting potential roommates through a familiar swipe interface while maintaining essential safety features. The app would prioritize user experience and simplicity while providing enough information for users to make informed decisions about potential matches.
+
+
+
+
+Minimum Viable Product (MVP) for your roommate-finding app with a dating app-like interface. Let me break this down into key components and features:
+
+1. **Core User Features**:
+   - User registration and authentication
+   - Profile creation with essential information:
+     - Basic info (name, age, gender)
+     - Current living situation (has room/needs room)
+     - Location preferences
+     - Budget range
+     - Move-in timeline
+     - Lifestyle preferences (cleanliness, partying, pets, etc.)
+     - Profile photos
+     - Bio/description
+
+2. **Matching Interface**:
+Tinder-like swipe interface
+Left swipe for "pass"
+Right swipe for "like"
+Profile cards showing:
+Profile photo
+Basic info
+Living situation
+Budget range
+Key preferences
+Match notification when both users swipe right
+
+
+4. **Location & Search**:
+City/area selection
+Basic filtering options:
+Price range
+Move-in date
+Room availability
+Gender preference
+
+5. **Safety & Trust**:
+Basic profile verification
+Report user functionality
+Block user capability
+
+6. **Technical Requirements**:
+Mobile app (iOS/Android) using React Native/Expo
+Backend API
+Real-time messaging
+Image storage
+User authentication
+Location services
+
+7. **MVP Limitations**:
+No advanced search filters
+Basic profile verification only
+Limited to one city/area initially
+No payment integration
+No background checks
+No scheduling system for viewings
+
+This MVP focuses on the core functionality of connecting potential roommates through a familiar swipe interface while maintaining essential safety features. The app would prioritize user experience and simplicity while providing enough information for users to make informed decisions about potential matches.
+
+
+
+
+
+
+
+
+
+
+
+
+For the time being create these pages with the questions and next button (like the already existing view), the answers do not need to be stored or collected , we just want to develop the view and create the questions, pages, and views.
+
+This is the current file strucutre for reference. Keep this in mind when creating new files as we do not want duplicates or to delete any of the current files because they are likely used in other places. ContentView.swift is located at /Users/arnoldancheril/Desktop/StartUp/HavynCurs/RoommateSwipe/RoommateSwipe/ContentView.swift, do not create a file called ContentView.swift and if any changes need to be made make changes to the contentview.swift at /Users/arnoldancheril/Desktop/StartUp/HavynCurs/RoommateSwipe/RoommateSwipe/ContentView.swift.
+
+Do not create a new file called SignUpView.swift because a file with that name already exists in the root directory.
+
+Aim for a clean, intuitive, and engaging user interface that enhances user interaction within the app.
+
+
+
+
+
+The profile tab in the root bar looks good. However the only way the user should be able to modify anything that appears on the view in the profile tab is if the user clicks edit at the top right corner, and any information the user enters while editing the profile, and once they click save that information should be reflective in the profile view. Right now the information in the edit section does not match up with the information we can see in the profile view, can you update the edit tab so that it has all the questions from the profile view.
+
+In addition the next step is we want to be able to setup this application with Firebase so that we can use the features provided by Firebase. The project is already set up on Firebase and the GoogleService-Info.plist file has been added to the project. Can you walk me through the next steps of setting that up. For right now we just want to do some tests to see how Firebase can be integrated. So is it possible to implement a system so that the information the user enters while editing and that will appear in the profile tab, can that be stored in Firebase, can you walk me through what the possibilities are and how to implement this.
+
+Do not set up firebase authentication, right now we just want it to just sample store the information that a user would enter when editing their profile in the profile view and nothing else. Preferable in just a Firestore Database if that is possible, can you walk me through what the possibilities are and how to implement this, and how to test this as well.
+
+Can you do give the instructions and do the setup based on using Swift Packet Manager and xcode, not using CocoaPods.
+
+
+
+
+
+Next we need to centralize all the data that we are collecting, so that for the most part we are collecting the same information from all the users but if they are listing an apartment then we collect some different information so that all of its stored cohesively
+Then we also need be able to update the profile view from based on what the user enters when logging into the app
+And see how to link the database so that it populates/creates the profiles when someone’s opens the app
+
+
+
+
+
+
+
+
+
+
+# RoommateSwipe MVP
+
+## Overview
+RoommateSwipe is a comprehensive roommate-matching platform that connects people looking for housing with those who have rooms available or apartment listings. The app uses a swipe-based interface (similar to dating apps) to make the roommate search process more intuitive and engaging.
+
+## Core Features
+
+### 1. User Registration & Authentication
+- **Account Creation**: Email/password signup with optional social login
+- **Profile Type Selection**: Users choose between three distinct roles:
+  - "Looking for a Room" (roommate seeker)
+  - "Have a Room" (room provider)
+  - "Apartment Listing" (property manager)
+- **Verification System**: ID/background verification for safety (optional tier)
+
+### 2. Profile Creation
+- **Stepwise Onboarding**: Multi-step form collecting essential information:
+  - Basic personal details (name, age, contact info)
+  - Housing preferences/details
+  - Lifestyle questions (cleanliness, social habits, schedule)
+  - Budget parameters
+  - Location preferences
+  - Move-in timeline
+- **Media Upload**: Profile photos and room/property images
+- **Preference Settings**: Defining ideal roommate characteristics
+
+### 3. Browse & Match System
+- **Card-Based Interface**: Profile cards with essential information
+- **Swipe Actions**: Right to like, left to pass
+- **Matching Algorithm**: Connect users when mutual interest is established
+- **Advanced Filters**: Filter by location, budget, timeline, and preferences
+- **Map View**: Geographic visualization of available rooms
+
+### 4. Communication
+- **In-App Messaging**: Chat with matches
+- **Notification System**: Alerts for new matches, messages, and profile views
+- **Message Suggestions**: Pre-written conversation starters
+
+### 5. Profile Management
+- **Profile Editing**: Update information, photos, and preferences
+- **Visibility Controls**: Pause/resume profile visibility
+- **Account Settings**: Privacy controls, notification preferences
+
+### 6. Database Integration
+- **Firebase Backend**: Real-time database for profiles, matches, and messages
+- **Collection Structure**:
+  - User profiles: Basic information about all users
+  - Looking for room: Specific details for roommate seekers
+  - Have room: Information about available rooms and preferences
+  - Apartment listings: Details about professional property listings
+  - Sample profiles: Pre-populated examples for testing
+- **Real-time Updates**: Profiles in browse automatically sync with database
+
+### 7. Admin & Moderation
+- **Content Moderation**: System to review and remove inappropriate content
+- **User Reporting**: Mechanism to flag suspicious profiles
+- **Analytics Dashboard**: Usage statistics and platform health metrics
+
+## User Flow
+
+1. **Onboarding**:
+   - Download app → Create account → Select profile type
+   - Complete multi-step profile → Upload photos → Set preferences
+
+2. **Core Experience**:
+   - Browse potential matches → Filter based on preferences
+   - Swipe right (like) or left (pass) on profiles
+   - Receive match notifications when mutual interest exists
+   - Message matches to discuss housing arrangements
+
+3. **Profile Management**:
+   - View and edit profile information
+   - Change preferences and filters
+   - Update room/housing status (available/unavailable)
+
+4. **Meetings & Verification**:
+   - Schedule in-person or virtual property viewings
+   - Option to verify identity through third-party services
+   - Leave feedback after meetings or roommate experiences
+
+## Technical Implementation
+
+### Frontend
+- **SwiftUI Interface**: Modern, responsive, and accessible design
+- **MVVM Architecture**: Separation of concerns for maintainable code
+- **Component-Based Design**: Reusable UI elements across screens
+
+### Backend
+- **Firebase Integration**:
+  - Authentication for user management
+  - Firestore for profile and matching data
+  - Storage for images and media
+  - Cloud Functions for backend logic and notifications
+- **Real-time Updates**: Live data synchronization
+
+### Data Structure
+- Different collections for each user type ensures organized data
+- Profile model includes:
+  - Basic personal information
+  - Housing preferences/details
+  - Lifestyle characteristics
+  - Geographic data
+  - Media references
+  - Match history
+
+## Future Enhancements
+
+1. **Advanced Matching**:
+   - AI-powered compatibility scoring
+   - Personality questionnaires for better matches
+   - Enhanced filtering options
+
+2. **Safety Features**:
+   - In-app video chat for virtual tours
+   - Identity verification badges
+   - Background check integration
+   - Reference system from previous roommates
+
+3. **Monetization Options**:
+   - Premium subscription for advanced features
+   - Boosted visibility for profiles
+   - Featured listings for property managers
+   - Referral programs with move-in services
+
+4. **Integration Possibilities**:
+   - Rental agreement templates
+   - Payment splitting tools
+   - Moving service connections
+   - Neighborhood guides and walkability scores
+
+5. **Community Features**:
+   - Forums for housing advice
+   - Local roommate events
+   - Roommate reviews system
+   - Resource center for rental laws
+
+## Success Metrics
+
+- User growth and retention
+- Match-to-meeting conversion rate
+- Successful roommate pairings
+- Time to find suitable housing/roommate
+- User satisfaction and feedback scores
+
+This MVP provides a solid foundation for launching the RoommateSwipe app with essential features while allowing for future growth and enhancement based on user feedback and market demands.
+
+
+

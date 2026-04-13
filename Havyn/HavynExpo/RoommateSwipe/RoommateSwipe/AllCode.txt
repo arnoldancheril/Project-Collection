@@ -1,0 +1,4042 @@
+# RoommateSwipe - Project Documentation
+
+## Project Overview
+
+RoommateSwipe is a mobile application designed to help users find compatible roommates and housing options. Inspired by dating apps like Tinder, it implements a swipe interface for browsing potential roommates, along with features for viewing matches, chatting, and managing user profiles. The app supports two main user types: those who have a room to offer and those looking for a room to rent.
+
+## Folder & File Structure
+
+```
+HAVYNCURS
+├── ProfileImages
+└── RoommateSwipe
+    ├── RoommateSwipe
+    │   ├── Assets.xcassets
+    │   ├── Models
+    │   │   ├── Profile.swift
+    │   │   └── UserProfile.swift
+    │   ├── Preview Content
+    │   │   └── Preview Assets.xcassets
+    │   ├── ViewModels
+    │   │   └── RoommateViewModel.swift
+    │   ├── Views
+    │   │   ├── ApartmentListingSignUpView.swift
+    │   │   ├── BasicInfoView.swift
+    │   │   ├── ButtonStyles.swift
+    │   │   ├── ChatComponents.swift
+    │   │   ├── DetailedProfileView.swift
+    │   │   ├── DetailedPropertyView.swift
+    │   │   ├── FormComponents.swift
+    │   │   ├── HaveRoomSignUpView.swift
+    │   │   ├── LifestyleQuestionsView.swift
+    │   │   ├── LikedView.swift
+    │   │   ├── LoadingView.swift
+    │   │   ├── LoginView.swift
+    │   │   ├── MapPropertyView.swift
+    │   │   ├── MapView.swift
+    │   │   ├── MatchedProfileView.swift
+    │   │   ├── MatchesView.swift
+    │   │   ├── PhotoUploadView.swift
+    │   │   ├── PreferencesView.swift
+    │   │   ├── ProfileDisplayView.swift
+    │   │   ├── ProfileEditView.swift
+    │   │   ├── ProfileTypeSelectionView.swift
+    │   │   ├── ProfileView.swift
+    │   │   ├── PropertyPreferencesView.swift
+    │   │   ├── RootTabView.swift
+    │   │   ├── ScheduleView.swift
+    │   │   ├── SignUpView.swift
+    │   │   ├── SwipeCardView.swift
+    │   │   └── SwipeView.swift
+    │   ├── AllCode.txt
+    │   ├── ApartmentListingRegistrationData.swift
+    │   ├── ContentView.swift
+    │   ├── GoogleService-Info.plist
+    │   ├── HaveRoomRegistrationData.swift
+    │   ├── Info.plist
+    │   ├── Item.swift
+    │   ├── Notes.txt
+    │   ├── RoommateSwipe.entitlements
+    │   ├── RoommateSwipeApp.swift
+    │   └── UserRegistrationData.swift
+    ├── RoommateSwipe.xcodeproj
+    ├── RoommateSwipeTests
+    │   └── RoommateSwipeTests.swift
+    └── RoommateSwipeUITests
+        ├── RoommateSwipeUITests.swift
+        └── RoommateSwipeUITestsLaunchTests.swift
+```
+
+## Detailed File Descriptions
+
+### Models
+
+#### 1. Profile.swift
+- **Purpose**: Defines the comprehensive data model for all user profiles in the application.
+- **Key Components**: 
+  - `Profile` struct (conforms to `Identifiable`)
+  - Fields for basic info (name, age, gender), property details, location data, lifestyle preferences
+  - Enum for profile types (offering room, seeking room, both, apartment company)
+- **Contribution**: Serves as the foundation for representing other users in the app, especially during swiping and matching.
+
+#### 2. UserProfile.swift
+- **Purpose**: Represents the current logged-in user's profile information.
+- **Key Components**:
+  - `UserProfile` struct with personal data fields
+  - Simplified version of Profile with additional fields specific to the current user
+  - Default initialization with empty values
+- **Contribution**: Stores and manages the current user's information throughout the app, especially in profile viewing and editing.
+
+### ViewModels
+
+#### 3. RoommateViewModel.swift
+- **Purpose**: Central data management and business logic for the application.
+- **Key Components**:
+  - `RoommateViewModel` class (conforms to `ObservableObject`)
+  - Sample profile data
+  - Current user's profile data
+  - Methods for filtering, matching, and managing profile interactions
+- **Contribution**: Serves as the app's state management system, connecting views with data and handling user interactions.
+
+### Views
+
+#### 4. ApartmentListingSignUpView.swift
+- **Purpose**: Registration form for apartment companies/landlords.
+- **Key Components**:
+  - Form fields for property details, amenities, and contact information
+  - Property photo uploads
+  - Company verification options
+- **Contribution**: Provides a specialized registration path for property owners or companies listing apartments.
+
+#### 5. BasicInfoView.swift
+- **Purpose**: Collects essential user information during sign-up.
+- **Key Components**:
+  - Form fields for name, email, password, age, and location
+  - Input validation
+  - Navigation to next registration steps
+- **Contribution**: Initiates the user registration process by capturing fundamental profile data.
+
+#### 6. ButtonStyles.swift
+- **Purpose**: Contains reusable button style definitions.
+- **Key Components**:
+  - `ScaleButtonStyle` - provides an animated scaling effect when buttons are pressed
+- **Contribution**: Ensures consistent button behavior and appearance throughout the app while reducing code duplication.
+
+#### 7. ChatComponents.swift
+- **Purpose**: Defines reusable components for the messaging interface.
+- **Key Components**:
+  - `ChatMessage` struct - data model for individual messages
+  - `ChatBubble` view - visual representation of messages
+- **Contribution**: Provides consistent chat UI elements for the messaging features of the app.
+
+#### 8. DetailedProfileView.swift
+- **Purpose**: Displays comprehensive information about a user profile.
+- **Key Components**:
+  - Profile image and basic information
+  - Organized sections for habits, preferences, and property details
+  - "Like" and "Not Interested" action buttons with animations
+- **Contribution**: Allows users to view detailed information about potential roommates and take action.
+
+#### 9. DetailedPropertyView.swift
+- **Purpose**: Shows detailed information about a property.
+- **Key Components**:
+  - Property images and basic information
+  - Amenities and features list
+  - Map integration showing property location
+  - Contact options
+- **Contribution**: Provides comprehensive property details for users seeking housing options.
+
+#### 10. FormComponents.swift
+- **Purpose**: Contains reusable form elements.
+- **Key Components**:
+  - Custom text fields, pickers, and toggles
+  - Styled form sections and containers
+- **Contribution**: Ensures consistent form appearance and behavior throughout the app.
+
+#### 11. HaveRoomSignUpView.swift
+- **Purpose**: Registration form for users who have a room to offer.
+- **Key Components**:
+  - Property details input fields
+  - Amenities selection
+  - Room availability and pricing information
+  - Property photo uploads
+- **Contribution**: Facilitates registration for users looking to find roommates for their existing housing.
+
+#### 12. LifestyleQuestionsView.swift
+- **Purpose**: Collects lifestyle preferences during registration.
+- **Key Components**:
+  - Questions about cleanliness, social habits, smoking, pets
+  - Preference sliders and toggles
+- **Contribution**: Gathers compatibility data to improve roommate matching accuracy.
+
+#### 13. LikedView.swift
+- **Purpose**: Displays profiles the user has liked.
+- **Key Components**:
+  - List of liked profiles with preview information
+  - Navigation to detailed profile view
+- **Contribution**: Allows users to revisit and further explore profiles they've expressed interest in.
+
+#### 14. LoadingView.swift
+- **Purpose**: Displays during app initialization or data loading.
+- **Key Components**:
+  - Loading animation
+  - Status message
+- **Contribution**: Provides visual feedback during loading processes to improve user experience.
+
+#### 15. LoginView.swift
+- **Purpose**: Handles user authentication.
+- **Key Components**:
+  - Login form with email and password fields
+  - Registration and password recovery options
+  - Authentication error handling
+- **Contribution**: Controls access to the app and redirects users to appropriate screens based on authentication status.
+
+#### 16. MapPropertyView.swift
+- **Purpose**: Displays property locations on a map.
+- **Key Components**:
+  - Interactive map with property pins
+  - Property previews on pin selection
+  - Navigation to detailed property view
+- **Contribution**: Provides a geographical interface for discovering available properties.
+
+#### 17. MapView.swift
+- **Purpose**: Main map interface for browsing properties.
+- **Key Components**:
+  - Full-screen map with property annotations
+  - Search and filter options
+  - Interaction with property listings
+- **Contribution**: Offers a location-based approach to finding housing options.
+
+#### 18. MatchedProfileView.swift
+- **Purpose**: Displays profile details for mutual matches.
+- **Key Components**:
+  - Profile information and preferences
+  - Chat initiation option
+  - Unmatch functionality
+- **Contribution**: Facilitates communication between matched users and provides detailed compatibility information.
+
+#### 19. MatchesView.swift
+- **Purpose**: Lists all mutual matches.
+- **Key Components**:
+  - Match preview cards with basic information
+  - Navigation to detailed match profiles
+  - Chat access
+- **Contribution**: Centralizes all successful matches, allowing users to manage their connections.
+
+#### 20. PhotoUploadView.swift
+- **Purpose**: Handles profile and property photo uploads.
+- **Key Components**:
+  - Photo selection interface
+  - Image preview and editing
+  - Upload progress indicators
+- **Contribution**: Enables users to add visual content to their profiles and property listings.
+
+#### 21. PreferencesView.swift
+- **Purpose**: Collects roommate and housing preferences.
+- **Key Components**:
+  - Budget range selection
+  - Location preferences
+  - Roommate characteristics preferences
+- **Contribution**: Gathers data to improve match quality and filter potential roommates.
+
+#### 22. ProfileDisplayView.swift
+- **Purpose**: Shows the current user's profile.
+- **Key Components**:
+  - Profile image and information in organized sections
+  - Edit profile option
+  - Verification status
+- **Contribution**: Provides users with a view of their own profile as it appears to others.
+
+#### 23. ProfileEditView.swift
+- **Purpose**: Allows users to modify their profile information.
+- **Key Components**:
+  - Editable fields for all profile information
+  - Photo management
+  - Save and cancel actions
+- **Contribution**: Enables users to keep their profile information current and accurate.
+
+#### 24. ProfileTypeSelectionView.swift
+- **Purpose**: Initial registration screen for selecting user type.
+- **Key Components**:
+  - Options for "Have a room", "Need a room", or "Apartment company"
+  - Visual explanations of each option
+- **Contribution**: Directs users to the appropriate registration flow based on their needs.
+
+#### 25. ProfileView.swift
+- **Purpose**: Tab view for accessing profile-related features.
+- **Key Components**:
+  - Profile display
+  - Edit profile access
+  - Account settings
+  - Logout option
+- **Contribution**: Serves as the hub for all profile management functions.
+
+#### 26. PropertyPreferencesView.swift
+- **Purpose**: Collects detailed housing preferences.
+- **Key Components**:
+  - Neighborhood preferences
+  - Amenities requirements
+  - Room type and size preferences
+  - Budget constraints
+- **Contribution**: Gathers specific housing requirements to improve property matches.
+
+#### 27. RootTabView.swift
+- **Purpose**: Main navigation structure of the app.
+- **Key Components**:
+  - Tab bar with icons for Swipe, Map, Liked, Matches, and Profile
+  - Navigation to main app sections
+- **Contribution**: Provides intuitive access to the app's primary features.
+
+#### 28. ScheduleView.swift
+- **Purpose**: Collects user schedule information.
+- **Key Components**:
+  - Wake/sleep time selectors
+  - Work schedule input
+  - Typical routine description
+- **Contribution**: Gathers lifestyle timing data to improve roommate compatibility matching.
+
+#### 29. SignUpView.swift
+- **Purpose**: Manages the multi-step registration process.
+- **Key Components**:
+  - Progress indicators
+  - Navigation between registration steps
+  - Data aggregation from all registration views
+- **Contribution**: Orchestrates the complete user onboarding experience.
+
+#### 30. SwipeCardView.swift
+- **Purpose**: Renders individual profile cards for swiping.
+- **Key Components**:
+  - Profile card with image and basic information
+  - Swipe gesture handling
+  - Like/Pass animations
+  - Navigation to detailed profile view
+- **Contribution**: Provides the core swiping interaction for browsing potential roommates.
+
+#### 31. SwipeView.swift
+- **Purpose**: Manages the stack of swipeable profile cards.
+- **Key Components**:
+  - Card stack management
+  - Filter bar for refining search criteria
+  - Profile data integration
+- **Contribution**: Serves as the main discovery interface for finding potential roommates.
+
+### Application Components
+
+#### 32. ApartmentListingRegistrationData.swift
+- **Purpose**: Data structure for apartment listing registration.
+- **Key Components**:
+  - Form data for apartment listings
+  - Input validation logic
+- **Contribution**: Manages data during apartment company registration flow.
+
+#### 33. ContentView.swift
+- **Purpose**: Root view that determines which main view to display.
+- **Key Components**:
+  - Authentication state checking
+  - Conditional navigation to Loading, Login, or Main app interface
+- **Contribution**: Handles initial app routing based on user state.
+
+#### 34. HaveRoomRegistrationData.swift
+- **Purpose**: Data structure for "have room" registration.
+- **Key Components**:
+  - Form data for users offering rooms
+  - Property details storage
+- **Contribution**: Manages data during the "have room" registration flow.
+
+#### 35. Item.swift
+- **Purpose**: Example SwiftData model.
+- **Key Components**:
+  - Basic data model with timestamp
+- **Contribution**: Demonstrates SwiftData implementation pattern.
+
+#### 36. RoommateSwipeApp.swift
+- **Purpose**: App entry point and configuration.
+- **Key Components**:
+  - `@main` app structure
+  - Environment setup
+  - ViewModel initialization
+- **Contribution**: Bootstraps the application and sets up the required environment.
+
+#### 37. UserRegistrationData.swift
+- **Purpose**: Common data structure for all user registrations.
+- **Key Components**:
+  - Shared form data for all user types
+  - Registration state management
+- **Contribution**: Provides a consistent data model for the registration process.
+
+### Configuration Files
+
+#### 38. GoogleService-Info.plist
+- **Purpose**: Firebase configuration.
+- **Contribution**: Enables Firebase integration for authentication, database, and storage.
+
+#### 39. Info.plist
+- **Purpose**: App configuration and permissions.
+- **Contribution**: Defines app capabilities, permissions, and configuration parameters.
+
+#### 40. RoommateSwipe.entitlements
+- **Purpose**: App entitlements definition.
+- **Contribution**: Specifies app privileges and capabilities.
+
+#### 41. Notes.txt
+- **Purpose**: Developer notes and documentation.
+- **Contribution**: Provides reference information for developers.
+
+### Test Files
+
+#### 42. RoommateSwipeTests.swift
+- **Purpose**: Unit test implementations.
+- **Contribution**: Ensures code quality and functionality through automated testing.
+
+#### 43. RoommateSwipeUITests.swift & RoommateSwipeUITestsLaunchTests.swift
+- **Purpose**: UI test implementations.
+- **Contribution**: Validates user interface functionality through automated testing.
+
+## Application Flow
+
+1. **Startup**: RoommateSwipeApp initializes the environment and loads ContentView.
+2. **Authentication**: ContentView displays LoginView for unauthenticated users.
+3. **Registration**: New users select their profile type and complete the multi-step registration.
+4. **Main Interface**: Authenticated users access the app through RootTabView's navigation tabs:
+   - **Swipe**: Browse potential roommates with SwipeView
+   - **Map**: Explore properties geographically with MapView
+   - **Liked**: View profiles the user has liked
+   - **Matches**: Access mutual matches and chat
+   - **Profile**: View and edit personal profile
+
+4. **Property Map**  
+   - A built-in map shows property locations for users offering a room.
+   - Each property pin can be tapped to see details such as rent, amenities, and pictures.
+
+5. **Profile Editing**  
+   - Users can edit their own profile, update property images, or adjust search filters at any time.
+
+6. **Filtering & Preferences**  
+   - City, gender, budget, and other preferences can be set so that only relevant profiles appear in the swipe deck.
+
+7. **General Flow**  
+   - Upon launching, the user sees a loading screen, then either logs in or signs up.
+   - Once authenticated, they navigate via a tab bar to swipe, view the map, see liked profiles, check matches, or edit their profile.
+
+Overall, the project provides a complete SwiftUI-based iOS application for discovering and matching with potential roommates, handling profile creation, property details, and real-time matching logic.
+
+
+File Structure:
+
+HAVYNCURS
+├── ProfileImages
+└── RoommateSwipe
+    ├── RoommateSwipe
+    │   ├── Assets.xcassets
+    │   ├── Models
+    │   │   ├── Profile.swift
+    │   │   └── UserProfile.swift
+    │   ├── Preview Content
+    │   │   └── Preview Assets.xcassets
+    │   ├── ViewModels
+    │   │   └── RoommateViewModel.swift
+    │   ├── Views
+    │   │   ├── ApartmentListingSignUpView.swift
+    │   │   ├── BasicInfoView.swift
+    │   │   ├── DetailedProfileView.swift
+    │   │   ├── DetailedPropertyView.swift
+    │   │   ├── FormComponents.swift
+    │   │   ├── HaveRoomSignUpView.swift
+    │   │   ├── LifestyleQuestionsView.swift
+    │   │   ├── LikedView.swift
+    │   │   ├── LoadingView.swift
+    │   │   ├── LoginView.swift
+    │   │   ├── MapPropertyView.swift
+    │   │   ├── MapView.swift
+    │   │   ├── MatchedProfileView.swift
+    │   │   ├── MatchesView.swift
+    │   │   ├── PhotoUploadView.swift
+    │   │   ├── PreferencesView.swift
+    │   │   ├── ProfileDisplayView.swift
+    │   │   ├── ProfileEditView.swift
+    │   │   ├── ProfileTypeSelectionView.swift
+    │   │   ├── ProfileView.swift
+    │   │   ├── PropertyPreferencesView.swift
+    │   │   ├── RootTabView.swift
+    │   │   ├── ScheduleView.swift
+    │   │   ├── SignUpView.swift
+    │   │   ├── SwipeCardView.swift
+    │   │   └── SwipeView.swift
+    │   ├── AllCode.txt
+    │   ├── ApartmentListingRegistrationData.swift
+    │   ├── ContentView.swift
+    │   ├── GoogleService-Info.plist
+    │   ├── HaveRoomRegistrationData.swift
+    │   ├── Info.plist
+    │   ├── Item.swift
+    │   ├── Notes.txt
+    │   ├── RoommateSwipe.entitlements
+    │   ├── RoommateSwipeApp.swift
+    │   └── UserRegistrationData.swift
+    ├── RoommateSwipe.xcodeproj
+    ├── project.xcworkspace
+    ├── project.pbxproj
+    ├── RoommateSwipeTests
+    │   └── RoommateSwipeTests.swift
+    └── RoommateSwipeUITests
+        ├── RoommateSwipeUITests.swift
+        └── RoommateSwipeUITestsLaunchTests.swift
+
+
+
+
+
+//
+//  ContentView.swift
+//  RoommateSwipe
+//
+//  Created by AA on 2/27/25.
+//
+
+
+import SwiftUI
+import SwiftData
+
+struct ContentView: View {
+    // MARK: - SwiftData environment
+    @Environment(\.modelContext) private var modelContext
+    @Query private var items: [Item]
+    
+    // MARK: - Loading State
+    @State private var isLoading: Bool = true
+    @State private var isAuthenticated: Bool = false
+    
+    // MARK: - ViewModel
+    @StateObject var viewModel = RoommateViewModel()
+    
+    var body: some View {
+        ZStack {
+            if isLoading {
+                LoadingView()
+                    .transition(.opacity)
+            } else if !isAuthenticated {
+                LoginView(isAuthenticated: $isAuthenticated)
+                    .transition(.opacity)
+            } else {
+                // The main UI with tabs
+                RootTabView()
+                    .environmentObject(viewModel)
+                    .transition(.opacity)
+            }
+        }
+        .onAppear {
+            // Simulate a 2-second loading time
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                withAnimation {
+                    isLoading = false
+                }
+            }
+        }
+    }
+    
+    // You can keep or remove the default SwiftData logic below:
+    /*
+    private func addItem() {
+        withAnimation {
+            let newItem = Item(timestamp: Date())
+            modelContext.insert(newItem)
+        }
+    }
+
+    private func deleteItems(offsets: IndexSet) {
+        withAnimation {
+            for index in offsets {
+                modelContext.delete(items[index])
+            }
+        }
+    }
+    */
+}
+
+#Preview {
+    ContentView()
+        .modelContainer(for: Item.self, inMemory: true)
+}
+
+
+
+
+
+
+
+//
+//  Profile.swift
+//  RoommateSwipe
+//
+
+import SwiftUI
+import MapKit
+
+struct Profile: Identifiable {
+    let id = UUID()
+    
+    // Basic Info
+    let name: String
+    let age: Int
+    let gender: String
+    let city: String
+    let bio: String
+    
+    // Profile Images
+    let imageName: String
+    let propertyImageName: String?
+    
+    // Living Situation
+    let hasRoom: Bool
+    let needsRoom: Bool
+    let moveInDate: Date
+    
+    // Location & Budget
+    let preferredNeighborhoods: [String]
+    let budgetRange: ClosedRange<Double>
+    let coordinate: CLLocationCoordinate2D
+    
+    // Property Details (if hasRoom is true)
+    let numberOfRooms: Int
+    let numberOfBathrooms: Int
+    let amenities: String
+    let rent: String
+    let address: String
+    
+    // Lifestyle Preferences
+    let cleanliness: Int // 1-5 scale
+    let partying: Int // 1-5 scale
+    let smoking: Bool
+    let pets: Bool
+    let petTypes: [String]?
+    let wakeUpTime: String
+    let sleepTime: String
+    
+    // Additional Info
+    let habits: String
+    let lookingFor: String
+    let verificationStatus: Bool
+    let isBlocked: Bool
+    
+    // Computed property for profile type
+    var profileType: ProfileType {
+        if hasRoom && needsRoom {
+            return .both
+        } else if hasRoom {
+            return .offering
+        } else if needsRoom {
+            return .seeking
+        } else {
+            return .apartmentCompany
+        }
+    }
+}
+
+enum ProfileType {
+    case offering
+    case seeking
+    case both
+    case apartmentCompany
+}
+
+
+
+//
+//  UserProfile.swift
+//  RoommateSwipe
+//
+
+import Foundation
+
+struct UserProfile {
+    var name: String
+    var age: Int
+    var city: String
+    var budget: String
+    var interests: String
+    var bio: String
+    
+    // Optional images for user + property
+    var profileImageName: String?
+    var propertyImageName: String?
+    
+    // You can add more fields here if needed
+}
+
+
+
+//
+//  RoommateViewModel.swift
+//  RoommateSwipe
+//
+
+import SwiftUI
+import CoreLocation
+
+class RoommateViewModel: ObservableObject {
+    @Published var profiles: [Profile] = [
+        Profile(
+            name: "Elsa",
+            age: 21,
+            gender: "Female",
+            city: "Chicago",
+            bio: "Occasionally freezes the living room, loves to sing.",
+            imageName: "exampleProfile5",
+            propertyImageName: "exampleProperty5",
+            hasRoom: true,
+            needsRoom: false,
+            moveInDate: Date().addingTimeInterval(30 * 24 * 60 * 60),
+            preferredNeighborhoods: ["River North", "Gold Coast"],
+            budgetRange: 800...1200,
+            coordinate: CLLocationCoordinate2D(latitude: 41.8962, longitude: -87.6362), // River North
+            numberOfRooms: 2,
+            numberOfBathrooms: 1,
+            amenities: "Private balcony, Modern decor, Fireplace",
+            rent: "$1200 / month",
+            address: "420 N State St, Chicago, IL 60654",
+            cleanliness: 5,
+            partying: 1,
+            smoking: false,
+            pets: false,
+            petTypes: nil,
+            wakeUpTime: "7:00 AM",
+            sleepTime: "11:00 PM",
+            habits: "Early riser, clean and organized, quiet after midnight.",
+            lookingFor: "Someone who appreciates a well-maintained living space.",
+            verificationStatus: true,
+            isBlocked: false
+        ),
+        Profile(
+            name: "Batman",
+            age: 30,
+            gender: "Male",
+            city: "Chicago",
+            bio: "Tech professional, enjoys city views and modern amenities.",
+            imageName: "exampleProfile6",
+            propertyImageName: "exampleProperty6",
+            hasRoom: true,
+            needsRoom: false,
+            moveInDate: Date().addingTimeInterval(14 * 24 * 60 * 60),
+            preferredNeighborhoods: ["Loop", "South Loop"],
+            budgetRange: 4000...6000,
+            coordinate: CLLocationCoordinate2D(latitude: 41.8786, longitude: -87.6251), // Loop
+            numberOfRooms: 3,
+            numberOfBathrooms: 2,
+            amenities: "High-rise views, Gym, Doorman",
+            rent: "$4500 / month",
+            address: "300 E Randolph St, Chicago, IL 60601",
+            cleanliness: 4,
+            partying: 1,
+            smoking: false,
+            pets: false,
+            petTypes: nil,
+            wakeUpTime: "6:00 AM",
+            sleepTime: "10:00 PM",
+            habits: "Work from home, gym enthusiast, minimal cooking.",
+            lookingFor: "Professional roommate with similar schedule.",
+            verificationStatus: true,
+            isBlocked: false
+        ),
+        Profile(
+            name: "Homer",
+            age: 39,
+            gender: "Male",
+            city: "Chicago",
+            bio: "Loves donuts, craft beer enthusiast.",
+            imageName: "exampleProfile7",
+            propertyImageName: "exampleProperty7",
+            hasRoom: true,
+            needsRoom: false,
+            moveInDate: Date().addingTimeInterval(7 * 24 * 60 * 60),
+            preferredNeighborhoods: ["Wicker Park"],
+            budgetRange: 800...1200,
+            coordinate: CLLocationCoordinate2D(latitude: 41.9088, longitude: -87.6796), // Wicker Park
+            numberOfRooms: 4,
+            numberOfBathrooms: 2,
+            amenities: "Rooftop deck, Garage parking, In-unit laundry",
+            rent: "$1100 / month",
+            address: "1550 N Milwaukee Ave, Chicago, IL 60622",
+            cleanliness: 2,
+            partying: 5,
+            smoking: false,
+            pets: true,
+            petTypes: ["Dog"],
+            wakeUpTime: "7:00 AM",
+            sleepTime: "11:00 PM",
+            habits: "Social, loves hosting game nights, casual living style.",
+            lookingFor: "Someone who enjoys a laid-back atmosphere.",
+            verificationStatus: true,
+            isBlocked: false
+        ),
+        Profile(
+            name: "Frodo",
+            age: 28,
+            gender: "Male",
+            city: "Chicago",
+            bio: "Artist and musician, looking for creative roommates.",
+            imageName: "exampleProfile8",
+            propertyImageName: "exampleProperty8",
+            hasRoom: true,
+            needsRoom: false,
+            moveInDate: Date().addingTimeInterval(14 * 24 * 60 * 60),
+            preferredNeighborhoods: ["Logan Square"],
+            budgetRange: 600...800,
+            coordinate: CLLocationCoordinate2D(latitude: 41.9231, longitude: -87.7093), // Logan Square
+            numberOfRooms: 2,
+            numberOfBathrooms: 1,
+            amenities: "Music room, Art studio space, Garden",
+            rent: "$750 / month",
+            address: "2500 N Milwaukee Ave, Chicago, IL 60647",
+            cleanliness: 3,
+            partying: 3,
+            smoking: false,
+            pets: false,
+            petTypes: nil,
+            wakeUpTime: "9:00 AM",
+            sleepTime: "1:00 AM",
+            habits: "Night owl, creative projects, occasional band practice.",
+            lookingFor: "Fellow artist or musician who appreciates creative energy.",
+            verificationStatus: true,
+            isBlocked: false
+        ),
+        Profile(
+            name: "Buzz",
+            age: 25,
+            gender: "Female",
+            city: "Chicago",
+            bio: "Yoga instructor, plant enthusiast.",
+            imageName: "exampleProfile1",
+            propertyImageName: "exampleProperty1",
+            hasRoom: true,
+            needsRoom: false,
+            moveInDate: Date().addingTimeInterval(30 * 24 * 60 * 60),
+            preferredNeighborhoods: ["Lincoln Park"],
+            budgetRange: 1000...1500,
+            coordinate: CLLocationCoordinate2D(latitude: 41.9214, longitude: -87.6513), // Lincoln Park
+            numberOfRooms: 2,
+            numberOfBathrooms: 2,
+            amenities: "Yoga space, Balcony garden, Natural light",
+            rent: "$1300 / month",
+            address: "2000 N Lincoln Park W, Chicago, IL 60614",
+            cleanliness: 5,
+            partying: 2,
+            smoking: false,
+            pets: true,
+            petTypes: ["Cat"],
+            wakeUpTime: "6:00 AM",
+            sleepTime: "10:00 PM",
+            habits: "Morning meditation, plant care, healthy cooking.",
+            lookingFor: "Health-conscious roommate who enjoys a peaceful home.",
+            verificationStatus: true,
+            isBlocked: false
+        ),
+        Profile(
+            name: "Shrek",
+            age: 32,
+            gender: "Male",
+            city: "Chicago",
+            bio: "Tech startup founder, coffee addict, fitness enthusiast.",
+            imageName: "exampleProfile2",
+            propertyImageName: "exampleProperty2",
+            hasRoom: true,
+            needsRoom: false,
+            moveInDate: Date().addingTimeInterval(21 * 24 * 60 * 60),
+            preferredNeighborhoods: ["West Loop", "Fulton Market"],
+            budgetRange: 2000...3000,
+            coordinate: CLLocationCoordinate2D(latitude: 41.8857, longitude: -87.6478), // West Loop
+            numberOfRooms: 3,
+            numberOfBathrooms: 2,
+            amenities: "Home office, Smart home features, Fitness room",
+            rent: "$2500 / month",
+            address: "1000 W Randolph St, Chicago, IL 60607",
+            cleanliness: 4,
+            partying: 2,
+            smoking: false,
+            pets: false,
+            petTypes: nil,
+            wakeUpTime: "5:30 AM",
+            sleepTime: "11:00 PM",
+            habits: "Early morning workouts, works from home, loves cooking.",
+            lookingFor: "Career-focused professional who values fitness and healthy living.",
+            verificationStatus: true,
+            isBlocked: false
+        ),
+        Profile(
+            name: "Scooby",
+            age: 27,
+            gender: "Female",
+            city: "Chicago",
+            bio: "Freelance photographer, world traveler, foodie.",
+            imageName: "exampleProfile3",
+            propertyImageName: "exampleProperty3",
+            hasRoom: true,
+            needsRoom: false,
+            moveInDate: Date().addingTimeInterval(45 * 24 * 60 * 60),
+            preferredNeighborhoods: ["Bucktown", "Ukrainian Village"],
+            budgetRange: 1200...1800,
+            coordinate: CLLocationCoordinate2D(latitude: 41.9169, longitude: -87.6762), // Bucktown
+            numberOfRooms: 2,
+            numberOfBathrooms: 1,
+            amenities: "Photography studio, Rooftop access, Vintage charm",
+            rent: "$1600 / month",
+            address: "1800 N Damen Ave, Chicago, IL 60647",
+            cleanliness: 4,
+            partying: 3,
+            smoking: false,
+            pets: true,
+            petTypes: ["Cat"],
+            wakeUpTime: "8:00 AM",
+            sleepTime: "12:00 AM",
+            habits: "Frequent traveler, home photography studio, loves hosting dinner parties.",
+            lookingFor: "Creative individual who appreciates art and good food.",
+            verificationStatus: true,
+            isBlocked: false
+        ),
+        Profile(
+            name: "Aladdin",
+            age: 29,
+            gender: "Male",
+            city: "Chicago",
+            bio: "Jazz musician, vinyl collector, culinary student.",
+            imageName: "exampleProfile4",
+            propertyImageName: "exampleProperty4",
+            hasRoom: true,
+            needsRoom: false,
+            moveInDate: Date().addingTimeInterval(15 * 24 * 60 * 60),
+            preferredNeighborhoods: ["Hyde Park", "Kenwood"],
+            budgetRange: 900...1400,
+            coordinate: CLLocationCoordinate2D(latitude: 41.7943, longitude: -87.5917), // Hyde Park
+            numberOfRooms: 3,
+            numberOfBathrooms: 2,
+            amenities: "Music room, Chef's kitchen, Record collection space",
+            rent: "$1200 / month",
+            address: "5200 S Lake Shore Dr, Chicago, IL 60615",
+            cleanliness: 3,
+            partying: 2,
+            smoking: false,
+            pets: false,
+            petTypes: nil,
+            wakeUpTime: "9:00 AM",
+            sleepTime: "1:00 AM",
+            habits: "Late night practice sessions, cooking experiments, record collecting.",
+            lookingFor: "Music lover who enjoys good food and late nights.",
+            verificationStatus: true,
+            isBlocked: false
+        )
+    ]
+
+    // Current user's info
+    @Published var currentUser = UserProfile(
+        name: "Your Name",
+        age: 25,
+        city: "Unknown",
+        budget: "",
+        interests: "",
+        bio: "Tell us about yourself!",
+        profileImageName: nil,
+        propertyImageName: nil
+    )
+    
+    // Lists of liked / matched profiles
+    @Published var likedProfiles: [Profile] = []
+    @Published var matchedProfiles: [Profile] = []
+    
+    // Filter properties
+    @Published var filterCity: String = ""
+    @Published var filterGender: String = "No Preference"
+    @Published var filterBudget: ClosedRange<Double> = 0...10000
+    @Published var filterMoveInDate: Date = Date().addingTimeInterval(90 * 24 * 60 * 60) // 90 days from now
+    @Published var filterHasRoom: Bool = true
+    @Published var filterNeedsRoom: Bool = false
+    
+    // Computed property for filtered profiles
+    var filteredProfiles: [Profile] {
+        profiles.filter { profile in
+            // Filter by city if not empty
+            if !filterCity.isEmpty && profile.city.lowercased() != filterCity.lowercased() {
+                return false
+            }
+            
+            // Filter by gender if specified
+            if filterGender != "No Preference" && profile.gender != filterGender {
+                return false
+            }
+            
+            // Filter by budget
+            if !profile.budgetRange.overlaps(filterBudget) {
+                return false
+            }
+            
+            // Filter by move-in date
+            if profile.moveInDate > filterMoveInDate {
+                return false
+            }
+            
+            // Filter by room availability
+            if filterHasRoom && !profile.hasRoom {
+                return false
+            }
+            if filterNeedsRoom && !profile.needsRoom {
+                return false
+            }
+            
+            return true
+        }
+    }
+    
+    // Basic actions
+    func like(profile: Profile) {
+        likedProfiles.append(profile)
+        if Bool.random() {
+            matchedProfiles.append(profile)
+        }
+    }
+    
+    func dislike(profile: Profile) { }
+    
+    func removeProfile(profile: Profile) {
+        if let index = profiles.firstIndex(where: { $0.id == profile.id }) {
+            profiles.remove(at: index)
+        }
+    }
+    
+    func blockProfile(profile: Profile) {
+        if let index = profiles.firstIndex(where: { $0.id == profile.id }) {
+            profiles.remove(at: index)
+        }
+    }
+    
+    func reportProfile(profile: Profile, reason: String) {
+        // In a real app, you would send this to your backend
+        print("Reported profile: \(profile.name) for reason: \(reason)")
+    }
+}
+
+
+
+
+
+//
+//  BasicInfoView.swift
+//  RoommateSwipe
+//
+
+import SwiftUI
+
+struct BasicInfoView: View {
+    @Binding var userData: UserRegistrationData
+    @State private var confirmPassword = ""
+    
+    var body: some View {
+        VStack(spacing: 25) {
+            Text("Tell us about yourself")
+                .font(.title2)
+                .fontWeight(.bold)
+            
+            VStack(alignment: .leading, spacing: 20) {
+                // Name fields
+                HStack(spacing: 15) {
+                    VStack(alignment: .leading) {
+                        Text("First Name")
+                            .foregroundColor(.gray)
+                        TextField("John", text: $userData.firstName)
+                            .textFieldStyle(.roundedBorder)
+                    }
+                    
+                    VStack(alignment: .leading) {
+                        Text("Last Name")
+                            .foregroundColor(.gray)
+                        TextField("Doe", text: $userData.lastName)
+                            .textFieldStyle(.roundedBorder)
+                    }
+                }
+                
+                // Email
+                VStack(alignment: .leading) {
+                    Text("Email")
+                        .foregroundColor(.gray)
+                    TextField("your@email.com", text: $userData.email)
+                        .textFieldStyle(.roundedBorder)
+                        .keyboardType(.emailAddress)
+                        .autocapitalization(.none)
+                }
+                
+                // Password fields
+                VStack(alignment: .leading) {
+                    Text("Password")
+                        .foregroundColor(.gray)
+                    SecureField("Create password", text: $userData.password)
+                        .textFieldStyle(.roundedBorder)
+                }
+                
+                VStack(alignment: .leading) {
+                    Text("Confirm Password")
+                        .foregroundColor(.gray)
+                    SecureField("Confirm password", text: $confirmPassword)
+                        .textFieldStyle(.roundedBorder)
+                }
+                
+                // Date of Birth
+                VStack(alignment: .leading) {
+                    Text("Date of Birth")
+                        .foregroundColor(.gray)
+                    DatePicker("", selection: $userData.dateOfBirth, 
+                             displayedComponents: .date)
+                        .datePickerStyle(.compact)
+                }
+                
+                // Gender Selection
+                VStack(alignment: .leading) {
+                    Text("Gender")
+                        .foregroundColor(.gray)
+                    Picker("Gender", selection: $userData.gender) {
+                        Text("Male").tag("Male")
+                        Text("Female").tag("Female")
+                        Text("Non-binary").tag("Non-binary")
+                        Text("Prefer not to say").tag("Prefer not to say")
+                    }
+                    .pickerStyle(.segmented)
+                }
+            }
+            .padding(.horizontal)
+        }
+    }
+}
+
+#Preview {
+    BasicInfoView(userData: .constant(UserRegistrationData()))
+        .padding()
+} 
+
+
+
+
+//
+//  DetailedProfileView.swift
+//  RoommateSwipe
+//
+
+import SwiftUI
+import MapKit
+
+struct DetailedProfileView: View {
+    let profile: Profile
+    
+    // Callbacks that let us "like" or "dislike" this profile
+    let onLike: () -> Void
+    let onDislike: () -> Void
+
+    // Used to dismiss the sheet
+    @Environment(\.dismiss) private var dismiss
+
+    // Show a second sheet with more property details
+    @State private var showPropertySheet = false
+
+    var body: some View {
+        NavigationView {
+            ScrollView {
+                VStack(alignment: .leading, spacing: 20) {
+                    // Profile Image
+                    Image(profile.imageName)
+                        .resizable()
+                        .scaledToFit()
+                        .frame(maxWidth: .infinity)
+                        .clipped()
+
+                    VStack(alignment: .leading, spacing: 16) {
+                        // Basic Info
+                        VStack(alignment: .leading, spacing: 8) {
+                            Text("\(profile.name), \(profile.age)")
+                                .font(.title)
+                                .fontWeight(.bold)
+
+                            Text(profile.city)
+                                .font(.title3)
+                                .foregroundColor(.secondary)
+
+                            Text(profile.bio)
+                                .font(.body)
+                                .fixedSize(horizontal: false, vertical: true)
+                                .padding(.top, 4)
+                        }
+                        .padding(.horizontal)
+
+                        Divider()
+                            .padding(.horizontal)
+
+                        // Habits Section
+                        VStack(alignment: .leading, spacing: 8) {
+                            Text("Habits")
+                                .font(.title2)
+                                .fontWeight(.semibold)
+                            Text(profile.habits)
+                                .font(.body)
+                                .fixedSize(horizontal: false, vertical: true)
+                        }
+                        .padding(.horizontal)
+
+                        Divider()
+                            .padding(.horizontal)
+
+                        // Looking For Section
+                        VStack(alignment: .leading, spacing: 8) {
+                            Text("Looking For")
+                                .font(.title2)
+                                .fontWeight(.semibold)
+                            Text(profile.lookingFor)
+                                .font(.body)
+                                .fixedSize(horizontal: false, vertical: true)
+                        }
+                        .padding(.horizontal)
+
+                        Divider()
+                            .padding(.horizontal)
+
+                        // Home Details Section
+                        VStack(alignment: .leading, spacing: 12) {
+                            Text("Home Details")
+                                .font(.title2)
+                                .fontWeight(.semibold)
+
+                            VStack(alignment: .leading, spacing: 8) {
+                                Text("Rooms: \(profile.numberOfRooms)")
+                                Text("Bathrooms: \(profile.numberOfBathrooms)")
+                                Text("Rent: \(profile.rent)")
+                                    .foregroundColor(.blue)
+                                Text("Amenities: \(profile.amenities)")
+                                    .fixedSize(horizontal: false, vertical: true)
+                            }
+                            .font(.body)
+                        }
+                        .padding(.horizontal)
+
+                        // Property Info Button
+                        Button {
+                            showPropertySheet = true
+                        } label: {
+                            Text("View Property Details")
+                                .fontWeight(.semibold)
+                                .frame(maxWidth: .infinity)
+                                .padding()
+                                .background(Color.blue.opacity(0.2))
+                                .cornerRadius(10)
+                        }
+                        .padding(.horizontal)
+                        .padding(.top, 8)
+                    }
+                }
+            }
+            .navigationTitle("Profile Details")
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                // A "Close" or "Back" button
+                ToolbarItem(placement: .navigationBarLeading) {
+                    Button("Back") {
+                        dismiss()  // Dismisses the sheet
+                    }
+                }
+            }
+            // A safe-area inset at the bottom for "Like" / "Not Interested"
+            .safeAreaInset(edge: .bottom) {
+                HStack(spacing: 12) {
+                    Button {
+                        onDislike()  // Mark as Not Interested
+                        dismiss()    // Close the sheet
+                    } label: {
+                        Text("Not Interested")
+                            .fontWeight(.semibold)
+                            .frame(maxWidth: .infinity)
+                            .padding()
+                            .foregroundColor(.white)
+                            .background(Color.gray)
+                            .cornerRadius(10)
+                    }
+
+                    Button {
+                        onLike()     // Mark as Like
+                        dismiss()    // Close the sheet
+                    } label: {
+                        Text("Like")
+                            .fontWeight(.semibold)
+                            .frame(maxWidth: .infinity)
+                            .padding()
+                            .foregroundColor(.white)
+                            .background(Color.pink)
+                            .cornerRadius(10)
+                    }
+                }
+                .padding()
+                .background(.thinMaterial)
+            }
+            // Present the detailed property sheet if requested
+            .sheet(isPresented: $showPropertySheet) {
+                // REUSE the DetailedPropertyView
+                DetailedPropertyView(profile: profile)
+            }
+        }
+    }
+}
+
+#Preview {
+    DetailedProfileView(
+        profile: Profile(
+            name: "Aladdin",
+            age: 22,
+            gender: "Male",
+            city: "Chicago",
+            bio: "Dog person, weekend hiker.",
+            imageName: "exampleProfile4",
+            propertyImageName: "exampleProperty4",
+            hasRoom: true,
+            needsRoom: false,
+            moveInDate: Date().addingTimeInterval(30 * 24 * 60 * 60), // 30 days from now
+            preferredNeighborhoods: ["Wicker Park", "Logan Square"],
+            budgetRange: 1000...1500,
+            coordinate: CLLocationCoordinate2D(latitude: 41.9088, longitude: -87.6796), // Wicker Park
+            numberOfRooms: 2,
+            numberOfBathrooms: 2,
+            amenities: "Covered parking, Storage",
+            rent: "$1100 / month",
+            address: "1550 N Milwaukee Ave, Chicago, IL 60622",
+            cleanliness: 4,
+            partying: 2,
+            smoking: false,
+            pets: true,
+            petTypes: ["Abu"],
+            wakeUpTime: "6:00 AM",
+            sleepTime: "10:00 PM",
+            habits: "I wake up early, keep common areas clean, no smoking.",
+            lookingFor: "A tidy roommate who respects quiet hours.",
+            verificationStatus: true,
+            isBlocked: false
+        ),
+        onLike: { },
+        onDislike: { }
+    )
+}
+
+
+
+
+
+//
+//  DetailedPropertyView.swift
+//  RoommateSwipe
+//
+
+import SwiftUI
+import MapKit
+
+struct DetailedPropertyView: View {
+    let profile: Profile
+    
+    @Environment(\.dismiss) private var dismiss
+
+    var body: some View {
+        NavigationView {
+            ScrollView {
+                VStack(alignment: .leading, spacing: 16) {
+                    // Large property image
+                    if let propertyImageName = profile.propertyImageName {
+                        Image(propertyImageName)
+                            .resizable()
+                            .scaledToFit()
+                            .frame(maxWidth: .infinity)
+                            .clipped()
+                    } else {
+                        Rectangle()
+                            .fill(Color.gray.opacity(0.4))
+                            .frame(height: 300)
+                            .overlay(Text("No property image").font(.headline).foregroundColor(.white))
+                    }
+
+                    VStack(alignment: .leading, spacing: 12) {
+                        Text("Property Info")
+                            .font(.title)
+                            .fontWeight(.bold)
+                            .padding(.horizontal)
+                        
+                        // Room Information
+                        HStack {
+                            VStack(alignment: .leading) {
+                                Text("Rooms")
+                                    .font(.subheadline)
+                                    .foregroundColor(.secondary)
+                                Text("\(profile.numberOfRooms)")
+                                    .font(.headline)
+                            }
+                            .frame(maxWidth: .infinity)
+                            
+                            VStack(alignment: .leading) {
+                                Text("Bathrooms")
+                                    .font(.subheadline)
+                                    .foregroundColor(.secondary)
+                                Text("\(profile.numberOfBathrooms)")
+                                    .font(.headline)
+                            }
+                            .frame(maxWidth: .infinity)
+                        }
+                        .padding()
+                        .background(Color.gray.opacity(0.1))
+                        .cornerRadius(10)
+                        .padding(.horizontal)
+
+                        // Amenities
+                        VStack(alignment: .leading, spacing: 8) {
+                            Text("Amenities")
+                                .font(.headline)
+                            Text(profile.amenities)
+                                .font(.body)
+                        }
+                        .padding()
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .background(Color.gray.opacity(0.1))
+                        .cornerRadius(10)
+                        .padding(.horizontal)
+
+                        // Rent
+                        VStack(alignment: .leading, spacing: 8) {
+                            Text("Monthly Rent")
+                                .font(.headline)
+                            Text(profile.rent)
+                                .font(.title2)
+                                .foregroundColor(.blue)
+                        }
+                        .padding()
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .background(Color.gray.opacity(0.1))
+                        .cornerRadius(10)
+                        .padding(.horizontal)
+                    }
+                }
+            }
+            .navigationTitle("Property Details")
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .navigationBarLeading) {
+                    Button("Back") {
+                        dismiss()
+                    }
+                }
+            }
+        }
+    }
+}
+
+#Preview {
+    DetailedPropertyView(
+        profile: Profile(
+            name: "Aladdin",
+            age: 22,
+            gender: "Male",
+            city: "Chicago",
+            bio: "Dog person, weekend hiker.",
+            imageName: "exampleProfile4",
+            propertyImageName: "exampleProperty4",
+            hasRoom: true,
+            needsRoom: false,
+            moveInDate: Date().addingTimeInterval(30 * 24 * 60 * 60), // 30 days from now
+            preferredNeighborhoods: ["Wicker Park", "Logan Square"],
+            budgetRange: 1000...1500,
+            coordinate: CLLocationCoordinate2D(latitude: 41.9088, longitude: -87.6796), // Wicker Park
+            numberOfRooms: 2,
+            numberOfBathrooms: 2,
+            amenities: "Covered parking, Storage",
+            rent: "$1100 / month",
+            address: "1550 N Milwaukee Ave, Chicago, IL 60622",
+            cleanliness: 4,
+            partying: 2,
+            smoking: false,
+            pets: true,
+            petTypes: ["Abu"],
+            wakeUpTime: "6:00 AM",
+            sleepTime: "10:00 PM",
+            habits: "Clean, early riser, occasionally blasts Disney tunes.",
+            lookingFor: "Friendly, active roommate who loves the outdoors.",
+            verificationStatus: true,
+            isBlocked: false
+        )
+    )
+}
+
+
+
+
+
+
+
+
+//
+//  LifestyleQuestionsView.swift
+//  RoommateSwipe
+//
+
+import SwiftUI
+
+struct LifestyleQuestionsView: View {
+    @Binding var userData: UserRegistrationData
+    
+    var body: some View {
+        VStack(spacing: 25) {
+            Text("Your Lifestyle")
+                .font(.title2)
+                .fontWeight(.bold)
+            
+            ScrollView {
+                VStack(alignment: .leading, spacing: 25) {
+                    // Cleanliness Level
+                    VStack(alignment: .leading) {
+                        Text("How clean do you keep your space?")
+                            .fontWeight(.medium)
+                        
+                        Slider(value: .init(get: {
+                            Double(userData.cleanliness)
+                        }, set: { newValue in
+                            userData.cleanliness = Int(newValue)
+                        }), in: 1...5, step: 1)
+                        
+                        HStack {
+                            Text("Casual")
+                            Spacer()
+                            Text("Average")
+                            Spacer()
+                            Text("Spotless")
+                        }
+                        .font(.caption)
+                        .foregroundColor(.gray)
+                    }
+                    
+                    // Noise Level
+                    VStack(alignment: .leading) {
+                        Text("What's your typical noise level?")
+                            .fontWeight(.medium)
+                        
+                        Slider(value: .init(get: {
+                            Double(userData.noise)
+                        }, set: { newValue in
+                            userData.noise = Int(newValue)
+                        }), in: 1...5, step: 1)
+                        
+                        HStack {
+                            Text("Silent")
+                            Spacer()
+                            Text("Moderate")
+                            Spacer()
+                            Text("Lively")
+                        }
+                        .font(.caption)
+                        .foregroundColor(.gray)
+                    }
+                    
+                    // Social Level
+                    VStack(alignment: .leading) {
+                        Text("How social are you at home?")
+                            .fontWeight(.medium)
+                        
+                        Slider(value: .init(get: {
+                            Double(userData.socialLevel)
+                        }, set: { newValue in
+                            userData.socialLevel = Int(newValue)
+                        }), in: 1...5, step: 1)
+                        
+                        HStack {
+                            Text("Private")
+                            Spacer()
+                            Text("Balanced")
+                            Spacer()
+                            Text("Very Social")
+                        }
+                        .font(.caption)
+                        .foregroundColor(.gray)
+                    }
+                    
+                    // Sleep Schedule
+                    VStack(alignment: .leading) {
+                        Text("What's your sleep schedule like?")
+                            .fontWeight(.medium)
+                        
+                        Picker("Sleep Schedule", selection: $userData.sleepSchedule) {
+                            Text("Early Bird").tag("Early Bird")
+                            Text("Night Owl").tag("Night Owl")
+                            Text("Regular Schedule").tag("Regular Schedule")
+                            Text("Variable").tag("Variable")
+                        }
+                        .pickerStyle(.segmented)
+                    }
+                    
+                    // Habits
+                    VStack(alignment: .leading, spacing: 15) {
+                        Text("Habits & Preferences")
+                            .fontWeight(.medium)
+                        
+                        Toggle("Do you drink alcohol?", isOn: $userData.drinking)
+                        Toggle("Do you smoke?", isOn: $userData.smoking)
+                        Toggle("Do you have or plan to have pets?", isOn: $userData.pets)
+                    }
+                }
+                .padding()
+            }
+        }
+    }
+}
+
+#Preview {
+    LifestyleQuestionsView(userData: .constant(UserRegistrationData()))
+        .padding()
+} 
+
+
+
+
+
+
+//
+//  LikedView.swift
+//  RoommateSwipe
+//
+
+import SwiftUI
+
+struct LikedView: View {
+    @EnvironmentObject var viewModel: RoommateViewModel
+
+    var body: some View {
+        NavigationView {
+            List {
+                ForEach(viewModel.likedProfiles) { profile in
+                    NavigationLink(destination: {
+                        // Show DetailedProfileView for this profile
+                        DetailedProfileView(
+                            profile: profile,
+                            onLike: {
+                                // Possibly do nothing since it's already liked
+                                // But if you want, you can re-insert it or just ignore
+                            },
+                            onDislike: {
+                                // Remove from liked list if user changes mind
+                                if let index = viewModel.likedProfiles.firstIndex(where: { $0.id == profile.id }) {
+                                    viewModel.likedProfiles.remove(at: index)
+                                }
+                            }
+                        )
+                    }) {
+                        // Row content
+                        HStack {
+                            Image(profile.imageName)
+                                .resizable()
+                                .scaledToFill()
+                                .frame(width: 50, height: 50)
+                                .clipShape(Circle())
+                            
+                            VStack(alignment: .leading) {
+                                Text(profile.name)
+                                    .font(.headline)
+                                Text("\(profile.age), \(profile.city)")
+                                    .font(.subheadline)
+                                    .foregroundColor(.secondary)
+                            }
+                        }
+                    }
+                }
+            }
+            .navigationTitle("Liked Profiles")
+        }
+    }
+}
+
+#Preview {
+    LikedView()
+        .environmentObject(RoommateViewModel())
+}
+
+
+
+
+
+
+
+//
+//  LoadingView.swift
+//  RoommateSwipe
+//
+//  Created by AA on 2/27/25.
+//
+
+import SwiftUI
+
+struct LoadingView: View {
+    @State private var isAnimating = false
+    
+    var body: some View {
+        ZStack {
+            Color.white.ignoresSafeArea()
+            VStack(spacing: 20) {
+                Image(systemName: "house.circle.fill")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 120, height: 120)
+                    .foregroundColor(.blue)
+                    .scaleEffect(isAnimating ? 1.1 : 1.0)
+                    .animation(
+                        Animation.easeInOut(duration: 1.0)
+                            .repeatForever(autoreverses: true),
+                        value: isAnimating
+                    )
+                
+                Text("Havyn")
+                    .font(.largeTitle)
+                    .fontWeight(.bold)
+                    .foregroundColor(.blue)
+                
+                ProgressView("Finding your perfect roommate...")
+                    .padding()
+            }
+        }
+        .onAppear {
+            isAnimating = true
+        }
+    }
+}
+
+#Preview {
+    LoadingView()
+}
+
+
+
+
+
+
+
+//
+//  LoginView.swift
+//  RoommateSwipe
+//
+
+import SwiftUI
+
+struct LoginView: View {
+    @Binding var isAuthenticated: Bool
+    @State private var showingSignUp = false
+    
+    var body: some View {
+        NavigationView {
+            VStack(spacing: 20) {
+                Text("Havyn")
+                    .font(.largeTitle)
+                    .fontWeight(.bold)
+                    .foregroundColor(.blue)
+                
+                Button(action: {
+                    isAuthenticated = true
+                }) {
+                    Text("Log In")
+                        .foregroundColor(.white)
+                        .frame(maxWidth: .infinity)
+                        .padding()
+                        .background(Color.blue)
+                        .cornerRadius(10)
+                }
+                .padding(.horizontal, 30)
+                
+                Button(action: {
+                    showingSignUp = true
+                }) {
+                    Text("Create Account")
+                        .foregroundColor(.blue)
+                }
+            }
+            .padding()
+            .sheet(isPresented: $showingSignUp) {
+                SignUpView()
+            }
+        }
+    }
+}
+
+#Preview {
+    LoginView(isAuthenticated: .constant(false))
+} 
+
+
+
+
+
+//
+//  MapPropertyView.swift
+//  RoommateSwipe
+//
+
+import SwiftUI
+import MapKit
+
+struct MapPropertyView: View {
+    let profile: Profile
+    @Environment(\.dismiss) private var dismiss
+    
+    var body: some View {
+        ScrollView {
+            VStack(alignment: .leading, spacing: 20) {
+                // Property Image
+                if let propertyImageName = profile.propertyImageName {
+                    Image(propertyImageName)
+                        .resizable()
+                        .scaledToFit()
+                        .frame(maxWidth: .infinity)
+                        .clipped()
+                }
+                
+                VStack(alignment: .leading, spacing: 16) {
+                    // Property Info Section
+                    VStack(alignment: .leading, spacing: 8) {
+                        Text("Property Details")
+                            .font(.title)
+                            .fontWeight(.bold)
+                        
+                        Text(profile.address)
+                            .font(.subheadline)
+                            .foregroundColor(.secondary)
+                        
+                        Text(profile.rent)
+                            .font(.title2)
+                            .fontWeight(.semibold)
+                            .foregroundColor(.blue)
+                    }
+                    .padding(.horizontal)
+                    
+                    // Room Information
+                    HStack {
+                        VStack(alignment: .leading) {
+                            Text("Rooms")
+                                .font(.subheadline)
+                                .foregroundColor(.secondary)
+                            Text("\(profile.numberOfRooms)")
+                                .font(.headline)
+                        }
+                        .frame(maxWidth: .infinity)
+                        
+                        VStack(alignment: .leading) {
+                            Text("Bathrooms")
+                                .font(.subheadline)
+                                .foregroundColor(.secondary)
+                            Text("\(profile.numberOfBathrooms)")
+                                .font(.headline)
+                        }
+                        .frame(maxWidth: .infinity)
+                    }
+                    .padding()
+                    .background(Color.gray.opacity(0.1))
+                    .cornerRadius(10)
+                    .padding(.horizontal)
+                    
+                    // Amenities
+                    VStack(alignment: .leading, spacing: 8) {
+                        Text("Amenities")
+                            .font(.headline)
+                        Text(profile.amenities)
+                            .font(.body)
+                    }
+                    .padding()
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .background(Color.gray.opacity(0.1))
+                    .cornerRadius(10)
+                    .padding(.horizontal)
+                    
+                    Divider()
+                        .padding(.vertical)
+                    
+                    // Profile Info Section
+                    VStack(alignment: .leading, spacing: 16) {
+                        HStack(spacing: 16) {
+                            Image(profile.imageName)
+                                .resizable()
+                                .scaledToFill()
+                                .frame(width: 80, height: 80)
+                                .clipShape(Circle())
+                            
+                            VStack(alignment: .leading, spacing: 4) {
+                                Text("\(profile.name), \(profile.age)")
+                                    .font(.title2)
+                                    .fontWeight(.bold)
+                                Text(profile.city)
+                                    .font(.subheadline)
+                                    .foregroundColor(.secondary)
+                            }
+                        }
+                        .padding(.horizontal)
+                        
+                        Text(profile.bio)
+                            .font(.body)
+                            .padding(.horizontal)
+                        
+                        // Lifestyle Section
+                        VStack(alignment: .leading, spacing: 12) {
+                            Text("Lifestyle")
+                                .font(.headline)
+                                .padding(.bottom, 4)
+                            
+                            HStack {
+                                LifestyleTag(title: "Cleanliness", value: profile.cleanliness)
+                                LifestyleTag(title: "Partying", value: profile.partying)
+                            }
+                            
+                            HStack {
+                                if profile.smoking {
+                                    LifestyleTag(title: "Smoker", isToggle: true)
+                                }
+                                if profile.pets {
+                                    LifestyleTag(title: "Has Pets", isToggle: true)
+                                }
+                            }
+                            
+                            Text("Schedule: \(profile.wakeUpTime) - \(profile.sleepTime)")
+                                .font(.subheadline)
+                                .foregroundColor(.secondary)
+                        }
+                        .padding()
+                        .background(Color.gray.opacity(0.1))
+                        .cornerRadius(10)
+                        .padding(.horizontal)
+                    }
+                }
+            }
+            .padding(.bottom, 20)
+        }
+        .navigationBarTitleDisplayMode(.inline)
+        .toolbar {
+            ToolbarItem(placement: .navigationBarLeading) {
+                Button("Back") {
+                    dismiss()
+                }
+            }
+            ToolbarItem(placement: .navigationBarTrailing) {
+                Button("Contact") {
+                    // Implement contact functionality
+                }
+                .buttonStyle(.borderedProminent)
+            }
+        }
+    }
+}
+
+struct LifestyleTag: View {
+    let title: String
+    var value: Int? = nil
+    var isToggle: Bool = false
+    
+    var body: some View {
+        HStack {
+            Text(title)
+            if let value = value {
+                Text(String(repeating: "•", count: value))
+                    .foregroundColor(.blue)
+            }
+        }
+        .padding(.horizontal, 12)
+        .padding(.vertical, 6)
+        .background(Color.blue.opacity(0.1))
+        .cornerRadius(15)
+    }
+}
+
+#Preview {
+    NavigationView {
+        MapPropertyView(
+            profile: Profile(
+                name: "Elsa",
+                age: 21,
+                gender: "Female",
+                city: "Chicago",
+                bio: "Occasionally freezes the living room, loves to sing.",
+                imageName: "exampleProfile5",
+                propertyImageName: "exampleProperty5",
+                hasRoom: true,
+                needsRoom: false,
+                moveInDate: Date().addingTimeInterval(30 * 24 * 60 * 60),
+                preferredNeighborhoods: ["River North", "Gold Coast"],
+                budgetRange: 800...1200,
+                coordinate: CLLocationCoordinate2D(latitude: 41.8962, longitude: -87.6362),
+                numberOfRooms: 2,
+                numberOfBathrooms: 1,
+                amenities: "Private balcony, Modern decor, Fireplace",
+                rent: "$1200 / month",
+                address: "420 N State St, Chicago, IL 60654",
+                cleanliness: 5,
+                partying: 1,
+                smoking: false,
+                pets: false,
+                petTypes: nil,
+                wakeUpTime: "7:00 AM",
+                sleepTime: "11:00 PM",
+                habits: "Early riser, clean and organized, quiet after midnight.",
+                lookingFor: "Someone who appreciates a well-maintained living space.",
+                verificationStatus: true,
+                isBlocked: false
+            )
+        )
+    }
+} 
+
+
+
+//
+//  MapView.swift
+//  RoommateSwipe
+//
+
+import SwiftUI
+import MapKit
+
+struct MapView: View {
+    @EnvironmentObject var viewModel: RoommateViewModel
+    @State private var selectedProfile: Profile?
+    @State private var showPropertyDetails = false
+    @State private var region = MKCoordinateRegion(
+        center: CLLocationCoordinate2D(latitude: 41.8781, longitude: -87.6298), // Chicago coordinates
+        span: MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1)
+    )
+    
+    var body: some View {
+        NavigationView {
+            Map(coordinateRegion: $region, annotationItems: viewModel.profiles.filter { $0.hasRoom }) { profile in
+                MapAnnotation(coordinate: profile.coordinate) {
+                    Button {
+                        selectedProfile = profile
+                        showPropertyDetails = true
+                    } label: {
+                        VStack {
+                            Image(systemName: "house.fill")
+                                .foregroundColor(.blue)
+                                .background(
+                                    Circle()
+                                        .fill(.white)
+                                        .frame(width: 30, height: 30)
+                                )
+                            
+                            Text(profile.rent)
+                                .font(.caption)
+                                .padding(4)
+                                .background(.white)
+                                .cornerRadius(4)
+                                .shadow(radius: 2)
+                        }
+                    }
+                }
+            }
+            .navigationTitle("Chicago Properties")
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button {
+                        // Reset to Chicago center
+                        region = MKCoordinateRegion(
+                            center: CLLocationCoordinate2D(latitude: 41.8781, longitude: -87.6298),
+                            span: MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1)
+                        )
+                    } label: {
+                        Image(systemName: "location")
+                    }
+                }
+            }
+            .sheet(isPresented: $showPropertyDetails) {
+                NavigationView {
+                    if let profile = selectedProfile {
+                        MapPropertyView(profile: profile)
+                    }
+                }
+            }
+        }
+    }
+}
+
+#Preview {
+    MapView()
+        .environmentObject(RoommateViewModel())
+} 
+
+
+
+
+
+//
+//  MatchedProfileView.swift
+//  RoommateSwipe
+//
+
+import SwiftUI
+import MapKit
+
+struct MatchedProfileView: View {
+    let profile: Profile
+    @EnvironmentObject var viewModel: RoommateViewModel
+    @Environment(\.dismiss) private var dismiss
+    @State private var showPropertySheet = false
+    @State private var showUnmatchAlert = false
+    @State private var showChat = false
+    @State private var messageText = ""
+    
+    var body: some View {
+        NavigationView {
+            ScrollView {
+                VStack(alignment: .leading, spacing: 20) {
+                    // Profile Image
+                    Image(profile.imageName)
+                        .resizable()
+                        .scaledToFit()
+                        .frame(maxWidth: .infinity)
+                        .clipped()
+
+                    VStack(alignment: .leading, spacing: 16) {
+                        // Basic Info
+                        VStack(alignment: .leading, spacing: 8) {
+                            Text("\(profile.name), \(profile.age)")
+                                .font(.title)
+                                .fontWeight(.bold)
+
+                            Text(profile.city)
+                                .font(.title3)
+                                .foregroundColor(.secondary)
+
+                            Text(profile.bio)
+                                .font(.body)
+                                .fixedSize(horizontal: false, vertical: true)
+                                .padding(.top, 4)
+                        }
+                        .padding(.horizontal)
+
+                        Divider()
+                            .padding(.horizontal)
+
+                        // Habits Section
+                        VStack(alignment: .leading, spacing: 8) {
+                            Text("Habits")
+                                .font(.title2)
+                                .fontWeight(.semibold)
+                            Text(profile.habits)
+                                .font(.body)
+                                .fixedSize(horizontal: false, vertical: true)
+                        }
+                        .padding(.horizontal)
+
+                        Divider()
+                            .padding(.horizontal)
+
+                        // Looking For Section
+                        VStack(alignment: .leading, spacing: 8) {
+                            Text("Looking For")
+                                .font(.title2)
+                                .fontWeight(.semibold)
+                            Text(profile.lookingFor)
+                                .font(.body)
+                                .fixedSize(horizontal: false, vertical: true)
+                        }
+                        .padding(.horizontal)
+
+                        Divider()
+                            .padding(.horizontal)
+
+                        // Home Details Section
+                        VStack(alignment: .leading, spacing: 12) {
+                            Text("Home Details")
+                                .font(.title2)
+                                .fontWeight(.semibold)
+
+                            VStack(alignment: .leading, spacing: 8) {
+                                Text("Rooms: \(profile.numberOfRooms)")
+                                Text("Bathrooms: \(profile.numberOfBathrooms)")
+                                Text("Rent: \(profile.rent)")
+                                    .foregroundColor(.blue)
+                                Text("Amenities: \(profile.amenities)")
+                                    .fixedSize(horizontal: false, vertical: true)
+                            }
+                            .font(.body)
+                        }
+                        .padding(.horizontal)
+
+                        // Property Info Button
+                        Button {
+                            showPropertySheet = true
+                        } label: {
+                            Text("View Property Details")
+                                .fontWeight(.semibold)
+                                .frame(maxWidth: .infinity)
+                                .padding()
+                                .background(Color.blue.opacity(0.2))
+                                .cornerRadius(10)
+                        }
+                        .padding(.horizontal)
+                        .padding(.top, 8)
+                    }
+                }
+            }
+            .navigationTitle("Match Profile")
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .navigationBarLeading) {
+                    Button("Back") {
+                        dismiss()
+                    }
+                }
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Menu {
+                        Button(role: .destructive) {
+                            showUnmatchAlert = true
+                        } label: {
+                            Label("Unmatch", systemImage: "person.badge.minus")
+                        }
+                    } label: {
+                        Image(systemName: "ellipsis.circle")
+                    }
+                }
+            }
+            .safeAreaInset(edge: .bottom) {
+                VStack {
+                    // Chat Button
+                    Button {
+                        showChat = true
+                    } label: {
+                        Text("Message")
+                            .fontWeight(.semibold)
+                            .frame(maxWidth: .infinity)
+                            .padding()
+                            .foregroundColor(.white)
+                            .background(Color.blue)
+                            .cornerRadius(10)
+                    }
+                    .padding()
+                    .background(.thinMaterial)
+                }
+            }
+            .sheet(isPresented: $showPropertySheet) {
+                DetailedPropertyView(profile: profile)
+            }
+            .sheet(isPresented: $showChat) {
+                ChatView(profile: profile)
+            }
+            .alert("Unmatch from \(profile.name)?", isPresented: $showUnmatchAlert) {
+                Button("Cancel", role: .cancel) { }
+                Button("Unmatch", role: .destructive) {
+                    if let index = viewModel.matchedProfiles.firstIndex(where: { $0.id == profile.id }) {
+                        viewModel.matchedProfiles.remove(at: index)
+                        dismiss()
+                    }
+                }
+            } message: {
+                Text("This will remove the match and delete your chat history.")
+            }
+        }
+    }
+}
+
+struct ChatView: View {
+    let profile: Profile
+    @Environment(\.dismiss) private var dismiss
+    @State private var messageText = ""
+    @State private var messages: [ChatMessage] = []
+    
+    var body: some View {
+        NavigationView {
+            VStack {
+                // Chat messages
+                ScrollView {
+                    LazyVStack(spacing: 12) {
+                        ForEach(messages) { message in
+                            ChatBubble(message: message)
+                                .padding(.horizontal)
+                        }
+                    }
+                    .padding(.top)
+                }
+                
+                // Message input
+                HStack {
+                    TextField("Type a message...", text: $messageText)
+                        .textFieldStyle(RoundedBorderTextFieldStyle())
+                        .padding(.horizontal)
+                    
+                    Button {
+                        sendMessage()
+                    } label: {
+                        Image(systemName: "paperplane.fill")
+                            .foregroundColor(.blue)
+                    }
+                    .padding(.trailing)
+                    .disabled(messageText.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty)
+                }
+                .padding(.vertical, 8)
+                .background(.thinMaterial)
+            }
+            .navigationTitle("Chat with \(profile.name)")
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .navigationBarLeading) {
+                    Button("Back") {
+                        dismiss()
+                    }
+                }
+            }
+        }
+    }
+    
+    private func sendMessage() {
+        let trimmedText = messageText.trimmingCharacters(in: .whitespacesAndNewlines)
+        guard !trimmedText.isEmpty else { return }
+        
+        let newMessage = ChatMessage(
+            id: UUID(),
+            text: trimmedText,
+            isFromCurrentUser: true,
+            timestamp: Date()
+        )
+        messages.append(newMessage)
+        messageText = ""
+        
+        // Simulate a response after a short delay
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+            let response = ChatMessage(
+                id: UUID(),
+                text: "Thanks for your message! I'll get back to you soon.",
+                isFromCurrentUser: false,
+                timestamp: Date()
+            )
+            messages.append(response)
+        }
+    }
+}
+
+struct ChatBubble: View {
+    let message: ChatMessage
+    
+    var body: some View {
+        HStack {
+            if message.isFromCurrentUser { Spacer() }
+            
+            Text(message.text)
+                .padding(12)
+                .background(message.isFromCurrentUser ? Color.blue : Color.gray.opacity(0.2))
+                .foregroundColor(message.isFromCurrentUser ? .white : .primary)
+                .cornerRadius(16)
+            
+            if !message.isFromCurrentUser { Spacer() }
+        }
+    }
+}
+
+struct ChatMessage: Identifiable {
+    let id: UUID
+    let text: String
+    let isFromCurrentUser: Bool
+    let timestamp: Date
+}
+
+#Preview {
+    MatchedProfileView(
+        profile: Profile(
+            name: "Aladdin",
+            age: 22,
+            gender: "Male",
+            city: "Chicago",
+            bio: "Dog person, weekend hiker.",
+            imageName: "exampleProfile4",
+            propertyImageName: "exampleProperty4",
+            hasRoom: true,
+            needsRoom: false,
+            moveInDate: Date().addingTimeInterval(30 * 24 * 60 * 60), // 30 days from now
+            preferredNeighborhoods: ["Wicker Park", "Logan Square"],
+            budgetRange: 1000...1500,
+            coordinate: CLLocationCoordinate2D(latitude: 41.9088, longitude: -87.6796), // Wicker Park
+            numberOfRooms: 2,
+            numberOfBathrooms: 2,
+            amenities: "Covered parking, Storage",
+            rent: "$1100 / month",
+            address: "1550 N Milwaukee Ave, Chicago, IL 60622",
+            cleanliness: 4,
+            partying: 2,
+            smoking: false,
+            pets: true,
+            petTypes: ["Abu"],
+            wakeUpTime: "6:00 AM",
+            sleepTime: "10:00 PM",
+            habits: "Clean, early riser, occasionally blasts Disney tunes.",
+            lookingFor: "Friendly, active roommate who loves the outdoors.",
+            verificationStatus: true,
+            isBlocked: false
+        )
+    )
+    .environmentObject(RoommateViewModel())
+} 
+
+
+
+
+
+
+
+
+
+//
+//  MatchesView.swift
+//  RoommateSwipe
+//
+
+import SwiftUI
+
+struct MatchesView: View {
+    @EnvironmentObject var viewModel: RoommateViewModel
+
+    var body: some View {
+        NavigationView {
+            List {
+                ForEach(viewModel.matchedProfiles) { profile in
+                    NavigationLink(destination: {
+                        MatchedProfileView(profile: profile)
+                    }) {
+                        HStack {
+                            Image(profile.imageName)
+                                .resizable()
+                                .scaledToFill()
+                                .frame(width: 50, height: 50)
+                                .clipShape(Circle())
+
+                            VStack(alignment: .leading) {
+                                Text(profile.name)
+                                    .font(.headline)
+                                Text("\(profile.age), \(profile.city)")
+                                    .font(.subheadline)
+                                    .foregroundColor(.secondary)
+                            }
+                        }
+                    }
+                }
+            }
+            .navigationTitle("Matches")
+            .overlay {
+                if viewModel.matchedProfiles.isEmpty {
+                    ContentUnavailableView(
+                        "No Matches Yet",
+                        systemImage: "person.2.slash",
+                        description: Text("Keep swiping to find your perfect roommate!")
+                    )
+                }
+            }
+        }
+    }
+}
+
+#Preview {
+    MatchesView()
+        .environmentObject(RoommateViewModel())
+}
+
+
+
+
+
+
+
+
+//
+//  PhotoUploadView.swift
+//  RoommateSwipe
+//
+
+import SwiftUI
+import PhotosUI
+
+struct PhotoUploadView: View {
+    @Binding var userData: UserRegistrationData
+    @State private var showingImagePicker = false
+    @State private var showingPropertyImagePicker = false
+    @State private var selectedItem: PhotosPickerItem?
+    @State private var selectedPropertyItems: [PhotosPickerItem] = []
+    
+    var body: some View {
+        VStack(spacing: 25) {
+            Text("Add Your Photos")
+                .font(.title2)
+                .fontWeight(.bold)
+            
+            ScrollView {
+                VStack(spacing: 30) {
+                    // Profile Photo
+                    VStack(spacing: 15) {
+                        Text("Profile Photo")
+                            .fontWeight(.medium)
+                        
+                        if let profilePhoto = userData.profilePhoto {
+                            Image(uiImage: profilePhoto)
+                                .resizable()
+                                .scaledToFill()
+                                .frame(width: 150, height: 150)
+                                .clipShape(Circle())
+                                .overlay(Circle().stroke(Color.blue, lineWidth: 2))
+                        } else {
+                            Image(systemName: "person.circle.fill")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 150, height: 150)
+                                .foregroundColor(.gray)
+                        }
+                        
+                        PhotosPicker(
+                            selection: $selectedItem,
+                            matching: .images,
+                            photoLibrary: .shared()) {
+                                Text("Select Profile Photo")
+                                    .foregroundColor(.blue)
+                            }
+                            .onChange(of: selectedItem) { newItem in
+                                Task {
+                                    if let data = try? await newItem?.loadTransferable(type: Data.self),
+                                       let image = UIImage(data: data) {
+                                        userData.profilePhoto = image
+                                    }
+                                }
+                            }
+                    }
+                    
+                    Divider()
+                    
+                    // Property Photos
+                    VStack(spacing: 15) {
+                        Text("Property Photos (Optional)")
+                            .fontWeight(.medium)
+                        
+                        if !userData.propertyPhotos.isEmpty {
+                            ScrollView(.horizontal, showsIndicators: false) {
+                                HStack(spacing: 10) {
+                                    ForEach(userData.propertyPhotos, id: \.self) { photo in
+                                        Image(uiImage: photo)
+                                            .resizable()
+                                            .scaledToFill()
+                                            .frame(width: 120, height: 120)
+                                            .clipShape(RoundedRectangle(cornerRadius: 10))
+                                    }
+                                }
+                                .padding(.horizontal)
+                            }
+                        }
+                        
+                        PhotosPicker(
+                            selection: $selectedPropertyItems,
+                            maxSelectionCount: 5,
+                            matching: .images,
+                            photoLibrary: .shared()) {
+                                Label("Add Property Photos", systemImage: "photo.stack")
+                                    .foregroundColor(.blue)
+                            }
+                            .onChange(of: selectedPropertyItems) { newItems in
+                                Task {
+                                    var images: [UIImage] = []
+                                    for item in newItems {
+                                        if let data = try? await item.loadTransferable(type: Data.self),
+                                           let image = UIImage(data: data) {
+                                            images.append(image)
+                                        }
+                                    }
+                                    userData.propertyPhotos = images
+                                }
+                            }
+                    }
+                    
+                    // Photo Guidelines
+                    VStack(alignment: .leading, spacing: 10) {
+                        Text("Photo Guidelines:")
+                            .fontWeight(.medium)
+                        
+                        VStack(alignment: .leading, spacing: 5) {
+                            BulletPoint(text: "Use a clear, recent photo of yourself")
+                            BulletPoint(text: "Ensure good lighting and quality")
+                            BulletPoint(text: "Property photos should show the space accurately")
+                            BulletPoint(text: "Avoid using filters or heavy editing")
+                        }
+                        .foregroundColor(.gray)
+                    }
+                    .padding()
+                    .background(Color.gray.opacity(0.1))
+                    .cornerRadius(10)
+                }
+                .padding()
+            }
+        }
+    }
+}
+
+struct BulletPoint: View {
+    let text: String
+    
+    var body: some View {
+        HStack(alignment: .top) {
+            Text("•")
+            Text(text)
+        }
+    }
+}
+
+#Preview {
+    PhotoUploadView(userData: .constant(UserRegistrationData()))
+        .padding()
+} 
+
+
+
+
+
+
+
+
+//
+//  PreferencesView.swift
+//  RoommateSwipe
+//
+
+import SwiftUI
+
+struct PreferencesView: View {
+    @Binding var userData: UserRegistrationData
+    
+    var body: some View {
+        VStack(spacing: 25) {
+            Text("Roommate Preferences")
+                .font(.title2)
+                .fontWeight(.bold)
+            
+            ScrollView {
+                VStack(alignment: .leading, spacing: 25) {
+                    // Preferred Gender
+                    VStack(alignment: .leading) {
+                        Text("Preferred Roommate Gender")
+                            .fontWeight(.medium)
+                        
+                        Picker("Gender Preference", selection: $userData.preferredGender) {
+                            Text("Any").tag("Any")
+                            Text("Male").tag("Male")
+                            Text("Female").tag("Female")
+                            Text("Non-binary").tag("Non-binary")
+                        }
+                        .pickerStyle(.segmented)
+                    }
+                    
+                    // Age Range
+                    VStack(alignment: .leading) {
+                        Text("Preferred Age Range")
+                            .fontWeight(.medium)
+                        
+                        HStack {
+                            Text("\(Int(userData.ageRange.lowerBound))")
+                            Slider(
+                                value: .init(
+                                    get: { Double(userData.ageRange.lowerBound) },
+                                    set: { userData.ageRange = Int($0)...userData.ageRange.upperBound }
+                                ),
+                                in: 18...50
+                            )
+                            Text("\(Int(userData.ageRange.upperBound))")
+                            Slider(
+                                value: .init(
+                                    get: { Double(userData.ageRange.upperBound) },
+                                    set: { userData.ageRange = userData.ageRange.lowerBound...Int($0) }
+                                ),
+                                in: 18...50
+                            )
+                        }
+                    }
+                    
+                    // Rent Range
+                    VStack(alignment: .leading) {
+                        Text("Monthly Rent Budget")
+                            .fontWeight(.medium)
+                        
+                        HStack {
+                            Text("$\(Int(userData.rentRange.lowerBound))")
+                            Slider(
+                                value: .init(
+                                    get: { Double(userData.rentRange.lowerBound) },
+                                    set: { userData.rentRange = Int($0)...userData.rentRange.upperBound }
+                                ),
+                                in: 500...5000,
+                                step: 100
+                            )
+                            Text("$\(Int(userData.rentRange.upperBound))")
+                            Slider(
+                                value: .init(
+                                    get: { Double(userData.rentRange.upperBound) },
+                                    set: { userData.rentRange = userData.rentRange.lowerBound...Int($0) }
+                                ),
+                                in: 500...5000,
+                                step: 100
+                            )
+                        }
+                    }
+                    
+                    // Move-in Date
+                    VStack(alignment: .leading) {
+                        Text("Preferred Move-in Date")
+                            .fontWeight(.medium)
+                        
+                        DatePicker(
+                            "Move-in Date",
+                            selection: $userData.moveInDate,
+                            displayedComponents: [.date]
+                        )
+                        .datePickerStyle(.graphical)
+                    }
+                    
+                    // Bio
+                    VStack(alignment: .leading) {
+                        Text("Tell potential roommates about yourself")
+                            .fontWeight(.medium)
+                        
+                        TextEditor(text: $userData.bio)
+                            .frame(height: 100)
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 8)
+                                    .stroke(Color.gray.opacity(0.2), lineWidth: 1)
+                            )
+                    }
+                }
+                .padding()
+            }
+        }
+    }
+}
+
+#Preview {
+    PreferencesView(userData: .constant(UserRegistrationData()))
+        .padding()
+} 
+
+
+
+
+
+
+
+
+
+//
+//  ProfileDisplayView.swift
+//  RoommateSwipe
+//
+
+import SwiftUI
+
+struct ProfileDisplayView: View {
+    @EnvironmentObject var viewModel: RoommateViewModel
+    @State private var showEditView = false
+    
+    var body: some View {
+        NavigationView {
+            ScrollView {
+                VStack(spacing: 24) {
+                    
+                    // 1) Profile Image Cards
+                    profileImagesSection
+                    propertyImagesSection
+                    
+                    // 2) Info Card
+                    infoCard
+                }
+                .padding(.top)
+            }
+            .navigationTitle("My Profile")
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                // Edit button in the top-right corner
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button("Edit") {
+                        showEditView = true
+                    }
+                }
+            }
+            // Present or push the edit view
+            .sheet(isPresented: $showEditView) {
+                ProfileEditView()
+                    .environmentObject(viewModel)
+            }
+            // Optional: add a subtle background
+            .background(
+                LinearGradient(
+                    gradient: Gradient(colors: [Color.white, Color(UIColor.systemGray6)]),
+                    startPoint: .top,
+                    endPoint: .bottom
+                )
+                .ignoresSafeArea()
+            )
+        }
+    }
+    
+    // MARK: - Profile Images
+    private var profileImagesSection: some View {
+        VStack(alignment: .leading, spacing: 8) {
+            Text("My Photos")
+                .font(.headline)
+                .padding(.horizontal)
+            
+            ScrollView(.horizontal, showsIndicators: false) {
+                HStack(spacing: 12) {
+                    // Main user image
+                    if let mainImageName = viewModel.currentUser.profileImageName,
+                       let mainImage = UIImage(named: mainImageName) {
+                        imageCard(uiImage: mainImage, label: "Main Photo")
+                    } else {
+                        placeholderCard(label: "No profile image")
+                    }
+                    
+                    // If you had multiple images, you’d loop them
+                }
+                .padding(.horizontal)
+            }
+        }
+    }
+    
+    // MARK: - Property Images
+    private var propertyImagesSection: some View {
+        VStack(alignment: .leading, spacing: 8) {
+            Text("My Property")
+                .font(.headline)
+                .padding(.horizontal)
+            
+            ScrollView(.horizontal, showsIndicators: false) {
+                HStack(spacing: 12) {
+                    if let propName = viewModel.currentUser.propertyImageName,
+                       let propertyImage = UIImage(named: propName) {
+                        imageCard(uiImage: propertyImage, label: "Property Photo")
+                    } else {
+                        placeholderCard(label: "No property image")
+                    }
+                }
+                .padding(.horizontal)
+            }
+        }
+    }
+    
+    // MARK: - Info Card (Name, Age, City, etc.)
+    private var infoCard: some View {
+        VStack(alignment: .leading, spacing: 8) {
+            Text(viewModel.currentUser.name)
+                .font(.title2).bold()
+            Text("Age: \(viewModel.currentUser.age)")
+                .font(.subheadline)
+            Text("City: \(viewModel.currentUser.city)")
+                .font(.subheadline)
+            
+            Divider().padding(.vertical, 8)
+            
+            Text("Bio")
+                .font(.headline)
+            Text(viewModel.currentUser.bio)
+                .font(.body)
+                .foregroundColor(.secondary)
+            
+            // Potentially show budget, interests, etc.
+            if !viewModel.currentUser.budget.isEmpty {
+                Divider().padding(.vertical, 8)
+                Text("Budget: \(viewModel.currentUser.budget)")
+                    .font(.subheadline)
+            }
+            if !viewModel.currentUser.interests.isEmpty {
+                Text("Interests: \(viewModel.currentUser.interests)")
+                    .font(.subheadline)
+            }
+        }
+        .padding()
+        .frame(maxWidth: .infinity, alignment: .leading)
+        // A card-like background
+        .background(Color.white.opacity(0.9))
+        .cornerRadius(12)
+        .shadow(color: Color.black.opacity(0.05), radius: 5, x: 0, y: 2)
+        .padding(.horizontal)
+    }
+    
+    // MARK: - Helper Views
+    private func imageCard(uiImage: UIImage, label: String) -> some View {
+        VStack {
+            Image(uiImage: uiImage)
+                .resizable()
+                .scaledToFill()
+                .frame(width: 120, height: 120)
+                .cornerRadius(8)
+                .clipped()
+            Text(label)
+                .font(.footnote)
+                .foregroundColor(.secondary)
+        }
+    }
+    
+    private func placeholderCard(label: String) -> some View {
+        VStack {
+            Rectangle()
+                .fill(Color.gray.opacity(0.4))
+                .frame(width: 120, height: 120)
+                .cornerRadius(8)
+                .overlay(Text(label).font(.footnote).foregroundColor(.white))
+        }
+    }
+}
+
+#Preview {
+    ProfileDisplayView()
+        .environmentObject(RoommateViewModel())
+}
+
+
+
+
+
+
+
+
+
+//
+//  ProfileEditView.swift
+//  RoommateSwipe
+//
+
+import SwiftUI
+
+struct ProfileEditView: View {
+    @EnvironmentObject var viewModel: RoommateViewModel
+    
+    // Local state to reflect user input
+    @State private var hasPlace: Bool = false
+    @State private var cityPreference: String = ""
+    @State private var desiredAmenities: String = ""
+    @State private var genderPreference: String = "No Preference"
+    @State private var otherRequirements: String = ""
+    
+    // Example: user is "lookingFor" a private bathroom, etc.
+    @State private var wantsPrivateBathroom: Bool = false
+    @State private var wantsGymAccess: Bool = false
+    @State private var wantsPetFriendly: Bool = false
+    
+    @Environment(\.dismiss) private var dismiss
+    
+    var body: some View {
+        NavigationView {
+            Form {
+                Section(header: Text("Edit Profile Images")) {
+                    if let imageName = viewModel.currentUser.profileImageName,
+                       let userImage = UIImage(named: imageName) {
+                        Image(uiImage: userImage)
+                            .resizable()
+                            .scaledToFit()
+                            .frame(height: 200)
+                            .cornerRadius(12)
+                    } else {
+                        Text("No profile image yet")
+                            .foregroundColor(.secondary)
+                    }
+                    
+                    Button("Add/Update Profile Image") {
+                        // launch image picker
+                    }
+                }
+                
+                Section(header: Text("Edit Property Images")) {
+                    Toggle("I have a place", isOn: $hasPlace)
+                    
+                    if hasPlace {
+                        if let propImageName = viewModel.currentUser.propertyImageName,
+                           let propertyImage = UIImage(named: propImageName) {
+                            Image(uiImage: propertyImage)
+                                .resizable()
+                                .scaledToFit()
+                                .frame(height: 200)
+                                .cornerRadius(12)
+                        } else {
+                            Text("No property image yet")
+                                .foregroundColor(.secondary)
+                        }
+                        
+                        Button("Add/Update Property Image") {
+                            // launch image picker
+                        }
+                    }
+                }
+                
+                Section(header: Text("Looking For (Roommate & Place)")) {
+                    Toggle("Private Bathroom", isOn: $wantsPrivateBathroom)
+                    Toggle("Gym Access", isOn: $wantsGymAccess)
+                    Toggle("Pet Friendly", isOn: $wantsPetFriendly)
+                    
+                    TextField("Other Requirements", text: $otherRequirements)
+                }
+                
+                Section(header: Text("Filter Preferences")) {
+                    TextField("City Preference", text: $cityPreference)
+                        .textFieldStyle(.roundedBorder)
+                    
+                    Picker("Gender Preference", selection: $genderPreference) {
+                        Text("No Preference").tag("No Preference")
+                        Text("Male").tag("Male")
+                        Text("Female").tag("Female")
+                    }
+                    .pickerStyle(.segmented)
+                }
+                
+                Section {
+                    Button("Save") {
+                        // In a real app, you'd persist these changes:
+                        //   viewModel.currentUser.propertyImageName = ...
+                        //   viewModel.currentUser.profileImageName = ...
+                        //   etc.
+                        //   Possibly update viewModel.filterCity / filterGender
+                        
+                        // Then dismiss
+                        dismiss()
+                    }
+                }
+            }
+            .navigationTitle("Edit Profile")
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .navigationBarLeading) {
+                    Button("Cancel") {
+                        dismiss()
+                    }
+                }
+            }
+        }
+        .onAppear {
+            // Initialize from currentUser if you wish
+            // hasPlace = (viewModel.currentUser.propertyImageName != nil)
+            // cityPreference = viewModel.filterCity
+            // genderPreference = viewModel.filterGender
+        }
+    }
+}
+
+#Preview {
+    ProfileEditView()
+        .environmentObject(RoommateViewModel())
+}
+
+
+
+
+
+
+
+
+
+
+
+//
+//  ProfileView.swift
+//  RoommateSwipe
+//
+
+import SwiftUI
+
+struct ProfileView: View {
+    @EnvironmentObject var viewModel: RoommateViewModel
+    
+    // Local state to reflect the currentUser's fields
+    @State private var hasPlace: Bool = false
+    @State private var genderPreference: String = "No Preference" // "Male", "Female", or "No Preference"
+    @State private var cityPreference: String = ""
+    @State private var desiredAmenities: String = ""
+
+    var body: some View {
+        NavigationView {
+            Form {
+                // SECTION 1: Profile Images
+                Section(header: Text("Profile Images")) {
+                    // Show current user profile image if available
+                    if let imageName = viewModel.currentUser.profileImageName,
+                       let userImage = UIImage(named: imageName) {
+                        Image(uiImage: userImage)
+                            .resizable()
+                            .scaledToFit()
+                            .frame(height: 200)
+                            .cornerRadius(12)
+                    } else {
+                        Text("No profile image yet")
+                            .foregroundColor(.secondary)
+                    }
+                    
+                    Button("Add/Update Profile Image") {
+                        // In a real app, open a UIImagePicker or PhotosPicker
+                        print("User taps to pick or update profile image.")
+                    }
+                }
+                
+                // SECTION 2: Property Images (if user has a place)
+                Section(header: Text("Property Images")) {
+                    Toggle("I already have a place", isOn: $hasPlace)
+                    
+                    if hasPlace {
+                        if let propImageName = viewModel.currentUser.propertyImageName,
+                           let propertyImage = UIImage(named: propImageName) {
+                            Image(uiImage: propertyImage)
+                                .resizable()
+                                .scaledToFit()
+                                .frame(height: 200)
+                                .cornerRadius(12)
+                        } else {
+                            Text("No property image yet")
+                                .foregroundColor(.secondary)
+                        }
+                        
+                        Button("Add/Update Property Image") {
+                            print("Open image picker for property photo.")
+                        }
+                    } else {
+                        Text("You currently don't have a place.")
+                            .foregroundColor(.secondary)
+                    }
+                }
+                
+                // SECTION 3: House/Room Preferences
+                Section(header: Text("Looking For")) {
+                    if hasPlace {
+                        TextField("Desired Amenities", text: $desiredAmenities)
+                            .textFieldStyle(.roundedBorder)
+                            .placeholder(when: desiredAmenities.isEmpty) {
+                                Text("e.g. Washer/Dryer, Gym, etc.")
+                                    .foregroundColor(.gray)
+                            }
+                    } else {
+                        Text("Since you don't have a place, you can specify what type of place you're looking for below.")
+                            .font(.footnote)
+                            .foregroundColor(.secondary)
+                    }
+                }
+                
+                // SECTION 4: Search / Filter Preferences
+                Section(header: Text("Filter Preferences")) {
+                    TextField("City Preference", text: $cityPreference)
+                        .textFieldStyle(.roundedBorder)
+                        .placeholder(when: cityPreference.isEmpty) {
+                            Text("e.g. New York, Chicago")
+                                .foregroundColor(.gray)
+                        }
+                    
+                    Picker("Gender Preference", selection: $genderPreference) {
+                        Text("No Preference").tag("No Preference")
+                        Text("Male").tag("Male")
+                        Text("Female").tag("Female")
+                    }
+                    .pickerStyle(.segmented)
+                }
+                
+                // SECTION 5: Save Button
+                Section {
+                    Button("Save") {
+                        // Example: update your model
+                        // viewModel.currentUser.profileImageName = ...
+                        // viewModel.currentUser.propertyImageName = ...
+                        // Save filter preferences, etc.
+                        print("Profile saved! (Placeholder)")
+                    }
+                }
+            }
+            .navigationTitle("My Profile")
+        }
+        .onAppear {
+            // Initialize local state from the environment object's currentUser
+            // If you want them to persist across sessions, store them in currentUser or in a backend
+            // For example:
+            // hasPlace = (viewModel.currentUser.propertyImageName != nil)
+            // cityPreference = viewModel.currentUser.city
+        }
+    }
+}
+
+extension View {
+    // Simple placeholder extension
+    func placeholder<Content: View>(
+        when shouldShow: Bool,
+        alignment: Alignment = .leading,
+        @ViewBuilder placeholder: () -> Content
+    ) -> some View {
+        ZStack(alignment: alignment) {
+            if shouldShow {
+                placeholder()
+            }
+            self
+        }
+    }
+}
+
+#Preview {
+    ProfileView()
+        .environmentObject(RoommateViewModel())
+}
+
+
+
+
+
+
+
+
+
+
+
+//
+//  PropertyPreferencesView.swift
+//  RoommateSwipe
+//
+
+import SwiftUI
+
+struct PropertyPreferencesView: View {
+    @Binding var userData: UserRegistrationData
+    @State private var newNeighborhood = ""
+    @State private var selectedAmenities = Set<String>()
+    
+    let chicagoNeighborhoods = [
+        "Wicker Park", "Logan Square", "Lincoln Park",
+        "Lakeview", "River North", "West Loop",
+        "Bucktown", "Old Town", "Gold Coast",
+        "Ukrainian Village", "Pilsen", "Hyde Park"
+    ]
+    
+    let amenities = [
+        "In-unit Laundry", "Dishwasher", "Central AC",
+        "Parking", "Gym", "Pool", "Elevator",
+        "Doorman", "Roof Deck", "Storage",
+        "Pet Friendly", "Furnished"
+    ]
+    
+    var body: some View {
+        VStack(spacing: 25) {
+            Text("Property Preferences")
+                .font(.title2)
+                .fontWeight(.bold)
+            
+            ScrollView {
+                VStack(alignment: .leading, spacing: 25) {
+                    // Preferred Neighborhoods
+                    VStack(alignment: .leading) {
+                        Text("Preferred Neighborhoods")
+                            .fontWeight(.medium)
+                        
+                        ScrollView(.horizontal, showsIndicators: false) {
+                            HStack {
+                                ForEach(chicagoNeighborhoods, id: \.self) { neighborhood in
+                                    Toggle(neighborhood, isOn: Binding(
+                                        get: { userData.preferredNeighborhoods.contains(neighborhood) },
+                                        set: { isSelected in
+                                            if isSelected {
+                                                userData.preferredNeighborhoods.append(neighborhood)
+                                            } else {
+                                                userData.preferredNeighborhoods.removeAll { $0 == neighborhood }
+                                            }
+                                        }
+                                    ))
+                                    .toggleStyle(.button)
+                                    .buttonStyle(.bordered)
+                                }
+                            }
+                        }
+                    }
+                    
+                    // Room Preference
+                    VStack(alignment: .leading) {
+                        Text("Room Preference")
+                            .fontWeight(.medium)
+                        
+                        Picker("Room Type", selection: $userData.roomPreference) {
+                            Text("Private Room").tag("Private")
+                            Text("Shared Room").tag("Shared")
+                            Text("Entire Unit").tag("Entire")
+                        }
+                        .pickerStyle(.segmented)
+                    }
+                    
+                    // Desired Amenities
+                    VStack(alignment: .leading) {
+                        Text("Desired Amenities")
+                            .fontWeight(.medium)
+                        
+                        LazyVGrid(columns: [
+                            GridItem(.flexible()),
+                            GridItem(.flexible())
+                        ], spacing: 10) {
+                            ForEach(amenities, id: \.self) { amenity in
+                                Toggle(amenity, isOn: Binding(
+                                    get: { userData.desiredAmenities.contains(amenity) },
+                                    set: { isSelected in
+                                        if isSelected {
+                                            userData.desiredAmenities.append(amenity)
+                                        } else {
+                                            userData.desiredAmenities.removeAll { $0 == amenity }
+                                        }
+                                    }
+                                ))
+                                .toggleStyle(.button)
+                                .buttonStyle(.bordered)
+                            }
+                        }
+                    }
+                    
+                    // Additional Preferences
+                    VStack(alignment: .leading) {
+                        Text("Additional Preferences")
+                            .fontWeight(.medium)
+                        
+                        TextEditor(text: .constant(""))
+                            .frame(height: 100)
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 8)
+                                    .stroke(Color.gray.opacity(0.2), lineWidth: 1)
+                            )
+                    }
+                }
+                .padding()
+            }
+        }
+    }
+}
+
+#Preview {
+    PropertyPreferencesView(userData: .constant(UserRegistrationData()))
+        .padding()
+} 
+
+
+
+
+
+
+
+
+
+
+
+//
+//  RootTabView.swift
+//  RoommateSwipe
+//
+
+import SwiftUI
+
+struct RootTabView: View {
+    var body: some View {
+        TabView {
+            SwipeView()
+                .tabItem {
+                    Label("Browse", systemImage: "square.stack")
+                }
+            
+            MapView()
+                .tabItem {
+                    Label("Map", systemImage: "map")
+                }
+            
+            LikedView()
+                .tabItem {
+                    Label("Liked", systemImage: "heart")
+                }
+            
+            MatchesView()
+                .tabItem {
+                    Label("Matches", systemImage: "person.2")
+                }
+            
+            ProfileDisplayView()
+                .tabItem {
+                    Label("Profile", systemImage: "person.circle")
+                }
+        }
+        .toolbarBackground(Color.white, for: .tabBar)
+        .toolbarBackground(.visible, for: .tabBar)
+    }
+}
+
+#Preview {
+    RootTabView()
+        .environmentObject(RoommateViewModel())
+}
+
+
+
+
+
+
+
+
+
+
+
+//
+//  ScheduleView.swift
+//  RoommateSwipe
+//
+
+import SwiftUI
+
+struct ScheduleView: View {
+    @Binding var userData: UserRegistrationData
+    
+    var body: some View {
+        VStack(spacing: 25) {
+            Text("Your Schedule")
+                .font(.title2)
+                .fontWeight(.bold)
+            
+            ScrollView {
+                VStack(alignment: .leading, spacing: 25) {
+                    // Wake up time
+                    VStack(alignment: .leading) {
+                        Text("What time do you usually wake up?")
+                            .fontWeight(.medium)
+                        
+                        DatePicker("Wake up time",
+                                 selection: $userData.wakeUpTime,
+                                 displayedComponents: .hourAndMinute)
+                            .datePickerStyle(.wheel)
+                            .labelsHidden()
+                    }
+                    
+                    // Bedtime
+                    VStack(alignment: .leading) {
+                        Text("What time do you usually go to bed?")
+                            .fontWeight(.medium)
+                        
+                        DatePicker("Bedtime",
+                                 selection: $userData.bedTime,
+                                 displayedComponents: .hourAndMinute)
+                            .datePickerStyle(.wheel)
+                            .labelsHidden()
+                    }
+                    
+                    // Work Schedule
+                    VStack(alignment: .leading) {
+                        Text("What's your typical work/study schedule?")
+                            .fontWeight(.medium)
+                        
+                        Picker("Work Schedule", selection: $userData.workSchedule) {
+                            Text("9-5").tag("9-5")
+                            Text("Night Shift").tag("Night Shift")
+                            Text("Flexible").tag("Flexible")
+                            Text("Remote").tag("Remote")
+                            Text("Student").tag("Student")
+                            Text("Other").tag("Other")
+                        }
+                        .pickerStyle(.wheel)
+                    }
+                    
+                    // Occupation
+                    VStack(alignment: .leading) {
+                        Text("What's your occupation?")
+                            .fontWeight(.medium)
+                        
+                        TextField("e.g. Software Engineer, Student, etc.", text: $userData.occupation)
+                            .textFieldStyle(.roundedBorder)
+                    }
+                    
+                    // Additional Info
+                    VStack(alignment: .leading) {
+                        Text("Any additional schedule information?")
+                            .fontWeight(.medium)
+                        
+                        TextEditor(text: .constant(""))
+                            .frame(height: 100)
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 8)
+                                    .stroke(Color.gray.opacity(0.2), lineWidth: 1)
+                            )
+                    }
+                }
+                .padding()
+            }
+        }
+    }
+}
+
+#Preview {
+    ScheduleView(userData: .constant(UserRegistrationData()))
+        .padding()
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+//
+//  SignUpView.swift
+//  RoommateSwipe
+//
+
+import SwiftUI
+
+struct SignUpView: View {
+    @Environment(\.dismiss) private var dismiss
+    @State private var currentStep = 0
+    @State private var userData = UserRegistrationData()
+    
+    var body: some View {
+        NavigationView {
+            ZStack {
+                // Background gradient
+                LinearGradient(
+                    gradient: Gradient(colors: [Color.blue.opacity(0.1), Color.purple.opacity(0.1)]),
+                    startPoint: .topLeading,
+                    endPoint: .bottomTrailing
+                )
+                .ignoresSafeArea()
+                
+                VStack(spacing: 20) {
+                    // Progress bar
+                    ProgressBar(currentStep: currentStep, totalSteps: 6)
+                        .padding(.horizontal)
+                    
+                    // Step content
+                    switch currentStep {
+                    case 0:
+                        BasicInfoView(userData: $userData)
+                            .transition(.slide)
+                    case 1:
+                        LifestyleQuestionsView(userData: $userData)
+                            .transition(.slide)
+                    case 2:
+                        PreferencesView(userData: $userData)
+                            .transition(.slide)
+                    case 3:
+                        ScheduleView(userData: $userData)
+                            .transition(.slide)
+                    case 4:
+                        PropertyPreferencesView(userData: $userData)
+                            .transition(.slide)
+                    case 5:
+                        PhotoUploadView(userData: $userData)
+                            .transition(.slide)
+                    default:
+                        EmptyView()
+                    }
+                    
+                    Spacer()
+                    
+                    // Navigation buttons
+                    HStack(spacing: 20) {
+                        if currentStep > 0 {
+                            Button(action: {
+                                withAnimation {
+                                    currentStep -= 1
+                                }
+                            }) {
+                                Text("Back")
+                                    .frame(maxWidth: .infinity)
+                                    .padding()
+                                    .background(Color.gray.opacity(0.2))
+                                    .cornerRadius(12)
+                            }
+                        }
+                        
+                        Button(action: {
+                            withAnimation {
+                                if currentStep < 5 {
+                                    currentStep += 1
+                                } else {
+                                    // Registration complete
+                                    dismiss()
+                                }
+                            }
+                        }) {
+                            Text(currentStep == 5 ? "Complete" : "Next")
+                                .frame(maxWidth: .infinity)
+                                .padding()
+                                .background(
+                                    LinearGradient(
+                                        gradient: Gradient(colors: [Color.blue, Color.purple]),
+                                        startPoint: .leading,
+                                        endPoint: .trailing
+                                    )
+                                )
+                                .foregroundColor(.white)
+                                .cornerRadius(12)
+                        }
+                    }
+                    .padding()
+                }
+            }
+            .navigationBarTitle("Create Your Profile", displayMode: .inline)
+            .navigationBarItems(leading: Button("Cancel") {
+                dismiss()
+            })
+        }
+    }
+}
+
+struct ProgressBar: View {
+    let currentStep: Int
+    let totalSteps: Int
+    
+    var body: some View {
+        GeometryReader { geometry in
+            ZStack(alignment: .leading) {
+                Rectangle()
+                    .foregroundColor(Color.gray.opacity(0.2))
+                    .frame(height: 8)
+                    .cornerRadius(4)
+                
+                Rectangle()
+                    .foregroundColor(.blue)
+                    .frame(width: geometry.size.width * CGFloat(Double(currentStep + 1) / Double(totalSteps)), height: 8)
+                    .cornerRadius(4)
+            }
+        }
+        .frame(height: 8)
+    }
+}
+
+#Preview {
+    SignUpView()
+} 
+
+
+
+
+
+
+
+
+
+
+
+//
+//  SwipeCardView.swift
+//  RoommateSwipe
+//
+
+import SwiftUI
+import MapKit
+
+struct SwipeCardView: View {
+    let profile: Profile
+    
+    // Callbacks triggered by swiping
+    let onSwipeLeft: () -> Void
+    let onSwipeRight: () -> Void
+    
+    // For the property detail sheet
+    @State private var showPropertySheet = false
+    
+    // For the profile detail sheet
+    @State private var showDetail = false
+    
+    // Tracks the drag offset
+    @State private var translation: CGSize = .zero
+    private let swipeThreshold: CGFloat = 100
+
+    var body: some View {
+        GeometryReader { geo in
+            // ZStack that is fully swipable
+            ZStack(alignment: .topTrailing) {
+                
+                // MAIN BACKGROUND: user's image + gradient
+                Image(profile.imageName)
+                    .resizable()
+                    .scaledToFill()
+                    .frame(width: geo.size.width, height: geo.size.height)
+                    .clipped()
+                
+                LinearGradient(
+                    gradient: Gradient(colors: [Color.clear, Color.black.opacity(0.6)]),
+                    startPoint: .center,
+                    endPoint: .bottom
+                )
+                .frame(width: geo.size.width, height: geo.size.height)
+                
+                // PROPERTY THUMBNAIL
+                VStack {
+                    HStack {
+                        Spacer()
+                        if let propertyImageName = profile.propertyImageName {
+                            Image(propertyImageName)
+                                .resizable()
+                                .scaledToFill()
+                                .frame(width: 150, height: 100)
+                                .clipped()
+                                .cornerRadius(8)
+                                .onTapGesture {
+                                    showPropertySheet = true
+                                }
+                                .padding(.top, 10)
+                                .padding(.trailing, 10)
+                        }
+                    }
+                    Spacer()
+                }
+                
+                // NAME, AGE, LOCATION, "MORE INFO" near bottom
+                VStack(alignment: .leading, spacing: 6) {
+                    Text("\(profile.name), \(profile.age)")
+                        .font(.title)
+                        .fontWeight(.bold)
+                        .foregroundColor(.white)
+                    
+                    Text(profile.city)
+                        .font(.headline)
+                        .foregroundColor(.white)
+                    
+                    Button(action: {
+                        showDetail = true
+                    }) {
+                        Text("More Info")
+                            .fontWeight(.semibold)
+                            .padding(.vertical, 6)
+                            .padding(.horizontal, 12)
+                            .background(Color.white.opacity(0.8))
+                            .cornerRadius(8)
+                    }
+                }
+                .padding(.horizontal, 16)
+                .padding(.bottom, 80)
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .padding(.top, geo.size.height * 0.65)
+                
+            }
+            .contentShape(Rectangle()) // entire ZStack is swipable
+            // Apply translation & rotation to the entire ZStack
+            .offset(x: translation.width, y: translation.height)
+            .rotationEffect(.degrees(Double(translation.width / geo.size.width) * 25), anchor: .bottom)
+            .animation(.interactiveSpring(), value: translation)
+            .gesture(
+                DragGesture()
+                    .onChanged { value in
+                        withAnimation(.interactiveSpring()) {
+                            translation = value.translation
+                        }
+                    }
+                    .onEnded { value in
+                        handleSwipeEnd(value: value, geo: geo)
+                    }
+            )
+            // SHEET for the user's detailed profile
+            .sheet(isPresented: $showDetail) {
+                DetailedProfileView(
+                    profile: profile,
+                    onLike: { onSwipeRight() },
+                    onDislike: { onSwipeLeft() }
+                )
+            }
+            // SHEET for the property details
+            .sheet(isPresented: $showPropertySheet) {
+                DetailedPropertyView(profile: profile)
+            }
+        }
+    }
+    
+    private func handleSwipeEnd(value: DragGesture.Value, geo: GeometryProxy) {
+        if value.translation.width > swipeThreshold {
+            // Swipe Right
+            withAnimation(.interactiveSpring()) {
+                translation = CGSize(width: geo.size.width * 1.5, height: value.translation.height)
+            }
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+                onSwipeRight()
+            }
+        } else if value.translation.width < -swipeThreshold {
+            // Swipe Left
+            withAnimation(.interactiveSpring()) {
+                translation = CGSize(width: -geo.size.width * 1.5, height: value.translation.height)
+            }
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+                onSwipeLeft()
+            }
+        } else {
+            // Snap back
+            withAnimation(.interactiveSpring()) {
+                translation = .zero
+            }
+        }
+    }
+}
+
+#Preview {
+    SwipeCardView(
+        profile: Profile(
+            name: "Aladdin",
+            age: 22,
+            gender: "Male",
+            city: "Chicago",
+            bio: "Dog person, weekend hiker.",
+            imageName: "exampleProfile4",
+            propertyImageName: "exampleProperty4",
+            hasRoom: true,
+            needsRoom: false,
+            moveInDate: Date().addingTimeInterval(30 * 24 * 60 * 60), // 30 days from now
+            preferredNeighborhoods: ["Wicker Park", "Logan Square"],
+            budgetRange: 1000...1500,
+            coordinate: CLLocationCoordinate2D(latitude: 41.9088, longitude: -87.6796), // Wicker Park
+            numberOfRooms: 2,
+            numberOfBathrooms: 2,
+            amenities: "Covered parking, Storage",
+            rent: "$1100 / month",
+            address: "1550 N Milwaukee Ave, Chicago, IL 60622",
+            cleanliness: 4,
+            partying: 2,
+            smoking: false,
+            pets: true,
+            petTypes: ["Abu"],
+            wakeUpTime: "6:00 AM",
+            sleepTime: "10:00 PM",
+            habits: "Clean, early riser, occasionally blasts Disney tunes.",
+            lookingFor: "Friendly, active roommate who loves the outdoors.",
+            verificationStatus: true,
+            isBlocked: false
+        ),
+        onSwipeLeft: { },
+        onSwipeRight: { }
+    )
+}
+
+
+
+
+
+
+
+
+
+
+
+
+//
+//  SwipeView.swift
+//  RoommateSwipe
+//
+
+import SwiftUI
+
+struct SwipeView: View {
+    @EnvironmentObject var viewModel: RoommateViewModel
+    
+    @State private var tempCityFilter: String = ""
+    @State private var tempGenderFilter: String = "No Preference"
+    
+    var body: some View {
+        NavigationView {
+            VStack(spacing: 0) {
+                if viewModel.filteredProfiles.isEmpty {
+                    Spacer()
+                    Text("No more profiles in your area.")
+                        .font(.title2)
+                        .foregroundColor(.gray)
+                        .padding()
+                    Spacer()
+                } else {
+                    GeometryReader { geo in
+                        ForEach(viewModel.filteredProfiles.indices, id: \.self) { index in
+                            let profile = viewModel.filteredProfiles[index]
+                            
+                            SwipeCardView(
+                                profile: profile,
+                                onSwipeLeft: {
+                                    viewModel.dislike(profile: profile)
+                                    viewModel.removeProfile(profile: profile)
+                                },
+                                onSwipeRight: {
+                                    viewModel.like(profile: profile)
+                                    viewModel.removeProfile(profile: profile)
+                                }
+                            )
+                            .stacked(at: index, in: viewModel.filteredProfiles.count)
+                            .frame(width: geo.size.width, height: geo.size.height - 30)
+                        }
+                    }
+                }
+            }
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .principal) {
+                    filterBar
+                }
+            }
+            .background(Color(.systemBackground))
+        }
+    }
+    
+    // The filter bar at the top
+    private var filterBar: some View {
+        HStack(spacing: 8) {
+            // City text field
+            TextField("City", text: $tempCityFilter)
+                .textFieldStyle(RoundedBorderTextFieldStyle())
+                .frame(width: 100)
+                .font(.system(size: 14))
+            
+            // Gender picker
+            Picker("Gender", selection: $tempGenderFilter) {
+                Text("All").tag("No Preference")
+                Text("M").tag("Male")
+                Text("F").tag("Female")
+            }
+            .pickerStyle(SegmentedPickerStyle())
+            .frame(width: 120)
+            
+            // Apply button
+            Button {
+                viewModel.filterCity = tempCityFilter
+                viewModel.filterGender = tempGenderFilter
+            } label: {
+                Text("Apply")
+                    .font(.system(size: 14, weight: .medium))
+                    .padding(.horizontal, 8)
+                    .padding(.vertical, 4)
+                    .background(Color.blue.opacity(0.2))
+                    .cornerRadius(6)
+            }
+        }
+        .padding(.horizontal, 8)
+    }
+}
+
+extension View {
+    func stacked(at index: Int, in total: Int) -> some View {
+        let offset = Double(total - index) * 4
+        return self.offset(x: 0, y: offset)
+    }
+}
+
+#Preview {
+    SwipeView()
+        .environmentObject(RoommateViewModel())
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//
+//  Item.swift
+//  RoommateSwipe
+//
+//  Created by Arnold Ancheril on 2/27/25.
+//
+
+import Foundation
+import SwiftData
+
+@Model
+final class Item {
+    var timestamp: Date
+    
+    init(timestamp: Date) {
+        self.timestamp = timestamp
+    }
+}
+
+
+
+
+
+
+
+
+
+
+//
+//  RoommateSwipeApp.swift
+//  RoommateSwipe
+//
+
+import SwiftUI
+
+@main
+struct RoommateSwipeApp: App {
+    @StateObject var viewModel = RoommateViewModel()
+
+    var body: some Scene {
+        WindowGroup {
+            RootTabView()
+                .environmentObject(viewModel)
+        }
+    }
+}
+#Preview {
+    ProfileEditView()
+        .environmentObject(RoommateViewModel())
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//
+//  UserRegistrationData.swift
+//  RoommateSwipe
+//
+
+import SwiftUI
+import UIKit
+
+struct UserRegistrationData {
+    var firstName = ""
+    var lastName = ""
+    var email = ""
+    var password = ""
+    var dateOfBirth = Date()
+    var gender = ""
+    var occupation = ""
+    var bio = ""
+    
+    // Lifestyle
+    var cleanliness = 3
+    var noise = 3
+    var socialLevel = 3
+    var sleepSchedule = "Night Owl"
+    var drinking = false
+    var smoking = false
+    var pets = false
+    
+    // Preferences
+    var preferredGender = "Any"
+    var ageRange = 18...35
+    var rentRange = 500...3000
+    var moveInDate = Date()
+    
+    // Schedule
+    var wakeUpTime = Date()
+    var bedTime = Date()
+    var workSchedule = "9-5"
+    
+    // Property
+    var preferredNeighborhoods: [String] = []
+    var desiredAmenities: [String] = []
+    var roomPreference = "Private"
+    
+    // Photos
+    var profilePhoto: UIImage?
+    var propertyPhotos: [UIImage] = []
+} 
+
+
+
+
+

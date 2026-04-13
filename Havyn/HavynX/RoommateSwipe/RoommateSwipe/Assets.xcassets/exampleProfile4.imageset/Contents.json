@@ -1,0 +1,23 @@
+{
+  "images" : [
+    {
+      "filename" : "character_aladdin_aladdin_5cdb707d.jpeg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "4d44d1a2659d09c6ccd497c093eb6001553a1baa6199eebeca3f131e1e9d6928._SX1080_FMpng_.png",
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "1500148814-aladdin-1500144659.jpg",
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
