@@ -10,7 +10,13 @@ import { getStorage } from "firebase/storage";
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyD3rRTV3NavrDWc-tOuhMjgmqnlFP4HohM",
+  apiKey: (
+    process.env.EXPO_PUBLIC_FIREBASE_API_KEY ||
+    process.env.REACT_APP_FIREBASE_API_KEY ||
+    process.env.NEXT_PUBLIC_FIREBASE_API_KEY ||
+    process.env.FIREBASE_API_KEY ||
+    ""
+  ),
   authDomain: "havynbackend.firebaseapp.com",
   projectId: "havynbackend",
   storageBucket: "havynbackend.firebasestorage.app",
@@ -18,6 +24,12 @@ const firebaseConfig = {
   appId: "1:346096844265:web:1ebcbbed0e79b315345f78",
   measurementId: "G-431S56WVJN"
 };
+
+if (!firebaseConfig.apiKey) {
+  console.warn(
+    "Firebase apiKey missing. Set EXPO_PUBLIC_FIREBASE_API_KEY / REACT_APP_FIREBASE_API_KEY / NEXT_PUBLIC_FIREBASE_API_KEY / FIREBASE_API_KEY in your environment."
+  );
+}
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
