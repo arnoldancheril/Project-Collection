@@ -1,0 +1,1339 @@
+{% extends "base.html" %}
+
+{% block title %}{{ team_abbrev }} - NBA Props Predictor{% endblock %}
+{% block page_title %}<span id="team-name">{{ team_abbrev }}</span>{% endblock %}
+
+{% block header_actions %}
+<a href="{{ url_for('teams_page') }}" class="btn btn-ghost">← All Teams</a>
+{% endblock %}
+
+{% block content %}
+<div class="team-dashboard">
+    <!-- Team Hero Section -->
+    <section class="team-hero" id="team-hero">
+        <div class="hero-main">
+            <div class="team-identity">
+                <div class="team-abbrev-large" id="team-abbrev-display">{{ team_abbrev }}</div>
+                <div class="team-info-stack">
+                    <h1 class="team-full-name" id="team-full-name">Loading...</h1>
+                    <p class="team-description" id="team-description"></p>
+                </div>
+            </div>
+            <div class="team-stats-row">
+                <div class="hero-stat-item">
+                    <span class="hero-stat-value" id="hero-record">-</span>
+                    <span class="hero-stat-label">Record</span>
+                </div>
+                <div class="hero-stat-item">
+                    <span class="hero-stat-value" id="hero-seed">-</span>
+                    <span class="hero-stat-label">Seed</span>
+                </div>
+                <div class="hero-stat-item">
+                    <span class="hero-stat-value" id="hero-conf">-</span>
+                    <span class="hero-stat-label">Conference</span>
+                </div>
+                <div class="hero-stat-item">
+                    <span class="hero-stat-value" id="hero-pct">-</span>
+                    <span class="hero-stat-label">Win %</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Navigation Tabs -->
+    <nav class="dashboard-nav">
+        <button class="dash-nav-btn active" data-section="overview" onclick="scrollToSection('overview')">
+            <span>📊</span> Overview
+        </button>
+        <button class="dash-nav-btn" data-section="roster" onclick="scrollToSection('roster')">
+            <span>👥</span> Roster
+        </button>
+        <button class="dash-nav-btn" data-section="stats" onclick="scrollToSection('stats')">
+            <span>📈</span> Stats
+        </button>
+        <button class="dash-nav-btn" data-section="defense" onclick="scrollToSection('defense')">
+            <span>🛡️</span> Defense
+        </button>
+    </nav>
+
+    <!-- Overview Section -->
+    <section id="section-overview" class="dashboard-section">
+        <div class="section-grid three-col">
+            <!-- Star Players Card -->
+            <div class="dash-card highlight-card">
+                <div class="dash-card-header">
+                    <span class="card-icon">⭐</span>
+                    <h3>Star Players</h3>
+                </div>
+                <div class="dash-card-body" id="star-players-list">
+                    <div class="loading-placeholder">Loading...</div>
+                </div>
+            </div>
+
+            <!-- Elite Defenders Card -->
+            <div class="dash-card">
+                <div class="dash-card-header">
+                    <span class="card-icon">🛡️</span>
+                    <h3>Elite Defenders</h3>
+                </div>
+                <div class="dash-card-body" id="elite-defenders-list">
+                    <div class="loading-placeholder">Loading...</div>
+                </div>
+            </div>
+
+            <!-- Hot Players Card -->
+            <div class="dash-card accent-card">
+                <div class="dash-card-header">
+                    <span class="card-icon">🔥</span>
+                    <h3>Hot Players</h3>
+                    <span class="card-badge">Recent Form</span>
+                </div>
+                <div class="dash-card-body" id="hot-players-list">
+                    <div class="loading-placeholder">Loading...</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Recent Games -->
+        <div class="dash-card full-width">
+            <div class="dash-card-header">
+                <span class="card-icon">🎮</span>
+                <h3>Recent Games</h3>
+            </div>
+            <div class="dash-card-body">
+                <div class="recent-games-grid" id="recent-games-list">
+                    <div class="loading-placeholder">Loading...</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Roster Section -->
+    <section id="section-roster" class="dashboard-section">
+        <div class="section-header">
+            <h2>Team Roster & Archetypes</h2>
+            <p>Complete roster with offensive and defensive classifications</p>
+        </div>
+
+        <div class="roster-grid" id="roster-grid">
+            <div class="loading-placeholder">Loading roster...</div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section id="section-stats" class="dashboard-section">
+        <div class="section-header">
+            <h2>Player Statistics</h2>
+            <p>Season averages from ingested box scores</p>
+        </div>
+
+        <div class="stats-table-container">
+            <table class="stats-table" id="stats-table">
+                <thead>
+                    <tr>
+                        <th>Player</th>
+                        <th>Pos</th>
+                        <th>GP</th>
+                        <th>MIN</th>
+                        <th>PTS</th>
+                        <th>REB</th>
+                        <th>AST</th>
+                        <th>Role</th>
+                    </tr>
+                </thead>
+                <tbody id="stats-tbody">
+                    <tr><td colspan="8" class="loading-cell">Loading stats...</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Defense Section -->
+    <section id="section-defense" class="dashboard-section">
+        <div class="section-header">
+            <h2>Defensive Analysis</h2>
+            <p>Team defensive strengths and weaknesses for betting insights</p>
+        </div>
+
+        <div class="section-grid two-col">
+            <div class="dash-card">
+                <div class="dash-card-header">
+                    <span class="card-icon">📉</span>
+                    <h3>Defensive Rating</h3>
+                </div>
+                <div class="dash-card-body" id="defense-rating-card">
+                    <div class="loading-placeholder">Loading...</div>
+                </div>
+            </div>
+
+            <div class="dash-card">
+                <div class="dash-card-header strengths-header">
+                    <span class="card-icon">💪</span>
+                    <h3>Strengths & Weaknesses</h3>
+                </div>
+                <div class="dash-card-body" id="defense-analysis-card">
+                    <div class="loading-placeholder">Loading...</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Betting Tips -->
+        <div class="dash-card betting-tips-card">
+            <div class="dash-card-header">
+                <span class="card-icon">💡</span>
+                <h3>Betting Insights</h3>
+            </div>
+            <div class="dash-card-body" id="betting-tips">
+                <div class="loading-placeholder">Loading...</div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<style>
+/* ====================================
+   Team Dashboard Styles
+   ==================================== */
+
+.team-dashboard {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* Hero Section */
+.team-hero {
+    background: linear-gradient(135deg, var(--bg-card) 0%, var(--bg-tertiary) 100%);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.team-hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, var(--accent-glow) 0%, transparent 70%);
+    opacity: 0.3;
+    pointer-events: none;
+}
+
+.hero-main {
+    position: relative;
+    z-index: 1;
+}
+
+.team-identity {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.team-abbrev-large {
+    font-size: 3.5rem;
+    font-weight: 800;
+    font-family: var(--font-mono);
+    background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1;
+}
+
+.team-info-stack {
+    flex: 1;
+}
+
+.team-full-name {
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin: 0 0 0.5rem 0;
+    color: var(--text-primary);
+}
+
+.team-description {
+    font-size: 0.9375rem;
+    color: var(--text-secondary);
+    margin: 0;
+    line-height: 1.5;
+    max-width: 600px;
+}
+
+.team-stats-row {
+    display: flex;
+    gap: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.hero-stat-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.hero-stat-value {
+    font-size: 1.5rem;
+    font-weight: 700;
+    font-family: var(--font-mono);
+    color: var(--text-primary);
+}
+
+.hero-stat-label {
+    font-size: 0.6875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--text-muted);
+}
+
+/* Dashboard Navigation */
+.dashboard-nav {
+    display: flex;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    overflow-x: auto;
+}
+
+.dash-nav-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.25rem;
+    background: transparent;
+    border: none;
+    border-radius: var(--border-radius-sm);
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    white-space: nowrap;
+}
+
+.dash-nav-btn:hover {
+    background: var(--bg-hover);
+    color: var(--text-primary);
+}
+
+.dash-nav-btn.active {
+    background: var(--accent-primary);
+    color: white;
+}
+
+/* Dashboard Sections */
+.dashboard-section {
+    scroll-margin-top: 1rem;
+}
+
+.section-header {
+    margin-bottom: 1.5rem;
+}
+
+.section-header h2 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin: 0 0 0.25rem 0;
+}
+
+.section-header p {
+    font-size: 0.875rem;
+    color: var(--text-muted);
+    margin: 0;
+}
+
+.section-grid {
+    display: grid;
+    gap: 1rem;
+}
+
+.section-grid.three-col {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.section-grid.two-col {
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+}
+
+/* Dashboard Cards */
+.dash-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+}
+
+.dash-card.full-width {
+    grid-column: 1 / -1;
+}
+
+.dash-card.highlight-card {
+    border-color: var(--accent-primary);
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.05) 0%, var(--bg-card) 100%);
+}
+
+.dash-card.accent-card {
+    border-color: rgba(245, 158, 11, 0.3);
+    background: linear-gradient(135deg, rgba(245, 158, 11, 0.05) 0%, var(--bg-card) 100%);
+}
+
+.dash-card-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem 1.25rem;
+    border-bottom: 1px solid var(--border-color);
+    background: var(--bg-secondary);
+}
+
+.card-icon {
+    font-size: 1.25rem;
+}
+
+.dash-card-header h3 {
+    font-size: 0.9375rem;
+    font-weight: 600;
+    margin: 0;
+    flex: 1;
+}
+
+.card-badge {
+    font-size: 0.6875rem;
+    font-weight: 600;
+    padding: 0.25rem 0.5rem;
+    background: rgba(245, 158, 11, 0.15);
+    color: #f59e0b;
+    border-radius: 4px;
+    text-transform: uppercase;
+}
+
+.dash-card-body {
+    padding: 1rem 1.25rem;
+}
+
+.loading-placeholder {
+    color: var(--text-muted);
+    text-align: center;
+    padding: 1rem;
+}
+
+/* Star Players List */
+.star-player-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.star-player-item:last-child {
+    border-bottom: none;
+}
+
+.star-player-tier {
+    font-size: 1.5rem;
+}
+
+.star-player-info {
+    flex: 1;
+}
+
+.star-player-name {
+    font-weight: 600;
+    color: var(--text-primary);
+    display: block;
+}
+
+.star-player-role {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+}
+
+.star-player-archetype {
+    font-size: 0.6875rem;
+    font-weight: 600;
+    padding: 0.25rem 0.5rem;
+    background: rgba(99, 102, 241, 0.15);
+    color: var(--accent-secondary);
+    border-radius: 4px;
+}
+
+/* Elite Defenders */
+.defender-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.625rem 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.defender-item:last-child {
+    border-bottom: none;
+}
+
+.defender-badge {
+    font-size: 1rem;
+}
+
+.defender-info {
+    flex: 1;
+}
+
+.defender-name {
+    font-weight: 600;
+    font-size: 0.9375rem;
+}
+
+.defender-role {
+    font-size: 0.6875rem;
+    color: var(--text-muted);
+}
+
+.defender-positions {
+    display: flex;
+    gap: 0.25rem;
+}
+
+.pos-tag {
+    font-size: 0.625rem;
+    font-weight: 600;
+    padding: 0.125rem 0.375rem;
+    background: var(--bg-tertiary);
+    color: var(--text-secondary);
+    border-radius: 3px;
+}
+
+/* Hot Players */
+.hot-player-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.hot-player-item:last-child {
+    border-bottom: none;
+}
+
+.hot-player-name {
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.hot-player-games {
+    font-size: 0.6875rem;
+    color: var(--text-muted);
+}
+
+.hot-player-stats {
+    display: flex;
+    gap: 1rem;
+    font-family: var(--font-mono);
+    font-size: 0.8125rem;
+}
+
+.hot-stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hot-stat-value {
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.hot-stat-label {
+    font-size: 0.5625rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+}
+
+/* Recent Games */
+.recent-games-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 0.75rem;
+}
+
+.game-card {
+    padding: 1rem;
+    background: var(--bg-secondary);
+    border-radius: var(--border-radius-sm);
+    border: 1px solid var(--border-color);
+}
+
+.game-card.win {
+    border-left: 3px solid var(--success);
+}
+
+.game-card.loss {
+    border-left: 3px solid var(--error);
+}
+
+.game-date {
+    font-size: 0.6875rem;
+    color: var(--text-muted);
+    margin-bottom: 0.5rem;
+}
+
+.game-matchup {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.game-location {
+    font-size: 0.6875rem;
+    color: var(--text-muted);
+}
+
+.game-opponent {
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.game-score {
+    font-family: var(--font-mono);
+    font-weight: 600;
+}
+
+.game-score.win { color: var(--success); }
+.game-score.loss { color: var(--error); }
+
+/* Roster Grid */
+.roster-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 1rem;
+}
+
+.roster-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    padding: 1.25rem;
+    transition: all var(--transition-fast);
+    cursor: default;
+}
+
+.roster-card:hover {
+    border-color: var(--accent-primary);
+    transform: translateY(-2px);
+}
+
+.roster-card.elite {
+    border-left: 3px solid var(--accent-primary);
+}
+
+.roster-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 0.75rem;
+}
+
+.roster-player-info h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0 0 0.25rem 0;
+}
+
+.roster-player-meta {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+}
+
+.roster-tier-badge {
+    font-size: 0.625rem;
+    font-weight: 700;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    text-transform: uppercase;
+}
+
+.tier-mvp { background: rgba(245, 158, 11, 0.15); color: #f59e0b; }
+.tier-star { background: rgba(139, 92, 246, 0.15); color: #8b5cf6; }
+.tier-big { background: rgba(6, 182, 212, 0.15); color: #06b6d4; }
+.tier-role { background: rgba(16, 185, 129, 0.15); color: #10b981; }
+.tier-spec { background: rgba(236, 72, 153, 0.15); color: #ec4899; }
+.tier-rotation { background: rgba(100, 116, 139, 0.15); color: #64748b; }
+
+.roster-archetypes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.375rem;
+    margin-bottom: 0.75rem;
+}
+
+.archetype-tag {
+    font-size: 0.6875rem;
+    font-weight: 500;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+}
+
+.archetype-tag.offensive {
+    background: rgba(245, 158, 11, 0.1);
+    color: #f59e0b;
+}
+
+.archetype-tag.secondary {
+    background: rgba(139, 92, 246, 0.1);
+    color: #8b5cf6;
+}
+
+.archetype-tag.defensive {
+    background: rgba(6, 182, 212, 0.1);
+    color: #06b6d4;
+}
+
+.roster-stats-mini {
+    display: flex;
+    gap: 1rem;
+    padding-top: 0.75rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.mini-stat {
+    display: flex;
+    flex-direction: column;
+}
+
+.mini-stat-value {
+    font-family: var(--font-mono);
+    font-weight: 600;
+    font-size: 0.9375rem;
+    color: var(--text-primary);
+}
+
+.mini-stat-label {
+    font-size: 0.5625rem;
+    text-transform: uppercase;
+    color: var(--text-muted);
+}
+
+.roster-notes {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    margin-top: 0.75rem;
+    font-style: italic;
+}
+
+/* Stats Table */
+.stats-table-container {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+}
+
+.stats-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.stats-table th {
+    padding: 0.875rem 1rem;
+    font-size: 0.6875rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    text-align: left;
+    color: var(--text-muted);
+    background: var(--bg-secondary);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.stats-table th:not(:first-child):not(:last-child) {
+    text-align: center;
+}
+
+.stats-table td {
+    padding: 0.75rem 1rem;
+    font-size: 0.875rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.stats-table td:not(:first-child):not(:last-child) {
+    text-align: center;
+    font-family: var(--font-mono);
+    font-size: 0.8125rem;
+}
+
+.stats-table tbody tr:hover {
+    background: var(--bg-hover);
+}
+
+.stats-player-cell {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.stats-player-name {
+    font-weight: 600;
+}
+
+.stats-top-badge {
+    font-size: 0.5625rem;
+    font-weight: 700;
+    padding: 0.125rem 0.375rem;
+    background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+    color: white;
+    border-radius: 3px;
+}
+
+.stats-pts {
+    font-weight: 700;
+    color: var(--accent-secondary) !important;
+}
+
+.loading-cell {
+    text-align: center;
+    padding: 2rem !important;
+    color: var(--text-muted);
+}
+
+/* Defense Section */
+.defense-rating-display {
+    text-align: center;
+    padding: 1rem 0;
+}
+
+.defense-rating-value {
+    font-size: 3rem;
+    font-weight: 800;
+    font-family: var(--font-mono);
+    margin-bottom: 0.5rem;
+}
+
+.defense-rating-value.elite { color: var(--success); }
+.defense-rating-value.good { color: #10b981; }
+.defense-rating-value.average { color: var(--warning); }
+.defense-rating-value.poor { color: var(--error); }
+
+.defense-rating-label {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+}
+
+.defense-stats-row {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border-color);
+    margin-top: 1rem;
+}
+
+.defense-stat {
+    text-align: center;
+}
+
+.defense-stat-value {
+    font-size: 1.25rem;
+    font-weight: 600;
+    font-family: var(--font-mono);
+    color: var(--text-primary);
+}
+
+.defense-stat-label {
+    font-size: 0.625rem;
+    text-transform: uppercase;
+    color: var(--text-muted);
+}
+
+/* Strengths/Weaknesses */
+.sw-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.sw-section h4 {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 0 0 0.5rem 0;
+}
+
+.sw-section.strengths h4 { color: var(--success); }
+.sw-section.weaknesses h4 { color: var(--error); }
+
+.sw-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.375rem;
+}
+
+.sw-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+}
+
+.sw-item.strength::before {
+    content: "✓";
+    color: var(--success);
+    font-weight: bold;
+}
+
+.sw-item.weakness::before {
+    content: "✗";
+    color: var(--error);
+    font-weight: bold;
+}
+
+/* Betting Tips */
+.betting-tips-card {
+    border-color: rgba(139, 92, 246, 0.3);
+    background: linear-gradient(135deg, rgba(139, 92, 246, 0.05) 0%, var(--bg-card) 100%);
+}
+
+.betting-tip {
+    display: flex;
+    gap: 1rem;
+    padding: 0.75rem;
+    background: var(--bg-secondary);
+    border-radius: var(--border-radius-sm);
+    margin-bottom: 0.75rem;
+}
+
+.betting-tip:last-child {
+    margin-bottom: 0;
+}
+
+.tip-icon {
+    font-size: 1.25rem;
+}
+
+.tip-content h4 {
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin: 0 0 0.25rem 0;
+    color: var(--text-primary);
+}
+
+.tip-content p {
+    font-size: 0.8125rem;
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+.empty-state {
+    text-align: center;
+    padding: 2rem;
+    color: var(--text-muted);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .team-identity {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .team-stats-row {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .section-grid.three-col,
+    .section-grid.two-col {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+
+<script>
+const teamAbbrev = '{{ team_abbrev }}';
+
+// Scroll to section
+function scrollToSection(sectionId) {
+    const section = document.getElementById(`section-${sectionId}`);
+    if (section) {
+        section.scrollIntoView({ behavior: 'smooth' });
+        
+        // Update active nav button
+        document.querySelectorAll('.dash-nav-btn').forEach(btn => {
+            btn.classList.toggle('active', btn.dataset.section === sectionId);
+        });
+    }
+}
+
+// Get tier display info
+function getTierInfo(tier) {
+    const tiers = {
+        'MVP_CANDIDATE': { icon: '⭐', class: 'tier-mvp', label: 'MVP' },
+        'TWO_WAY_STAR': { icon: '🌟', class: 'tier-star', label: 'Star' },
+        'ELITE_BIG': { icon: '🏀', class: 'tier-big', label: 'Elite Big' },
+        'ELITE_ROLE': { icon: '🔧', class: 'tier-role', label: 'Elite Role' },
+        'SPECIALIST': { icon: '🎯', class: 'tier-spec', label: 'Specialist' },
+        'ROTATION': { icon: '🔄', class: 'tier-rotation', label: 'Rotation' },
+    };
+    return tiers[tier] || { icon: '•', class: 'tier-rotation', label: tier };
+}
+
+// Load team dashboard data
+async function loadDashboard() {
+    try {
+        const data = await fetchAPI(`/api/team/${teamAbbrev}/dashboard`);
+        
+        // Update hero section
+        document.getElementById('team-full-name').textContent = data.name;
+        document.getElementById('team-name').textContent = data.name;
+        document.title = `${data.name} - NBA Props Predictor`;
+        document.getElementById('team-description').textContent = data.description;
+        
+        if (data.record) {
+            document.getElementById('hero-record').textContent = `${data.record.wins}-${data.record.losses}`;
+            document.getElementById('hero-seed').textContent = `#${data.record.seed}`;
+            document.getElementById('hero-conf').textContent = data.record.conference;
+            document.getElementById('hero-pct').textContent = `${(data.record.win_pct * 100).toFixed(1)}%`;
+        }
+        
+        // Render star players
+        renderStarPlayers(data.star_players);
+        
+        // Render elite defenders
+        renderEliteDefenders(data.elite_defenders);
+        
+        // Render hot players
+        renderHotPlayers(data.hot_players);
+        
+        // Render recent games
+        renderRecentGames(data.recent_games);
+        
+        // Render roster
+        renderRoster(data.roster);
+        
+        // Render stats table
+        renderStatsTable(data.player_stats, data.roster);
+        
+        // Render defense section
+        renderDefense(data.defensive_analysis, data.elite_defenders);
+        
+    } catch (e) {
+        console.error('Failed to load dashboard:', e);
+    }
+}
+
+function renderStarPlayers(players) {
+    const container = document.getElementById('star-players-list');
+    
+    if (!players || players.length === 0) {
+        container.innerHTML = '<div class="empty-state">No star players in database</div>';
+        return;
+    }
+    
+    container.innerHTML = players.map(p => {
+        const tierInfo = getTierInfo(p.tier);
+        return `
+            <div class="star-player-item">
+                <span class="star-player-tier">${tierInfo.icon}</span>
+                <div class="star-player-info">
+                    <span class="star-player-name">${p.name}</span>
+                    <span class="star-player-role">${p.position || ''} · ${p.defensive_role}</span>
+                </div>
+                <span class="star-player-archetype">${p.primary_offensive}</span>
+            </div>
+        `;
+    }).join('');
+}
+
+function renderEliteDefenders(defenders) {
+    const container = document.getElementById('elite-defenders-list');
+    
+    if (!defenders || defenders.length === 0) {
+        container.innerHTML = '<div class="empty-state">No elite defenders on roster</div>';
+        return;
+    }
+    
+    container.innerHTML = defenders.map(d => `
+        <div class="defender-item">
+            <span class="defender-badge">🛡️</span>
+            <div class="defender-info">
+                <span class="defender-name">${d.name}</span>
+                <span class="defender-role">${d.defensive_role}</span>
+            </div>
+            ${d.guards_positions.length > 0 ? `
+                <div class="defender-positions">
+                    ${d.guards_positions.map(p => `<span class="pos-tag">${p}</span>`).join('')}
+                </div>
+            ` : ''}
+        </div>
+    `).join('');
+}
+
+function renderHotPlayers(players) {
+    const container = document.getElementById('hot-players-list');
+    
+    if (!players || players.length === 0) {
+        container.innerHTML = '<div class="empty-state">Not enough recent data</div>';
+        return;
+    }
+    
+    container.innerHTML = players.map(p => `
+        <div class="hot-player-item">
+            <div>
+                <span class="hot-player-name">${p.name}</span>
+                <span class="hot-player-games">${p.games} games</span>
+            </div>
+            <div class="hot-player-stats">
+                <div class="hot-stat">
+                    <span class="hot-stat-value">${p.avg_pts}</span>
+                    <span class="hot-stat-label">PTS</span>
+                </div>
+                <div class="hot-stat">
+                    <span class="hot-stat-value">${p.avg_reb}</span>
+                    <span class="hot-stat-label">REB</span>
+                </div>
+                <div class="hot-stat">
+                    <span class="hot-stat-value">${p.avg_ast}</span>
+                    <span class="hot-stat-label">AST</span>
+                </div>
+            </div>
+        </div>
+    `).join('');
+}
+
+function renderRecentGames(games) {
+    const container = document.getElementById('recent-games-list');
+    
+    if (!games || games.length === 0) {
+        container.innerHTML = '<div class="empty-state">No recent games</div>';
+        return;
+    }
+    
+    container.innerHTML = games.map(g => `
+        <div class="game-card ${g.result ? g.result.toLowerCase() : ''}">
+            <div class="game-date">${g.date}</div>
+            <div class="game-matchup">
+                <span class="game-location">${g.home ? 'vs' : '@'}</span>
+                <span class="game-opponent">${g.opponent_abbrev || g.opponent}</span>
+            </div>
+            ${g.team_pts && g.opp_pts ? `
+                <div class="game-score ${g.result ? g.result.toLowerCase() : ''}">
+                    ${g.team_pts} - ${g.opp_pts}
+                </div>
+            ` : '<div class="game-score">-</div>'}
+        </div>
+    `).join('');
+}
+
+function renderRoster(roster) {
+    const container = document.getElementById('roster-grid');
+    
+    if (!roster || roster.length === 0) {
+        container.innerHTML = '<div class="empty-state">No roster data available</div>';
+        return;
+    }
+    
+    container.innerHTML = roster.map(p => {
+        const tierInfo = getTierInfo(p.tier);
+        const stats = p.stats;
+        
+        return `
+            <div class="roster-card ${p.is_elite_defender ? 'elite' : ''}">
+                <div class="roster-card-header">
+                    <div class="roster-player-info">
+                        <h4>${p.name} ${p.is_elite_defender ? '🛡️' : ''}</h4>
+                        <span class="roster-player-meta">${p.position || '?'} · ${p.height || ''}</span>
+                    </div>
+                    <span class="roster-tier-badge ${tierInfo.class}">${tierInfo.label}</span>
+                </div>
+                <div class="roster-archetypes">
+                    <span class="archetype-tag offensive">${p.primary_offensive}</span>
+                    ${p.secondary_offensive ? `<span class="archetype-tag secondary">${p.secondary_offensive}</span>` : ''}
+                    <span class="archetype-tag defensive">${p.defensive_role}</span>
+                </div>
+                ${stats ? `
+                    <div class="roster-stats-mini">
+                        <div class="mini-stat">
+                            <span class="mini-stat-value">${stats.avg_pts?.toFixed(1) || '-'}</span>
+                            <span class="mini-stat-label">PTS</span>
+                        </div>
+                        <div class="mini-stat">
+                            <span class="mini-stat-value">${stats.avg_reb?.toFixed(1) || '-'}</span>
+                            <span class="mini-stat-label">REB</span>
+                        </div>
+                        <div class="mini-stat">
+                            <span class="mini-stat-value">${stats.avg_ast?.toFixed(1) || '-'}</span>
+                            <span class="mini-stat-label">AST</span>
+                        </div>
+                        <div class="mini-stat">
+                            <span class="mini-stat-value">${stats.gp || '-'}</span>
+                            <span class="mini-stat-label">GP</span>
+                        </div>
+                    </div>
+                ` : ''}
+                ${p.notes ? `<p class="roster-notes">${p.notes}</p>` : ''}
+            </div>
+        `;
+    }).join('');
+}
+
+function renderStatsTable(stats, roster) {
+    const tbody = document.getElementById('stats-tbody');
+    
+    if (!stats || stats.length === 0) {
+        tbody.innerHTML = '<tr><td colspan="8" class="loading-cell">No stats available</td></tr>';
+        return;
+    }
+    
+    // Create lookup for roster archetypes
+    const rosterLookup = {};
+    (roster || []).forEach(p => { rosterLookup[p.name] = p; });
+    
+    tbody.innerHTML = stats.map((p, i) => {
+        const profile = rosterLookup[p.player];
+        const roleText = profile ? profile.primary_offensive : '-';
+        
+        return `
+            <tr>
+                <td>
+                    <div class="stats-player-cell">
+                        <span class="stats-player-name">${p.player}</span>
+                        ${i < 7 ? '<span class="stats-top-badge">TOP 7</span>' : ''}
+                    </div>
+                </td>
+                <td>${p.pos || '-'}</td>
+                <td>${p.gp}</td>
+                <td>${p.avg_min?.toFixed(1) || '-'}</td>
+                <td class="stats-pts">${p.avg_pts?.toFixed(1) || '-'}</td>
+                <td>${p.avg_reb?.toFixed(1) || '-'}</td>
+                <td>${p.avg_ast?.toFixed(1) || '-'}</td>
+                <td><span class="archetype-tag offensive" style="font-size: 0.625rem">${roleText}</span></td>
+            </tr>
+        `;
+    }).join('');
+}
+
+function renderDefense(analysis, eliteDefenders) {
+    // Defense rating card
+    const ratingCard = document.getElementById('defense-rating-card');
+    
+    if (!analysis || !analysis.pts_allowed_pg) {
+        ratingCard.innerHTML = '<div class="empty-state">Insufficient defensive data</div>';
+    } else {
+        const ratingClass = analysis.rating || 'average';
+        ratingCard.innerHTML = `
+            <div class="defense-rating-display">
+                <div class="defense-rating-value ${ratingClass}">${analysis.pts_allowed_pg?.toFixed(1) || '-'}</div>
+                <div class="defense-rating-label">Points Allowed Per Game</div>
+            </div>
+            <div class="defense-stats-row">
+                <div class="defense-stat">
+                    <div class="defense-stat-value">${analysis.reb_allowed_pg?.toFixed(1) || '-'}</div>
+                    <div class="defense-stat-label">Reb Allowed</div>
+                </div>
+                <div class="defense-stat">
+                    <div class="defense-stat-value">${analysis.ast_allowed_pg?.toFixed(1) || '-'}</div>
+                    <div class="defense-stat-label">Ast Allowed</div>
+                </div>
+            </div>
+        `;
+    }
+    
+    // Strengths/Weaknesses card
+    const analysisCard = document.getElementById('defense-analysis-card');
+    const strengths = analysis?.strengths || [];
+    const weaknesses = analysis?.weaknesses || [];
+    
+    if (strengths.length === 0 && weaknesses.length === 0) {
+        analysisCard.innerHTML = '<div class="empty-state">Not enough data for analysis</div>';
+    } else {
+        analysisCard.innerHTML = `
+            <div class="sw-container">
+                ${strengths.length > 0 ? `
+                    <div class="sw-section strengths">
+                        <h4>Strengths</h4>
+                        <div class="sw-list">
+                            ${strengths.map(s => `<div class="sw-item strength">${s}</div>`).join('')}
+                        </div>
+                    </div>
+                ` : ''}
+                ${weaknesses.length > 0 ? `
+                    <div class="sw-section weaknesses">
+                        <h4>Weaknesses</h4>
+                        <div class="sw-list">
+                            ${weaknesses.map(w => `<div class="sw-item weakness">${w}</div>`).join('')}
+                        </div>
+                    </div>
+                ` : ''}
+            </div>
+        `;
+    }
+    
+    // Betting tips
+    const tipsCard = document.getElementById('betting-tips');
+    let tips = [];
+    
+    if (eliteDefenders && eliteDefenders.length > 0) {
+        tips.push({
+            icon: '🛡️',
+            title: 'Elite Defense Present',
+            text: `This team has ${eliteDefenders.length} elite defender(s). Consider UNDER on opposing players who face them directly.`
+        });
+    }
+    
+    if (analysis?.weaknesses?.includes('Allowing easy baskets')) {
+        tips.push({
+            icon: '🎯',
+            title: 'Vulnerable Defense',
+            text: 'This team allows above-average points. Consider OVER on high-usage players against them.'
+        });
+    }
+    
+    if (analysis?.weaknesses?.includes('Giving up offensive rebounds')) {
+        tips.push({
+            icon: '📊',
+            title: 'Rebounding Issues',
+            text: 'Opponents get extra possessions. Look for rebounding props and second-chance opportunities.'
+        });
+    }
+    
+    if (analysis?.strengths?.includes('Limiting opponent scoring')) {
+        tips.push({
+            icon: '📉',
+            title: 'Strong Perimeter Defense',
+            text: 'This team limits scoring. Consider UNDER on opposing guards and wings.'
+        });
+    }
+    
+    if (tips.length === 0) {
+        tips.push({
+            icon: '💡',
+            title: 'Standard Analysis',
+            text: 'No significant defensive advantages or weaknesses detected. Rely on individual matchup analysis.'
+        });
+    }
+    
+    tipsCard.innerHTML = tips.map(tip => `
+        <div class="betting-tip">
+            <span class="tip-icon">${tip.icon}</span>
+            <div class="tip-content">
+                <h4>${tip.title}</h4>
+                <p>${tip.text}</p>
+            </div>
+        </div>
+    `).join('');
+}
+
+// Initialize
+document.addEventListener('DOMContentLoaded', loadDashboard);
+</script>
+{% endblock %}

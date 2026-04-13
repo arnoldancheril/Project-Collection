@@ -1,0 +1,202 @@
+{% extends "base.html" %}
+
+{% block title %}Dashboard - NBA Props Predictor{% endblock %}
+{% block page_title %}Dashboard{% endblock %}
+
+{% block content %}
+<div class="dashboard-grid">
+    <!-- Quick Stats Cards -->
+    <div class="stats-row">
+        <div class="stat-card">
+            <div class="stat-card-icon">🎮</div>
+            <div class="stat-card-content">
+                <span class="stat-card-value" id="total-games">-</span>
+                <span class="stat-card-label">Games Tracked</span>
+            </div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-card-icon">👤</div>
+            <div class="stat-card-content">
+                <span class="stat-card-value" id="total-players">-</span>
+                <span class="stat-card-label">Players</span>
+            </div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-card-icon">📈</div>
+            <div class="stat-card-content">
+                <span class="stat-card-value" id="total-lines">-</span>
+                <span class="stat-card-label">Lines Tracked</span>
+            </div>
+        </div>
+        <div class="stat-card accent">
+            <div class="stat-card-icon">📅</div>
+            <div class="stat-card-content">
+                <span class="stat-card-value" id="latest-date">-</span>
+                <span class="stat-card-label">Latest Game</span>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Recent Games -->
+    <div class="card">
+        <div class="card-header">
+            <h2>Recent Games</h2>
+            <a href="{{ url_for('games_page') }}" class="btn btn-ghost btn-sm">View All →</a>
+        </div>
+        <div class="card-body">
+            <div class="games-list" id="recent-games">
+                <div class="loading-state">
+                    <div class="spinner"></div>
+                    <p>Loading games...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Conference Standings -->
+    <div class="standings-container">
+        <div class="card">
+            <div class="card-header">
+                <h2>Eastern Conference</h2>
+            </div>
+            <div class="card-body">
+                <table class="standings-table">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Team</th>
+                            <th>W</th>
+                            <th>L</th>
+                            <th>PCT</th>
+                        </tr>
+                    </thead>
+                    <tbody id="east-standings">
+                        <tr><td colspan="5" class="loading">Loading...</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="card-header">
+                <h2>Western Conference</h2>
+            </div>
+            <div class="card-body">
+                <table class="standings-table">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Team</th>
+                            <th>W</th>
+                            <th>L</th>
+                            <th>PCT</th>
+                        </tr>
+                    </thead>
+                    <tbody id="west-standings">
+                        <tr><td colspan="5" class="loading">Loading...</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Quick Actions -->
+    <div class="card quick-add">
+        <div class="card-header">
+            <h2>Quick Actions</h2>
+        </div>
+        <div class="card-body">
+            <p class="muted">Add game data or analyze player matchups.</p>
+            <div style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center;">
+                <a href="{{ url_for('paste_page') }}" class="btn btn-primary btn-lg">
+                    <span>📋</span> Add Box Score
+                </a>
+                <a href="{{ url_for('players_page') }}" class="btn btn-ghost btn-lg">
+                    <span>⭐</span> Player Database
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', async () => {
+    // Load stats
+    try {
+        const stats = await fetchAPI('/api/stats');
+        document.getElementById('total-games').textContent = stats.games;
+        document.getElementById('total-players').textContent = stats.players;
+        document.getElementById('total-lines').textContent = stats.lines;
+        document.getElementById('latest-date').textContent = stats.latest_game_date || 'None';
+    } catch (e) {
+        console.error('Failed to load stats:', e);
+    }
+    
+    // Load recent games
+    try {
+        const data = await fetchAPI('/api/games?limit=10');
+        const container = document.getElementById('recent-games');
+        if (data.games.length === 0) {
+            container.innerHTML = '<div class="empty-state"><p>No games tracked yet. <a href="/paste">Add your first game</a>.</p></div>';
+        } else {
+            container.innerHTML = data.games.map(g => `
+                <a href="#" class="game-row" onclick="event.preventDefault(); showGameDetail(${g.id})">
+                    <div class="game-date">${g.date}</div>
+                    <div class="game-matchup">
+                        <span class="team ${g.team1_pts > g.team2_pts ? 'winner' : ''}">${g.team1_abbrev}</span>
+                        <span class="score">${g.team1_pts ?? '-'}</span>
+                        <span class="vs">@</span>
+                        <span class="score">${g.team2_pts ?? '-'}</span>
+                        <span class="team ${g.team2_pts > g.team1_pts ? 'winner' : ''}">${g.team2_abbrev}</span>
+                    </div>
+                </a>
+            `).join('');
+        }
+    } catch (e) {
+        console.error('Failed to load games:', e);
+        document.getElementById('recent-games').innerHTML = '<div class="error-state">Failed to load games</div>';
+    }
+    
+    // Load standings
+    try {
+        const standings = await fetchAPI('/api/standings');
+        
+        const renderStandings = (conf, elementId) => {
+            const tbody = document.getElementById(elementId);
+            const teams = standings[conf] || [];
+            if (teams.length === 0) {
+                tbody.innerHTML = '<tr><td colspan="5" class="empty-state">No data</td></tr>';
+                return;
+            }
+            tbody.innerHTML = teams.slice(0, 10).map(t => `
+                <tr onclick="window.location='/team/${t.abbrev}'">
+                    <td>${t.seed}</td>
+                    <td>
+                        <span class="team-name">${t.abbrev}</span>
+                    </td>
+                    <td>${t.wins}</td>
+                    <td>${t.losses}</td>
+                    <td>${t.win_pct.toFixed(3)}</td>
+                </tr>
+            `).join('');
+        };
+        
+        renderStandings('East', 'east-standings');
+        renderStandings('West', 'west-standings');
+    } catch (e) {
+        console.error('Failed to load standings:', e);
+    }
+});
+
+async function showGameDetail(gameId) {
+    try {
+        const data = await fetchAPI(`/api/game/${gameId}`);
+        // For now, just log it - we'll add a modal later
+        console.log('Game detail:', data);
+        showToast(`${data.game.team1} vs ${data.game.team2} - ${data.game.date}`, 'info');
+    } catch (e) {
+        showToast('Failed to load game details', 'error');
+    }
+}
+</script>
+{% endblock %}

@@ -1,0 +1,241 @@
+{% extends "base.html" %}
+
+{% block title %}Add Game - NBA Props Predictor{% endblock %}
+{% block page_title %}Add Box Score{% endblock %}
+
+{% block content %}
+<div class="paste-container">
+    <div class="card paste-card">
+        <div class="card-header">
+            <h2>📋 Paste Box Score</h2>
+        </div>
+        <div class="card-body">
+            <p class="muted" style="margin-bottom: 1.5rem;">
+                Paste the raw box score text from ESPN or similar source. The system will automatically 
+                detect teams and parse player stats.
+            </p>
+            
+            <div class="form-group">
+                <label for="game-date">Game Date</label>
+                <div style="display: flex; gap: 0.75rem; align-items: center; flex-wrap: wrap;">
+                    <input type="date" id="game-date" class="form-control" style="width: auto;" required>
+                    <select id="recent-dates" class="form-control" style="width: auto; min-width: 160px;">
+                        <option value="">Recent dates...</option>
+                    </select>
+                    <button type="button" class="btn btn-ghost" onclick="setToday()">Today</button>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="box-score-text">Box Score Text</label>
+                <textarea 
+                    id="box-score-text" 
+                    class="form-control textarea-large" 
+                    style="font-family: var(--font-mono); font-size: 0.8125rem; line-height: 1.6;"
+                    placeholder="Paste the entire box score here...
+
+Example format:
+Minnesota Timberwolves
+Click on any linked stat to view the Video and/or Shot Chart
+
+PLAYER	MIN	FGM	FGA	FG%	3PM	3PA	3P%	FTM	FTA	FT%	OREB	DREB	REB	AST	STL	BLK	TO	PF	PTS	+/-
+undefined Headshot
+Jaden McDaniels
+F
+21:38	3	5	60.0	2	3	66.7	0	0	0.0	1	3	4	2	0	1	2	3	8	-12
+..."
+                    rows="18"
+                ></textarea>
+            </div>
+            
+            <div class="detected-info" id="detected-info" style="display: none; margin-top: 1rem; padding: 1rem; background: var(--success-bg); border: 1px solid var(--success-border); border-radius: var(--radius-md);">
+                <div style="display: flex; align-items: center; gap: 0.75rem;">
+                    <span style="font-size: 1.25rem;">✅</span>
+                    <div>
+                        <span style="font-size: 0.75rem; color: var(--text-muted); display: block;">Detected Teams</span>
+                        <span id="detected-teams-list" style="font-weight: 600; color: var(--success);">-</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="form-actions">
+                <button type="button" class="btn btn-ghost" onclick="clearForm()">Clear</button>
+                <button type="button" class="btn btn-primary btn-lg" onclick="ingestBoxScore()" id="ingest-btn">
+                    <span>⬆️</span>
+                    Ingest Box Score
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card help-card">
+        <div class="card-header">
+            <h3>Supported Formats</h3>
+        </div>
+        <div class="card-body">
+            <div style="margin-bottom: 1.5rem;">
+                <h4 style="font-size: 0.9375rem; font-weight: 600; margin-bottom: 0.5rem; color: var(--accent);">ESPN Box Score Format</h4>
+                <p style="font-size: 0.875rem; color: var(--text-secondary); line-height: 1.6;">
+                    Copy the entire box score including team names, the "PLAYER MIN FGM..." header, 
+                    all player rows, and the TOTALS line. Include the Inactive Players section if available.
+                </p>
+            </div>
+            <div>
+                <h4 style="font-size: 0.9375rem; font-weight: 600; margin-bottom: 0.5rem; color: var(--accent);">What Gets Captured</h4>
+                <ul style="font-size: 0.875rem; color: var(--text-secondary); padding-left: 1.25rem; line-height: 1.8;">
+                    <li>Player stats: PTS, REB, AST, MIN, FG%, 3P%, FT%, +/-</li>
+                    <li>Team totals</li>
+                    <li>DNP/DND players</li>
+                    <li>Inactive players list</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+let debounceTimer;
+let detectedTeams = [];
+
+document.addEventListener('DOMContentLoaded', async () => {
+    // Load recent dates
+    try {
+        const data = await fetchAPI('/api/recent-dates');
+        const select = document.getElementById('recent-dates');
+        data.dates.forEach(d => {
+            const opt = document.createElement('option');
+            opt.value = d;
+            opt.textContent = d;
+            select.appendChild(opt);
+        });
+        
+        // Set default date to today
+        setToday();
+    } catch (e) {
+        console.error('Failed to load recent dates:', e);
+        setToday();
+    }
+    
+    // Set up event listeners
+    document.getElementById('recent-dates').addEventListener('change', function() {
+        if (this.value) {
+            document.getElementById('game-date').value = this.value;
+        }
+    });
+    
+    document.getElementById('box-score-text').addEventListener('input', function() {
+        clearTimeout(debounceTimer);
+        debounceTimer = setTimeout(() => detectTeamsAndSuggestDate(this.value), 500);
+    });
+    
+    // Handle paste event for immediate detection
+    document.getElementById('box-score-text').addEventListener('paste', function(e) {
+        // Small delay to let the paste complete
+        setTimeout(() => detectTeamsAndSuggestDate(this.value), 100);
+    });
+});
+
+function setToday() {
+    const today = new Date().toISOString().split('T')[0];
+    document.getElementById('game-date').value = today;
+}
+
+async function detectTeamsAndSuggestDate(text) {
+    if (!text || text.length < 50) {
+        document.getElementById('detected-info').style.display = 'none';
+        return;
+    }
+    
+    try {
+        // Detect teams
+        const teamData = await fetchAPI('/api/detect-teams', {
+            method: 'POST',
+            body: JSON.stringify({ text })
+        });
+        
+        if (teamData.teams && teamData.teams.length > 0) {
+            detectedTeams = teamData.teams;
+            const teamsStr = teamData.teams.map(t => `${t.name} (${t.abbrev})`).join(' vs ');
+            document.getElementById('detected-teams-list').textContent = teamsStr;
+            document.getElementById('detected-info').style.display = 'block';
+            
+            // Auto-suggest date if we have 2 teams and no date set
+            if (teamData.teams.length >= 2) {
+                const currentDate = document.getElementById('game-date').value;
+                const today = new Date().toISOString().split('T')[0];
+                
+                // Only suggest if current date is today (not manually changed)
+                if (currentDate === today) {
+                    try {
+                        const dateData = await fetchAPI('/api/suggest-date', {
+                            method: 'POST',
+                            body: JSON.stringify({ teams: teamData.teams.map(t => t.abbrev) })
+                        });
+                        
+                        if (dateData.date && dateData.source !== 'default') {
+                            document.getElementById('game-date').value = dateData.date;
+                            showToast(`Date auto-set to ${dateData.date} (day after latest game)`, 'info');
+                        }
+                    } catch (e) {
+                        // Ignore date suggestion errors
+                    }
+                }
+            }
+        } else {
+            document.getElementById('detected-info').style.display = 'none';
+        }
+    } catch (e) {
+        console.error('Failed to detect teams:', e);
+    }
+}
+
+function clearForm() {
+    document.getElementById('box-score-text').value = '';
+    document.getElementById('detected-info').style.display = 'none';
+}
+
+async function ingestBoxScore() {
+    const text = document.getElementById('box-score-text').value.trim();
+    const gameDate = document.getElementById('game-date').value;
+    
+    if (!text) {
+        showToast('Please paste a box score first', 'error');
+        return;
+    }
+    
+    if (!gameDate) {
+        showToast('Please select a game date', 'error');
+        return;
+    }
+    
+    const btn = document.getElementById('ingest-btn');
+    btn.disabled = true;
+    btn.innerHTML = '<span>⏳</span> Processing...';
+    
+    try {
+        const result = await fetchAPI('/api/ingest/boxscore', {
+            method: 'POST',
+            body: JSON.stringify({
+                text: text,
+                date: gameDate,
+                label: 'PASTE'
+            })
+        });
+        
+        if (result.success) {
+            showToast(`Game ingested successfully! (ID: ${result.game_id})`, 'success');
+            clearForm();
+            // Update sidebar stats
+            updateStats();
+        } else {
+            showToast(result.error || 'Failed to ingest box score', 'error');
+        }
+    } catch (e) {
+        showToast(e.message || 'Failed to ingest box score', 'error');
+    } finally {
+        btn.disabled = false;
+        btn.innerHTML = '<span>⬆️</span> Ingest Box Score';
+    }
+}
+</script>
+{% endblock %}
