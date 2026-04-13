@@ -1,0 +1,188 @@
+I want to create an application to help people find roommates. I want to make an expo app and right now I want to create the basic setup before we begin working on the different pages. I have an idea of how I want the loading screen, login page, and profile search page to look and have renderings for each. However before we start working on it I want to work on the setup for the application. I want each page to have different files for code so it is easier to traverse and modify and I want all the files created to be added to @FileStructure.md so that if changes need to be made, it is easier to work on the application. Can you set up the basics for the application. Crate a virtual environment if necessary, and add the instructions to @FileStructure.md. Do not even create sample pages, create the setup for the expo app and stop right before you have to create the landing page.
+
+We will use google firebase to store information and to pull information. But this will be setup later.
+
+ I have added some mockup images for different parts and provided some context about those images below, please make the app based on the images attached.
+
+
+
+Next I want to create the profile search screen, I have attached an image of what I want it to look like. Please write the code for this page. Please run and test the code. I want each page to have different files for code so it is easier to traverse and modify and I want all the files created to be added to @FileStructure.md so that if changes need to be made, it is easier to work on the application. 
+
+
+Design Sample for Loading Screen based on @Loadingscreendesign.png
+
+---
+
+### 1. Composition & Layout
+
+| Zone                      | Purpose                                                                                                                                                                                                             | Specs |
+| ------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----- |
+| **Top 40 %**              | Breathing space so the UI feels light and fast-loading. The soft gradient also ensures status-bar icons remain legible.                                                                                             |       |
+| **Center (Logo Cluster)** | • Havyn icon (house + magnifier) at **144 × 144 px**  <br>• Wordmark “**Havyn**” in **Poppins SemiBold 48 pt** <br>• Tagline “Find your perfect roommate in Chicago” in **Poppins Light 20 pt / 140 % line height** |       |
+| **Lower 35 %**            | Chicago skyline silhouette (20 % opacity) anchored along the bottom third. Gives local personality without stealing focus.                                                                                          |       |
+| **Bottom 12 %**           | Indeterminate three-dot loader (**8 px** dots, 12 px spacing). Simple CSS key-frame or a tiny Lottie.                                                                                                               |       |
+
+---
+
+### 2. Color Palette  (AA-compliant)
+
+| Role                            | Hex                       | Notes                                      |
+| ------------------------------- | ------------------------- | ------------------------------------------ |
+| Primary Navy                    | **#083C6C**               | Matches your logo; passes WCAG on white.   |
+| Sky Gradient Top                | **#E7F3FF** → **#FFFFFF** | 90 deg; subtle to avoid banding.           |
+| Skyline Tint                    | **#B7C9E5** @ 20 %        | Keeps focus on logo.                       |
+| Loader Dots (active / inactive) | #083C6C / #083C6C @ 40 %  | Fade opacity on each key-frame for motion. |
+
+---
+
+### 3. Animation Hints
+
+| Element                     | Duration   | Ease        | Description                                               |
+| --------------------------- | ---------- | ----------- | --------------------------------------------------------- |
+| Loader dots                 | 1.2 s loop | ease-in-out | “…” wave (opacity & Y-translate 2 px).                    |
+| Logo pulse (optional)       | 2 s loop   | ease-out    | Scale 100 → 103 % at 25 % mark, then settle.              |
+| Skyline parallax (optional) | 8 s slow   | linear      | Slight horizontal drift (+3 px), evokes “L” train motion. |
+
+---
+
+### 4. Dark-Mode Variant
+
+* Background: radial gradient **#0E1A28 → #152538**
+* Wordmark / icon stay **#FFFFFF**.
+* Skyline tint becomes **#284059** @ 30 %
+* Loader dots switch to pure white.
+
+---
+
+### 5. Hand-off Checklist
+
+* **Assets**: export logo SVG, skyline SVG (adjust fill-opacity in code).
+* **Fonts**: include Poppins weights 300 & 600.
+* **Lottie JSON** or CSS key-frame for loader (keep under 5 KB).
+* **Splash duration**: hide after first API call completes or max 3 s.
+* **Accessibility**: announce “Loading Havyn” to VoiceOver / TalkBack.
+* **Safe areas**: verify on iPhone 14 Pro (dynamic island) & Pixel 8 Pro.
+
+
+
+
+
+
+Login Page 
+Below is a full spec for a **Login / Sign-Up** screen that pairs perfectly with the loading screen we just did. Hand this straight to your Figma (or Flutter, React Native, SwiftUI) team.
+
+---
+
+## 1 · Layout Blueprint
+
+| Zone                          | Elements                                                                                  | Specs & Rationale                                                    |
+| ----------------------------- | ----------------------------------------------------------------------------------------- | -------------------------------------------------------------------- |
+| **Header (safe-area + 8 pt)** | Havyn icon (48 × 48 px)                                                                   | Small, keeps focus on form; tap = return → Splash.                   |
+| **Hero Stack (20 % height)**  | “Welcome to Havyn” (Poppins SemiBold 32 pt) <br>Illustration of 2 roommates shaking hands | Warm social cue; skyline faintly behind for local flavor.            |
+| **Auth Form Card**            | Email (text, auto-fill) <br>Password (••••••, eye-toggle) <br>Primary CTA                 | Card has 16 pt padding, 12 pt radius, subtle shadow 4 px @ 5 % navy. |
+| **Primary CTA**               | **Log in** button – filled gradient #08457A→#072F50, radius 12 pt                         | Disabled state 35 % opacity.                                         |
+| **Alt Auth**                  | “Continue with Google” outlined button, Google SVG 24 px                                  | Apple ID easy swap if you want parity on iOS.                        |
+| **Switcher Row**              | “Don’t have an account? **Sign up**”                                                      | Tappable link → push `/signup` route.                                |
+| **Footer (12 pt padding)**    | Mini policy links, version tag                                                            | Keep tiny & low-contrast.                                            |
+
+---
+
+## 2 · Sign-Up Variant (same route, toggled)
+
+* Replace header text with **“Create your Havyn account”**
+* Fields: Name, Email, Password, Confirm Password (latest guidelines).
+* CTA becomes **Sign up**; switcher reads “Already have an account? **Log in**”.
+* Password rules hint (Poppins Light 12 pt #666).
+
+---
+
+## 3 · Color & Typography
+
+| Token                | Hex                     | Usage                          |
+| -------------------- | ----------------------- | ------------------------------ |
+| `--color-primary`    | #083C6C                 | Icons, text, loaders           |
+| `--gradient-primary` | #08457A → #072F50       | Main buttons                   |
+| `--bg-gradient`      | #E7F3FF → #FFFFFF       | Page background                |
+| `--field-border`     | #CBD7E6                 | 1 px outline, 4 px radius      |
+| `--error`            | #D64545                 | Field helper & shake animation |
+| **Fonts**            | Poppins 300 / 400 / 600 | Consistency with splash        |
+
+---
+
+## 4 · Motion & Micro-interactions
+
+| Trigger              | Motion                                   | Timing          |
+| -------------------- | ---------------------------------------- | --------------- |
+| Loader after CTA tap | Shrink CTA to 90 %, show spinner overlay | 200 ms ease-out |
+| Invalid field        | Shake X 4 px (key-frames) + error color  | 0.4 s           |
+| Switcher tap         | Card height animates via auto-layout     | 250 ms ease     |
+
+---
+
+## 5 · Accessibility
+
+* WCAG AA contrast ≥ 4.5:1 on text vs background.
+* Announce screen names via `accessibilityLabel`.
+* Field hints (`aria-describedby`) for errors.
+* Password field supports paste + secure keyboard.
+
+---
+
+## 6 · Developer Handoff Checklist
+
+* Components: `TextField`, `ButtonPrimary`, `ButtonOutlined`, `LinkText`.
+* States: default / focus / filled / error / disabled.
+* API stubs: `/auth/login`, `/auth/signup`, `/auth/oauth/google`.
+* Remember to **debounce** email validation (300 ms).
+
+
+
+
+
+
+
+Profile_Page
+Here’s a high-fidelity mock-up of the **Havyn** main feed—the screen where users swipe through potential roommates.
+
+---
+
+### Anatomy of the screen
+
+| # | Zone                           | Purpose & Details                                                                                                                                                                                                | Key Specs                                                                                                |
+| - | ------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| 1 | **Header**                     | • Left-aligned Havyn logo reinforces brand. <br>• Right: **filter** icon (stacked sliders) opens advanced search (budget range, neighborhood, pets, etc.).                                                       | Height ≈ 56 dp, shadow-less for a clean look.                                                            |
+| 2 | **Swipe Card Stack**           | • Tinder-style deck; top card is active. <br>• Large hero photo, rounded 24 dp corners. <br>• Price & bedroom chips overlay top-right (navy on white). <br>• Card footer auto-expands on tap to reveal more bio. | Card width = 85 % of screen, drop shadow opacity 8 %.                                                    |
+| 3 | **Swipe Hints** *(no buttons)* | • Subtle “‹ Skip” left and “Connect ›” right labels fade in/out as user drags. <br>• Icons are only 25 % opacity at rest—guidance, not clutter.                                                                  | Use `PanResponder` (React Native) / `GestureDetector` (Flutter) to tie drag distance → label opacity.    |
+| 4 | **Bottom Nav (5 tabs)**        | ① **Home** (deck) – active state shown. <br>② **Map** – live pins of listings. <br>③ **Matches** – mutual connections. <br>④ **Messages** – chat threads. <br>⑤ **Profile** – user’s own details & settings.     | • 72 dp tall pill with `borderRadius:32`. <br>• Active tab: navy icon + bold label + 2 px indicator bar. |
+| 5 | **Safe-area & Gestures**       | Rounded device corners accommodated; swipe-up gesture won’t collide with nav.                                                                                                                                    | Extra 12 dp padding bottom on iOS.                                                                       |
+
+---
+
+### Color & type palette
+
+| Usage                                  | Color               | Hex |
+| -------------------------------------- | ------------------- | --- |
+| Primary navy                           | `#033E6B`           |     |
+| Accent lighter blue (icons/indicators) | `#77B6FF`           |     |
+| Background gradient                    | `#E4F2FF → #FFFFFF` |     |
+| Body text                              | `#283A46`           |     |
+
+*Typeface:* **Poppins** — Bold for headings, Regular for body (maintains continuity with logo).
+
+---
+
+### Interaction flow
+
+1. **Swipe ↔** to dismiss or connect.
+2. **Tap card** → modal with full bio, lease dates, and CTA “Request Intro.”
+3. **Map tab** surfaces same listings geolocated; cards pop up from pin taps for a consistent mental model.
+4. **Matches tab** lists mutual likes; **Messages** auto-opens a chat after both parties approve.
+
+---
+
+### Rapid build pointers
+
+| Framework        | Snippet                                                                                                 |
+| ---------------- | ------------------------------------------------------------------------------------------------------- |
+| **React Native** | Use `react-native-deck-swiper` for card mechanics; `react-navigation/bottom-tabs` for nav.              |
+| **Flutter**      | `flutter_tindercard` for swipe; `BottomNavigationBar` with `NavigationRail` fallback for large screens. |

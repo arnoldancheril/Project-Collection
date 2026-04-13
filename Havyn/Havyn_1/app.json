@@ -1,0 +1,34 @@
+{
+  "expo": {
+    "name": "Havyn",
+    "slug": "havyn",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/Logo_Just_Icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/images/Logo_Just_Icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#E6F0FF"
+    },
+    "scheme": "havyn",
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/Logo_Just_Icon.png",
+        "backgroundColor": "#E6F0FF"
+      }
+    },
+    "web": {
+      "favicon": "./assets/images/Logo_Just_Icon.png"
+    },
+    "plugins": [
+      "expo-router"
+    ]
+  }
+} 

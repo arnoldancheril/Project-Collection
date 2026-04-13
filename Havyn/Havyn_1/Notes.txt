@@ -1,0 +1,34 @@
+
+You are an agent please keep going until the job is completely solved before ending your turn.
+If you are not sure about file content or codebase structure pertaining to the request, open them and do not hallucinate.
+You must plan extensively before each function call, and reflect extensively on the outcomes.
+
+
+
+Next I want to work on the loading screen for the applicaiton. I have attached an image of how I want it to look and provided the context for the rest of the application.
+Like before I want all the components of the application to be broken up into different files so that it is easier to update the application later. So please ensure to update @FileStrucutre.md with all the changes made. 
+Also this might be important for the loading screen:
+Check App.js (or your main entry point).
+Check Firebase auth state on app load.
+Navigate to Login/Sign Up if no user, or Main App if user is logged in. (we will make the proper login/signup page next)
+Also check use onAuthStateChanged from firebase/auth, if this is necessary.
+
+So based on all this can you make the loading screen for the roommates application based on the provided image. Make it resemble the image attached. 
+
+
+
+
+
+
+
+Next to do:
+
+You are an agent please keep going until the job is completely solved before ending your turn.
+
+The application looks great. Major issue: After swiping left or right on each of the profile there is a delay for the next profile appearing and it takes time to come, however if you click more info and then select like or not interested the next profile comes instantly, so can you fix it so that the next profile appears quickly after swiping on the profile. 
+
+
+Next we want to develop the maps page. I have attached a UI rendering of what the groups page should look like, it should be a page where people are able to add others to discuss forming a larger appartment group, can you design the UI and functionality for this page, think outside the box and of what things would be useful, create new views as necessary and make it all functional. The user should be able to click on the property and have information about the property come up. 
+
+If you are not sure about file content or codebase structure pertaining to the request, open them and do not hallucinate.
+You must plan extensively before each function call, and reflect extensively on the outcomes.
